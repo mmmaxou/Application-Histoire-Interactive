@@ -1,8 +1,9 @@
 ﻿Pitch :
 
 Le personnage principale ( A ), est un fils de noble, qui est exclu par sa famille, jugé indigne.
-Il s'en va donc a l'aventure, essayant de poursuivre une quête (?). Il vit quelques péripéties, rencontres quelques personnes.
-Ils l'amènent a faire quelques choix importants, réfléchir sur sa condition.
+Il s'en va donc a l'aventure, essayant de poursuivre une quête (?). ( quête ou bien plutôt une recherche de soi ? Typé il cherche un mentor genre un magicien/maitre d'arme )  
+Il vit quelques péripéties, rencontres quelques personnes (-> personnages avec qui il reste ou plutôt des gens random de sous main  ?  ).
+Ils l'amènent a faire quelques choix importants(divergence possible avec : choisir la voie magique/voie armée possible ), réfléchir sur sa condition.
 A est un gros creuvard. C'est une raclure au moment où son père le vire.
 Il va petit a petit comprendre que le monde est difficile et être plus compréhensif.
 
@@ -10,6 +11,9 @@ Puis, A meurt. On voit ensuite les réactions des choix du persos, les répercus
 
 
 Le héro va au fur et à mesure tenter de devenir meilleur, plus moral, mais va toujours échouer à cause de la dureté du monde, 
-et avoir l'impression que ses choix ne changent rien. A sa mort, on se rend compte que ses choix ont vraiment changer quelque choses, 
+et avoir l'impression que ses choix ne changent rien( faut quand même avoir quelques choix qui se répercutent sinon le joueur va avoir l'impression de jouer pour rien ).
+ A sa mort, on se rend compte que ses choix ont vraiment changer quelque choses, 
 et que le fait qu'il n'ai pas perdu la foi a payer.
-Par exemple, il a réussi a sauver qqun, ou a se racheter, que son père l'accepte, etc ...
+Par exemple, il a réussi a sauver qqun (-> sauver quelqu'un parce qu'il servait ses intérêts ? ),
+ ou a se racheter ( -> mettre fin à une guerre, sauver un prince/roi/Royaume, empêcher un attentat/coup d'état  ?),
+ que son père l'accepte, etc ...
