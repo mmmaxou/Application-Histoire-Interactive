@@ -1,29 +1,29 @@
 ﻿Pitch :
 
-Le personnage principale ( A ), est un fils de noble, qui est exclu par sa famille, jugé indigne.
+Le personnage principal ( On laisse l'utilisateur choisir son nom  ), est un fils de noble, qui est exclu par sa famille, jugé indigne.
 Il s'en va donc a l'aventure, essayant de poursuivre une quête (?). ( quête ou bien plutôt une recherche de soi ? Typé il cherche un mentor genre un magicien/maitre d'arme )  
 Il vit quelques péripéties, rencontres quelques personnes (-> personnages avec qui il reste ou plutôt des gens random de sous main  ?  ).
 Ils l'amènent a faire quelques choix importants(divergence possible avec : choisir la voie magique/voie armée possible ), réfléchir sur sa condition.
 A est un gros creuvard. C'est une raclure au moment où son père le vire.
 Il va petit a petit comprendre que le monde est difficile et être plus compréhensif.
 
-Puis, A meurt. On voit ensuite les réactions des choix du persos, les répercussions de ses choix.
+Puis, A meurt. On voit ensuite les réactions des choix du persos, les répercussions de ses choix. (Environ 75% du jeu )
 
 
 Le héro va au fur et à mesure tenter de devenir meilleur, plus moral, mais va toujours échouer à cause de la dureté du monde, 
-et avoir l'impression que ses choix ne changent rien( faut quand même avoir quelques choix qui se répercutent sinon le joueur va avoir l'impression de jouer pour rien ).
- A sa mort, on se rend compte que ses choix ont vraiment changer quelque choses, 
-et que le fait qu'il n'ai pas perdu la foi a payer.
+et avoir l'impression que ses choix ne changent rien( faut quand même avoir quelques choix qui se répercutent sinon le joueur va avoir l'impression de jouer pour rien ). ( Scènes à part où on voit les retombées de ses choix ) 
+ A sa mort, on se rend compte que ses choix ont vraiment changer quelque choses, et que le fait qu'il n'ai pas perdu la foi a payé.
 Par exemple, il a réussi a sauver qqun (-> sauver quelqu'un parce qu'il servait ses intérêts ? ),
  ou a se racheter ( -> mettre fin à une guerre, sauver un prince/roi/Royaume, empêcher un attentat/coup d'état  ?),
- que son père l'accepte, etc ...
+ que son père l'accepte comme il est et qu'il peut se débrouiller, etc ...
 
-Son père est un noble. A est destiné a être marrié par enjeu politique. A ne veut, pas, il préfère profiter de la vie, trainer avec ses camarades voyoux, boit et joue. Son père souhaite qu'il administre un village paumé. Il se fait viré par son père a cause de ce refut.
+Son père est un noble. A est destiné a être marrié par enjeu politique. A ne veut pas car il voulait se marrier avec une autre fille et prexte le fait que sa promise soit moche pour refuser. Il préfère profiter de la vie, trainer avec ses camarades voyoux, boit et joue. Son père souhaite qu'il administre un village paumé. Il se fait viré par son père a cause de ce refus.
 Il est donc versé dans l'art de voler les gens. Et tente de survivre par cette compétence.
-Il veut alors réussir a prouvé a son père qu'il est capable de faire des choses. Qu'il va pouvoir grimper l'échelle sociale par ses propres moyens. Il va a la capitale se faire des thunes. Il tente de voler des gens à la capitale. 
+Il veut alors réussir a prouver à son père qu'il est capable de faire des choses. Qu'il va pouvoir grimper l'échelle sociale par ses propres moyens. Il va a la capitale se faire des thunes. Il tente de voler des gens à la capitale. 
 
 
 Description de A :
-Ses ambitions : S'elever dans l'échelle sociale, pour ne plus avoir rien à faire. Prouver a son père ce qu'il est capable.
-Ses compétences : Voler, Séduction, Vif, Répartie, Charisme, Aisance sociale / Leadership.
+Ses ambitions : S'elever dans l'échelle sociale, pour ne plus avoir rien à faire. Prouver a son père de ce qu'il est capable.
+Ses compétences : Voler, Séduction, Vif, Répartie, Charisme, Aisance sociale / Leadership.az
 Défauts : Imbue de lui, Cupide, Sans scrupule, Fénéant, Manipulateur, Suscéptible, Egoiste, Laissé allé, Hypocrite.
+
