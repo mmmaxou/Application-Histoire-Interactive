@@ -1,0 +1,22 @@
+Système de sauvegarde :
+{
+	Plusieurs sauvegardes ( environ 16 )
+	Affichage de l'état d'une sauvegarde
+	Contenu de la sauvegarde : {
+		Choix déja effectués
+		Texte affiché actuel
+		Date et Heure
+		Temps de jeu
+	}
+
+}
+
+Système d'affichage : 
+{
+	En jeu : {
+		Le texte
+		L'image de fond avec eventuellement plusieurs couches
+		Les personnages qui parlent.
+	}
+	
+}
