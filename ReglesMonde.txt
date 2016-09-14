@@ -1,12 +1,9 @@
 Magie : oui
 Type de monde : Île finie avec des terres distinctes pour chaque race différentes 
 
+Constitution du système politique : Royaume/Empire humain qui maintient la paix dans toute la zone qui leur est consacrée par la force et la dissuasion ou acte et traités de paix. Négociations sont  rares , mais parviennent a quelques entendements.
 
-Constitution du système politique : Royaume/Empire humain qui maintient la paix dans toute la zone qui leur est consacrée
-Dissenssions internes entre les différentes parties du royaume/empire
-coalition cependant contre  un enemi commun ( type elfe noirs/trolls/gobelins/Dragon/Fanatiques hostiles) aux frontières délimitées par une curiosité géographique (forêt, montagne, etc...)
+Dissensions internes entre les différentes parties du royaume/empire
+coalition cependant contre  un ennemi commun ( type elfe noirs/trolls/gobelins/Dragon/Fanatiques hostiles) aux frontières délimitées par une curiosité géographique (forêt, montagne, etc...)
 
 Races différentes telles que : Humains/Sylvains/être des montagnes/anti race gentille ( elfe noir )
-
-
-
