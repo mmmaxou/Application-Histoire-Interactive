@@ -8,7 +8,6 @@ Système de sauvegarde :
 		Date et Heure
 		Temps de jeu
 	}
-
 }
 
 Système d'affichage : 
@@ -16,7 +15,18 @@ Système d'affichage :
 	En jeu : {
 		Le texte
 		L'image de fond avec eventuellement plusieurs couches
-		Les personnages qui parlent.
+		Les personnages qui parlent
+		Moyen d'acceder à l'interface (?)
 	}
-	
+	Interface : {
+		Accès aux sauvegardes
+		Sauvegarde instantannée
+		Accès aux paramètres
+	}
+}
+
+Paramètres : {
+	Taille du texte
+	Vitesse de défilement
+		
 }
