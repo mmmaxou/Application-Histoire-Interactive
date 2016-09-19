@@ -26,6 +26,7 @@ Achievment pour les différentes fins (?)
 		Accès aux sauvegardes
 		Sauvegarde instantanée
 		Accès aux paramètres
+		Historique 
 	}
 }
 
@@ -37,7 +38,13 @@ Paramètres : {
 	Vitesse à laquelle le texte apparaît.
 	Afficher / Cacher les achievment (?)
 }
-
+Menu principal : {
+	Nouvelle partie
+	Charger une sauvegarde rapide( Optionnel )
+	Charger une sauvegarde
+	Paramètres
+	Galerie ( Optionnel )
+}
 
 
 

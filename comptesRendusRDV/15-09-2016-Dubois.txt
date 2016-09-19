@@ -1,0 +1,13 @@
+Objectif global du projet : 
+Réaliser un travail global et complet depuis l’idée de base jusqu’à la sortie sur le Google Play de l’application.
+Réaliser et développer toutes ces features et assets.
+Développer et rédiger le scénario au travers de textes et dialogues.
+
+Pour la partie communication on doit faire en sorte de mettre l’eau à la bouche :
+Dévoiler suffisamment mais pas trop.
+
+Faire une animation est facile sur Android via un simple GIF animé.
+On peut utiliser différents layers pour faciliter le travail et le montant des réalisations graphiques, notamment pour la background.
+
+L’objectif principal à court terme est de réaliser une version de test fonctionnelle, dans le but de tester le moteur, les textes, les images, et la cohérence globale du projet.
+Une fois cette version réalisée, on pourra développer et continuer sur cette base.
