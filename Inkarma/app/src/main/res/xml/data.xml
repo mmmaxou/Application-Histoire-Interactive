@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <frame id='1'>
+            Le roi Il Palazzo: Qu'est que je fais ici ? Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
+            A) Un héros du temps ?! Cool ! C'est par où mon destin ?
+            B) Pardon ? Qu'est que je fais ici ?
+            <choix consequence='2'/>
+            <choix consequence='6'/>
+            <img src="imageframe1"/>
+        </frame>
+        <frame id='2'>
+            Le roi Il Palazzo: bien ! Aller chercher l'épée légendaire du légendaire héros de la légende !
+            A) Pas de problème, j'y vais de ce pas !
+            B) les épée légendaire, c'est pour les faibles, j'y vais à main nue !
+            <choix consequence='3'/>
+            <choix consequence='22'/>
+            <img src="imageframe2"/>
+        </frame>
+        <frame id='3'>
+            En suivant les indications données par le roi vous trouver la stèle où se trouve l'épée légendaire du légendaire héros de la légende. Maintenant que vous êtes armé, partez-vous à l'attaque du roi démon ?
+            A) Avec cette épée, nul ne peut se dresser face à moi ! J'y cours !
+            B) Je me disais que je pouvais explorer un petit peu ce nouveau monde avant.
+            <choix consequence='4'/>
+            <choix consequence='16'/>
+            <img src="imageframe3"/>
+        </frame>
+        <frame id='4'>
+            Après de nombreuses périméties, que nous ne développeront pas ici, vous arrivé sans encombres, grâce au pouvoir de l'épée jusqu'au château du roi démon. Vous vous retrouvez, totalement pa hasard, au détour d'un couloir face à face avec le propriétaire des lieux.
+            A) "Meurs, Créature démoniaque !" En agitant votre épée face à vous pour mettre fin au règne du roi démon.
+            B) Bon, j'ai un peu réfléchi en chemin et je me dis que ce serait une bonne idée de communiquer avant de combattre.
+            <choix consequence='5'/>
+            <choix consequence='18'/>
+            <img src="imageframe4"/>
+        </frame>
+        <frame id='5'>
+            Bravo ! Vous avez héroïquement massacré une personne à qui vous n'aviez rien à reprocher ainsi que tout sont peuple ! * applaudissement sarcastique *
+            <img src="imageframe5"/>
+        </frame>
+        <frame id='6'>
+            Le roi Il Palazzo: bonjour, Héros du temps ! Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
+            A) Ah ! Pardon, je n'avais pas compris !
+            B) J'avoue avoir un léger doute ...
+            <choix consequence='2'/>
+            <choix consequence='7'/>
+            <img src="imageframe6"/>
+        </frame>
+        <frame id='7'>
+            Le roi Il Palazzo: Un doute ? Pourtant, tous les signes concordent ! Vous êtes le héros que nous attendions ! Si jamais vous n'avez pas encore des "doutes", vous pouvez toujours aller voir la voyante royale, elle vous le confirmera.
+            A) Nan, mais si les signes le disent, et vous avez l'air honnête Monsieur.
+            B) C'est vrai que je ne serais pas contre des explications.
+            <choix consequence='2'/>
+            <choix consequence='8'/>
+            <img src="imageframe7"/>
+        </frame>
+        <frame id='8'>
+            Vous rejoignez les quartiers de la voyante, escorté par plusieurs gardes, qui vous laisse seul à seul avec la voyante. La voyante : posez-moi vos questions, j'y répondrai avec plaisir.
+            A) Je suis vraiment le héros du temps.
+            B) Vous êtes vraiment une voyante ?
+            <choix consequence='10'/>
+            <choix consequence='11'/>
+            <img src="imageframe8"/>
+        </frame>
+        <!-- frame9 inexistante -->
+        <frame id='10'>
+            La voyante : Évidemment ! Tous les signes concordent, vous êtes forcément le héros du temps !
+            A) Si la magicienne du royaume me l'assure ce doit être vrai ! Je vais retourner voir le roi.
+            B) Mais de quels signes, vous parlez ?
+            <choix consequence='2'/>
+            <choix consequence='14'/>
+            <img src="imageframe10"/>
+        </frame>
+        <frame id='11'>
+            La voyante : Ah non, pas du tout. Le roi est juste très crédule, je me contente de lui dire ce qu'il a envie d'entendre.
+            A) pardon ?
+            B) Du coup cette histoire de héros, c'est n'importe quoi ?
+            <choix consequence='12'/>
+            <choix consequence='13'/>
+            <img src="imageframe11"/>
+        </frame>
+        <frame id='12'>
+            La voyante : je disais ; Le roi est juste très crédule, je me contente de lui dire ce qu'il a envie d'entendre.
+            A) Mais du coup, cette histoire de signes !?
+            <choix consequence='14'/>
+            <img src="imageframe12"/>
+        </frame>
+        <frame id='13'>
+            La voyante : Il existe bien une legende à propos d'un héros tueur de démon mais ça pourrait être n'importe qui. Pareil pour l'épée, à peu prés n'importe qui peux la retirer tant qu'il le veux vraiment. Mais du coup ça pourrait être vous, vous pouvez toujours tenter l'aventure.
+            A) Je pense que je vais quand même tenter ma chance. Je sans que mon destin m'appelle !
+            B) Je ... J'avoue que je suis perplexe. Je n'aipas envie de risquer ma vie en misant sur une petite chance d'être, peu être, un héros.
+            <choix consequence='15'/>
+            <choix consequence='21'/>
+            <img src="imageframe13"/>
+        </frame>
+        <frame id='14'>
+            La voyante : Les villageois se font beaucoup de films, en se basant sur une vieille prophétie, ils invoquent de monde parallèle, des soit disant héros tous les mois, et sont, à chaque fois persuadé d'avoir convoqué le "héros du temps". Mais du coup, ça pourrait être vous, vous pouvez toujours tenter l'aventure.
+            A) Je pense que je vais quand même tenter ma chance. Je sens que mon destin m'appelle !
+            B) Je ... J'avoue que je suis perplexe. Je n'ai pas envie de risquer ma vie en misant sur une petite chance d'être, peu être, un héros.
+            <choix consequence='15'/>
+            <choix consequence='21'/>
+            <img src="imageframe14"/>
+        </frame>
+        <frame id='15'>
+            La voyante : Si tu souhaites réellement tenter ta chance, retourne voir le roi, il te donnera les indications pour mener à bien ta quête.
+            A) Je m'y rend dès à présent !
+            <choix consequence='3'/>
+            <img src="imageframe15"/>
+        </frame>
+        <frame id='16'>
+            Cela fait plusieurs jours que vous explorer ce nouveau monde, vous découvrez avec émerveillement sa faune, sa flore et ses habitants. Vous avez peu à peu perdu de l'intérêt pour votre quête :
+            A) Vous vous reprenais, il est temps de mener à bien cette aventure !
+            B) Finalement, cette histoire ne vous concerne pas vraiment, vous n'avez aucune raison d'aller tuer ce roi démon.
+            <choix consequence='4'/>
+            <choix consequence='17'/>
+            <img src="imageframe16"/>
+        </frame>
+        <frame id='17'>
+            Vous laissez totalement tomber cette querelle qui ne vous concerne pas, vous vivez en pèlerin, aidant les innocents que vous rencontrez et forgeant votre légende de héros errant.
+            <img src="imageframe17"/>
+        </frame>
+        <frame id='18'>
+            Vous avez discuté avec le roi démon, il vous a expliqué que les démons ne sont pas mauvais mais simplement victimes de discrimination à cause de leur physique et que la guerre opposant les humains au démon n'est pas une guerre sainte, mais une guerre purement géopolitique, qu'il n'existe ni méchants, ni gentils.
+            Il vous explique qu'il souhaite réellement avec votre aide, en temps que pont entre les deux peuples, établir une paix entre les deux peuples
+            A) Vous n'en croyez pas un mot, c'est un démon, il tente de vous manipuler et vous l'attaquez.
+            B) Vous comprenez la requête de votre interlocuteur et retourner voir le roi Il Palazza.
+            <choix consequence='5'/>
+            <choix consequence='19'/>
+            <img src="imageframe18"/>
+        </frame>
+        <frame id='19'>
+            Vous êtes de retour au royaume humain et avez transmis le message de paix du roi démon.
+            Le roi Il Palazzo maintient que le démon vous a manipulé et qu'il faut mettre fin à son règne au plus vite.
+            A) Vous ouvrez enfin les yeux, votre roi à raison, vous retournez au château du roi démon pour mettre fin à cette folie.
+            B) Finalement, le roi démon vous semble bien plus raisonnable que le roi Il Palazzo.
+            Vous rejoignez l'idée de paix commune du roi démon et vous mettez à son service.
+            <choix consequence='5'/>
+            <choix consequence='20'/>
+            <img src="imageframe19"/>
+        </frame>
+        <frame id='20'>
+            Avec votre aide de négociation ont finalement eu lieu entre les humains et les démons et bien qu'ils restent énormément de travail pour arriver à une parfaite cohabitation entre les deux peuples. Mais grâce à vous, ce monde connaît, pour la première fois depuis des centaines d'années, un pas vers la paix.
+            <img src="imageframe20"/>
+        </frame>
+        <frame id='21'>
+            Vous considérez que ces histoires ne vous concernent pas et qu'il serait plus intelligent et plus agréable d'aller boire une bière à la taverne du coin.
+            <img src="imageframe21"/>
+        </frame>
+        <frame id='22'>
+            Partir à l'aventure sans arme était la plus grosse erreur possible. Après seulement 2km en dehors des rempart de la ville, vous décédez héroïquement, succombant au assaut répété d'un chaton myope et asthmatique
+            <img src="imageframe22"/>
+        </frame>
+    </application>
+</PreferenceScreen>
