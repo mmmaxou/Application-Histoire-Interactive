@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,94 +11,109 @@
     android:weightSum="1"
     android:background="#cac4c4">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/frame1"
+        android:id="@+id/imageView"
+        android:layout_weight="2"
+        android:scaleType="centerCrop" />
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/frame1"
-        android:id="@+id/decorImgBox">
+        android:orientation="vertical">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:id="@+id/space"></LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/decorImgBox">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="2"
+                android:id="@+id/space"></LinearLayout>
 
-                <Button
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="A"
-                    android:id="@+id/choix1"
-                    android:onClick="onClick1"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginRight="100dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="A"
+                        android:id="@+id/choix1"
+                        android:onClick="onClick1"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="B"
+                        android:id="@+id/choix2"
+                        android:onClick="onClick2"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:text="Next"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="B"
-                    android:id="@+id/choix2"
-                    android:onClick="onClick2"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginRight="100dp"
-                    android:layout_weight="1" />
+                    android:id="@+id/choixNext"
+                    android:onClick="onClick3" />
             </LinearLayout>
 
-            <Button
-                android:text="Next"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/choixNext"
-                android:onClick="onClick3" />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_weight="0"
-        android:layout_height="130dp">
-
-        <ScrollView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/scrollView2"
-            android:background="#c4ffffff"
-            android:layout_weight="10">
+            android:layout_weight="0"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:id="@+id/BoiteDialogue"
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView2"
+                android:background="#c4ffffff"
                 android:layout_weight="10"
-                android:text="Lorem ipsum"
-                android:textSize="20dp"
-                android:textIsSelectable="false" />
-        </ScrollView>
+                android:minHeight="120dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Menu"
-            android:id="@+id/menu"
-            android:onClick="onClickMenu" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/BoiteDialogue"
+                    android:layout_weight="10"
+                    android:text="Lorem ipsum"
+                    android:textSize="20dp"
+                    android:textIsSelectable="false" />
+            </ScrollView>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Menu"
+                android:id="@+id/menu"
+                android:onClick="onClickMenu" />
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>

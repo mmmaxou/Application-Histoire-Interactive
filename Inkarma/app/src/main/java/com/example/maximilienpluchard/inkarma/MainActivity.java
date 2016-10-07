@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Button Next
     public void onClick3(View view){
         setFrame(frame.id + 1);
     }
