@@ -11,20 +11,69 @@
     android:weightSum="1"
     android:background="#cac4c4">
 
-    <ImageView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/decorBoxImg"
-        android:scaleType="centerCrop">
+        android:background="@drawable/frame1"
+        android:id="@+id/decorImgBox">
 
-    </ImageView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/space"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="A"
+                    android:id="@+id/choix1"
+                    android:onClick="onClick1"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="B"
+                    android:id="@+id/choix2"
+                    android:onClick="onClick2"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                android:text="Next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/choixNext"
+                android:onClick="onClick3" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:layout_weight="0">
+        android:layout_weight="0"
+        android:layout_height="130dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -43,33 +92,12 @@
                 android:textIsSelectable="false" />
         </ScrollView>
 
-        <LinearLayout
-            android:orientation="vertical"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.2">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A"
-                android:id="@+id/choix1"
-                android:onClick="onClick1" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="B"
-                android:id="@+id/choix2"
-                android:onClick="onClick2" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Menu"
-                android:id="@+id/menu"
-                android:onClick="onClickMenu" />
-        </LinearLayout>
+            android:text="Menu"
+            android:id="@+id/menu"
+            android:onClick="onClickMenu" />
 
     </LinearLayout>
 

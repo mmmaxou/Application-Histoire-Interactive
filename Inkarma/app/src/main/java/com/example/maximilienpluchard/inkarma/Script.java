@@ -1,3 +1,5 @@
+package com.example.maximilienpluchard.inkarma;
+
 import java.util.HashMap;
 import java.util.Map;
 

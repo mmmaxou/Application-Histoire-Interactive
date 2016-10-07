@@ -4,13 +4,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        script = new Script();
+        script.put("heroName","toto");
+
         setContentView(R.layout.activity_main);
 
        // if(newGame =)
@@ -67,28 +72,36 @@ public class MainActivity extends AppCompatActivity {
         if(tmp != null) {
             frame = tmp;
 
-            ImageView imgView = (ImageView) findViewById(R.id.decorBoxImg);
+            LinearLayout layout =(LinearLayout)findViewById(R.id.decorImgBox);
             if (frame.img != -1) {
-                imgView.setImageResource(frame.img);
+                layout.setBackgroundResource(frame.img);
             }
 
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
-            textView.setText(frame.text);
+            textView.setText(script.evaluate("\""+frame.text+"\"").toString());
 
             if (frame.choix[0] == -1){
                 Button button1 = (Button) findViewById(R.id.choix1);
-                button1.setEnabled(false);
+                button1.setVisibility(View.GONE);
             } else {
                 Button button1 = (Button) findViewById(R.id.choix1);
-                button1.setEnabled(true);
+                button1.setVisibility(View.VISIBLE);
             }
 
             if (frame.choix[1] == -1){
                 Button button2 = (Button) findViewById(R.id.choix2);
-                button2.setEnabled(false);
+                button2.setVisibility(View.GONE);
             } else {
                 Button button2 = (Button) findViewById(R.id.choix2);
-                button2.setEnabled(true);
+                button2.setVisibility(View.VISIBLE);
+            }
+
+            if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                Button buttonNext = (Button) findViewById(R.id.choixNext);
+                buttonNext.setVisibility(View.VISIBLE);
+            } else {
+                Button buttonNext = (Button) findViewById(R.id.choixNext);
+                buttonNext.setVisibility(View.GONE);
             }
         }
     }
@@ -102,6 +115,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClick2(View view){
         setFrame(frame.choix[1]);
 
+    }
+
+    public void onClick3(View view){
+        setFrame(frame.id + 1);
     }
 
     // Button MENU
@@ -141,4 +158,41 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    Script script;
+
+
+
+
+
+
+
+
+
+    // Affichage caractère par caracère
+/*
+    private Handler mHandler = new Handler();
+    private Runnable characterAdder = new Runnable() {
+        @Override
+        public void run() {
+            tv.setText(mText.subSequence(0, mIndex++));
+            if(mIndex <= mText.length()) {
+                mHandler.postDelayed(characterAdder, mDelay);
+            }
+        }
+    };
+
+    public void animateText(CharSequence text) {
+        mText = text;
+        mIndex = 0;
+
+        tv.setText("");
+        mHandler.removeCallbacks(characterAdder);
+        mHandler.postDelayed(characterAdder, mDelay);
+    }
+
+    public void setCharacterDelay(long millis) {
+        mDelay = millis;
+    }
+*/
 }
+
