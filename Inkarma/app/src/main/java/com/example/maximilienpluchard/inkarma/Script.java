@@ -52,7 +52,7 @@ public class Script {
 		OP_PLUS,OP_MINUS,OP_TIME,OP_DIVIDE,
 		OP_AND,OP_OR,OP_NEG,OP_TEST,OP_SELECT,
 		L_PAR,R_PAR,EVALUATE,
-		QUOTE,SIMPLE_QUOTE,SEMI_COLON,
+		QUOTE,SIMPLE_QUOTE,SEMI_COLON,ESCAPE,
 		EGAL,LT,GT,
 		OTHER,EOF};	
 
@@ -83,6 +83,7 @@ public class Script {
 			if (c=='"') return TYPE.QUOTE;
 			if (c=='\'') return TYPE.SIMPLE_QUOTE;
 			if (c==';') return TYPE.SEMI_COLON;
+			if (c=='\\') return TYPE.ESCAPE;
 
 			if (c=='=') return TYPE.EGAL;			
 			if (c=='<') return TYPE.LT;			
@@ -337,6 +338,10 @@ public class Script {
 							globbleSpace();
 							accept(TYPE.EVALUATE);
 							start = current;		                 // resume string literal				
+						} else if (accept(TYPE.ESCAPE)){
+							result += string.substring(start,current-1); //ends and adds current string
+							start = current; //next character is to be included
+							consume(); // and not parsed (because it is escaped)
 						} else {
 							consume();						
 						}
@@ -344,7 +349,15 @@ public class Script {
 				} else { // simple quote allows no evaluation
 					accept(TYPE.SIMPLE_QUOTE);
 					start = current;
-					while(!accept(TYPE.SIMPLE_QUOTE)) consume();						
+					while(!accept(TYPE.SIMPLE_QUOTE)) {
+						if (accept(TYPE.ESCAPE)){
+							result += string.substring(start,current-1); //ends and adds current string
+							start = current; //next character is to be included
+							consume(); // and not parsed (because it is escaped)
+						} else {
+							consume();
+						}
+					}
 				}
 				result += string.substring(start,current-1); //litteral ends
 				globbleSpace();
@@ -411,7 +424,7 @@ public class Script {
 				while(true){
 					globbleSpace();
 					if (accept(TYPE.OP_AND)){
-						result = asBool(result) || asBool(readTest());
+						result = asBool(result) && asBool(readTest());
 					} else {
 						return result;
 					}				
@@ -549,11 +562,17 @@ public class Script {
 		
 		
 		public Script(){
-			var = new HashMap();
+			var = new HashMap<String, Object>();
 		}
 
+		public Script(String command){
+			var = new HashMap<String, Object>();
+			evaluate(command);
+		}
+		
+		
 		public Script(Map<String,Object> varMap){
-			var = new HashMap(varMap);
+			var = new HashMap<String, Object>(varMap);
 		}
 
 
@@ -571,6 +590,34 @@ public class Script {
 			return var;
 		}
 		
+		public String serialize(){
+			String result = "";
+			for(Map.Entry<String, Object> entry :  var.entrySet()){
+				if (!result.isEmpty()) result +=";"; 
+				result += entry.getKey() + "=";
+				Object value = entry.getValue();
+				if (value instanceof Integer){
+					result +=  value;
+				} else if (value instanceof Boolean){
+					result += ((Boolean) value) ? "1==1" : "1==0";
+				} else {
+					result += "'"+escape((String) value)+"'";
+				}
+			}
+			
+			
+			return result;
+		}
+		
+		private String escape(String s) {
+			String result ="";
+			for(int i = 0; i<s.length();++i){
+				char c = s.charAt(i);
+				result += (c == '\'') ? "\'" : c;
+			}
+			return result;
+		}
+
 		public void clear(){
 			var.clear();
 		}
@@ -605,65 +652,96 @@ public class Script {
 					((result instanceof Integer) ? "(int) " : 
 						(result instanceof Boolean) ? "(bool) " :"(String) ")+result);
 		}
+		
+		public static boolean test(Script script,String command, Object result){
+			Object r = script.evaluate(command);
+			if (result.equals(r)) {
+				System.out.println("OK "+command+" -> " + r);
+				return true;
+			}
+			System.err.println("ERROR "+command+" -> "+r+" ("+result+")");
+			return false;
+		}
+		
 
 		//regression tests
 		public static void main(String[] arg){
 			Script script = new Script();
-			script.printAndExecute("\"hello world\"");
-			script.printAndExecute("2+2");
-			script.printAndExecute("a=2;a+a");
-			script.printAndExecute("test=\"test\";test + test");
-			script.printAndExecute("a=(3*(1+1)-1);b=a/2;c=a-b*2");
-			script.printAndExecute("b");
-			script.printAndExecute("3*1+1-1*2");
-			script.printAndExecute("2==2");
-			script.printAndExecute("2!=2");
-			script.printAndExecute("b==b");
-			script.printAndExecute("2<3");
-			script.printAndExecute("2<=2");
-			script.printAndExecute("3>=5");
-			script.printAndExecute("a");
-			script.printAndExecute("a==2");
-			script.printAndExecute("b==2");
-			script.printAndExecute("(a==5)&(b==2)");
-			script.printAndExecute("a==5|b==2");
-			script.printAndExecute("d=\"tete\";d<test");
-			script.printAndExecute("d>test");
-			script.printAndExecute("!(2==2)");
-			script.printAndExecute("!(2!=2)");
-			script.printAndExecute("!(!(2==2))");
-			script.printAndExecute("(2==2)==(3==3)");
-			script.printAndExecute("true=2==2");
-			script.printAndExecute("false=2==3");
-			script.printAndExecute("true&false|true&true");
-			script.printAndExecute("true&false|false&true");
-			script.printAndExecute("!true&false|true&true");
-			script.printAndExecute("!true&false");
-			script.printAndExecute("!true&false");
-			script.printAndExecute("a==5?1:20");
-			script.printAndExecute("false?1:20");
-			script.printAndExecute(" a = ( 3 * ( 1 + 1 ) - 1 ) \n" +
-					"; b = a / 2 ; c = a - b * 2 ");
-			script.printAndExecute("HP=20");
-			script.printAndExecute("HP = HP - ((a!=5)?1:10)");
-			script.printAndExecute("HP = HP -10");
-			script.printAndExecute(" HP > 0 ? \"Alive\" : \"Dead\" ");
-			script.printAndExecute("e=e+1");
-			script.printAndExecute("e=e+1");
-			script.printAndExecute("f=f+\".\"");
-			script.printAndExecute("f=f+\".\"");
-			script.printAndExecute("true?f:1");
-			script.printAndExecute("\"2+2=$2+2$\"");
-			script.printAndExecute("\"a=$a$\"");
-			script.printAndExecute("name = \"bob\";\"your name is $name$\"");
-			script.printAndExecute("name + \" has $HP$ HP, and is $HP>0?\"alive\":\"dead\"$.\"");
-			script.printAndExecute("status = 'name + \" has $HP$ HP, and is $HP>0?\"alive\":\"dead\"$.\"'");
-			script.printAndExecute("\"$name$ drink a potion, and now $HP=HP+5;$status$\"");
-			script.printAndExecute("\"value is 5$'$'$\"");
-			script.printAndExecute("\"value is 5\"+'$'");
-			script.printAndExecute("'value is 5$'");
-			script.printAndExecute("'$name$'");
-
+			test(script,"\"hello world\"","hello world");
+			test(script,"2+2",4);
+			test(script,"a=2;a+a",4);
+			test(script,"test=\"test\";test + test","testtest");
+			test(script,"a=(3*(1+1)-1);b=a/2;c=a-b*2",1);
+			test(script,"b",2);
+			test(script,"3*1+1-1*2",2);
+			test(script,"2==2",true);
+			test(script,"2!=2",false);
+			test(script,"b==b",true);
+			test(script,"2<3",true);
+			test(script,"2<=2",true);
+			test(script,"3>=5",false);
+			test(script,"a",5);
+			test(script,"a==2",false);
+			test(script,"b==2",true);
+			test(script,"a==5",true);
+			test(script,"(a==5)",true);
+			test(script,"a==5&b==2",true);
+			test(script,"(a==5)&(b!=2)",false);
+			test(script,"a==5|b==2",true);
+			test(script,"d=\"tete\";d<test",false);
+			test(script,"d>test",true);
+			test(script,"!(2==2)",false);
+			test(script,"!(2!=2)",true);
+			test(script,"!(!(2==2))",true);
+			test(script,"(2==2)==(3==3)",true);
+			test(script,"true=2==2",true);
+			test(script,"false=2==3",false);
+			test(script,"true&false",false);
+			test(script,"true&true",true);
+			test(script,"true&false|false&true",false);
+			test(script,"true&false|true&true",true);
+			test(script,"true&false|true&!false",true);
+			test(script,"(!true)&true",false);
+			test(script,"!false&true",true);
+			test(script,"!true",false);
+			test(script,"!true|false",false);
+			test(script,"a==5?1:20",1);
+			test(script,"false?1:20",20);
+			test(script," a = ( 3 * ( 1 + 1 ) - 1 ) \n" +
+					"; b = a / 2 ; c = a - b * 2 ",1);
+			test(script,"HP=20",20);
+			test(script,"HP = HP - ((a!=5)?1:10)",10);
+			test(script,"HP = HP -10",0);
+			test(script," HP > 0 ? \"Alive\" : \"Dead\" ","Dead");
+			test(script,"e=e+1",1);
+			test(script,"e=e+1",2);
+			test(script,"f=f+\".\"","null.");
+			test(script,"f=f+\".\"","null..");
+			test(script,"true?f:1","null..");
+			test(script,"\"2+2=$2+2$\"","2+2=4");
+			test(script,"\"a=$a$\"","a=5");
+			test(script,"name = \"bob\";\"your name is $name$\"","your name is bob");
+			test(script,"name + \" has $HP$ HP, and is $HP>0?\"alive\":\"dead\"$.\"","bob has 0 HP, and is dead.");
+			test(script,"status = 'name + \" has $HP$ HP, and is $HP>0?\"alive\":\"dead\"$.\"'",
+					"name + \" has $HP$ HP, and is $HP>0?\"alive\":\"dead\"$.\"");				
+			test(script,"\"$name$ drinks a potion, and now $HP=HP+5;$status$\"",
+					"bob drinks a potion, and now bob has 5 HP, and is alive.");
+			test(script,"\"value is 5$'$'$\"","value is 5$");
+			test(script,"\"value is 5\"+'$'","value is 5$");
+			test(script,"\"value is 5\\$\"","value is 5$");
+			test(script,"'value is 5$'","value is 5$");
+			test(script,"'$name$'","$name$");
+			test(script,"\"\\\'\"","\'");
+			test(script,"\'\\\'\'","'");
+			
+			String s = script.serialize();
+			
+			System.out.println(s);
+			
+			Script copy = new Script(s);
+			
+			System.out.println(script.getVarMap().equals(copy.getVarMap()));
+			
 		}
 }
 

@@ -31,12 +31,10 @@ public class MenuActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-
-
     }
 
-    public void onClickCredit(View view) {
-        Intent intent = new Intent(this, CreditActivity.class);
+    public void onClickLoad(View view) {
+        Intent intent = new Intent(this, LoadActivity.class);
         startActivity(intent);
     }
 

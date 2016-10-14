@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:srcCompat="@drawable/frame1"
-        android:id="@+id/imageView"
+        android:id="@+id/decorImgBox"
         android:layout_weight="2"
         android:scaleType="centerCrop" />
 
@@ -28,76 +28,119 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/decorImgBox">
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/layout">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="2"
-                android:id="@+id/space"></LinearLayout>
+                android:id="@+id/space">
 
-            <LinearLayout
-                android:orientation="horizontal"
+            </LinearLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="2">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/personnage"
+                    android:layout_weight="2"
+                    android:scaleType="centerInside"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/expression"
+                    android:layout_weight="2"
+                    android:scaleType="centerInside"
+                    android:layout_alignParentBottom="true" />
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="2"
+                    android:minHeight="100dp"
+                    android:orientation="horizontal">
 
-                    <Button
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="A"
-                        android:id="@+id/choix1"
-                        android:onClick="onClick1"
-                        android:layout_marginLeft="100dp"
-                        android:layout_marginRight="100dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="5">
 
-                    <Button
-                        android:layout_width="match_parent"
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="A"
+                            android:id="@+id/choix1"
+                            android:onClick="onClick1"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="B"
+                            android:id="@+id/choix2"
+                            android:onClick="onClick2"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="B"
-                        android:id="@+id/choix2"
-                        android:onClick="onClick2"
-                        android:layout_marginLeft="100dp"
-                        android:layout_marginRight="100dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1">
+
+                        <Button
+                            android:text="Save"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/choixSave"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:text="Next"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/choixNext"
+                            android:onClick="onClick3"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
                 </LinearLayout>
-
-                <Button
-                    android:text="Next"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/choixNext"
-                    android:onClick="onClick3" />
-            </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_weight="0"
-            android:layout_height="wrap_content">
+            android:layout_weight="1"
+            android:layout_height="0dp">
 
             <ScrollView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/scrollView2"
                 android:background="#c4ffffff"
-                android:layout_weight="10"
-                android:minHeight="120dp">
+                android:minHeight="120dp"
+                android:layout_weight="5"
+                android:layout_margin="6dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:id="@+id/BoiteDialogue"
                     android:layout_weight="10"
@@ -107,11 +150,12 @@
             </ScrollView>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="Menu"
                 android:id="@+id/menu"
-                android:onClick="onClickMenu" />
+                android:onClick="onClickMenu"
+                android:layout_weight="1" />
 
         </LinearLayout>
     </LinearLayout>

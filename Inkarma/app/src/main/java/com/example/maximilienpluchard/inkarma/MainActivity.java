@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -28,15 +29,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         script = new Script();
         script.put("heroName","toto");
+
 
         setContentView(R.layout.activity_main);
 
        // if(newGame =)
         //////////chargement du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        int i = settings.getInt("frame", 1);
+        int i;
+
+        String save = settings.getString("save", null);
+        if ( save != null ) {
+            script.evaluate(save);
+            i = script.getInt("frame"); // Initialise le i au travers de la frame
+        } else {
+            i = 1;
+        }
 
         try {
             data = new Data(this);
@@ -60,49 +72,69 @@ public class MainActivity extends AppCompatActivity {
         // sauvegarde du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("frame", i);
+
+        // Sauvegarde la frame actuelle i
+        script.put("frame", i);
+        editor.putString("save",script.serialize());
+
+//        editor.  putSerializable("HashMap",script.getVarMap());
 
         // Commit the edits!
         editor.commit();
-
-
 
         Frame tmp = data.get(i);
 
         if(tmp != null) {
             frame = tmp;
 
-            LinearLayout layout =(LinearLayout)findViewById(R.id.decorImgBox);
-            if (frame.img != -1) {
-                layout.setBackgroundResource(frame.img);
-            }
-
+            // Declaration des elements
+            ImageView background =(ImageView) findViewById(R.id.decorImgBox);
+            ImageView personnage =(ImageView) findViewById(R.id.personnage);
+            ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+            Button button1 = (Button) findViewById(R.id.choix1);
+            Button button2 = (Button) findViewById(R.id.choix2);
+            Button buttonNext = (Button) findViewById(R.id.choixNext);
+
+
+
+
+            // Affichage du texte
             textView.setText(script.evaluate("\""+frame.text+"\"").toString());
 
+
+            // Affichage des choix
             if (frame.choix[0] == -1){
-                Button button1 = (Button) findViewById(R.id.choix1);
                 button1.setVisibility(View.GONE);
             } else {
-                Button button1 = (Button) findViewById(R.id.choix1);
                 button1.setVisibility(View.VISIBLE);
             }
 
             if (frame.choix[1] == -1){
-                Button button2 = (Button) findViewById(R.id.choix2);
                 button2.setVisibility(View.GONE);
             } else {
-                Button button2 = (Button) findViewById(R.id.choix2);
                 button2.setVisibility(View.VISIBLE);
             }
 
+            // Si il n'y a pas de choix, on affiche un bouton pour passer à la frame suivante.
             if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                Button buttonNext = (Button) findViewById(R.id.choixNext);
                 buttonNext.setVisibility(View.VISIBLE);
             } else {
-                Button buttonNext = (Button) findViewById(R.id.choixNext);
                 buttonNext.setVisibility(View.GONE);
             }
+
+            // Affichage des images
+            if (frame.img != -1) {
+                background.setImageResource(frame.img);
+            }
+            if (frame.personnage != -1) {
+                personnage.setImageResource(frame.personnage);
+            }
+            if (frame.expression != -1) {
+                expression.setImageResource(frame.expression);
+            }
+
+
         }
     }
 

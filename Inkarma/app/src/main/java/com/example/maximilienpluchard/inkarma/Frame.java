@@ -9,6 +9,8 @@ public class Frame {
     String text;
     int[] choix;
     int img = -1;
+    int personnage = -1;
+    int expression = -1;
 
     public Frame() {
         choix= new int[2];
