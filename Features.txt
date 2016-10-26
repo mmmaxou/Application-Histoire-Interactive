@@ -18,7 +18,8 @@ Système d'affichage :
 		Le texte : 
 			S’affiche lettre par lettre
 		L'image de fond avec éventuellement plusieurs couches
-		Les personnages qui parlent
+		Image Personnage
+		Image Expression
 		Moyen d'accéder à l'interface (icône en haut à gauche avec un rouage ? )
 Achievment pour les différentes fins (?)
 	}
