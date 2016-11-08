@@ -3,6 +3,7 @@ package com.example.maximilienpluchard.inkarma;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -95,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
             ImageView personnage =(ImageView) findViewById(R.id.personnage);
             ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+            TextView debug = (TextView) findViewById(R.id.debug);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
             Button buttonNext = (Button) findViewById(R.id.choixNext);
-
 
 
 
@@ -136,6 +137,39 @@ public class MainActivity extends AppCompatActivity {
             if (frame.expression != -1) {
                 expression.setImageResource(frame.expression);
             }
+
+
+            //////////// AUTO SKIP
+            // Calcul du temps d'auto skip
+            int size = textView.length();
+            String sizeText = Integer.toString(size);
+
+            // Duree en secondes
+            long small = size / 25;
+            long moyen = size / 30;
+            long rapide = size / 35;
+
+            //Affichage
+            debug.setText(sizeText);
+
+            //Dailayage
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                        setFrame(frame.id + 1);
+                    }
+                    else {
+                        TextView debug = (TextView) findViewById(R.id.debug);
+                        debug.setText("Next");
+                    }
+                }
+
+            }, moyen * 1000); // 5000ms delay
+
+
 
 
         }
@@ -183,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.action_save :
                 return true;
-            
+
             case R.id.action_load :
                 Intent intent2 = new Intent(this, LoadActivity.class);
                 startActivity(intent2);
