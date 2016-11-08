@@ -32,14 +32,25 @@
             android:layout_weight="2"
             android:id="@+id/layout">
 
-            <LinearLayout
-                android:orientation="vertical"
+            <RelativeLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:id="@+id/space">
 
-            </LinearLayout>
+                <ImageButton
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/settingsicon"
+                    android:id="@+id/imageButton"
+                    android:elevation="1dp"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onClickSettings" />
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -106,12 +117,6 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:text="Save"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:id="@+id/choixSave"
-                            android:layout_weight="1"/>
-                        <Button
                             android:text="Next"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -137,7 +142,8 @@
                 android:background="#c4ffffff"
                 android:minHeight="120dp"
                 android:layout_weight="5"
-                android:layout_margin="6dp">
+                android:layout_margin="6dp"
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -148,14 +154,6 @@
                     android:textSize="20dp"
                     android:textIsSelectable="false" />
             </ScrollView>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Menu"
-                android:id="@+id/menu"
-                android:onClick="onClickMenu"
-                android:layout_weight="1" />
 
         </LinearLayout>
     </LinearLayout>

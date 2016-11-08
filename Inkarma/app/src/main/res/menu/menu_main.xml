@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="web2.adventuregame.MainActivity" >
     <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:title="@string/action_settings"/>
+    <item android:id="@+id/action_menu"
+        android:title="@string/action_menu"/>
+    <item android:id="@+id/action_save"
+        android:title="@string/action_save"/>
+    <item android:id="@+id/action_load"
+        android:title="@string/action_load"/>
 </menu>

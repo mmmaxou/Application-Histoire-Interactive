@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+    }
     defaultConfig {
         applicationId "com.example.maximilienpluchard.inkarma"
         minSdkVersion 15
@@ -15,6 +18,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
         }
     }
     productFlavors {

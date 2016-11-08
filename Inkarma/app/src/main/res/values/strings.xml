@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Inkarma</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Parametres</string>
+    <string name="action_menu">Menu principal</string>
+    <string name="action_save">Sauvegarder</string>
+    <string name="action_load">Charger</string>
 </resources>

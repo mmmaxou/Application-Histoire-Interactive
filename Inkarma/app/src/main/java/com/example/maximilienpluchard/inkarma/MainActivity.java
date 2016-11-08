@@ -2,18 +2,16 @@ package com.example.maximilienpluchard.inkarma;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.Image;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -34,14 +32,17 @@ public class MainActivity extends AppCompatActivity {
         script = new Script();
         script.put("heroName","toto");
 
-
         setContentView(R.layout.activity_main);
 
-       // if(newGame =)
+        ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
+        registerForContextMenu(imageButton);
+
+       // if(newGame)
         //////////chargement du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         int i;
 
+        /*
         String save = settings.getString("save", null);
         if ( save != null ) {
             script.evaluate(save);
@@ -49,10 +50,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             i = 1;
         }
+        */
+
+        i = 1;
 
         try {
             data = new Data(this);
-
 
             ////// obtenir et afficher page 1 --> setFrame(int)
             setFrame(i); // le i
@@ -69,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFrame(int i) {
 
-        // sauvegarde du i
+        // Sauvegarde du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
@@ -147,27 +150,48 @@ public class MainActivity extends AppCompatActivity {
     public void onClick2(View view){
         setFrame(frame.choix[1]);
 
-    }
+    };
 
     // Button Next
     public void onClick3(View view){
         setFrame(frame.id + 1);
     }
 
-    // Button MENU
-
-
-    public void onClickMenu(View view) {
-        Intent intent = new Intent(this, MenuActivity.class);
-        startActivity(intent);
+    public void onClickSettings(View view) {
+        openContextMenu(view);
     }
 
+       @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+    }
 
-    // onClick
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_settings :
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
 
-    // setFRame ( frame.choix[0]
+            case R.id.action_menu :
+                Intent intent1 = new Intent(this, MenuActivity.class);
+                startActivity(intent1);
+                return true;
 
-    //
+            case R.id.action_save :
+                return true;
+            
+            case R.id.action_load :
+                Intent intent2 = new Intent(this, LoadActivity.class);
+                startActivity(intent2);
+                return true;
+        }
+
+        return super.onContextItemSelected(item);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

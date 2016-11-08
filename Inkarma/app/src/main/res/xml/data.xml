@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
+        <frame id='0'>
+            PAGE PAR DEFAUT
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
         <frame id='1'>
             Le roi Il Palazzo: Qu'est que je fais ici ? Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
             A) Un héros du temps ?! Cool ! C'est par où mon destin ?
