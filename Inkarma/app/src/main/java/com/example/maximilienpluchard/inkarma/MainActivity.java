@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         script = new Script();
-        script.put("heroName","toto");
+
 
         setContentView(R.layout.activity_main);
 
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         int i;
 
-        /*
         String save = settings.getString("save", null);
         if ( save != null ) {
             script.evaluate(save);
@@ -51,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             i = 1;
         }
-        */
 
-        i = 1;
 
         try {
             data = new Data(this);
@@ -73,18 +71,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFrame(int i) {
 
+
+        // Sauvegarde la frame actuelle i
+        script.put("frame", i);
+
         // Sauvegarde du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        // Sauvegarde la frame actuelle i
-        script.put("frame", i);
         editor.putString("save",script.serialize());
 
-//        editor.  putSerializable("HashMap",script.getVarMap());
-
         // Commit the edits!
-        editor.commit();
+        editor.apply();
 
         Frame tmp = data.get(i);
 
@@ -104,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             // Affichage du texte
-            textView.setText(script.evaluate("\""+frame.text+"\"").toString());
+            textView.setText(script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString());
 
 
             // Affichage des choix
@@ -138,59 +136,86 @@ public class MainActivity extends AppCompatActivity {
                 expression.setImageResource(frame.expression);
             }
 
-
             //////////// AUTO SKIP
-            // Calcul du temps d'auto skip
-            int size = textView.length();
-            String sizeText = Integer.toString(size);
-
-            // Duree en secondes
-            long small = size / 25;
-            long moyen = size / 30;
-            long rapide = size / 35;
-
-            //Affichage
-            debug.setText(sizeText);
-
-            //Dailayage
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-                    if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                        setFrame(frame.id + 1);
-                    }
-                    else {
-                        TextView debug = (TextView) findViewById(R.id.debug);
-                        debug.setText("Next");
-                    }
-                }
-
-            }, moyen * 1000); // 5000ms delay
-
-
-
+            autoSkip(textView, debug);
 
         }
     }
 
+    private void autoSkip(TextView textView, TextView debug) {
+        // Calcul du temps d'auto skip
+        int size = textView.length();
+        String sizeText = Integer.toString(size);
+
+        // Duree en secondes
+        long small = size / 25;
+        long moyen = size / 30;
+        long rapide = size / 35;
+
+        //Affichage
+        debug.setText(sizeText);
+
+        //Dailayage
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                    setFrame(frame.id + 1);
+                }
+                else {
+                    TextView debug = (TextView) findViewById(R.id.debug);
+                    debug.setText("Next");
+                }
+            }
+
+        }, moyen * 1000); // 5000ms delay
+    }
+
     // Button choix 1
     public void onClick1(View view){
-        setFrame(frame.choix[0]);
+        script.put("lastChoiceID", frame.id);
+        script.put("frameNumber", 0);
+        setFrame(frame.choix[0]); //Les variables script sont sauvegardées dans le setFrame
     }
 
     // Button choix 2
     public void onClick2(View view){
-        setFrame(frame.choix[1]);
-
+        script.put("lastChoiceID", frame.id);
+        script.put("frameNumber", 0);
+        setFrame(frame.choix[1]); //Les variables script sont sauvegardées dans le setFrame
     };
 
     // Button Next
     public void onClick3(View view){
-        setFrame(frame.id + 1);
+
+        if ( frame.id < 10000 ) {
+            int frameNumber = script.getInt("frameNumber");
+            script.put("frameNumber",frameNumber + 1 );
+            setFrame(frame.id + 1); //Les variables script sont sauvegardées dans le setFrame
+        } else {
+            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+            textView.setText("fin");
+        }
+
     }
 
+
+    // Button Before
+    public void onClickBefore(View view) {
+        int lastChoiceID = script.getInt("lastChoiceID");
+        int frameNumber = script.getInt("frameNumber");
+        Log.d("OnClickBefore",lastChoiceID+" "+frameNumber+ "-1");
+
+        if ( frameNumber > 0 ) {
+            setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
+        }
+    }
+
+
+
+    // Button Settings
     public void onClickSettings(View view) {
         openContextMenu(view);
     }

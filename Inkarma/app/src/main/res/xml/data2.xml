@@ -6,5 +6,90 @@
             <choix consequence='-1' />
             <choix consequence='-1' />
         </frame>
+        <frame id='1'>
+            Vous vous trouvez sur le rebord de la fenêtre de votre grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques tâches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <img src="@drawable/frame1" />
+        </frame>
+        <frame id='2'>
+            Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='3'>
+            Ce paysage vous rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne vous incombait aucune responsabilité…
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='4'>
+            Que donneriez-vous pour retourner à cette douce époque ? ...
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='5'>
+            ASIEL
+            Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids…
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='6'>
+            THEDRIS
+            Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='7'>
+            Vous murmurez entre vos dents… ‘Mais quel petit con celui la’
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='8'>
+            THEDRIS
+            Quoi ? Insolent !
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='9'>
+            Thedris se rapproche furieusement de vous, et vous colle une grosse beigne dans les dents.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='10'>
+            AIE.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='11'>
+            Vous ne l'aviez pas vu venir celle là. Par réflexe, votre main vient délicatement palper le coup violent que viens de vous asséner votre père.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='12'>
+            PAGE PAR DEFAUT
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='13'>
+            PAGE PAR DEFAUT
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='14'>
+            PAGE PAR DEFAUT
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='15'>
+            PAGE PAR DEFAUT
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='16'>
+            PAGE PAR DEFAUT
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+
     </application>
 </PreferenceScreen>

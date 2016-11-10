@@ -13,7 +13,7 @@
         android:textAlignment="center"
         android:textStyle="normal|bold" />
 
-    <LinearLayout
+    <RadioGroup
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,6 +48,13 @@
             android:id="@+id/radioButtonExtraLarge"
             android:layout_weight="1"
             android:duplicateParentState="true" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
 
     </LinearLayout>
 
@@ -68,7 +75,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox" />
+            android:id="@+id/checkBox"
+            android:checked="true" />
     </LinearLayout>
     <TextView
         android:text="Vitesse de passage automatique"
@@ -79,7 +87,7 @@
         android:textStyle="normal|bold"
         android:textAlignment="center" />
 
-    <LinearLayout
+    <RadioGroup
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -103,6 +111,24 @@
             android:layout_height="wrap_content"
             android:id="@+id/radioButtonSpeedSkipFast"
             android:layout_weight="1"/>
-    </LinearLayout>
+    </RadioGroup>
+
+    <Button
+        android:text="Menu principal"
+        android:layout_width="match_parent"
+        android:id="@+id/buttonMenuPrincipal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickMenu"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="5dp"
+        android:visibility="visible" />
 
 </LinearLayout>

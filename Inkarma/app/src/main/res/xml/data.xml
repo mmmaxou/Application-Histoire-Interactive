@@ -19,7 +19,7 @@
             A) Pas de problème, j'y vais de ce pas !
             B) les épée légendaire, c'est pour les faibles, j'y vais à main nue !
             <choix consequence='3'/>
-            <choix consequence='22'/>
+            <choix consequence='10003'/>
             <img src="@drawable/frame2"/>
         </frame>
         <frame id='3'>
@@ -94,7 +94,7 @@
             A) Je pense que je vais quand même tenter ma chance. Je sans que mon destin m'appelle !
             B) Je ... J'avoue que je suis perplexe. Je n'aipas envie de risquer ma vie en misant sur une petite chance d'être, peu être, un héros.
             <choix consequence='15'/>
-            <choix consequence='21'/>
+            <choix consequence='10002'/>
             <img src="imageframe13"/>
         </frame>
         <frame id='14'>
@@ -139,18 +139,18 @@
             B) Finalement, le roi démon vous semble bien plus raisonnable que le roi Il Palazzo.
             Vous rejoignez l'idée de paix commune du roi démon et vous mettez à son service.
             <choix consequence='5'/>
-            <choix consequence='20'/>
+            <choix consequence='10001'/>
             <img src="imageframe19"/>
         </frame>
-        <frame id='20'>
+        <frame id='10001'>
             Avec votre aide de négociation ont finalement eu lieu entre les humains et les démons et bien qu'ils restent énormément de travail pour arriver à une parfaite cohabitation entre les deux peuples. Mais grâce à vous, ce monde connaît, pour la première fois depuis des centaines d'années, un pas vers la paix.
             <img src="imageframe20"/>
         </frame>
-        <frame id='21'>
+        <frame id='10002'>
             Vous considérez que ces histoires ne vous concernent pas et qu'il serait plus intelligent et plus agréable d'aller boire une bière à la taverne du coin.
             <img src="imageframe21"/>
         </frame>
-        <frame id='22'>
+        <frame id='10003'>
             Partir à l'aventure sans arme était la plus grosse erreur possible. Après seulement 2km en dehors des rempart de la ville, vous décédez héroïquement, succombant au assaut répété d'un chaton myope et asthmatique
             <img src="imageframe22"/>
         </frame>
