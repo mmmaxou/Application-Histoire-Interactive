@@ -22,7 +22,6 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/frame1"
                 android:id="@+id/imageView"
                 android:layout_weight="1"
                 android:scaleType="centerCrop" />
@@ -42,7 +41,6 @@
                     android:textColor="@android:color/white" />
 
                 <TextView
-                    android:text="3h de jeu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewDate"
@@ -50,7 +48,6 @@
                     android:textColor="@android:color/white" />
 
                 <TextView
-                    android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewPlayTime"
@@ -69,7 +66,6 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/frame1"
                 android:id="@+id/imageViewSaveID1"
                 android:layout_weight="1"
                 android:scaleType="centerCrop" />
@@ -89,7 +85,6 @@
                     android:textColor="@android:color/white" />
 
                 <TextView
-                    android:text="Le 11/05/2016"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewDate1"
@@ -97,7 +92,6 @@
                     android:textColor="@android:color/white" />
 
                 <TextView
-                    android:text="8h de jeu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewPlayTime1"
@@ -116,7 +110,6 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/frame1"
                 android:id="@+id/imageViewSaveID2"
                 android:layout_weight="1"
                 android:scaleType="centerCrop" />

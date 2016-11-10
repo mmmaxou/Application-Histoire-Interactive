@@ -22,7 +22,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final String PREFS_NAME = "jkhkj";
+    static final String PREFS_NAME = "current";
     private Data data;
     private Frame frame;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         int i;
 
-        String save = settings.getString("save", null);
+        String save = settings.getString("autosave", null);
         if ( save != null ) {
             script.evaluate(save);
             i = script.getInt("frame"); // Initialise le i au travers de la frame
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        editor.putString("save",script.serialize());
+        editor.putString("autosave",script.serialize());
 
         // Commit the edits!
         editor.apply();
@@ -208,6 +208,8 @@ public class MainActivity extends AppCompatActivity {
         int frameNumber = script.getInt("frameNumber");
         Log.d("OnClickBefore",lastChoiceID+" "+frameNumber+ "-1");
 
+        script.put("frameNumber", 0);
+
         if ( frameNumber > 0 ) {
             setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
         }
@@ -275,13 +277,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     Script script;
-
-
-
-
-
-
-
 
 
     // Affichage caractère par caracère

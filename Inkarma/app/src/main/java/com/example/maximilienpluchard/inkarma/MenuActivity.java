@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 
 public class MenuActivity extends AppCompatActivity {
 
-    static final String PREFS_NAME = "jkhkj";
+    static final String PREFS_NAME = "current";
 
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
@@ -44,7 +44,7 @@ public class MenuActivity extends AppCompatActivity {
         boolean valid = false;
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        String save = settings.getString("save", null);
+        String save = settings.getString("autosave", null);
         if (save != null) {
             valid = true;
         }
@@ -78,7 +78,7 @@ public class MenuActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        editor.putString("save",script.serialize());
+        editor.putString("autosave",script.serialize());
 
         // Commit the edits!
         editor.apply();
