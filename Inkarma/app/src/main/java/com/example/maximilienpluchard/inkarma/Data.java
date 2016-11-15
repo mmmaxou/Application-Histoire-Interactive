@@ -33,18 +33,30 @@ public class Data {
         int eventType = xpp.getEventType();
         while (eventType != XmlPullParser.END_DOCUMENT) {// tant que pas fini...
             if (eventType == XmlPullParser.START_TAG) {
-                if ("frame".equals(xpp.getName())) {// dŽbut d'une nouvelle catŽgorie
+                if ("frame".equals(xpp.getName())) {// début d'une nouvelle catégorie
                     currentFrame = new Frame();
                     currentFrame.id = xpp.getAttributeIntValue(null, "id", -1);
                     frame.put(currentFrame.id, currentFrame);
                     cpt = 0;
-                } else if ("choix".equals(xpp.getName())) {// dŽbut d'une nouvelle catŽgorie
+                } else if ("choix".equals(xpp.getName())) {// début d'une nouvelle catégorie
                     currentFrame.choix[cpt] = xpp.getAttributeIntValue(null, "consequence", -1);
                     cpt++;
                 } else if ("img".equals(xpp.getName())) {// début d'une nouvelle image
                     String src = xpp.getAttributeValue(null, "src");
                     if (src != null) {
-                        currentFrame.img = context.getResources().getIdentifier(src, "drawable", context.getPackageName());;
+                        currentFrame.img = context.getResources().getIdentifier(src, "drawable", context.getPackageName());
+                    }
+                } else if ("expression".equals(xpp.getName())) {
+                    String src = xpp.getAttributeValue(null, "src");
+                    if (src != null) {
+                        currentFrame.expression = context.getResources().getIdentifier(src, "drawable", context.getPackageName());
+                    }
+                } else if ("locuteur".equals(xpp.getName())) {
+                    currentFrame.locuteur = xpp.getAttributeValue(null, "personnage");
+
+                    String src = currentFrame.locuteur;
+                    if ( src != null ) {
+                        currentFrame.locuteurImg = context.getResources().getIdentifier(src, "drawable", context.getPackageName());
                     }
                 }
 

@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             TextView debug = (TextView) findViewById(R.id.debug);
+            TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
             Button buttonNext = (Button) findViewById(R.id.choixNext);
@@ -104,18 +105,35 @@ public class MainActivity extends AppCompatActivity {
             // Affichage du texte
             textView.setText(script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString());
 
+            // On cache les choix
+            button1.setVisibility(View.GONE);
+            button2.setVisibility(View.GONE);
 
-            // Affichage des choix
-            if (frame.choix[0] == -1){
-                button1.setVisibility(View.GONE);
-            } else {
-                button1.setVisibility(View.VISIBLE);
-            }
+            // On affiche le nom du personnage si il y en a un, et on affiche son image;
+            if ( frame.locuteur != "") {
+                String name = frame.locuteur;
+                String upperName = name.substring(0, 1).toUpperCase() + name.substring(1);
 
-            if (frame.choix[1] == -1){
-                button2.setVisibility(View.GONE);
+                locuteur.setText(upperName);
+                locuteur.setVisibility(View.VISIBLE);
+                personnage.setImageResource(frame.locuteurImg);
+
+                if (frame.expression != -1) {
+                    expression.setImageResource(frame.expression);
+                } else {
+                    int id = getResources().getIdentifier("neutre", "drawable", getPackageName());
+                    expression.setImageResource(id);
+                }
+
+
+                personnage.setVisibility(View.VISIBLE);
+                expression.setVisibility(View.VISIBLE);
+                locuteur.setVisibility(View.VISIBLE);
+
             } else {
-                button2.setVisibility(View.VISIBLE);
+                personnage.setVisibility(View.INVISIBLE);
+                expression.setVisibility(View.INVISIBLE);
+                locuteur.setVisibility(View.INVISIBLE);
             }
 
             // Si il n'y a pas de choix, on affiche un bouton pour passer à la frame suivante.
@@ -129,19 +147,12 @@ public class MainActivity extends AppCompatActivity {
             if (frame.img != -1) {
                 background.setImageResource(frame.img);
             }
-            if (frame.personnage != -1) {
-                personnage.setImageResource(frame.personnage);
-            }
-            if (frame.expression != -1) {
-                expression.setImageResource(frame.expression);
-            }
 
             //////////// AUTO SKIP
             autoSkip(textView, debug);
 
         }
     }
-
     private void autoSkip(TextView textView, TextView debug) {
         // Calcul du temps d'auto skip
         int size = textView.length();
@@ -161,12 +172,21 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {
+                //Il n'y a pas de choix; on pass
                 if (frame.choix[0] == -1 && frame.choix[1] == -1) {
                     setFrame(frame.id + 1);
                 }
-                else {
+                else // Sinon, on cache le nom du personnage et on affiche les choix;
+                {
                     TextView debug = (TextView) findViewById(R.id.debug);
+                    TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
+                    Button button1 = (Button) findViewById(R.id.choix1);
+                    Button button2 = (Button) findViewById(R.id.choix2);
+
                     debug.setText("Next");
+                    locuteur.setVisibility(View.GONE);
+                    button1.setVisibility(View.VISIBLE);
+                    button2.setVisibility(View.VISIBLE);
                 }
             }
 

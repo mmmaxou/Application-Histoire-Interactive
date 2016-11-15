@@ -7,12 +7,14 @@
             <choix consequence='-1' />
         </frame>
         <frame id='1'>
-            Le roi Il Palazzo: Qu'est que je fais ici ? Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
+            Qu'est que je fais ici ? Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
             A) Un héros du temps ?! Cool ! C'est par où mon destin ?
             B) Pardon ? Qu'est que $ heroName $  fais ici ?
             <choix consequence='-1'/>
             <choix consequence='-1'/>
             <img src="@drawable/frame1"/>
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/emu" />
         </frame>
         <frame id='2'>
             Le roi Il Palazzo: bien ! Aller chercher l'épée légendaire du légendaire héros de la légende !
@@ -21,6 +23,8 @@
             <choix consequence='3'/>
             <choix consequence='10003'/>
             <img src="@drawable/frame2"/>
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/peur" />
         </frame>
         <frame id='3'>
             En suivant les indications données par le roi vous trouver la stèle où se trouve l'épée légendaire du légendaire héros de la légende. Maintenant que vous êtes armé, partez-vous à l'attaque du roi démon ?
@@ -29,6 +33,8 @@
             <choix consequence='4'/>
             <choix consequence='16'/>
             <img src="imageframe3"/>
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/tristesse2" />
         </frame>
         <frame id='4'>
             Après de nombreuses périméties, que nous ne développeront pas ici, vous arrivé sans encombres, grâce au pouvoir de l'épée jusqu'au château du roi démon. Vous vous retrouvez, totalement pa hasard, au détour d'un couloir face à face avec le propriétaire des lieux.
