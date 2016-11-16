@@ -32,7 +32,6 @@ public class LoadActivity extends AppCompatActivity {
 
         }
 
-
     }
 
     public void onClickMenu(View view) {
