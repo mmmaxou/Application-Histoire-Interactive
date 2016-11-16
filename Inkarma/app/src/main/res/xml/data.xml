@@ -7,158 +7,596 @@
             <choix consequence='-1' />
         </frame>
         <frame id='1'>
-            Qu'est que je fais ici ? Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
-            A) Un héros du temps ?! Cool ! C'est par où mon destin ?
-            B) Pardon ? Qu'est que $ heroName $  fais ici ?
-            <choix consequence='-1'/>
-            <choix consequence='-1'/>
-            <img src="@drawable/frame1"/>
-            <locuteur personnage="asiel" />
-            <expression src="@drawable/emu" />
+            Vous vous trouvez sur le rebord de la fenêtre de votre grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques tâches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <img src="@drawable/frame1" />
         </frame>
         <frame id='2'>
-            Le roi Il Palazzo: bien ! Aller chercher l'épée légendaire du légendaire héros de la légende !
-            A) Pas de problème, j'y vais de ce pas !
-            B) les épée légendaire, c'est pour les faibles, j'y vais à main nue !
-            <choix consequence='3'/>
-            <choix consequence='10003'/>
-            <img src="@drawable/frame2"/>
-            <locuteur personnage="thedris" />
-            <expression src="@drawable/peur" />
+            Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
         </frame>
         <frame id='3'>
-            En suivant les indications données par le roi vous trouver la stèle où se trouve l'épée légendaire du légendaire héros de la légende. Maintenant que vous êtes armé, partez-vous à l'attaque du roi démon ?
-            A) Avec cette épée, nul ne peut se dresser face à moi ! J'y cours !
-            B) Je me disais que je pouvais explorer un petit peu ce nouveau monde avant.
-            <choix consequence='4'/>
-            <choix consequence='16'/>
-            <img src="imageframe3"/>
+            Ce paysage vous rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne vous incombait aucune responsabilité…
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='4'>
+            Que donneriez-vous pour retourner à cette douce époque ? ...
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='5'>
+            Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids…
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/compatissant" />
+        </frame>
+        <frame id='6'>
+            Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/surprise2" />
+        </frame>
+        <frame id='7'>
+            <![CDATA[<i>
+            Vous murmurez entre vos dents… ‘Mais quel petit con celui la !
+            </i>]]>
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/tristesse" />
+        </frame>
+        <frame id='8'>
+            Quoi ? Insolent !
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/surprise2" />
+        </frame>
+        <frame id='9'>
+            Thedris se rapproche furieusement de vous, et vous colle une grosse beigne dans les dents.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='10'>
+            AIE.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='11'>
+            Vous ne l'aviez pas vu venir celle là. Par réflexe, votre main vient délicatement palper le coup violent que viens de vous asséner votre père.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='12'>
+            Descends aider ta mère ! TOUT DE SUITE !
+            Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’a tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/surprise" />
+        </frame>
+        <frame id='13'>
+            <![CDATA[<i>
+            Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
+            </i>]]>
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='14'>
+            Suite à cette injonction, vous vous en allez en traînant la patte. En ressassant dans votre tête une suite de jurons à l’égard de votre père.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='15'>
+            Tu arrives timidement à table, fuyant le regard de ton père. Comme à ton habitude, tu t’assois auprès de ta petite soeur, en face de tes parents. Le repas est déjà servi.
+            <![CDATA[<i>
+            Cool, je n’avais vraiment pas envie de devoir m’occuper de ce repas.
+            </i>]]>
+            Ton père te fusille du regard. Il a l’air d’avoir fermé les yeux sur l’incident de tout à l’heure. Rassuré, tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+        </frame>
+        <frame id='16'>
+            Pas si vite Asiel, j’ai une nouvelle importante à t’annoncer.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/neutre" />
+        </frame>
+        <frame id="17">
+            Tu grommelles, inquiet et intrigué, et te rassois docilement.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+        </frame>
+        <frame id="18">
+            Ah ? Quoi donc père ?
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/surprise" />
+        </frame>
+        <frame id="19">
+            Tu sais que notre famille est pérenne depuis plusieurs générations. Notre fortune s'agrandit lentement et nous avons besoin de nouvelles relations pour garder la tête hors de l’eau lorsque l’hiver viendra. J’ai parlé longuement avec  Ser Dulric cet après-midi pendant ma visite au domaine des Florieux.
+            Tout comme notre famille, ils ont besoin d’une alliance pour les temps rudes à venir, les premiers symptômes de l’hiver se font déjà ressentir. Leur fille vient d’avoir ses premiers sangs, elle est donc en âge de se marier, c’est pourquoi nous allons organiser ton union avec elle au plus tôt.
+            Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/neutre" />
+        </frame>
+        <frame id="20">
+            Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+        </frame>
+        <frame id="21">
+            Attends, quoi ?! C’est une blague non ?
+            Je n’ vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/surprise2" />
+        </frame>
+        <frame id="22">
+            Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/fierte" />
+        </frame>
+        <frame id="23">
+            Quoi, mais attend. Je … Je ne veux pas me marier moi !
+            C’est nul … Je …
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/tristesse" />
+        </frame>
+        <frame id="24">
+            Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <locuteur personnage="thedris" />
+            <expression src="@drawable/surprise" />
+        </frame>
+        <frame id="25">
+            Mais… Non… Je….
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse2" />
         </frame>
-        <frame id='4'>
-            Après de nombreuses périméties, que nous ne développeront pas ici, vous arrivé sans encombres, grâce au pouvoir de l'épée jusqu'au château du roi démon. Vous vous retrouvez, totalement pa hasard, au détour d'un couloir face à face avec le propriétaire des lieux.
-            A) "Meurs, Créature démoniaque !" En agitant votre épée face à vous pour mettre fin au règne du roi démon.
-            B) Bon, j'ai un peu réfléchi en chemin et je me dis que ce serait une bonne idée de communiquer avant de combattre.
-            <choix consequence='5'/>
-            <choix consequence='18'/>
-            <img src="imageframe4"/>
+        <frame id="26">
+            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
         </frame>
-        <frame id='5'>
-            Bravo ! Vous avez héroïquement massacré une personne à qui vous n'aviez rien à reprocher ainsi que tout sont peuple ! * applaudissement sarcastique *
-            <img src="imageframe5"/>
+        <frame id="27">
+            Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidants offusqués de cet affront à leur personne.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
-        <frame id='6'>
-            Le roi Il Palazzo: bonjour, Héros du temps ! Je suis le roi des humains, le grand Il Palazzo ! Nous t'avons convoqué pour que tu ailles tuer le Roi démon !
-            A) Ah ! Pardon, je n'avais pas compris !
-            B) J'avoue avoir un léger doute ...
-            <choix consequence='2'/>
-            <choix consequence='7'/>
-            <img src="imageframe6"/>
+        <frame id="28">
+            Toutes ces escapades nocturnes à l’encontre des règles établies par vos parents respectifs, toute cette adrénaline générée par la sensation de l’interdit, d’être tous les deux ensembles à braver les diktats du monde qui semblent immuables. Il est en quelque sorte un frère pour toi.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
-        <frame id='7'>
-            Le roi Il Palazzo: Un doute ? Pourtant, tous les signes concordent ! Vous êtes le héros que nous attendions ! Si jamais vous n'avez pas encore des "doutes", vous pouvez toujours aller voir la voyante royale, elle vous le confirmera.
-            A) Nan, mais si les signes le disent, et vous avez l'air honnête Monsieur.
-            B) C'est vrai que je ne serais pas contre des explications.
-            <choix consequence='2'/>
-            <choix consequence='8'/>
-            <img src="imageframe7"/>
+        <frame id="29">
+            Salut Chuck.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/attente" />
         </frame>
-        <frame id='8'>
-            Vous rejoignez les quartiers de la voyante, escorté par plusieurs gardes, qui vous laisse seul à seul avec la voyante. La voyante : posez-moi vos questions, j'y répondrai avec plaisir.
-            A) Je suis vraiment le héros du temps.
-            B) Vous êtes vraiment une voyante ?
-            <choix consequence='10'/>
-            <choix consequence='11'/>
-            <img src="imageframe8"/>
+        <frame id="30">
+            Hey Asiel,  tu devineras jamais ce qui m’est arrivé !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/joie" />
         </frame>
-        <!-- frame9 inexistante -->
-        <frame id='10'>
-            La voyante : Évidemment ! Tous les signes concordent, vous êtes forcément le héros du temps !
-            A) Si la magicienne du royaume me l'assure ce doit être vrai ! Je vais retourner voir le roi.
-            B) Mais de quels signes, vous parlez ?
-            <choix consequence='2'/>
-            <choix consequence='14'/>
-            <img src="imageframe10"/>
+        <frame id="31">
+            Hmm... ?
+            <![CDATA[<i>
+            Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
+            </i>]]>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/tristesse" />
         </frame>
-        <frame id='11'>
-            La voyante : Ah non, pas du tout. Le roi est juste très crédule, je me contente de lui dire ce qu'il a envie d'entendre.
-            A) pardon ?
-            B) Du coup cette histoire de héros, c'est n'importe quoi ?
-            <choix consequence='12'/>
-            <choix consequence='13'/>
-            <img src="imageframe11"/>
+        <frame id="32">
+            Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
+            Il y’a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincé dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage. Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/joie" />
         </frame>
-        <frame id='12'>
-            La voyante : je disais ; Le roi est juste très crédule, je me contente de lui dire ce qu'il a envie d'entendre.
-            A) Mais du coup, cette histoire de signes !?
-            <choix consequence='14'/>
-            <img src="imageframe12"/>
+        <frame id="33">
+            Chuck te lance un bout de pain que tu rattrapes de justesse.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
-        <frame id='13'>
-            La voyante : Il existe bien une legende à propos d'un héros tueur de démon mais ça pourrait être n'importe qui. Pareil pour l'épée, à peu prés n'importe qui peux la retirer tant qu'il le veux vraiment. Mais du coup ça pourrait être vous, vous pouvez toujours tenter l'aventure.
-            A) Je pense que je vais quand même tenter ma chance. Je sans que mon destin m'appelle !
-            B) Je ... J'avoue que je suis perplexe. Je n'aipas envie de risquer ma vie en misant sur une petite chance d'être, peu être, un héros.
-            <choix consequence='15'/>
-            <choix consequence='10002'/>
-            <img src="imageframe13"/>
+        <frame id="34">
+            Ahah ! Bien joué mec !
+            Bon, … Faut que j’me vide l’esprit. Viens on bouge un peu ...
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/joie" />
         </frame>
-        <frame id='14'>
-            La voyante : Les villageois se font beaucoup de films, en se basant sur une vieille prophétie, ils invoquent de monde parallèle, des soit disant héros tous les mois, et sont, à chaque fois persuadé d'avoir convoqué le "héros du temps". Mais du coup, ça pourrait être vous, vous pouvez toujours tenter l'aventure.
-            A) Je pense que je vais quand même tenter ma chance. Je sens que mon destin m'appelle !
-            B) Je ... J'avoue que je suis perplexe. Je n'ai pas envie de risquer ma vie en misant sur une petite chance d'être, peu être, un héros.
-            <choix consequence='15'/>
-            <choix consequence='21'/>
-            <img src="imageframe14"/>
+        <frame id="35">
+            Vous vous tenez tous les deux derrière une pile de caisse dans une ruelle attenante à l’église du culte de Xyrus.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
-        <frame id='15'>
-            La voyante : Si tu souhaites réellement tenter ta chance, retourne voir le roi, il te donnera les indications pour mener à bien ta quête.
-            A) Je m'y rend dès à présent !
-            <choix consequence='3'/>
-            <img src="imageframe15"/>
+        <frame id="36">
+            T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/peur" />
         </frame>
-        <frame id='16'>
-            Cela fait plusieurs jours que vous explorer ce nouveau monde, vous découvrez avec émerveillement sa faune, sa flore et ses habitants. Vous avez peu à peu perdu de l'intérêt pour votre quête :
-            A) Vous vous reprenais, il est temps de mener à bien cette aventure !
-            B) Finalement, cette histoire ne vous concerne pas vraiment, vous n'avez aucune raison d'aller tuer ce roi démon.
-            <choix consequence='4'/>
-            <choix consequence='17'/>
-            <img src="imageframe16"/>
+        <frame id="37">
+            Mais oui, t’inquiète ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ?
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/joie" />
         </frame>
-        <frame id='17'>
-            Vous laissez totalement tomber cette querelle qui ne vous concerne pas, vous vivez en pèlerin, aidant les innocents que vous rencontrez et forgeant votre légende de héros errant.
-            <img src="imageframe17"/>
+        <frame id="38">
+            Ouais mais bon.. C’est un abbé quand même, et puis voler un lieu de culte c’est pas une si bonne idée que ça j’pense…
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/neutre" />
         </frame>
-        <frame id='18'>
-            Vous avez discuté avec le roi démon, il vous a expliqué que les démons ne sont pas mauvais mais simplement victimes de discrimination à cause de leur physique et que la guerre opposant les humains au démon n'est pas une guerre sainte, mais une guerre purement géopolitique, qu'il n'existe ni méchants, ni gentils.
-            Il vous explique qu'il souhaite réellement avec votre aide, en temps que pont entre les deux peuples, établir une paix entre les deux peuples
-            A) Vous n'en croyez pas un mot, c'est un démon, il tente de vous manipuler et vous l'attaquez.
-            B) Vous comprenez la requête de votre interlocuteur et retourner voir le roi Il Palazza.
-            <choix consequence='5'/>
-            <choix consequence='19'/>
-            <img src="imageframe18"/>
+        <frame id="39">
+            Pourtant t’as bien dit que tu voulais sérieusement te changer les idées non ? Bah là t’auras une bonne grosse dose d’adrénaline, si ça, ça ne te sort pas de ta mauvaise humeur, je ne sais pas ce qu’il te faut.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/joie" />
         </frame>
-        <frame id='19'>
-            Vous êtes de retour au royaume humain et avez transmis le message de paix du roi démon.
-            Le roi Il Palazzo maintient que le démon vous a manipulé et qu'il faut mettre fin à son règne au plus vite.
-            A) Vous ouvrez enfin les yeux, votre roi à raison, vous retournez au château du roi démon pour mettre fin à cette folie.
-            B) Finalement, le roi démon vous semble bien plus raisonnable que le roi Il Palazzo.
-            Vous rejoignez l'idée de paix commune du roi démon et vous mettez à son service.
-            <choix consequence='5'/>
-            <choix consequence='10001'/>
-            <img src="imageframe19"/>
+        <frame id="40">
+            C’est pas faux,  mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/peur" />
         </frame>
-        <frame id='10001'>
-            Avec votre aide de négociation ont finalement eu lieu entre les humains et les démons et bien qu'ils restent énormément de travail pour arriver à une parfaite cohabitation entre les deux peuples. Mais grâce à vous, ce monde connaît, pour la première fois depuis des centaines d'années, un pas vers la paix.
-            <img src="imageframe20"/>
+        <frame id="41">
+            Okay, allons-y.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/neutre" />
         </frame>
-        <frame id='10002'>
-            Vous considérez que ces histoires ne vous concernent pas et qu'il serait plus intelligent et plus agréable d'aller boire une bière à la taverne du coin.
-            <img src="imageframe21"/>
+        <frame id="42">
+            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercles, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent. De belles statues et tentures aux effigies de l'emblème de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
+            Chuck se déplace silencieusement jusqu'à une petite statuette de marbre. Il gratte un peu son doigt, et un petite bague tombe sur le sol. Chuck s’empresse alors de la ramasser et de la mettre dans sa poche.
+            Suivant son exemple, tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
         </frame>
-        <frame id='10003'>
-            Partir à l'aventure sans arme était la plus grosse erreur possible. Après seulement 2km en dehors des rempart de la ville, vous décédez héroïquement, succombant au assaut répété d'un chaton myope et asthmatique
-            <img src="imageframe22"/>
+        <frame id="43">
+            Hé, regarde là bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revends au marché noir !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/neutre" />
         </frame>
+        <frame id="44">
+            Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/joie" />
+        </frame>
+        <frame id="45">
+            On choppe ça et on se tire pour profiter du marché tant qu’il est ouvert ?
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/neutre" />
+        </frame>
+        <frame id="46">
+            Ça m’va.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/neutre" />
+        </frame>
+        <frame id="47">
+            Alors que Chuck empoignait le mince collier du pendentif, une bourrasque de vent s’éleva dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
+        </frame>
+        <frame id="48">
+            CHUCK, ON SE TIRE ! MAINTENANT !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/surprise2" />
+        </frame>
+        <frame id="49">
+            Vous vous précipitez au-dehors ! Le glas de la garde sonne au loin. Vous courez rapidement sans trop savoir où aller. Le pas de Chuck est très paniqué, jamais tu ne l’as vu comme cela.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+        </frame>
+        <frame id="50">
+            Viens, on va se planquer dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par la on est tranquille !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="asiel" />
+            <expression src="@drawable/peur" />
+        </frame>
+        <frame id="51">
+            <![CDATA[<b>
+            AU VOLEUR, LE COLLIER DE XYRUS !
+            </b>]]>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="voix lointaine" />
+        </frame>
+        <frame id="52">
+            Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquant sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
+            Un garde surgit alors quelques ruelles au devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+        </frame>
+        <frame id="53">
+            Merde !! Comment nous ont-ils retrouvé ?
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/surprise" />
+        </frame>
+        <frame id="54">
+            La ruelle dans laquelle vous vous trouvez est assez longue, mais il ne semble pas y avoir d’issue.
+            Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais choper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merde !
+            Je vaux bien mieux que ça !! Non, pas moyen.
+            Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
+            La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapé. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+        </frame>
+        <frame id="55">
+            PUTAAAAAIN !!
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+            <locuteur personnage="chuck" />
+            <expression src="@drawable/stupefaction" />
+        </frame>
+        <frame id="56">
+            Tu te retournes précipitamment, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage rouge qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+        </frame>
+        <frame id="57">
+            Deux possibilités s’offrent à toi, laquelle choisis-tu ?
+
+
+            a ) Tu reviens en arrière pour l’aider à se relever en prenant le risque de se faire prendre
+
+
+            b) Tu pars devant, abandonnant Chuck en courant vers la maison.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
+        </frame>
+
+        <!--
+
+        <frame id="58">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="59">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="60">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="61">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="62">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="63">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="64">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="65">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="66">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="67">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="68">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="69">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="70">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="71">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="72">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="73">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="74">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="75">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="76">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="77">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="78">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="79">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="80">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="81">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="82">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="83">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="84">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="85">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="86">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="87">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="88">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="89">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="90">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="91">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="92">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="93">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="94">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="95">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="96">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="97">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="98">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="99">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="100">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+
+        -->
+
     </application>
 </PreferenceScreen>

@@ -228,10 +228,11 @@ public class MainActivity extends AppCompatActivity {
         int frameNumber = script.getInt("frameNumber");
         Log.d("OnClickBefore",lastChoiceID+" "+frameNumber+ "-1");
 
-        script.put("frameNumber", 0);
-
         if ( frameNumber > 0 ) {
+
+            script.put("frameNumber", 0);
             setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
+
         }
     }
 

@@ -110,97 +110,97 @@
         </frame>
         <frame id="17">
             Tu grommelles, inquiet et intrigué, et te rassois docilement.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
         </frame>
         <frame id="18">
             Ah ? Quoi donc père ?
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/surprise" />
         </frame>
         <frame id="19">
             Tu sais que notre famille est pérenne depuis plusieurs générations. Notre fortune s'agrandit lentement et nous avons besoin de nouvelles relations pour garder la tête hors de l’eau lorsque l’hiver viendra. J’ai parlé longuement avec  Ser Dulric cet après-midi pendant ma visite au domaine des Florieux.
             Tout comme notre famille, ils ont besoin d’une alliance pour les temps rudes à venir, les premiers symptômes de l’hiver se font déjà ressentir. Leur fille vient d’avoir ses premiers sangs, elle est donc en âge de se marier, c’est pourquoi nous allons organiser ton union avec elle au plus tôt.
-            Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre. 
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/neutre" />
         </frame>
         <frame id="20">
             Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
         </frame>
         <frame id="21">
             Attends, quoi ?! C’est une blague non ?
             Je n’ vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/surprise2" />
         </frame>
         <frame id="22">
             Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/fierte" />
         </frame>
         <frame id="23">
             Quoi, mais attend. Je … Je ne veux pas me marier moi !
             C’est nul … Je …
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse" />
         </frame>
         <frame id="24">
             Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/surprise" />
         </frame>
         <frame id="25">
             Mais… Non… Je….
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse2" />
         </frame>
         <frame id="26">
-            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire. 
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
+            <choix consequence="-1" />
+            <choix consequence="-1" />
         </frame>
         <frame id="27">
             Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidants offusqués de cet affront à leur personne.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="28">
             Toutes ces escapades nocturnes à l’encontre des règles établies par vos parents respectifs, toute cette adrénaline générée par la sensation de l’interdit, d’être tous les deux ensembles à braver les diktats du monde qui semblent immuables. Il est en quelque sorte un frère pour toi.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="29">
             Salut Chuck.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/attente" />
         </frame>
         <frame id="30">
             Hey Asiel,  tu devineras jamais ce qui m’est arrivé !
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/joie" />
         </frame>
@@ -209,154 +209,154 @@
             <![CDATA[<i>
             Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
             </i>]]>
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse" />
         </frame>
         <frame id="32">
             Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
             Il y’a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincé dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage. Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/joie" />
         </frame>
         <frame id="33">
             Chuck te lance un bout de pain que tu rattrapes de justesse.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="34">
             Ahah ! Bien joué mec !
             Bon, … Faut que j’me vide l’esprit. Viens on bouge un peu ...
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/joie" />
         </frame>
         <frame id="35">
             Vous vous tenez tous les deux derrière une pile de caisse dans une ruelle attenante à l’église du culte de Xyrus.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="36">
             T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/peur" />
         </frame>
         <frame id="37">
             Mais oui, t’inquiète ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ?
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/joie" />
         </frame>
         <frame id="38">
             Ouais mais bon.. C’est un abbé quand même, et puis voler un lieu de culte c’est pas une si bonne idée que ça j’pense…
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/neutre" />
         </frame>
         <frame id="39">
             Pourtant t’as bien dit que tu voulais sérieusement te changer les idées non ? Bah là t’auras une bonne grosse dose d’adrénaline, si ça, ça ne te sort pas de ta mauvaise humeur, je ne sais pas ce qu’il te faut.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/joie" />
         </frame>
         <frame id="40">
             C’est pas faux,  mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/peur" />
         </frame>
         <frame id="41">
             Okay, allons-y.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/neutre" />
         </frame>
         <frame id="42">
             Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercles, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent. De belles statues et tentures aux effigies de l'emblème de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
             Chuck se déplace silencieusement jusqu'à une petite statuette de marbre. Il gratte un peu son doigt, et un petite bague tombe sur le sol. Chuck s’empresse alors de la ramasser et de la mettre dans sa poche.
-            Suivant son exemple, tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer ! 
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Suivant son exemple, tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+            <choix consequence="-1" />
+            <choix consequence="-1" />
         </frame>
         <frame id="43">
             Hé, regarde là bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revends au marché noir !
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/eglise"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/neutre" />
         </frame>
         <frame id="44">
             Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé !
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/eglise"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/joie" />
         </frame>
         <frame id="45">
             On choppe ça et on se tire pour profiter du marché tant qu’il est ouvert ?
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/eglise"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/neutre" />
         </frame>
         <frame id="46">
             Ça m’va.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/eglise"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/neutre" />
         </frame>
         <frame id="47">
             Alors que Chuck empoignait le mince collier du pendentif, une bourrasque de vent s’éleva dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/eglise"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
         </frame>
         <frame id="48">
             CHUCK, ON SE TIRE ! MAINTENANT !
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/eglise"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/eglise" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/surprise2" />
         </frame>
         <frame id="49">
             Vous vous précipitez au-dehors ! Le glas de la garde sonne au loin. Vous courez rapidement sans trop savoir où aller. Le pas de Chuck est très paniqué, jamais tu ne l’as vu comme cela.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="50">
             Viens, on va se planquer dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par la on est tranquille !
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/peur" />
         </frame>
@@ -364,23 +364,23 @@
             <![CDATA[<b>
             AU VOLEUR, LE COLLIER DE XYRUS !
             </b>]]>
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="voix lointaine" />
         </frame>
         <frame id="52">
             Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquant sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
             Un garde surgit alors quelques ruelles au devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="53">
             Merde !! Comment nous ont-ils retrouvé ?
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/surprise" />
         </frame>
@@ -390,23 +390,23 @@
             Je vaux bien mieux que ça !! Non, pas moyen.
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapé. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="55">
             PUTAAAAAIN !!
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
             <locuteur personnage="chuck" />
             <expression src="@drawable/stupefaction" />
         </frame>
         <frame id="56">
             Tu te retournes précipitamment, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage rouge qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         <frame id="57">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ? 
@@ -416,9 +416,9 @@
 
 
             b) Tu pars devant, abandonnant Chuck en courant vers la maison.
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-            <img src="@drawable/village"></img>
+            <choix consequence="-1" />
+            <choix consequence="-1" />
+            <img src="@drawable/village" />
         </frame>
         
         <!--
