@@ -10,27 +10,31 @@
             Vous vous trouvez sur le rebord de la fenêtre de votre grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques tâches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <choix consequence='-1' />
             <choix consequence='-1' />
-            <img src="@drawable/frame1" />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='2'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='3'>
             Ce paysage vous rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne vous incombait aucune responsabilité…
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='4'>
             Que donneriez-vous pour retourner à cette douce époque ? ...
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='5'>
             Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids…
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/compatissant" />
         </frame>
@@ -38,6 +42,7 @@
             Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/surprise2" />
         </frame>
@@ -47,6 +52,7 @@
             </i>]]>
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse" />
         </frame>
@@ -54,6 +60,7 @@
             Quoi ? Insolent !
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/surprise2" />
         </frame>
@@ -61,22 +68,26 @@
             Thedris se rapproche furieusement de vous, et vous colle une grosse beigne dans les dents.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='10'>
             AIE.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='11'>
             Vous ne l'aviez pas vu venir celle là. Par réflexe, votre main vient délicatement palper le coup violent que viens de vous asséner votre père.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='12'>
             Descends aider ta mère ! TOUT DE SUITE !
             Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’a tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/surprise" />
         </frame>
@@ -86,11 +97,13 @@
             </i>]]>
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='14'>
             Suite à cette injonction, vous vous en allez en traînant la patte. En ressassant dans votre tête une suite de jurons à l’égard de votre père.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/campagne" />
         </frame>
         <frame id='15'>
             Tu arrives timidement à table, fuyant le regard de ton père. Comme à ton habitude, tu t’assois auprès de ta petite soeur, en face de tes parents. Le repas est déjà servi.
@@ -100,11 +113,13 @@
             Ton père te fusille du regard. Il a l’air d’avoir fermé les yeux sur l’incident de tout à l’heure. Rassuré, tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/salleamanger" />
         </frame>
         <frame id='16'>
             Pas si vite Asiel, j’ai une nouvelle importante à t’annoncer.
             <choix consequence='-1' />
             <choix consequence='-1' />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/neutre" />
         </frame>
@@ -112,11 +127,13 @@
             Tu grommelles, inquiet et intrigué, et te rassois docilement.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
         </frame>
         <frame id="18">
             Ah ? Quoi donc père ?
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/surprise" />
         </frame>
@@ -126,6 +143,7 @@
             Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/neutre" />
         </frame>
@@ -133,12 +151,14 @@
             Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
         </frame>
         <frame id="21">
             Attends, quoi ?! C’est une blague non ?
             Je n’ vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/surprise2" />
         </frame>
@@ -146,6 +166,7 @@
             Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/fierte" />
         </frame>
@@ -154,6 +175,7 @@
             C’est nul … Je …
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse" />
         </frame>
@@ -161,6 +183,7 @@
             Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="@drawable/surprise" />
         </frame>
@@ -168,6 +191,7 @@
             Mais… Non… Je….
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="@drawable/tristesse2" />
         </frame>
@@ -175,6 +199,7 @@
             La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
             <choix consequence="-1" />
             <choix consequence="-1" />
+            <img src="@drawable/salleamanger" />
         </frame>
         <frame id="27">
             Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidants offusqués de cet affront à leur personne.
@@ -416,8 +441,8 @@
 
 
             b) Tu pars devant, abandonnant Chuck en courant vers la maison.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            <choix consequence="58" />
+            <choix consequence="59" />
             <img src="@drawable/village" />
         </frame>
 

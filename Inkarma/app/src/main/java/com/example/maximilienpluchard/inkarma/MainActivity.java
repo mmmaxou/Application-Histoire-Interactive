@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -124,8 +123,6 @@ public class MainActivity extends AppCompatActivity {
                     int id = getResources().getIdentifier("neutre", "drawable", getPackageName());
                     expression.setImageResource(id);
                 }
-
-
                 personnage.setVisibility(View.VISIBLE);
                 expression.setVisibility(View.VISIBLE);
                 locuteur.setVisibility(View.VISIBLE);
@@ -160,11 +157,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Duree en secondes
         long small = size / 25;
-        long moyen = size / 30;
+        long moyen = size + 30 / 30;
         long rapide = size / 35;
 
         //Affichage
         debug.setText(sizeText);
+
+        final int id = frame.id;
 
         //Dailayage
         Handler handler = new Handler();
@@ -172,12 +171,20 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                //Il n'y a pas de choix; on pass
-                if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                    setFrame(frame.id + 1);
+                //Il n'y a pas de choix; on passe
+                if ( id == frame.id ) {
+                    if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                        if (frame.id < 10000) {
+                            int frameNumber = script.getInt("frameNumber");
+                            script.put("frameNumber", frameNumber + 1);
+                            setFrame(id + 1); //Les variables script sont sauvegardées dans le setFrame
+                        } else {
+                            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+                            textView.setText("fin");
+                        }
+                    }
                 }
-                else // Sinon, on cache le nom du personnage et on affiche les choix;
-                {
+                if ( frame.choix[0] != -1 && frame.choix[1] != -1 ) {
                     TextView debug = (TextView) findViewById(R.id.debug);
                     TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
                     Button button1 = (Button) findViewById(R.id.choix1);
@@ -189,8 +196,7 @@ public class MainActivity extends AppCompatActivity {
                     button2.setVisibility(View.VISIBLE);
                 }
             }
-
-        }, moyen * 1000); // 5000ms delay
+        }, moyen * 1000); // xx000ms delay
     }
 
     // Button choix 1
@@ -226,11 +232,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBefore(View view) {
         int lastChoiceID = script.getInt("lastChoiceID");
         int frameNumber = script.getInt("frameNumber");
-        Log.d("OnClickBefore",lastChoiceID+" "+frameNumber+ "-1");
 
         if ( frameNumber > 0 ) {
 
-            script.put("frameNumber", 0);
+            script.put("frameNumber", frameNumber - 1);
             setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
 
         }
