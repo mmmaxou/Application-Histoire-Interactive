@@ -75,7 +75,7 @@
                     android:text="Personnage"
                     android:id="@+id/textViewLocuteur"
                     android:fontFamily="sans-serif"
-                    android:background="#c4ffffff"
+                    android:background="@drawable/cadre"
                     android:layout_alignBottom="@+id/expression"
                     android:layout_marginLeft="5dp"
                     android:textSize="30sp"
@@ -84,7 +84,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="false"
                     android:layout_toEndOf="@+id/expression"
-                    android:padding="5dp" />
+                    android:padding="5dp"
+                    android:layout_toRightOf="@+id/expression" />
 
                 <ImageView
                     app:srcCompat="@mipmap/ic_launcher"
@@ -123,22 +124,28 @@
                         <Button
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@drawable/cadre"
                             android:text="A"
                             android:id="@+id/choix1"
                             android:onClick="onClick1"
                             android:layout_marginLeft="100dp"
                             android:layout_marginRight="100dp"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp" />
 
                         <Button
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@drawable/cadre"
                             android:text="B"
                             android:id="@+id/choix2"
                             android:onClick="onClick2"
                             android:layout_marginLeft="100dp"
                             android:layout_marginRight="100dp"
-                            android:layout_weight="1" />
+                            android:layout_weight="1"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp" />
 
                     </LinearLayout>
 
@@ -179,7 +186,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/scrollView2"
-                android:background="#c4ffffff"
+                android:background="@drawable/cadre"
                 android:minHeight="120dp"
                 android:layout_weight="5"
                 android:layout_margin="6dp"
