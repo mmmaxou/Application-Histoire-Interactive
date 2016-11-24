@@ -17,7 +17,8 @@
         app:srcCompat="@drawable/frame1"
         android:id="@+id/decorImgBox"
         android:layout_weight="2"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:elevation="0dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +27,8 @@
         android:orientation="vertical"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/first_layout">
 
         <LinearLayout
             android:orientation="vertical"
@@ -153,7 +155,8 @@
                         android:orientation="vertical"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:visibility="gone">
 
                         <Button
                             android:text="Next"
@@ -161,7 +164,8 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/choixNext"
                             android:onClick="onClick3"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:visibility="gone" />
 
                         <Button
                             android:text="Before"
@@ -169,7 +173,8 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/buttonBefore"
                             android:layout_weight="1"
-                            android:onClick="onClickBefore" />
+                            android:onClick="onClickBefore"
+                            android:visibility="gone" />
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -194,15 +199,15 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:id="@+id/BoiteDialogue"
-                    android:layout_weight="10"
+                    android:layout_weight="5"
                     android:text="Lorem ipsum"
-                    android:textSize="20dp"
-                    android:textIsSelectable="false" />
+                    android:textSize="20dp" />
             </ScrollView>
 
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

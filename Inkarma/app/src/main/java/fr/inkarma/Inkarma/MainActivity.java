@@ -1,29 +1,40 @@
 package fr.inkarma.Inkarma;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 public class MainActivity extends AppCompatActivity {
 
     static final String PREFS_NAME = "current";
     private Data data;
     private Frame frame;
+    private float x1,x2,y1,y2;
+    static float MIN_DISTANCE;
+    static float TOUCH_DISTANCE;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
         script = new Script();
 
 
+
         setContentView(R.layout.activity_main);
+
+        MIN_DISTANCE = getResources().getDimension(R.dimen.min_distance_swipe);
+        TOUCH_DISTANCE = getResources().getDimension(R.dimen.touch_distance_swipe);
 
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
         registerForContextMenu(imageButton);
@@ -216,6 +231,11 @@ public class MainActivity extends AppCompatActivity {
     // Button Next
     public void onClick3(View view){
 
+        next();
+
+    }
+
+    private void next() {
         if ( frame.id < 10000 ) {
             int frameNumber = script.getInt("frameNumber");
             script.put("frameNumber",frameNumber + 1 );
@@ -224,12 +244,15 @@ public class MainActivity extends AppCompatActivity {
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             textView.setText("fin");
         }
-
     }
 
 
     // Button Before
     public void onClickBefore(View view) {
+        before();
+    }
+
+    private void before() {
         int lastChoiceID = script.getInt("lastChoiceID");
         int frameNumber = script.getInt("frameNumber");
 
@@ -239,7 +262,16 @@ public class MainActivity extends AppCompatActivity {
             setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
 
         }
+
+        long date = System.currentTimeMillis();
+        TextView debug = (TextView) findViewById(R.id.debug);
+        SimpleDateFormat simpleDate = new SimpleDateFormat("'le' dd.MM 'à' h:mm a");
+        debug.setText(simpleDate.format(date));
+
     }
+
+
+
 
 
 
@@ -264,8 +296,26 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_menu :
-                Intent intent1 = new Intent(this, MenuActivity.class);
-                startActivity(intent1);
+
+                new AlertDialog.Builder(this)
+                        .setTitle("Retour au menu Principal")
+                        .setMessage("Etes-vous sur de retourner au Menu principal. Cette action peut entrainer une perte des données non sauvegardées. Sauvegardez votre partie avant en cliquant sur Menu > Sauvegarder.")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                // yes
+                                startMenuActivity();
+
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
                 return true;
 
             case R.id.action_save :
@@ -280,29 +330,62 @@ public class MainActivity extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void startMenuActivity () {
+        Intent intent1 = new Intent(this, MenuActivity.class);
+        startActivity(intent1);
     }
 
     Script script;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
+
+
+        if ( layout.getVisibility() == View.GONE ) {
+
+            layout.setVisibility(View.VISIBLE);
+            return super.onTouchEvent(event);
+
+        }
+        switch(event.getAction())
+        {
+            case MotionEvent.ACTION_DOWN:
+                x1 = event.getX();
+                y1 = event.getY();
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = event.getX();
+                y2 = event.getY();
+                float deltaX = x2 - x1;
+                float deltaY = y2 - y1;
+                Log.d("Debug", "x1 : " + x1 + " ; x2 : " + x2 + " delta : " + deltaX);
+                if (deltaX > MIN_DISTANCE)
+                {
+                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
+                    before();
+
+                }
+                else if ( Math.abs(deltaX) < TOUCH_DISTANCE && Math.abs(deltaY) < TOUCH_DISTANCE )
+                {
+                    Toast.makeText(this, "Touch", Toast.LENGTH_SHORT).show ();
+                    next();
+                }
+                else if ( Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2 )
+                {
+                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
+                    layout.setVisibility(View.GONE);
+                }
+                break;
+        }
+        return super.onTouchEvent(event);
+    }
+
+
+
+
+
 
 
     // Affichage caractère par caracère
