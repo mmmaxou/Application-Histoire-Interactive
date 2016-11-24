@@ -7,43 +7,43 @@ Système de sauvegarde :
 	Contenu de la sauvegarde : {
 		Choix déjà effectués
 		Texte affiché actuel
-		Date et Heure
-		Temps de jeu
+		-- Date et Heure
+		-- Temps de jeu
 	}
 }
 
 Système d'affichage : 
 {
 	En jeu : {	
-		Le texte : 
+		-- Le texte : 
 			S’affiche lettre par lettre
-		L'image de fond avec éventuellement plusieurs couches
-		Image Personnage
-		Image Expression
-		Moyen d'accéder à l'interface (icône en haut à gauche avec un rouage ? )
+		-- L'image de fond avec éventuellement plusieurs couches
+		-- Image Personnage
+		-- Image Expression
+		-- Moyen d'accéder à l'interface (icône en haut à gauche avec un rouage ? )
 Achievment pour les différentes fins (?)
 	}
 	Interface : {
-		Accès aux sauvegardes
-		Sauvegarde instantanée
-		Accès aux paramètres
+		-- Accès aux sauvegardes
+		-- Sauvegarde instantanée
+		-- Accès aux paramètres
 		Historique 
 	}
 }
 
 Paramètres : {
-	Taille du texte
+	-- Taille du texte
 	Vitesse de défilement
 	Son ( couper/régler le volume / arrêter lors d’un appel)
-	Auto-Skip ( Change de dialogue au bout d’un certain temps)
-	Vitesse à laquelle le texte apparaît.
+	-- Auto-Skip ( Change de dialogue au bout d’un certain temps)
+	-- Vitesse à laquelle le texte apparaît.
 	Afficher / Cacher les achievment (?)
 }
 Menu principal : {
-	Nouvelle partie
+	-- Nouvelle partie
 	Charger une sauvegarde rapide( Optionnel )
-	Charger une sauvegarde
-	Paramètres
+	-- Charger une sauvegarde
+	-- Paramètres
 	Galerie ( Optionnel )
 }
 
