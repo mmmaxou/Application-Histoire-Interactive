@@ -1,4 +1,4 @@
-package fr.inkarma.Inkarma.Inkarma;
+package fr.inkarma.Inkarma;
 
 import android.content.Context;
 import android.content.res.XmlResourceParser;
@@ -10,9 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by paul.rodrigues on 24/02/16.
- */
+
 public class Data {
 
     Map<Integer,Frame> frame;

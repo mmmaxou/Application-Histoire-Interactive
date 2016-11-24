@@ -1,4 +1,4 @@
-package fr.inkarma.Inkarma.Inkarma;
+package fr.inkarma.Inkarma;
 
 import org.junit.Test;
 

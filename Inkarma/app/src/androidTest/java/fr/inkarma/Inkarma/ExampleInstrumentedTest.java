@@ -1,4 +1,4 @@
-package fr.inkarma.Inkarma.Inkarma;
+package fr.inkarma.Inkarma;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

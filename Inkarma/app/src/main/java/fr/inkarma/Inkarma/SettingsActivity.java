@@ -1,4 +1,4 @@
-package fr.inkarma.Inkarma.Inkarma;
+package fr.inkarma.Inkarma;
 
 import android.content.Intent;
 import android.os.Bundle;
