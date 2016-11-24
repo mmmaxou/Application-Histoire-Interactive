@@ -7,12 +7,13 @@ android {
         maven { url 'http://repo1.maven.org/maven2' }
     }
     defaultConfig {
-        applicationId "com.example.maximilienpluchard.inkarma"
+        applicationId 'fr.inkarma.Inkarma'
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName '0.0.1'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionNameSuffix 'pre-alpha'
     }
     buildTypes {
         release {
