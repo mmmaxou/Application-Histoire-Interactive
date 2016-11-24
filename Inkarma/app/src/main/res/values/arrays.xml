@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_autoSkipSpeed_entries">
+        <item>Lente</item>
+        <item>Normale</item>
+        <item>Rapide</item>
+    </string-array>
+    <string-array name="pref_autoSkipSpeed_values">
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+    </string-array>
+    <string-array name="pref_textSize_entries" >
+        <item>Petit</item>
+        <item>Normal</item>
+        <item>Gros</item>
+        <item>Très gros</item>
+    </string-array>
+    <string-array name="pref_textSize_values" >
+        <item>12</item>
+        <item>14</item>
+        <item>18</item>
+        <item>22</item>
+    </string-array>
+</resources>

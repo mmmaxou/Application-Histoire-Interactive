@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Passage automatique"
+        android:key="pref_key_autoSkip">
+
+        <CheckBoxPreference
+            android:key="pref_autoSkip"
+            android:title="Passage automatique à l'ecran suivant"
+            android:summary="Au bout d'une certaine durée, on passe automatiquement à l'écran suivant."
+            android:defaultValue="true"
+            android:persistent="true"/>
+        <ListPreference
+            android:dependency="pref_autoSkip"
+            android:key="pref_autoSkipSpeed"
+            android:title="Vitesse de passage automatique"
+            android:dialogTitle="Vitesse"
+            android:entries="@array/pref_autoSkipSpeed_entries"
+            android:entryValues="@array/pref_autoSkipSpeed_values"
+            android:defaultValue="30"
+            android:persistent="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Texte"
+        android:key="pref_key_textSize">
+
+        <ListPreference
+            android:key="pref_textSize"
+            android:title="Taille du texte"
+            android:dialogTitle="Taille"
+            android:entries="@array/pref_textSize_entries"
+            android:entryValues="@array/pref_textSize_values"
+            android:defaultValue="12"
+            android:persistent="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -84,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
 
         Frame tmp = data.get(i);
-
         if(tmp != null) {
             frame = tmp;
 
@@ -100,9 +101,21 @@ public class MainActivity extends AppCompatActivity {
             Button buttonNext = (Button) findViewById(R.id.choixNext);
 
 
+            //Reglage de la taille du texte
+            SharedPreferences reglages = PreferenceManager.getDefaultSharedPreferences(this);
+            String a = reglages.getString("pref_textSize", "14");
+            Float textSize = Float.parseFloat(a);
+
+            textView.setTextSize(textSize);
 
             // Affichage du texte
-            textView.setText(script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString());
+            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                textView.setText(Html.fromHtml(text));
+            }
 
             // On cache les choix
             button1.setVisibility(View.GONE);
@@ -151,52 +164,58 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void autoSkip(TextView textView, TextView debug) {
-        // Calcul du temps d'auto skip
-        int size = textView.length();
-        String sizeText = Integer.toString(size);
 
-        // Duree en secondes
-        long small = size / 25;
-        long moyen = size + 30 / 30;
-        long rapide = size / 35;
+        //Recuperation des informations de vitesse de skip
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean autoSpeed = settings.getBoolean("pref_autoSkip", false);
+        if ( autoSpeed ) {
 
-        //Affichage
-        debug.setText(sizeText);
+            String skipSpeedText = settings.getString("pref_autoSkipSpeed", "30");
+            int skipSpeed = Integer.parseInt(skipSpeedText);
+//        debug.setText(skipSpeedText);
 
-        final int id = frame.id;
+            // Calcul du temps d'auto skip
+            int size = textView.length();
 
-        //Dailayage
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+            // Duree en secondes
+            int speed = (size / skipSpeed) + 1;
 
-            @Override
-            public void run() {
-                //Il n'y a pas de choix; on passe
-                if ( id == frame.id ) {
-                    if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                        if (frame.id < 10000) {
-                            int frameNumber = script.getInt("frameNumber");
-                            script.put("frameNumber", frameNumber + 1);
-                            setFrame(id + 1); //Les variables script sont sauvegardées dans le setFrame
-                        } else {
-                            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
-                            textView.setText("fin");
+            final int id = frame.id;
+
+            //Dailayage
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    //Il n'y a pas de choix; on passe
+                    if (id == frame.id) {
+                        if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                            if (frame.id < 10000) {
+                                int frameNumber = script.getInt("frameNumber");
+                                script.put("frameNumber", frameNumber + 1);
+                                setFrame(id + 1); //Les variables script sont sauvegardées dans le setFrame
+                            } else {
+                                TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+                                textView.setText("fin");
+                            }
                         }
                     }
-                }
-                if ( frame.choix[0] != -1 && frame.choix[1] != -1 ) {
-                    TextView debug = (TextView) findViewById(R.id.debug);
-                    TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
-                    Button button1 = (Button) findViewById(R.id.choix1);
-                    Button button2 = (Button) findViewById(R.id.choix2);
+                    if (frame.choix[0] != -1 && frame.choix[1] != -1) {
+                        TextView debug = (TextView) findViewById(R.id.debug);
+                        TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
+                        Button button1 = (Button) findViewById(R.id.choix1);
+                        Button button2 = (Button) findViewById(R.id.choix2);
 
-                    debug.setText("Next");
-                    locuteur.setVisibility(View.GONE);
-                    button1.setVisibility(View.VISIBLE);
-                    button2.setVisibility(View.VISIBLE);
+                        debug.setText("Next");
+                        locuteur.setVisibility(View.GONE);
+                        button1.setVisibility(View.VISIBLE);
+                        button2.setVisibility(View.VISIBLE);
+                    }
                 }
-            }
-        }, moyen * 1000); // xx000ms delay
+            }, speed * 1000); // xx000ms delay
+
+        }
     }
 
     // Button choix 1

@@ -14,7 +14,7 @@ Système de sauvegarde :
 
 Système d'affichage : 
 {
-	En jeu : {
+	En jeu : {	
 		Le texte : 
 			S’affiche lettre par lettre
 		L'image de fond avec éventuellement plusieurs couches
