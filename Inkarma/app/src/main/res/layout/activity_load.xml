@@ -23,22 +23,70 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/imageViewSaveID1"
-                android:scaleType="centerCrop"
                 android:layout_weight="1"
-                android:background="@drawable/cadregris"
-                android:layout_margin="10dp" />
-            <ImageView
+                android:id="@+id/RelativeLayoutSaveID1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageViewSaveID1"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    android:background="@drawable/cadregris"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:text="@string/save_disponible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/TextViewSaveID1" />
+
+                <TextView
+                    android:text="Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageViewSaveID1"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/textViewDateSaveID1"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/imageViewSaveID2"
-                android:scaleType="centerCrop"
                 android:layout_weight="1"
-                android:background="@drawable/cadregris"
-                android:layout_margin="10dp" />
+                android:id="@+id/RelativeLayoutSaveID2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageViewSaveID2"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    android:background="@drawable/cadregris"
+                    android:layout_margin="10dp" />
+                <TextView
+                    android:text="@string/save_disponible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/TextViewSaveID2" />
+                <TextView
+                    android:text="Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageViewSaveID2"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/textViewDateSaveID2"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -48,23 +96,67 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/imageViewSaveID3"
-                android:scaleType="centerCrop"
                 android:layout_weight="1"
-                android:background="@drawable/cadregris"
-                android:layout_margin="10dp" />
+                android:id="@+id/RelativeLayoutSaveID3">
 
-            <ImageView
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageViewSaveID3"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    android:background="@drawable/cadregris"
+                    android:layout_margin="10dp" />
+                <TextView
+                    android:text="@string/save_disponible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/TextViewSaveID3" />
+                <TextView
+                    android:text="Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageViewSaveID3"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/textViewDateSaveID3"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/imageViewSaveID4"
-                android:scaleType="centerCrop"
                 android:layout_weight="1"
-                android:background="@drawable/cadregris"
-                android:layout_margin="10dp" />
+                android:id="@+id/RelativeLayoutSaveID4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageViewSaveID4"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    android:background="@drawable/cadregris"
+                    android:layout_margin="10dp" />
+                <TextView
+                    android:text="@string/save_disponible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/TextViewSaveID4" />
+                <TextView
+                    android:text="Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageViewSaveID4"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/textViewDateSaveID4"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
         </LinearLayout>
 

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -20,21 +21,21 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 
 public class MainActivity extends AppCompatActivity {
 
     static final String PREFS_NAME = "current";
     private Data data;
     private Frame frame;
+    private Boolean gameRunning = false;
     private float x1,x2,y1,y2;
     static float MIN_DISTANCE;
     static float TOUCH_DISTANCE;
+    Script script;
 
 
     @Override
@@ -43,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         script = new Script();
-
-
 
         setContentView(R.layout.activity_main);
 
@@ -181,54 +180,57 @@ public class MainActivity extends AppCompatActivity {
 
         //Recuperation des informations de vitesse de skip
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        Boolean autoSpeed = settings.getBoolean("pref_autoSkip", false);
-        if ( autoSpeed ) {
+        final Boolean autoSpeed = settings.getBoolean("pref_autoSkip", false);
 
-            String skipSpeedText = settings.getString("pref_autoSkipSpeed", "30");
-            int skipSpeed = Integer.parseInt(skipSpeedText);
-//        debug.setText(skipSpeedText);
+        String skipSpeedText = settings.getString("pref_autoSkipSpeed", "30");
+        int skipSpeed = Integer.parseInt(skipSpeedText);
+//      debug.setText(skipSpeedText);
 
-            // Calcul du temps d'auto skip
-            int size = textView.length();
+        // Calcul du temps d'auto skip
+        int size = textView.length();
 
-            // Duree en secondes
-            int speed = (size / skipSpeed) + 1;
+        // Duree en secondes
+        int speed = (size / skipSpeed) + 1;
 
-            final int id = frame.id;
+        final int id = frame.id;
 
-            //Dailayage
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
+        //Dailayage
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
 
-                @Override
-                public void run() {
-                    //Il n'y a pas de choix; on passe
-                    if (id == frame.id) {
-                        if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                            if (frame.id < 10000) {
-                                int frameNumber = script.getInt("frameNumber");
-                                script.put("frameNumber", frameNumber + 1);
-                                setFrame(id + 1); //Les variables script sont sauvegardées dans le setFrame
-                            } else {
-                                TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
-                                textView.setText("fin");
-                            }
+            @Override
+            public void run() {
+                //Il n'y a pas de choix; on passe
+                if (id == frame.id && gameRunning && autoSpeed) {
+                    if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                        if (frame.id < 10000) {
+                            int frameNumber = script.getInt("frameNumber");
+                            script.put("frameNumber", frameNumber + 1);
+                            setFrame(id + 1); //Les variables script sont sauvegardées dans le setFrame
+                        } else {
+                            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+                            textView.setText("fin");
                         }
                     }
-                    if (frame.choix[0] != -1 && frame.choix[1] != -1) {
-                        TextView debug = (TextView) findViewById(R.id.debug);
-                        TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
-                        Button button1 = (Button) findViewById(R.id.choix1);
-                        Button button2 = (Button) findViewById(R.id.choix2);
-
-                        debug.setText("Next");
-                        locuteur.setVisibility(View.GONE);
-                        button1.setVisibility(View.VISIBLE);
-                        button2.setVisibility(View.VISIBLE);
-                    }
                 }
-            }, speed * 1000); // xx000ms delay
+                // Il y a un choix, on l'affiche
+                displayChoice();
+            }
+        }, speed * 1000); // xx000ms delay
 
+    }
+
+    private void displayChoice() {
+        if (frame.choix[0] != -1 && frame.choix[1] != -1 && gameRunning) {
+            TextView debug = (TextView) findViewById(R.id.debug);
+            TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
+            Button button1 = (Button) findViewById(R.id.choix1);
+            Button button2 = (Button) findViewById(R.id.choix2);
+
+            debug.setText("Next");
+            locuteur.setVisibility(View.GONE);
+            button1.setVisibility(View.VISIBLE);
+            button2.setVisibility(View.VISIBLE);
         }
     }
 
@@ -280,12 +282,6 @@ public class MainActivity extends AppCompatActivity {
             setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
 
         }
-
-        long date = System.currentTimeMillis();
-        TextView debug = (TextView) findViewById(R.id.debug);
-        SimpleDateFormat simpleDate = new SimpleDateFormat("'le' dd.MM 'à' h:mm a");
-        debug.setText(simpleDate.format(date));
-
     }
 
 
@@ -295,6 +291,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Button Settings
     public void onClickSettings(View view) {
+        gameRunning = false;
+        Log.d("State : ", gameRunning.toString());
         openContextMenu(view);
     }
 
@@ -307,6 +305,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+
         switch(item.getItemId()) {
             case R.id.action_settings :
                 Intent intent = new Intent(this, SettingsActivity.class);
@@ -337,23 +336,31 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_save :
+                Intent intent2 = new Intent(this, LoadActivity.class);
+                intent2.putExtra("EXTRA_STATE_SAVE", "Oui");
+                startActivity(intent2);
                 return true;
 
             case R.id.action_load :
-                Intent intent2 = new Intent(this, LoadActivity.class);
-                startActivity(intent2);
+                Intent intent3 = new Intent(this, LoadActivity.class);
+                startActivity(intent3);
                 return true;
         }
 
         return super.onContextItemSelected(item);
     }
 
+    @Override
+    public void onContextMenuClosed(Menu menu) {
+
+        gameRunning = true;
+        super.onContextMenuClosed(menu);
+    }
+
     public void startMenuActivity () {
         Intent intent1 = new Intent(this, MenuActivity.class);
         startActivity(intent1);
     }
-
-    Script script;
 
     @Override
     public boolean onTouchEvent(MotionEvent event)
@@ -363,6 +370,7 @@ public class MainActivity extends AppCompatActivity {
 
         if ( layout.getVisibility() == View.GONE ) {
 
+            gameRunning = true;
             layout.setVisibility(View.VISIBLE);
             return super.onTouchEvent(event);
 
@@ -381,18 +389,19 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Debug", "x1 : " + x1 + " ; x2 : " + x2 + " delta : " + deltaX);
                 if (deltaX > MIN_DISTANCE)
                 {
-                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
+//                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
                     before();
 
                 }
                 else if ( Math.abs(deltaX) < TOUCH_DISTANCE && Math.abs(deltaY) < TOUCH_DISTANCE )
                 {
-                    Toast.makeText(this, "Touch", Toast.LENGTH_SHORT).show ();
+//                    Toast.makeText(this, "Touch", Toast.LENGTH_SHORT).show ();
                     next();
                 }
                 else if ( Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2 )
                 {
-                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
+//                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
+                    gameRunning = false;
                     layout.setVisibility(View.GONE);
                 }
                 break;
