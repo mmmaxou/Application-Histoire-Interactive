@@ -9,6 +9,8 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.Layout;
+import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -26,6 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import static java.lang.Math.toIntExact;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -101,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Sauvegarde du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
+        final SharedPreferences.Editor editor = settings.edit();
 
         editor.putString("autosave",script.serialize());
 
@@ -117,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView personnage =(ImageView) findViewById(R.id.personnage);
             ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+            final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.first_layout);
             TextView debug = (TextView) findViewById(R.id.debug);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
@@ -181,6 +185,10 @@ public class MainActivity extends AppCompatActivity {
                 background.setImageResource(frame.img);
             }
 
+            //Affichage du layout
+            mainLayout.setVisibility(View.VISIBLE);
+
+
             historiqueView = (ListView) findViewById(R.id.ListViewHistorique);
             ArrayAdapter<Spanned> arrayAdapter = new ArrayAdapter<>(
                     this,
@@ -190,18 +198,32 @@ public class MainActivity extends AppCompatActivity {
             historiqueView.setAdapter(arrayAdapter);
 
 
-            /*
+
             historiqueView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    Object o = prestListView.getItemAtPosition(position);
-                    prestationEco str=(prestationEco)o;//As you are using Default String Adapter
-                    Toast.makeText(getBaseContext(),historique[] ,Toast.LENGTH_SHORT).show();
+                    gameRunning = true;
+                    historiqueView.setVisibility(View.GONE);
+                    mainLayout.setVisibility(View.VISIBLE);
+                    String save = historique.get( position );
+                    editor.putString("autosave", save);
+                    script.evaluate(save);
+
+                    //TODO : THIS
+                    Log.d("DEBUG : ", "position : " + position + "    ; id : " + id);
+
+                    for ( int i = position; i < historique.size() + 1; i++) {
+                        historique.remove(historique.size() - 1 );
+                        historiqueText.remove(historiqueText.size() - 1);
+                    }
+
+                    setFrame(script.getInt("frame"));
+
                 }
             });
 
-*/
+
 
 
             //On enregistre la frame courante dans l'historique
@@ -224,9 +246,9 @@ public class MainActivity extends AppCompatActivity {
         historique.add(currentSave);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            historiqueText.add(Html.fromHtml(frame.text, Html.FROM_HTML_MODE_LEGACY));
+            historiqueText.add(Html.fromHtml(frame.text + " SIZE :  " + historique.size(), Html.FROM_HTML_MODE_LEGACY));
         } else {
-            historiqueText.add(Html.fromHtml(frame.text));
+            historiqueText.add(Html.fromHtml(frame.text + " SIZE :  " + historique.size()));
         }
     }
 
@@ -355,13 +377,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
 
+        Boolean stopGame = false;
+
         switch(item.getItemId()) {
             case R.id.action_settings :
+                gameRunning = true;
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
 
             case R.id.action_menu :
+                gameRunning = true;
 
                 new AlertDialog.Builder(this)
                         .setTitle("Retour au menu Principal")
@@ -385,16 +411,26 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_save :
+                gameRunning = true;
                 Intent intent2 = new Intent(this, LoadActivity.class);
                 intent2.putExtra("EXTRA_STATE_SAVE", "Oui");
                 startActivity(intent2);
                 return true;
 
             case R.id.action_load :
+                gameRunning = true;
                 Intent intent3 = new Intent(this, LoadActivity.class);
                 startActivity(intent3);
+
                 return true;
             case R.id.action_historique :
+                gameRunning = false;
+
+                LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
+                ListView listView = (ListView) findViewById(R.id.ListViewHistorique);
+
+                listView.setVisibility(View.VISIBLE);
+                layout.setVisibility(View.GONE);
 
                 return true;
         }
@@ -404,8 +440,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onContextMenuClosed(Menu menu) {
-
-        gameRunning = true;
         super.onContextMenuClosed(menu);
     }
 
