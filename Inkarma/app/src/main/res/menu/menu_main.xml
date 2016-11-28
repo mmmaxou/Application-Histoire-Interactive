@@ -10,4 +10,6 @@
         android:title="@string/action_save"/>
     <item android:id="@+id/action_load"
         android:title="@string/action_load"/>
+    <item android:id="@+id/action_historique"
+        android:title="@string/action_historique"/>
 </menu>

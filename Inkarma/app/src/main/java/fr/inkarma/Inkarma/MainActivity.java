@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -16,21 +17,30 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     static final String PREFS_NAME = "current";
     private Data data;
     private Frame frame;
+    List<String> historique = new ArrayList<>();
+    List<Spanned> historiqueText = new ArrayList<>();
+    ListView historiqueView;
     private Boolean gameRunning = false;
     private float x1,x2,y1,y2;
     static float MIN_DISTANCE;
@@ -171,11 +181,55 @@ public class MainActivity extends AppCompatActivity {
                 background.setImageResource(frame.img);
             }
 
+            historiqueView = (ListView) findViewById(R.id.ListViewHistorique);
+            ArrayAdapter<Spanned> arrayAdapter = new ArrayAdapter<>(
+                    this,
+                    android.R.layout.simple_list_item_1,
+                    historiqueText);
+
+            historiqueView.setAdapter(arrayAdapter);
+
+
+            /*
+            historiqueView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    Object o = prestListView.getItemAtPosition(position);
+                    prestationEco str=(prestationEco)o;//As you are using Default String Adapter
+                    Toast.makeText(getBaseContext(),historique[] ,Toast.LENGTH_SHORT).show();
+                }
+            });
+
+*/
+
+
+            //On enregistre la frame courante dans l'historique
+            addToHistorique(settings);
+
             //////////// AUTO SKIP
             autoSkip(textView, debug);
 
         }
     }
+
+    private void addToHistorique(SharedPreferences settings) {
+        String currentSave = settings.getString("autosave", null);
+
+        if (historique.size() >= 10 ) {
+
+            historique.remove(0);
+            historiqueText.remove(0);
+        }
+        historique.add(currentSave);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            historiqueText.add(Html.fromHtml(frame.text, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            historiqueText.add(Html.fromHtml(frame.text));
+        }
+    }
+
     private void autoSkip(TextView textView, TextView debug) {
 
         //Recuperation des informations de vitesse de skip
@@ -284,11 +338,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-
-
-
     // Button Settings
     public void onClickSettings(View view) {
         gameRunning = false;
@@ -344,6 +393,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_load :
                 Intent intent3 = new Intent(this, LoadActivity.class);
                 startActivity(intent3);
+                return true;
+            case R.id.action_historique :
+
                 return true;
         }
 
@@ -408,8 +460,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onTouchEvent(event);
     }
-
-
 
 
 

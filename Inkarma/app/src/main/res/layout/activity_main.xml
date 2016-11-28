@@ -28,7 +28,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/first_layout">
+        android:id="@+id/first_layout"
+        android:visibility="invisible">
 
         <LinearLayout
             android:orientation="vertical"
@@ -208,5 +209,13 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ListViewHistorique"
+        android:layout_margin="30dp"
+        android:background="@android:color/background_light"
+        android:alpha="0.7" />
 
 </RelativeLayout>
