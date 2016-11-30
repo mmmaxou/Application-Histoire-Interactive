@@ -9,8 +9,6 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.text.Layout;
-import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -27,8 +25,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import static java.lang.Math.toIntExact;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -136,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextSize(textSize);
 
             // Affichage du texte
-            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+//            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+            String text = script.evaluate("\""+frame.text+"\"").toString();
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
@@ -210,7 +207,6 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("autosave", save);
                     script.evaluate(save);
 
-                    //TODO : THIS
                     Log.d("DEBUG : ", "position : " + position + "    ; id : " + id);
 
                     int size = historique.size();
