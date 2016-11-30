@@ -213,9 +213,10 @@ public class MainActivity extends AppCompatActivity {
                     //TODO : THIS
                     Log.d("DEBUG : ", "position : " + position + "    ; id : " + id);
 
-                    for ( int i = position; i < historique.size() + 1; i++) {
-                        historique.remove(historique.size() - 1 );
-                        historiqueText.remove(historiqueText.size() - 1);
+                    int size = historique.size();
+                    for ( int i = position; i < size ; i++) {
+                        historique.remove( historique.size() - 1 );
+                        historiqueText.remove( historiqueText.size() - 1 );
                     }
 
                     setFrame(script.getInt("frame"));
@@ -246,9 +247,9 @@ public class MainActivity extends AppCompatActivity {
         historique.add(currentSave);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            historiqueText.add(Html.fromHtml(frame.text + " SIZE :  " + historique.size(), Html.FROM_HTML_MODE_LEGACY));
+            historiqueText.add(Html.fromHtml(frame.text, Html.FROM_HTML_MODE_LEGACY));
         } else {
-            historiqueText.add(Html.fromHtml(frame.text + " SIZE :  " + historique.size()));
+            historiqueText.add(Html.fromHtml(frame.text));
         }
     }
 
