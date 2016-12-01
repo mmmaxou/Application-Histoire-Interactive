@@ -97,10 +97,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFrame(int i) {
 
-
         if ( handler != null) {
             handler.removeCallbacksAndMessages(null);
         }
+
         // Sauvegarde la frame actuelle i
         script.put("frame", i);
 
