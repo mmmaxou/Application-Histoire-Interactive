@@ -17,6 +17,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     static float MIN_DISTANCE;
     static float TOUCH_DISTANCE;
     Script script;
+    private Handler handler;
 
 
     @Override
@@ -94,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFrame(int i) {
 
+        if ( handler != null) {
+            handler.removeCallbacksAndMessages(null);
+        }
 
         // Sauvegarde la frame actuelle i
         script.put("frame", i);
@@ -110,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
         Frame tmp = data.get(i);
         if(tmp != null) {
             frame = tmp;
+
+            // On relance l'autoRun  :
+            setGameRunning( true );
 
             // Declaration des elements
             ImageView background =(ImageView) findViewById(R.id.decorImgBox);
@@ -179,6 +188,12 @@ public class MainActivity extends AppCompatActivity {
 
             // Affichage des images
             if (frame.img != -1) {
+
+                Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation);
+                background.startAnimation(animation);
+
+
+
                 background.setImageResource(frame.img);
             }
 
@@ -193,14 +208,11 @@ public class MainActivity extends AppCompatActivity {
                     historiqueText);
 
             historiqueView.setAdapter(arrayAdapter);
-
-
-
             historiqueView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    gameRunning = true;
+                    setGameRunning( true );
                     historiqueView.setVisibility(View.GONE);
                     mainLayout.setVisibility(View.VISIBLE);
                     String save = historique.get( position );
@@ -268,13 +280,13 @@ public class MainActivity extends AppCompatActivity {
         final int id = frame.id;
 
         //Dailayage
-        Handler handler = new Handler();
+        handler = new Handler();
         handler.postDelayed(new Runnable() {
 
             @Override
             public void run() {
                 //Il n'y a pas de choix; on passe
-                if (id == frame.id && gameRunning && autoSpeed) {
+                if (id == frame.id && getGameRunning() && autoSpeed) {
                     if (frame.choix[0] == -1 && frame.choix[1] == -1) {
                         if (frame.id < 10000) {
                             int frameNumber = script.getInt("frameNumber");
@@ -294,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayChoice() {
-        if (frame.choix[0] != -1 && frame.choix[1] != -1 && gameRunning) {
+        if (frame.choix[0] != -1 && frame.choix[1] != -1 && getGameRunning() ) {
             TextView debug = (TextView) findViewById(R.id.debug);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
@@ -346,6 +358,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void before() {
+
+        historique.remove( historique.size() -1 );
+        historique.remove( historique.size() -1 );
+        historiqueText.remove( historiqueText.size() -1 );
+        historiqueText.remove( historiqueText.size() -1 );
+
         int lastChoiceID = script.getInt("lastChoiceID");
         int frameNumber = script.getInt("frameNumber");
 
@@ -359,8 +377,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Button Settings
     public void onClickSettings(View view) {
-        gameRunning = false;
-        Log.d("State : ", gameRunning.toString());
+        setGameRunning( false );
+        Log.d("State : ", String.valueOf(getGameRunning()));
         openContextMenu(view);
     }
 
@@ -374,18 +392,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
 
-        Boolean stopGame = false;
+        setGameRunning( false );
 
         switch(item.getItemId()) {
             case R.id.action_settings :
-                gameRunning = true;
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
 
             case R.id.action_menu :
-                gameRunning = true;
-
                 new AlertDialog.Builder(this)
                         .setTitle("Retour au menu Principal")
                         .setMessage("Etes-vous sur de retourner au Menu principal. Cette action peut entrainer une perte des données non sauvegardées. Sauvegardez votre partie avant en cliquant sur Menu > Sauvegarder.")
@@ -408,21 +423,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_save :
-                gameRunning = true;
                 Intent intent2 = new Intent(this, LoadActivity.class);
                 intent2.putExtra("EXTRA_STATE_SAVE", "Oui");
                 startActivity(intent2);
                 return true;
 
             case R.id.action_load :
-                gameRunning = true;
                 Intent intent3 = new Intent(this, LoadActivity.class);
                 startActivity(intent3);
 
                 return true;
             case R.id.action_historique :
-                gameRunning = false;
-
                 LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
                 ListView listView = (ListView) findViewById(R.id.ListViewHistorique);
 
@@ -453,7 +464,8 @@ public class MainActivity extends AppCompatActivity {
 
         if ( layout.getVisibility() == View.GONE ) {
 
-            gameRunning = true;
+            setGameRunning( true );
+
             layout.setVisibility(View.VISIBLE);
             return super.onTouchEvent(event);
 
@@ -484,19 +496,34 @@ public class MainActivity extends AppCompatActivity {
                 else if ( Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2 )
                 {
 //                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
-                    gameRunning = false;
+                    setGameRunning( false );
                     layout.setVisibility(View.GONE);
                 }
                 break;
         }
         return super.onTouchEvent(event);
+
+    }
+
+
+    private boolean getGameRunning () {
+
+        Log.d("Game Running state : " , gameRunning.toString());
+        return gameRunning;
+
+    }
+
+    private void setGameRunning( boolean state) {
+
+        Log.d("GameRunning state : " , gameRunning.toString());
+        gameRunning = state;
+
     }
 
 
 
 
-
-    // Affichage caractère par caracère
+    // Affichage caractère par caractère
 /*
     private Handler mHandler = new Handler();
     private Runnable characterAdder = new Runnable() {
