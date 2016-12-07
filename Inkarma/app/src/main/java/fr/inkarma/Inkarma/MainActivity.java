@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -16,26 +17,37 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     static final String PREFS_NAME = "current";
     private Data data;
     private Frame frame;
+    List<String> historique = new ArrayList<>();
+    List<Spanned> historiqueText = new ArrayList<>();
+    ListView historiqueView;
     private Boolean gameRunning = false;
     private float x1,x2,y1,y2;
     static float MIN_DISTANCE;
     static float TOUCH_DISTANCE;
     Script script;
+    private Handler handler;
 
 
     @Override
@@ -85,13 +97,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFrame(int i) {
 
+        if ( handler != null) {
+            handler.removeCallbacksAndMessages(null);
+        }
 
         // Sauvegarde la frame actuelle i
         script.put("frame", i);
 
         // Sauvegarde du i
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
+        final SharedPreferences.Editor editor = settings.edit();
 
         editor.putString("autosave",script.serialize());
 
@@ -102,11 +117,15 @@ public class MainActivity extends AppCompatActivity {
         if(tmp != null) {
             frame = tmp;
 
+            // On relance l'autoRun  :
+            setGameRunning( true );
+
             // Declaration des elements
             ImageView background =(ImageView) findViewById(R.id.decorImgBox);
             ImageView personnage =(ImageView) findViewById(R.id.personnage);
             ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+            final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.first_layout);
             TextView debug = (TextView) findViewById(R.id.debug);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
@@ -122,7 +141,8 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextSize(textSize);
 
             // Affichage du texte
-            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+//            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+            String text = script.evaluate("\""+frame.text+"\"").toString();
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
@@ -168,14 +188,79 @@ public class MainActivity extends AppCompatActivity {
 
             // Affichage des images
             if (frame.img != -1) {
+
+                Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation);
+                background.startAnimation(animation);
+
+
+
                 background.setImageResource(frame.img);
             }
+
+            //Affichage du layout
+            mainLayout.setVisibility(View.VISIBLE);
+
+
+            historiqueView = (ListView) findViewById(R.id.ListViewHistorique);
+            ArrayAdapter<Spanned> arrayAdapter = new ArrayAdapter<>(
+                    this,
+                    android.R.layout.simple_list_item_1,
+                    historiqueText);
+
+            historiqueView.setAdapter(arrayAdapter);
+            historiqueView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+
+                    setGameRunning( true );
+                    historiqueView.setVisibility(View.GONE);
+                    mainLayout.setVisibility(View.VISIBLE);
+                    String save = historique.get( position );
+                    editor.putString("autosave", save);
+                    script.evaluate(save);
+
+                    Log.d("DEBUG : ", "position : " + position + "    ; id : " + id);
+
+                    int size = historique.size();
+                    for ( int i = position; i < size ; i++) {
+                        historique.remove( historique.size() - 1 );
+                        historiqueText.remove( historiqueText.size() - 1 );
+                    }
+
+                    setFrame(script.getInt("frame"));
+
+                }
+            });
+
+
+
+
+            //On enregistre la frame courante dans l'historique
+            addToHistorique(settings);
 
             //////////// AUTO SKIP
             autoSkip(textView, debug);
 
         }
     }
+
+    private void addToHistorique(SharedPreferences settings) {
+        String currentSave = settings.getString("autosave", null);
+
+        if (historique.size() >= 10 ) {
+
+            historique.remove(0);
+            historiqueText.remove(0);
+        }
+        historique.add(currentSave);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            historiqueText.add(Html.fromHtml(frame.text, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            historiqueText.add(Html.fromHtml(frame.text));
+        }
+    }
+
     private void autoSkip(TextView textView, TextView debug) {
 
         //Recuperation des informations de vitesse de skip
@@ -195,13 +280,13 @@ public class MainActivity extends AppCompatActivity {
         final int id = frame.id;
 
         //Dailayage
-        Handler handler = new Handler();
+        handler = new Handler();
         handler.postDelayed(new Runnable() {
 
             @Override
             public void run() {
                 //Il n'y a pas de choix; on passe
-                if (id == frame.id && gameRunning && autoSpeed) {
+                if (id == frame.id && getGameRunning() && autoSpeed) {
                     if (frame.choix[0] == -1 && frame.choix[1] == -1) {
                         if (frame.id < 10000) {
                             int frameNumber = script.getInt("frameNumber");
@@ -221,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayChoice() {
-        if (frame.choix[0] != -1 && frame.choix[1] != -1 && gameRunning) {
+        if (frame.choix[0] != -1 && frame.choix[1] != -1 && getGameRunning() ) {
             TextView debug = (TextView) findViewById(R.id.debug);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
@@ -273,6 +358,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void before() {
+
+        historique.remove( historique.size() -1 );
+        historique.remove( historique.size() -1 );
+        historiqueText.remove( historiqueText.size() -1 );
+        historiqueText.remove( historiqueText.size() -1 );
+
         int lastChoiceID = script.getInt("lastChoiceID");
         int frameNumber = script.getInt("frameNumber");
 
@@ -284,15 +375,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-
-
-
     // Button Settings
     public void onClickSettings(View view) {
-        gameRunning = false;
-        Log.d("State : ", gameRunning.toString());
+        setGameRunning( false );
+        Log.d("State : ", String.valueOf(getGameRunning()));
         openContextMenu(view);
     }
 
@@ -306,6 +392,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
 
+        setGameRunning( false );
+
         switch(item.getItemId()) {
             case R.id.action_settings :
                 Intent intent = new Intent(this, SettingsActivity.class);
@@ -313,7 +401,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_menu :
-
                 new AlertDialog.Builder(this)
                         .setTitle("Retour au menu Principal")
                         .setMessage("Etes-vous sur de retourner au Menu principal. Cette action peut entrainer une perte des données non sauvegardées. Sauvegardez votre partie avant en cliquant sur Menu > Sauvegarder.")
@@ -344,6 +431,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_load :
                 Intent intent3 = new Intent(this, LoadActivity.class);
                 startActivity(intent3);
+
+                return true;
+            case R.id.action_historique :
+                LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
+                ListView listView = (ListView) findViewById(R.id.ListViewHistorique);
+
+                listView.setVisibility(View.VISIBLE);
+                layout.setVisibility(View.GONE);
+
                 return true;
         }
 
@@ -352,8 +448,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onContextMenuClosed(Menu menu) {
-
-        gameRunning = true;
         super.onContextMenuClosed(menu);
     }
 
@@ -370,7 +464,8 @@ public class MainActivity extends AppCompatActivity {
 
         if ( layout.getVisibility() == View.GONE ) {
 
-            gameRunning = true;
+            setGameRunning( true );
+
             layout.setVisibility(View.VISIBLE);
             return super.onTouchEvent(event);
 
@@ -401,21 +496,34 @@ public class MainActivity extends AppCompatActivity {
                 else if ( Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2 )
                 {
 //                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
-                    gameRunning = false;
+                    setGameRunning( false );
                     layout.setVisibility(View.GONE);
                 }
                 break;
         }
         return super.onTouchEvent(event);
+
+    }
+
+
+    private boolean getGameRunning () {
+
+        Log.d("Game Running state : " , gameRunning.toString());
+        return gameRunning;
+
+    }
+
+    private void setGameRunning( boolean state) {
+
+        Log.d("GameRunning state : " , gameRunning.toString());
+        gameRunning = state;
+
     }
 
 
 
 
-
-
-
-    // Affichage caractère par caracère
+    // Affichage caractère par caractère
 /*
     private Handler mHandler = new Handler();
     private Runnable characterAdder = new Runnable() {

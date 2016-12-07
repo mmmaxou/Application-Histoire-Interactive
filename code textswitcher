@@ -1,0 +1,21 @@
+
+        imageSwitcher = (ImageSwitcher)findViewById(R.id.switcher);
+
+
+        Animation in = AnimationUtils.loadAnimation(this,android.R.anim.slide_in_left);
+        Animation out = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right);
+        imageSwitcher.setInAnimation(in);
+        imageSwitcher.setOutAnimation(out);
+
+    }
+
+
+    public void onClick (View view) {
+        
+        
+
+        ImageView imageView = (ImageView) imageSwitcher.getNextView();
+        imageView.setImageResource(R.mipmap.perso1);
+
+        imageSwitcher.showNext();
+    }

@@ -209,4 +209,13 @@
 
     </LinearLayout>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ListViewHistorique"
+        android:layout_margin="30dp"
+        android:background="@android:color/background_light"
+        android:alpha="0.7"
+        android:visibility="gone" />
+
 </RelativeLayout>
