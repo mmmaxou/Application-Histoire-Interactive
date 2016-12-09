@@ -1,0 +1,17 @@
+*{margin:0;padding:0;}
+body{
+    background-image:url('../img/mountain.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:bottom;
+    height:100vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+nav{
+    font-size:2em;
+    text-align: right;
+    margin-right:30px;
+    position:relative;
+    transform: translateY(50%);
+    top:0;
+}
