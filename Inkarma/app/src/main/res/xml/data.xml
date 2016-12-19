@@ -7,18 +7,31 @@
             
         </frame>
         <frame id='1'>
+<<<<<<< HEAD
+            Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grè des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+            <choix consequence='-1' />
+            <choix consequence='-1' />
+            <img src="@drawable/campagne" />
+=======
             Tu te trouve sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grè des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
+>>>>>>> 5bc0f7b2ddda37c8a3715240126a131b402beeff
         </frame>
         <frame id='2'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <img src="campagne" />
         </frame>
         <frame id='3'>
+<<<<<<< HEAD
+            Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…<choix consequence='-1' />
+            <choix consequence='-1' />
+            <img src="@drawable/campagne" />
+=======
             Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…
             
             
             <img src="campagne" />
+>>>>>>> 5bc0f7b2ddda37c8a3715240126a131b402beeff
         </frame>
         <frame id='4'>
             Que donnerais-tu pour retourner à cette douce époque ? ...
@@ -60,7 +73,7 @@
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
-        <frame id='9'>
+        <frame id='9'>  
             Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
             
             
@@ -152,6 +165,7 @@
         <frame id="21">
             Attends, quoi ?! C’est une blague non ?
             Je n’ vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
+
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="salleamanger" />
