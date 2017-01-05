@@ -310,83 +310,83 @@
         </frame>
         
         <!-- A modifier pour changer les frames id + choix et têtes -->
+        <!-- TODO Changement de Karma -->
+
         <frame id="4210">
             Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
             A)Tu demandes à Chuck de la laisser par terre.
             B)Tu ne fais rien.
             <img src="village" />
-            <choix consequence="4220" />
-            <choix consequence="42" />
+            <choix consequence="4211" />
+            <choix consequence="4213" />
         </frame>
-        <frame id="4220">
+        <frame id="4211">
             Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, ils pourraient avoir caché un sortilège dedans !
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
+            <choix consequence="4220" />
         </frame>
-        <frame id="4230">
+        <frame id="4212">
             Pas faux ! Je la laisse là du coup.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
-        <frame id="4240">
+        <frame id="4213">
             Chuck s’empresse alors de la ramasser et de la mettre dans sa poche. Heureusement qu’elle ne retenait pas de sortilège !
         </frame>
-        <frame id="4250">
+        <frame id="4214">
             Cool, avec ça on pourra s’acheter des pommes ! 
             <locuteur personnage="chuck" />
             <expression src="joie" />
+            <choix consequence="4220" />
         </frame>
 
 
-        <!-- TODO Finir cette partie et raccorder avec le reste -->
+        <!-- TODO Changement de Karma -->
 
 
-        <frame id="00">
-            Tu t’approches de l’autel et l’inspecte. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. 
-        </frame>
-        <frame id="00">
+        <frame id="4220">
+            Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
             A)Tu prends une pierre dans ce monticule
-            Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
-        </frame>
-        <frame id="00">
             B)Tu ne fais rien
-            Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.
+            <choix consequence="4221" />
+            <choix consequence="4222" />
         </frame>
-        <frame id="00">
+        <frame id="4221">
+            Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+            <choix consequence="4230" />
+        </frame>
+        <frame id="4222">
+            Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.
+            <choix consequence="4230" />
+        </frame>
+        <frame id="4230">
             Soudainement, un éclat plus vif que les autres attire l’attention de Chuck.
         </frame>
         <!-- FIN modif -->
         
         <frame id="4300">
             Hé, regarde là-bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revend au marché noir !
-            
-            
             <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
         <frame id="4400">
-            Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé ! 
-            
-            
+            Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé !
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
         </frame>
         <frame id="4500">
             On choppe ça et on se tire pour profiter du marché tant qu’il est ouvert ?
-            
-            
             <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
         <frame id="4600">
             Ça m’va.
-            
-            
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
@@ -399,28 +399,20 @@
         
         <frame id="4700">
             Alors que Chuck empoigne le mince collier du pendentif, une bourrasque de vent gronde dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif et maudissant ta cupidité.
-            
-            
             <img src="eglise" />
         </frame>
         <frame id="4800">
             CHUCK, ON SE TIRE ! MAINTENANT !
-            
-            
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
         </frame>
         <frame id="4900">
             Vous vous précipitez au-dehors ! L'alarme de la garde sonne au loin. Vous courez rapidement sans trop savoir où aller. Le pas de Chuck est très paniqué, jamais tu ne l’as vu comme cela.
-            
-            
             <img src="village" />
         </frame>
         <frame id="5000">
             Viens, on va se planquer dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par là on est tranquille !
-            
-            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
@@ -429,22 +421,16 @@
             <![CDATA[<b>
             AU VOLEUR, LE COLLIER DE XYRUS !
             </b>]]>
-            
-            
             <img src="village" />
             <locuteur personnage="voix lointaine" />
         </frame>
         <frame id="5200">
             Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquent sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
             Un garde surgit alors quelques ruelles au-devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
-            
-            
             <img src="village" />
         </frame>
         <frame id="5300">
             Merde !! Comment nous ont-ils retrouvés ?
-            
-            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
@@ -455,23 +441,16 @@
             Je vaux bien mieux que ça !! Non, pas moyen.
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapés. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
-            
-            
             <img src="village" />
         </frame>
         <frame id="5500">
             PUTAAAAAIN !!
-            
-            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="stupefaction" />
         </frame>
         <frame id="5600">
             Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
- 
-            
-            
             <img src="village" />
         </frame>
         <frame id="5700">
@@ -482,8 +461,8 @@
 
 
             b) Tu pars devant, abandonnant Chuck en courant vers la maison.
-            <choix consequence="58" />
-            <choix consequence="59" />
+            <choix consequence="5800" />
+            <choix consequence="5900" />
             <img src="village" />
         </frame>
 

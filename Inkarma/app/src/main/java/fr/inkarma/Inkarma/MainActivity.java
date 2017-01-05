@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             i = script.getInt("frame"); // Initialise le i au travers de la frame
         } else {
             i = 1;
+            Log.d("Debug", Integer.toString(i));
         }
 
 
@@ -336,7 +337,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void next() {
-        if ( frame.id < 10000 ) {
+        if ( frame.id < 1000000 ) {
             int frameNumber = script.getInt("frameNumber");
             script.put("frameNumber",frameNumber + 1 );
             setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
