@@ -7,19 +7,27 @@ frame {
     width:700px;
     margin:auto;
     font-size:24px;
-    background-color:rgba(204, 255, 251, 0.79);
+    background-color:rgb(226, 226, 226);
+    padding-right: 10px;
+    padding-left:10px;
+    padding-bottom:10px;
+    margin-bottom: 20px;
 	
 }
 frame:before {
 	margin-top:20px;
+    margin-right:-10px;
+    margin-left:-10px;
 	content:'#' attr(id);
 	display: block;
-	background-color:#ffbbff;
+	background-color:#c1c1c1;
 }
 
 img {
 }
 img:after {
+    border-top:1px solid black;
+    margin-top :10px;
 	display: block;
 	content : 'Décor : ' attr(src);
 }
