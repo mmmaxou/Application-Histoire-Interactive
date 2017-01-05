@@ -7,7 +7,6 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -39,6 +38,7 @@ public class Data {
                     cpt = 0;
                 } else if ("choix".equals(xpp.getName())) {// début d'une nouvelle catégorie
                     currentFrame.choix[cpt] = xpp.getAttributeIntValue(null, "consequence", -1);
+                    currentFrame.choixText[cpt] = xpp.getAttributeValue(null, "placeholder");
                     cpt++;
                 } else if ("img".equals(xpp.getName())) {// début d'une nouvelle image
                     String src = xpp.getAttributeValue(null, "src");

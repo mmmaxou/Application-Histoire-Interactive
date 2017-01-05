@@ -69,9 +69,9 @@ public class MenuActivity extends AppCompatActivity {
         Script script = new Script();
 
         script.put("heroName","toto");
-        script.put("frame", 1);
+        script.put("frame", 100);
         script.put("frameNumber", 0);
-        script.put("lastChoiceID", 1);
+        script.put("lastChoiceID", 100);
 
         SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();

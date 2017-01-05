@@ -314,14 +314,12 @@
 
         <frame id="4210">
             Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
-            A)Tu demandes à Chuck de la laisser par terre.
-            B)Tu ne fais rien.
             <img src="village" />
-            <choix consequence="4211" />
-            <choix consequence="4213" />
+            <choix consequence="4211" placeholder="Demander à Chuck de la laisser par terre."></choix>
+            <choix consequence="4213" placeholder="Ne rien faire"></choix>
         </frame>
         <frame id="4211">
-            Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, ils pourraient avoir caché un sortilège dedans !
+            Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, il pourrait y avoir un sortilège caché dedans !
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
@@ -334,7 +332,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="4213">
-            Chuck s’empresse alors de la ramasser et de la mettre dans sa poche. Heureusement qu’elle ne retenait pas de sortilège !
+            Chuck s’empresse alors de la ramasser et de la mettre dans sa poche. Heureusement qu’elle ne retenait pas de sortilèges !
         </frame>
         <frame id="4214">
             Cool, avec ça on pourra s’acheter des pommes ! 
@@ -349,13 +347,11 @@
 
         <frame id="4220">
             Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
-            A)Tu prends une pierre dans ce monticule
-            B)Tu ne fais rien
-            <choix consequence="4221" />
-            <choix consequence="4222" />
+            <choix consequence="4221" placeholder="Prendre une pierre dans ce monticule" />
+            <choix consequence="4222" placeholder="Ne rien faire"/>
         </frame>
         <frame id="4221">
-            Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+            Délicatement, tu prends celle se situant au sommet et la ranges dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
             <choix consequence="4230" />
         </frame>
         <frame id="4222">
@@ -455,14 +451,8 @@
         </frame>
         <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
-
-
-            a ) Tu reviens en arrière pour l’aider à se relever en prenant le risque de te faire prendre
-
-
-            b) Tu pars devant, abandonnant Chuck en courant vers la maison.
-            <choix consequence="5800" />
-            <choix consequence="5900" />
+            <choix consequence="5800" placeholder="Revenir en arrière et l'aider à se relever"/>
+            <choix consequence="5900" placeholder="Partir et abandonner Chuck"/>
             <img src="village" />
         </frame>
 

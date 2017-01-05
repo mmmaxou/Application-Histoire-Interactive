@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         script = new Script();
 
         setContentView(R.layout.activity_main);
@@ -142,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextSize(textSize);
 
             // Affichage du texte
-            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
-//            String text = script.evaluate("\""+frame.text+"\"").toString();
+//            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+            String text = script.evaluate("'#'+frame+\""+frame.text+"\"").toString();
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
@@ -180,17 +179,13 @@ public class MainActivity extends AppCompatActivity {
                 locuteur.setVisibility(View.INVISIBLE);
             }
 
-            // Si il n'y a pas de choix, on affiche un bouton pour passer à la frame suivante.
-            if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                buttonNext.setVisibility(View.VISIBLE);
-            } else {
-                buttonNext.setVisibility(View.GONE);
-            }
+//            // Si il n'y a pas de choix, on affiche un bouton pour passer à la frame suivante.
+//            if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+//                buttonNext.setVisibility(View.VISIBLE);
+//            } else {
+//                buttonNext.setVisibility(View.GONE);
+//            }
 
-            //Si il n'y a qu'un choix, on va a cet endroit
-            if (frame.choix[0] != -1 && frame.choix[1] == -1 ){
-                setFrame(frame.choix[0]);
-            }
 
             // Affichage des images
             if (frame.img != -1) {
@@ -235,9 +230,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-
-
-
             //On enregistre la frame courante dans l'historique
             addToHistorique(settings);
 
@@ -278,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
         int size = textView.length();
 
         // Duree en secondes
-        int speed = (size / skipSpeed) + 1;
+        int speed = (size / skipSpeed) + 2;
 
         final int id = frame.id;
 
@@ -294,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
                         next();
                     }
                 }
-                // Il y a un choix, on l'affiche
+                // On essaie d'afficher le choix
                 displayChoice();
             }
         }, speed * 1000); // xx000ms delay
@@ -310,6 +302,8 @@ public class MainActivity extends AppCompatActivity {
 
             debug.setText("Next");
             locuteur.setVisibility(View.GONE);
+            button1.setText(frame.choixText[0]);
+            button2.setText(frame.choixText[1]);
             button1.setVisibility(View.VISIBLE);
             button2.setVisibility(View.VISIBLE);
         }
@@ -317,15 +311,15 @@ public class MainActivity extends AppCompatActivity {
 
     // Button choix 1
     public void onClick1(View view){
-        script.put("lastChoiceID", frame.id);
-        script.put("frameNumber", 0);
+//        script.put("lastChoiceID", frame.id);
+//        script.put("frameNumber", 0);
         setFrame(frame.choix[0]); //Les variables script sont sauvegardées dans le setFrame
     }
 
     // Button choix 2
     public void onClick2(View view){
-        script.put("lastChoiceID", frame.id);
-        script.put("frameNumber", 0);
+//        script.put("lastChoiceID", frame.id);
+//        script.put("frameNumber", 0);
         setFrame(frame.choix[1]); //Les variables script sont sauvegardées dans le setFrame
     }
 
@@ -338,9 +332,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void next() {
         if ( frame.id < 1000000 ) {
-            int frameNumber = script.getInt("frameNumber");
-            script.put("frameNumber",frameNumber + 1 );
-            setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
+//            int frameNumber = script.getInt("frameNumber");
+//            script.put("frameNumber",frameNumber + 1 );
+
+            //Si il n'y a qu'un choix, on va a cet endroit
+            if (frame.choix[0] != -1 && frame.choix[1] == -1 ){
+                data.get(frame.choix[0]).precedent = frame;
+                setFrame(frame.choix[0]);
+            } else if ( frame.choix[0] == -1 || frame.choix[1] == -1) {
+                setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
+            }
         } else {
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             textView.setText("fin");
@@ -362,11 +363,9 @@ public class MainActivity extends AppCompatActivity {
             historiqueText.remove(historiqueText.size() - 1);
         }
 
-        int frameNumber = script.getInt("frameNumber");
+        if ( frame.precedent.choix[0] == -1 || frame.precedent.choix[1] == -1 ) {
 
-        if ( frameNumber > 0 ) {
-
-            script.put("frameNumber", frameNumber - 1);
+//            script.put("frameNumber", frameNumber - 1);
             setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
 
         }

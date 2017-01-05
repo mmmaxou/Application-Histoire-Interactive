@@ -133,7 +133,9 @@
                             android:layout_marginRight="100dp"
                             android:layout_weight="1"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp" />
+                            android:layout_marginTop="5dp"
+                            android:textColor="?android:attr/textColorTertiary"
+                            android:textSize="20dp" />
 
                         <Button
                             android:layout_width="match_parent"
@@ -146,7 +148,9 @@
                             android:layout_marginRight="100dp"
                             android:layout_weight="1"
                             android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp" />
+                            android:layout_marginTop="5dp"
+                            android:textSize="20dp"
+                            android:textColor="?android:attr/textColorTertiary" />
 
                     </LinearLayout>
 
@@ -202,7 +206,8 @@
                     android:id="@+id/BoiteDialogue"
                     android:layout_weight="5"
                     android:text="Lorem ipsum"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:textColor="?android:attr/textColorTertiary" />
             </ScrollView>
 
         </LinearLayout>

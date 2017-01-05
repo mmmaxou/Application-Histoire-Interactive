@@ -11,6 +11,7 @@ public class Frame {
     int img = -1;
     int expression = -1;
     int locuteurImg;
+    String[] choixText;
     String locuteur = "";
 
     Frame precedent,suivant;
@@ -19,6 +20,8 @@ public class Frame {
         choix= new int[2];
         choix[0] = -1;
         choix[1] = -1;
-
+        choixText = new String[2];
+        choixText[0] = "";
+        choixText[1] = "";
     }
 }
