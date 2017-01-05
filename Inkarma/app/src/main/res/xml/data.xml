@@ -6,8 +6,7 @@
             
             
         </frame>
-        <frame id='1'>
-            Tu te trouve sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grè des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+        <frame id='1'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
         </frame>
         <frame id='2'>
@@ -16,8 +15,6 @@
         </frame>
         <frame id='3'>
             Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…
-            
-            
             <img src="campagne" />
         </frame>
         <frame id='4'>
@@ -44,7 +41,7 @@
         </frame>
         <frame id='7'>
             <![CDATA[<i>
-            Tu murmure entre tes dents… ‘Mais quel petit con celui la !
+            Tu murmures entre tes dents… ‘Mais quel petit con celui la !
             </i>]]>
             
             
@@ -60,8 +57,8 @@
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
-        <frame id='9'>
-            Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
+        <frame id='9'>  
+           Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
             
             
             <img src="campagne" />
@@ -73,7 +70,7 @@
             <img src="campagne" />
         </frame>
         <frame id='11'>
-            Tu ne l'avais pas vue venir celle là. Par réflexe, ta main viens délicatement palper le coup violent que viens de t'asséner votre père.
+            Tu ne l'avais pas vu venir celle là. Par réflexe, ta main viens délicatement palper le coup violent que viens de t'asséner ton père.
             
             
             <img src="campagne" />
@@ -96,7 +93,7 @@
             <img src="campagne" />
         </frame>
         <frame id='14'>
-            Suite à cette injonction, tu t'en va en traînant la patte. En ressassant dans ta tête une suite de jurons à l’égard de votre père.
+            Suite à cette injonction, tu t'en va en traînant la patte. En ressassant dans ta tête une suite de jurons à l’égard de ton père.
             
             
             <img src="campagne" />
@@ -151,7 +148,8 @@
         </frame>
         <frame id="21">
             Attends, quoi ?! C’est une blague non ?
-            Je n’ vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
+            Je ne vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
+
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="salleamanger" />
@@ -167,7 +165,7 @@
             <expression src="fierte" />
         </frame>
         <frame id="23">
-            Quoi, mais attends. Je … Je ne veux pas me marier moi !
+            Quoi, mais attend. Je … Je ne veux pas me marier moi !
             C’est nul … Je …
             <choix consequence="-1" />
             <choix consequence="-1" />
@@ -192,13 +190,13 @@
             <expression src="tristesse2" />
         </frame>
         <frame id="26">
-            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormi, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
+            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="salleamanger" />
         </frame>
         <frame id="27">
-            Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cents coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidants offusqués de cet affront à leur personne.
+            Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="village" />
@@ -237,7 +235,7 @@
             <expression src="tristesse" />
         </frame>
         <frame id="32">
-            Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui couraient, ils avaient l’air de fuir quelque chose.
+            Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
             Il y a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincés dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage. Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
             <choix consequence="-1" />
             <choix consequence="-1" />
@@ -315,14 +313,51 @@
             <expression src="neutre" />
         </frame>
         <frame id="42">
-            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercles, c’est une pièce très grande, dans laquelle chacun de tes pas résonne. De belles statues et tentures aux effigies de l'emblème de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
-            Chuck se déplace silencieusement jusqu'à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol. Chuck s’empresse alors de la ramasser et de la mettre dans sa poche.
-            Suivant son exemple, tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. Délicatement, tu prends celle se situant au sommet et la ranges dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercle, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent. De belles statues et tentures aux effigies de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
             <choix consequence="-1" />
             <choix consequence="-1" />
         </frame>
+        
+        <!-- A modifier pour changer les frames id + choix et têtes -->
+        <frame id="">
+            Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol. 
+        </frame>
+        <frame id="">
+            A)Tu demandes à Chuck de la laisser par terre 
+            Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, ils pourraient avoir caché un sortilège dedans !
+            
+        </frame>
+        <frame id="">
+            Pas faux ! Je la laisse là du coup.
+            <locuteur personnage="chuck" />
+        </frame>
+        <frame id="">
+            B)Tu ne fais rien 
+            Chuck s’empresse alors de la ramasser et de la mettre dans sa poche. Heureusement qu’elle ne retenait pas de sortilège !
+            
+        </frame>
+        <frame id="">
+            Cool, avec ça on pourra s’acheter des pommes ! 
+            <locuteur personnage="chuck" />
+        </frame>
+        <frame id="">
+            Tu t’approches de l’autel et l’inspecte. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. 
+        </frame>
+        <frame id="">
+            A)Tu prends une pierre dans ce monticule
+            Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+        </frame>
+        <frame id="">
+            B)Tu ne fais rien
+            Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.
+        </frame>
+        <frame id="">
+            Soudainement, un éclat plus vif que les autres attire l’attention de Chuck.
+        </frame>
+        <!-- FIN modif -->
+        
         <frame id="43">
-            Hé, regarde là bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revend au marché noir !
+            Hé, regarde là-bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revend au marché noir !
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="eglise" />
@@ -330,7 +365,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="44">
-            Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé !
+            Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé ! 
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="eglise" />
@@ -353,8 +388,14 @@
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
+        
+        <!--AJOUT d'une frame -->
+        <frame id="">
+            Perdant toute prudence, tu laisses ton ami s’emparer du pendentif.
+        </frame>
+        
         <frame id="47">
-            Alors que Chuck empoigne le mince collier du pendentif, une bourrasque de vent gronde dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif.
+            Alors que Chuck empoigne le mince collier du pendentif, une bourrasque de vent gronde dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif et maudissant ta cupidité.
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="eglise" />
@@ -391,8 +432,8 @@
             <locuteur personnage="voix lointaine" />
         </frame>
         <frame id="52">
-            Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquant sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
-            Un garde surgit alors quelques ruelles au devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
+            Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquent sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
+            Un garde surgit alors quelques ruelles au-devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="village" />
@@ -424,7 +465,8 @@
             <expression src="stupefaction" />
         </frame>
         <frame id="56">
-            Tu te retournes précipitamment, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage rouge qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
+            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
+ 
             <choix consequence="-1" />
             <choix consequence="-1" />
             <img src="village" />
