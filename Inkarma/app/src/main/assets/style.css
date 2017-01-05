@@ -4,37 +4,45 @@ application {
 }
 frame {
 	display:block;
+    width:700px;
+    margin:auto;
+    font-size:24px;
+    background-color:rgb(226, 226, 226);
+    padding-right: 10px;
+    padding-left:10px;
+    padding-bottom:10px;
+    margin-bottom: 20px;
 	
 }
 frame:before {
 	margin-top:20px;
+    margin-right:-10px;
+    margin-left:-10px;
 	content:'#' attr(id);
 	display: block;
-	background-color:#FDB;
+	background-color:#c1c1c1;
 }
 
 img {
 }
 img:after {
+    border-top:1px solid black;
+    margin-top :10px;
 	display: block;
 	content : 'Décor : ' attr(src);
-	background-color:#FEC;
 }
 
 locuteur:after {
 	display: inline;
 	content: 'locuteur : ' attr(personnage);
-	background-color:#FFF;
 }
 
 expression:after {
 	display: inline;
 	content: '( ' attr(src) ' )';
-	background-color:#FFF;
 }
 
 choix:after {
 	display: inline;
 	content: '[ ' attr(consequence) ' ]';
-	background-color:#EEE;
 }
