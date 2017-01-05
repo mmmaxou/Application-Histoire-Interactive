@@ -9,6 +9,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 public class Data {
@@ -19,7 +20,7 @@ public class Data {
     public Data(Context context) throws XmlPullParserException, IOException {
 
         //instanciations
-        frame = new HashMap() ;
+        frame = new TreeMap<>() ;
         Frame currentFrame = null;
         int cpt = 0;
 
@@ -64,6 +65,17 @@ public class Data {
                     currentFrame.text = xpp.getText(); // On met le text de coté pour la fin de la balise.
             }
             eventType = xpp.next(); // au suivant !
+        }
+
+
+        // Parcours la map pour ajouter les champs suivant et précédent
+        currentFrame = null;
+        for(Frame nextFrame: frame.values()){
+            nextFrame.precedent = currentFrame;
+            if (currentFrame != null){
+                currentFrame.suivant = nextFrame;
+            }
+            currentFrame = nextFrame;
         }
 
     }

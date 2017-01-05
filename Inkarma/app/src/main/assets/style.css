@@ -1,0 +1,40 @@
+PreferenceScreen {}
+application {
+
+}
+frame {
+	display:block;
+	
+}
+frame:before {
+	margin-top:20px;
+	content:'#' attr(id);
+	display: block;
+	background-color:#FDB;
+}
+
+img {
+}
+img:after {
+	display: block;
+	content : 'Décor : ' attr(src);
+	background-color:#FEC;
+}
+
+locuteur:after {
+	display: inline;
+	content: 'locuteur : ' attr(personnage);
+	background-color:#FFF;
+}
+
+expression:after {
+	display: inline;
+	content: '( ' attr(src) ' )';
+	background-color:#FFF;
+}
+
+choix:after {
+	display: inline;
+	content: '[ ' attr(consequence) ' ]';
+	background-color:#EEE;
+}

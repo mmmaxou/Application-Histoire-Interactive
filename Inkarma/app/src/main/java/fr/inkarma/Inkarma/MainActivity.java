@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(imageButton);
 
        // if(newGame)
-        //////////chargement du i
+        //////////chargement du i qui est la frame sur laquelle on s'est arreté
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         int i;
 
@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextSize(textSize);
 
             // Affichage du texte
-//            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
-            String text = script.evaluate("\""+frame.text+"\"").toString();
+            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
+//            String text = script.evaluate("\""+frame.text+"\"").toString();
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
@@ -186,14 +186,16 @@ public class MainActivity extends AppCompatActivity {
                 buttonNext.setVisibility(View.GONE);
             }
 
+            //Si il n'y a qu'un choix, on va a cet endroit
+            if (frame.choix[0] != -1 && frame.choix[1] == -1 ){
+                setFrame(frame.choix[0]);
+            }
+
             // Affichage des images
             if (frame.img != -1) {
 
                 Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation);
                 background.startAnimation(animation);
-
-
-
                 background.setImageResource(frame.img);
             }
 
@@ -248,10 +250,10 @@ public class MainActivity extends AppCompatActivity {
         String currentSave = settings.getString("autosave", null);
 
         if (historique.size() >= 10 ) {
-
             historique.remove(0);
             historiqueText.remove(0);
         }
+
         historique.add(currentSave);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -288,14 +290,7 @@ public class MainActivity extends AppCompatActivity {
                 //Il n'y a pas de choix; on passe
                 if (id == frame.id && getGameRunning() && autoSpeed) {
                     if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-                        if (frame.id < 10000) {
-                            int frameNumber = script.getInt("frameNumber");
-                            script.put("frameNumber", frameNumber + 1);
-                            setFrame(id + 1); //Les variables script sont sauvegardées dans le setFrame
-                        } else {
-                            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
-                            textView.setText("fin");
-                        }
+                        next();
                     }
                 }
                 // Il y a un choix, on l'affiche
@@ -344,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
         if ( frame.id < 10000 ) {
             int frameNumber = script.getInt("frameNumber");
             script.put("frameNumber",frameNumber + 1 );
-            setFrame(frame.id + 1); //Les variables script sont sauvegardées dans le setFrame
+            setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
         } else {
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             textView.setText("fin");
@@ -359,18 +354,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void before() {
 
-        historique.remove( historique.size() -1 );
-        historique.remove( historique.size() -1 );
-        historiqueText.remove( historiqueText.size() -1 );
-        historiqueText.remove( historiqueText.size() -1 );
+        if ( historique.size() >= 2 ) {
+            historique.remove(historique.size() - 1);
+            historique.remove(historique.size() - 1);
+            historiqueText.remove(historiqueText.size() - 1);
+            historiqueText.remove(historiqueText.size() - 1);
+        }
 
-        int lastChoiceID = script.getInt("lastChoiceID");
         int frameNumber = script.getInt("frameNumber");
 
         if ( frameNumber > 0 ) {
 
             script.put("frameNumber", frameNumber - 1);
-            setFrame(lastChoiceID + frameNumber - 1); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
+            setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
 
         }
     }

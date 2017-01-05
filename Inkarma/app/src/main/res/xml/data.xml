@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
-        <frame id='0'>
+        <frame id='000'>
             PAGE PAR DEFAUT
             
             
         </frame>
-        <frame id='1'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+        <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
         </frame>
-        <frame id='2'>
+        <frame id='200'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <img src="campagne" />
         </frame>
-        <frame id='3'>
+        <frame id='300'>
             Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…
             <img src="campagne" />
         </frame>
-        <frame id='4'>
+        <frame id='400'>
             Que donnerais-tu pour retourner à cette douce époque ? ...
             
             
             <img src="campagne" />
         </frame>
-        <frame id='5'>
+        <frame id='500'>
             Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids…
             
             
@@ -31,7 +32,7 @@
             <locuteur personnage="asiel" />
             <expression src="compatissant" />
         </frame>
-        <frame id='6'>
+        <frame id='600'>
             Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
             
             
@@ -39,7 +40,7 @@
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
-        <frame id='7'>
+        <frame id='700'>
             <![CDATA[<i>
             Tu murmures entre tes dents… ‘Mais quel petit con celui la !
             </i>]]>
@@ -49,7 +50,7 @@
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
-        <frame id='8'>
+        <frame id='800'>
             Quoi ? Insolent !
             
             
@@ -57,25 +58,25 @@
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
-        <frame id='9'>  
+        <frame id='900'>  
            Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
             
             
             <img src="campagne" />
         </frame>
-        <frame id='10'>
+        <frame id='1000'>
             <![CDATA[<b>AIE.</b>]]>
             
             
             <img src="campagne" />
         </frame>
-        <frame id='11'>
+        <frame id='1100'>
             Tu ne l'avais pas vu venir celle là. Par réflexe, ta main viens délicatement palper le coup violent que viens de t'asséner ton père.
             
             
             <img src="campagne" />
         </frame>
-        <frame id='12'>
+        <frame id='1200'>
             Descends aider ta mère ! TOUT DE SUITE !
             Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’a tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
             
@@ -84,7 +85,7 @@
             <locuteur personnage="thedris" />
             <expression src="surprise" />
         </frame>
-        <frame id='13'>
+        <frame id='1300'>
             <![CDATA[<i>
             Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
             </i>]]>
@@ -92,386 +93,388 @@
             
             <img src="campagne" />
         </frame>
-        <frame id='14'>
+        <frame id='1400'>
             Suite à cette injonction, tu t'en va en traînant la patte. En ressassant dans ta tête une suite de jurons à l’égard de ton père.
             
             
             <img src="campagne" />
         </frame>
-        <frame id='15'>
+        <frame id='1500'>
             Tu arrives timidement à table, fuyant le regard de ton père. Comme à ton habitude, tu t’assois auprès de ta petite soeur, en face de tes parents. Le repas est déjà servi.
             <![CDATA[<i>
             Cool, je n’avais vraiment pas envie de devoir m’occuper de ce repas.
             </i>]]>
             Ton père te fusille du regard. Il a l’air d’avoir fermé les yeux sur l’incident de tout à l’heure. Rassuré, tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
-            
-            
             <img src="salleamanger" />
         </frame>
-        <frame id='16'>
+        <frame id='1600'>
             Pas si vite Asiel, j’ai une nouvelle importante à t’annoncer.
-            
-            
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
         </frame>
-        <frame id="17">
+        <frame id="1700">
             Tu grommelles, inquiet et intrigué, et te rassois docilement.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
             <img src="salleamanger" />
         </frame>
-        <frame id="18">
+        <frame id="1800">
             Ah ? Quoi donc père ?
-            <choix consequence="-1" />
-            <choix consequence="-1" />
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="surprise" />
         </frame>
-        <frame id="19">
+        <frame id="1900">
             Tu sais que notre famille est pérenne depuis plusieurs générations. Notre fortune s'agrandit lentement et nous avons besoin de nouvelles relations pour garder la tête hors de l’eau lorsque l’hiver viendra. J’ai parlé longuement avec  Ser Dulric cet après-midi pendant ma visite au domaine des Florieux.
             Tout comme notre famille, ils ont besoin d’une alliance pour les temps rudes à venir, les premiers symptômes de l’hiver se font déjà ressentir. Leur fille vient d’avoir ses premiers sangs, elle est donc en âge de se marier, c’est pourquoi nous allons organiser ton union avec elle au plus tôt.
             Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
         </frame>
-        <frame id="20">
+        <frame id="2000">
             Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
         </frame>
-        <frame id="21">
+        <frame id="2100">
             Attends, quoi ?! C’est une blague non ?
             Je ne vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
 
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
         </frame>
-        <frame id="22">
+        <frame id="2200">
             Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
         </frame>
-        <frame id="23">
+        <frame id="2300">
             Quoi, mais attend. Je … Je ne veux pas me marier moi !
             C’est nul … Je …
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
-        <frame id="24">
+        <frame id="2400">
             Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
         </frame>
-        <frame id="25">
+        <frame id="2500">
             Mais… Non… Je….
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse2" />
         </frame>
-        <frame id="26">
+        <frame id="2600">
             La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="salleamanger" />
         </frame>
-        <frame id="27">
+        <frame id="2700">
             Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="28">
+        <frame id="2800">
             Toutes ces escapades nocturnes à l’encontre des règles établies par vos parents respectifs, toute cette adrénaline générée par la sensation de l’interdit, d’être tous les deux ensemble à braver les diktats du monde qui semblent immuables. Il est en quelque sorte un frère pour toi.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="29">
+        <frame id="2900">
             Salut Chuck.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
         </frame>
-        <frame id="30">
+        <frame id="3000">
             Hey Asiel,  tu devineras jamais ce qui m’est arrivé !
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
-        <frame id="31">
+        <frame id="3100">
             Hmm... ?
             <![CDATA[<i>
             Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
             </i>]]>
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
-        <frame id="32">
+        <frame id="3200">
             Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
             Il y a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincés dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage. Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
-        <frame id="33">
+        <frame id="3300">
             Chuck te lance un bout de pain que tu rattrapes de justesse.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="34">
+        <frame id="3400">
             Ahah ! Bien joué mec !
             Bon, … Faut que j’me vide l’esprit. Viens on bouge un peu ...
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
         </frame>
-        <frame id="35">
+        <frame id="3500">
             Vous vous tenez tous les deux derrière une pile de caisses dans une ruelle attenante à l’église du culte de Xyrus.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="36">
+        <frame id="3600">
             T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
-        <frame id="37">
+        <frame id="3700">
             Mais oui, t’inquiète ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ?
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
-        <frame id="38">
+        <frame id="3800">
             Ouais mais bon.. C’est un abbé quand même, et puis voler un lieu de culte c’est pas une si bonne idée que ça j’pense…
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
-        <frame id="39">
+        <frame id="3900">
             Pourtant t’as bien dit que tu voulais sérieusement te changer les idées non ? Bah là t’auras une bonne grosse dose d’adrénaline, si ça, ça ne te sort pas de ta mauvaise humeur, je ne sais pas ce qu’il te faut.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
-        <frame id="40">
+        <frame id="4000">
             C’est pas faux,  mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
-        <frame id="41">
+        <frame id="4100">
             Okay, allons-y.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
-        <frame id="42">
+        <frame id="4200">
             Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercle, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent. De belles statues et tentures aux effigies de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
         </frame>
         
         <!-- A modifier pour changer les frames id + choix et têtes -->
-        <frame id="">
-            Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol. 
+        <frame id="4210">
+            Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
+            A)Tu demandes à Chuck de la laisser par terre.
+            B)Tu ne fais rien.
+            <img src="village" />
+            <choix consequence="4220" />
+            <choix consequence="42" />
         </frame>
-        <frame id="">
-            A)Tu demandes à Chuck de la laisser par terre 
+        <frame id="4220">
             Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, ils pourraient avoir caché un sortilège dedans !
-            
+            <img src="village" />
+            <locuteur personnage="asiel" />
+            <expression src="peur" />
         </frame>
-        <frame id="">
+        <frame id="4230">
             Pas faux ! Je la laisse là du coup.
+            <img src="village" />
             <locuteur personnage="chuck" />
+            <expression src="neutre" />
         </frame>
-        <frame id="">
-            B)Tu ne fais rien 
+        <frame id="4240">
             Chuck s’empresse alors de la ramasser et de la mettre dans sa poche. Heureusement qu’elle ne retenait pas de sortilège !
-            
         </frame>
-        <frame id="">
+        <frame id="4250">
             Cool, avec ça on pourra s’acheter des pommes ! 
             <locuteur personnage="chuck" />
+            <expression src="joie" />
         </frame>
-        <frame id="">
+
+
+        <!-- TODO Finir cette partie et raccorder avec le reste -->
+
+
+        <frame id="00">
             Tu t’approches de l’autel et l’inspecte. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses. 
         </frame>
-        <frame id="">
+        <frame id="00">
             A)Tu prends une pierre dans ce monticule
             Délicatement, tu prends celle se situant au sommet et la range dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
         </frame>
-        <frame id="">
+        <frame id="00">
             B)Tu ne fais rien
             Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.
         </frame>
-        <frame id="">
+        <frame id="00">
             Soudainement, un éclat plus vif que les autres attire l’attention de Chuck.
         </frame>
         <!-- FIN modif -->
         
-        <frame id="43">
+        <frame id="4300">
             Hé, regarde là-bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revend au marché noir !
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
-        <frame id="44">
+        <frame id="4400">
             Oh ouais t’as raison ! On pourrait en tirer au moins quatre centils d’or, ça nous permettrait de nous poser tranquillement sur les toits tout en mangeant un peu de poulet grillé pendant un bon bout de temps héhé ! 
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
         </frame>
-        <frame id="45">
+        <frame id="4500">
             On choppe ça et on se tire pour profiter du marché tant qu’il est ouvert ?
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
-        <frame id="46">
+        <frame id="4600">
             Ça m’va.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
         
         <!--AJOUT d'une frame -->
-        <frame id="">
+        <frame id="00">
             Perdant toute prudence, tu laisses ton ami s’emparer du pendentif.
         </frame>
         
-        <frame id="47">
+        <frame id="4700">
             Alors que Chuck empoigne le mince collier du pendentif, une bourrasque de vent gronde dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif et maudissant ta cupidité.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="eglise" />
         </frame>
-        <frame id="48">
+        <frame id="4800">
             CHUCK, ON SE TIRE ! MAINTENANT !
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
         </frame>
-        <frame id="49">
+        <frame id="4900">
             Vous vous précipitez au-dehors ! L'alarme de la garde sonne au loin. Vous courez rapidement sans trop savoir où aller. Le pas de Chuck est très paniqué, jamais tu ne l’as vu comme cela.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="50">
+        <frame id="5000">
             Viens, on va se planquer dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par là on est tranquille !
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
-        <frame id="51">
+        <frame id="5100">
             <![CDATA[<b>
             AU VOLEUR, LE COLLIER DE XYRUS !
             </b>]]>
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="voix lointaine" />
         </frame>
-        <frame id="52">
+        <frame id="5200">
             Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquent sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
             Un garde surgit alors quelques ruelles au-devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="53">
+        <frame id="5300">
             Merde !! Comment nous ont-ils retrouvés ?
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
         </frame>
-        <frame id="54">
+        <frame id="5400">
             La ruelle dans laquelle vous vous trouvez est assez longue, mais il ne semble pas y avoir d’issue.
             Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais chopper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merde !
             Je vaux bien mieux que ça !! Non, pas moyen.
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapés. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="55">
+        <frame id="5500">
             PUTAAAAAIN !!
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="stupefaction" />
         </frame>
-        <frame id="56">
+        <frame id="5600">
             Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
  
-            <choix consequence="-1" />
-            <choix consequence="-1" />
+            
+            
             <img src="village" />
         </frame>
-        <frame id="57">
+        <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
 
 
@@ -486,175 +489,175 @@
 
         <!--
 
-        <frame id="58">
+        <frame id="5800">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="59">
+        <frame id="5900">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="60">
+        <frame id="6000">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="61">
+        <frame id="6100">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="62">
+        <frame id="6200">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="63">
+        <frame id="6300">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="64">
+        <frame id="6400">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="65">
+        <frame id="6500">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="66">
+        <frame id="6600">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="67">
+        <frame id="6700">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="68">
+        <frame id="6800">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="69">
+        <frame id="6900">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="70">
+        <frame id="7000">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="71">
+        <frame id="7100">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="72">
+        <frame id="7200">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="73">
+        <frame id="7300">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="74">
+        <frame id="7400">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="75">
+        <frame id="7500">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="76">
+        <frame id="7600">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="77">
+        <frame id="7700">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="78">
+        <frame id="7800">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="79">
+        <frame id="7900">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="80">
+        <frame id="8000">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="81">
+        <frame id="8100">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="82">
+        <frame id="8200">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="83">
+        <frame id="8300">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="84">
+        <frame id="8400">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="85">
+        <frame id="8500">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="86">
+        <frame id="8600">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="87">
+        <frame id="8700">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="88">
+        <frame id="8800">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="89">
+        <frame id="8900">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="90">
+        <frame id="9000">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="91">
+        <frame id="9100">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="92">
+        <frame id="9200">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="93">
+        <frame id="9300">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="94">
+        <frame id="9400">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="95">
+        <frame id="9500">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="96">
+        <frame id="9600">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="97">
+        <frame id="9700">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="98">
+        <frame id="9800">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="99">
+        <frame id="9900">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
-        <frame id="100">
+        <frame id="10000">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>

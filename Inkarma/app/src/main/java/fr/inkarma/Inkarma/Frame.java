@@ -13,6 +13,8 @@ public class Frame {
     int locuteurImg;
     String locuteur = "";
 
+    Frame precedent,suivant;
+
     public Frame() {
         choix= new int[2];
         choix[0] = -1;
