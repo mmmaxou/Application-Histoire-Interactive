@@ -4,13 +4,17 @@ application {
 }
 frame {
 	display:block;
+    width:700px;
+    margin:auto;
+    font-size:24px;
+    background-color:rgba(204, 255, 251, 0.79);
 	
 }
 frame:before {
 	margin-top:20px;
 	content:'#' attr(id);
 	display: block;
-	background-color:#FDB;
+	background-color:#ffbbff;
 }
 
 img {
@@ -18,23 +22,19 @@ img {
 img:after {
 	display: block;
 	content : 'Décor : ' attr(src);
-	background-color:#FEC;
 }
 
 locuteur:after {
 	display: inline;
 	content: 'locuteur : ' attr(personnage);
-	background-color:#FFF;
 }
 
 expression:after {
 	display: inline;
 	content: '( ' attr(src) ' )';
-	background-color:#FFF;
 }
 
 choix:after {
 	display: inline;
 	content: '[ ' attr(consequence) ' ]';
-	background-color:#EEE;
 }
