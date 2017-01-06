@@ -11,7 +11,7 @@
             <img src="campagne" />
         </frame>
         <frame id='200'>
-            Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
+            $karma=karma+1;'uahudhazuhduiazhdiazhiudazidza'$
             <img src="campagne" />
         </frame>
         <frame id='300'>
@@ -20,14 +20,10 @@
         </frame>
         <frame id='400'>
             Que donnerais-tu pour retourner à cette douce époque ? ...
-            
-            
             <img src="campagne" />
         </frame>
         <frame id='500'>
-            Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids…
-            
-            
+            Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids.
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="compatissant" />

@@ -71,6 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         script.put("heroName","toto");
         script.put("frame", 100);
         script.put("frameNumber", 0);
+        script.put("karma", 0);
         script.put("lastChoiceID", 100);
 
         SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
