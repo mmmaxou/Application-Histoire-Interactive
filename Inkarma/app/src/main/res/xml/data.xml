@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
@@ -11,7 +11,8 @@
             <img src="campagne" />
         </frame>
         <frame id='200'>
-            $karma=karma+1;'uahudhazuhduiazhdiazhiudazidza'$
+            $karma=karma+1;'Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.'$
+	
             <img src="campagne" />
         </frame>
         <frame id='300'>
