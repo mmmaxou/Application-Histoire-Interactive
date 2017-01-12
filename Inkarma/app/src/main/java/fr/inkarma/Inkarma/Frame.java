@@ -13,6 +13,8 @@ public class Frame {
     int locuteurImg;
     String[] choixText;
     String locuteur = "";
+    int karma = 0;
+    boolean karmaEvaluated = false;
 
     Frame precedent,suivant;
 

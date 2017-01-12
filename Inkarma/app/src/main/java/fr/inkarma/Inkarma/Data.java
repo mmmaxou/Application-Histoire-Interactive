@@ -57,8 +57,11 @@ public class Data {
                     if ( src != null ) {
                         currentFrame.locuteurImg = context.getResources().getIdentifier(src, "drawable", context.getPackageName());
                     }
-                }
+                } else if ("karma".equals(xpp.getName())) {// On signale qu'il ya une modification du karma
 
+                    currentFrame.karma = xpp.getAttributeIntValue(null, "value", 0);
+
+                }
             } else if (eventType == XmlPullParser.END_TAG) { // fin d'un tag
             } else if (eventType == XmlPullParser.TEXT) {
                 if (currentFrame != null)

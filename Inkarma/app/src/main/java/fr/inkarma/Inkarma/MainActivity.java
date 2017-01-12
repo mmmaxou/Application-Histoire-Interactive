@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
             textView.setTextSize(textSize);
 
             // Affichage du texte
+
 //            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
             String text = script.evaluate("'#'+frame+' | karma:'+karma+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("karma=karma+1;'karma:'+karma+\""+frame.text+"\"").toString();
@@ -149,6 +150,15 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 textView.setText(Html.fromHtml(text));
             }
+
+            // On regarde si il faux modifier le karma
+            if ( frame.karma != 0 && frame.karmaEvaluated == false) {
+                int currentKarma = script.getInt("karma");
+                script.put("karma", currentKarma + frame.karma);
+                frame.karmaEvaluated = true;
+            }
+
+
 
             // On cache les choix
             button1.setVisibility(View.GONE);
@@ -199,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
             mainLayout.setVisibility(View.VISIBLE);
 
 
+            // Affichage de l'Historique
             historiqueView = (ListView) findViewById(R.id.ListViewHistorique);
             ArrayAdapter<Spanned> arrayAdapter = new ArrayAdapter<>(
                     this,
@@ -268,6 +279,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Calcul du temps d'auto skip
         int size = textView.length();
+        // On essaie d'afficher le choix
+        displayChoice();
 
         // Duree en secondes
         int speed = (size / skipSpeed) + 2;
@@ -286,8 +299,6 @@ public class MainActivity extends AppCompatActivity {
                         next();
                     }
                 }
-                // On essaie d'afficher le choix
-                displayChoice();
             }
         }, speed * 1000); // xx000ms delay
 
@@ -330,6 +341,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Button Auto
+    public void onClickAuto(View view) {
+
+        Frame currentFrame = frame;
+        if ( currentFrame.choix[0] == -1 || currentFrame.choix[1] == -1) {
+            while ( currentFrame.suivant.choix[0] == -1 || currentFrame.suivant.choix[1] == -1 ) {
+                currentFrame = currentFrame.suivant;
+                if ( currentFrame.karma != 0 && currentFrame.karmaEvaluated == false) {
+                    int currentKarma = script.getInt("karma");
+                    script.put("karma", currentKarma + currentFrame.karma);
+                    data.get(currentFrame.id).karmaEvaluated = true;
+                }
+            }
+            historique.clear();
+            historiqueText.clear();
+            setFrame(currentFrame.suivant.id);
+        }
+    }
+
     private void next() {
         if ( frame.id < 1000000 ) {
 //            int frameNumber = script.getInt("frameNumber");
@@ -365,7 +395,6 @@ public class MainActivity extends AppCompatActivity {
 
         if ( frame.precedent.choix[0] == -1 || frame.precedent.choix[1] == -1 ) {
 
-//            script.put("frameNumber", frameNumber - 1);
             setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
 
         }
@@ -374,7 +403,6 @@ public class MainActivity extends AppCompatActivity {
     // Button Settings
     public void onClickSettings(View view) {
         setGameRunning( false );
-        Log.d("State : ", String.valueOf(getGameRunning()));
         openContextMenu(view);
     }
 

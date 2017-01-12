@@ -4,15 +4,12 @@
     <application>
         <frame id='000'>
             PAGE PAR DEFAUT
-            
-            
         </frame>
         <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
         </frame>
         <frame id='200'>
-            $karma=karma+1;'Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.'$
-	
+            Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <img src="campagne" />
         </frame>
         <frame id='300'>
@@ -31,8 +28,6 @@
         </frame>
         <frame id='600'>
             Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
-            
-            
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
@@ -171,28 +166,20 @@
         </frame>
         <frame id="2500">
             Mais… Non… Je….
-            
-            
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse2" />
         </frame>
         <frame id="2600">
             La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
-            
-            
             <img src="salleamanger" />
         </frame>
         <frame id="2700">
             Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
-            
-            
             <img src="village" />
         </frame>
         <frame id="2800">
             Toutes ces escapades nocturnes à l’encontre des règles établies par vos parents respectifs, toute cette adrénaline générée par la sensation de l’interdit, d’être tous les deux ensemble à braver les diktats du monde qui semblent immuables. Il est en quelque sorte un frère pour toi.
-            
-            
             <img src="village" />
         </frame>
         <frame id="2900">
@@ -305,10 +292,6 @@
             
             
         </frame>
-        
-        <!-- A modifier pour changer les frames id + choix et têtes -->
-        <!-- TODO Changement de Karma -->
-
         <frame id="4210">
             Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
             <img src="village" />
@@ -321,6 +304,7 @@
             <locuteur personnage="asiel" />
             <expression src="peur" />
             <choix consequence="4220" />
+            <karma value="1" />
         </frame>
         <frame id="4212">
             Pas faux ! Je la laisse là du coup.
@@ -337,11 +321,6 @@
             <expression src="joie" />
             <choix consequence="4220" />
         </frame>
-
-
-        <!-- TODO Changement de Karma -->
-
-
         <frame id="4220">
             Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
             <choix consequence="4221" placeholder="Prendre une pierre dans ce monticule" />
@@ -350,6 +329,7 @@
         <frame id="4221">
             Délicatement, tu prends celle se situant au sommet et la ranges dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
             <choix consequence="4230" />
+            <karma value="-1" />
         </frame>
         <frame id="4222">
             Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.

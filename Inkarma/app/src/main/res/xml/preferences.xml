@@ -33,7 +33,7 @@
             android:dialogTitle="Taille"
             android:entries="@array/pref_textSize_entries"
             android:entryValues="@array/pref_textSize_values"
-            android:defaultValue="12"
+            android:defaultValue="18"
             android:persistent="true"/>
 
     </PreferenceCategory>
