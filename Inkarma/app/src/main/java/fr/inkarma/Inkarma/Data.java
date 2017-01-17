@@ -50,6 +50,11 @@ public class Data {
                     if (src != null) {
                         currentFrame.expression = context.getResources().getIdentifier(src, "drawable", context.getPackageName());
                     }
+                } else if ("music".equals(xpp.getName())) {
+                    String src = xpp.getAttributeValue(null, "src");
+                    if (src != null) {
+                        currentFrame.music = context.getResources().getIdentifier(src, "raw", context.getPackageName());
+                    }
                 } else if ("locuteur".equals(xpp.getName())) {
                     currentFrame.locuteur = xpp.getAttributeValue(null, "personnage");
 

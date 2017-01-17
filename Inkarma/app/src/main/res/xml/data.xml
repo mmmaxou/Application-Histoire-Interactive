@@ -7,24 +7,29 @@
         </frame>
         <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
+            <music src="knowingsecret" />
         </frame>
         <frame id='200'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <img src="campagne" />
+            <music src="doutes" />
         </frame>
         <frame id='300'>
             Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…
             <img src="campagne" />
+            <music src="abidingprincess" />
         </frame>
         <frame id='400'>
             Que donnerais-tu pour retourner à cette douce époque ? ...
             <img src="campagne" />
+            <music src="forme" />
         </frame>
         <frame id='500'>
             Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids.
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="compatissant" />
+            <music src="grandioso" />
         </frame>
         <frame id='600'>
             Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
@@ -289,18 +294,17 @@
         </frame>
         <frame id="4200">
             Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercle, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent. De belles statues et tentures aux effigies de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
-            
-            
+            <img src="eglise" />
         </frame>
         <frame id="4210">
             Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
-            <img src="village" />
+            <img src="eglise" />
             <choix consequence="4211" placeholder="Demander à Chuck de la laisser par terre."></choix>
             <choix consequence="4213" placeholder="Ne rien faire"></choix>
         </frame>
         <frame id="4211">
             Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, il pourrait y avoir un sortilège caché dedans !
-            <img src="village" />
+            <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
             <choix consequence="4220" />
@@ -308,35 +312,41 @@
         </frame>
         <frame id="4212">
             Pas faux ! Je la laisse là du coup.
-            <img src="village" />
+            <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
         <frame id="4213">
             Chuck s’empresse alors de la ramasser et de la mettre dans sa poche. Heureusement qu’elle ne retenait pas de sortilèges !
+            <img src="eglise" />
         </frame>
         <frame id="4214">
-            Cool, avec ça on pourra s’acheter des pommes ! 
+            Cool, avec ça on pourra s’acheter des pommes !
+            <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
             <choix consequence="4220" />
         </frame>
         <frame id="4220">
             Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
+            <img src="eglise" />
             <choix consequence="4221" placeholder="Prendre une pierre dans ce monticule" />
             <choix consequence="4222" placeholder="Ne rien faire"/>
         </frame>
         <frame id="4221">
             Délicatement, tu prends celle se situant au sommet et la ranges dans ta poche. Après tout, vu la richesse de ce sanctuaire, cette pierre n’allait certainement pas leur manquer !
+            <img src="eglise" />
             <choix consequence="4230" />
             <karma value="-1" />
         </frame>
         <frame id="4222">
             Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.
+            <img src="eglise" />
             <choix consequence="4230" />
         </frame>
         <frame id="4230">
             Soudainement, un éclat plus vif que les autres attire l’attention de Chuck.
+            <img src="eglise" />
         </frame>
         <!-- FIN modif -->
         

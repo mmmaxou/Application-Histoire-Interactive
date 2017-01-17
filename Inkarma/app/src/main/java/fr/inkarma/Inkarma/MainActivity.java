@@ -3,6 +3,7 @@ package fr.inkarma.Inkarma;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -27,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     static float TOUCH_DISTANCE;
     Script script;
     private Handler handler;
+    private MediaPlayer mediaPlayer;
 
 
     @Override
@@ -92,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        // On lance la musique dernièrement chargée
+        playSound(script.getInt("music"));
     }
 
     private void setFrame(int i) {
@@ -196,6 +201,12 @@ public class MainActivity extends AppCompatActivity {
 //                buttonNext.setVisibility(View.GONE);
 //            }
 
+
+            // On lance la musique
+
+            if ( frame.music != -1) {
+                playSound(frame.music);
+            }
 
             // Affichage des images
             if (frame.img != -1) {
@@ -526,9 +537,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onTouchEvent(event);
-
     }
-
 
     private boolean getGameRunning () {
 
@@ -544,8 +553,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void playSound(int music) {
 
+        if ( music == -1) {
+            Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
+        } else {
+            // Initialisation
+            if (mediaPlayer == null) {
+                mediaPlayer = MediaPlayer.create(this, music);
+                mediaPlayer.start();
+                mediaPlayer.setLooping(true);
 
+                script.put("music", music);
+
+            }
+            if ( mediaPlayer != null && mediaPlayer.isPlaying() ) {
+                int currentMusic = script.getInt("music");
+                if ( currentMusic != music) {
+                    mediaPlayer.reset();
+                    mediaPlayer = MediaPlayer.create(this, music);
+                    mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
+
+                    script.put("music", music);
+                }
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
 
     // Affichage caractère par caractère
 /*

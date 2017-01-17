@@ -16,6 +16,8 @@ public class Frame {
     int karma = 0;
     boolean karmaEvaluated = false;
 
+    int music = -1;
+
     Frame precedent,suivant;
 
     public Frame() {
