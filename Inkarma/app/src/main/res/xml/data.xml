@@ -5,9 +5,12 @@
         <frame id='000'>
             PAGE PAR DEFAUT
         </frame>
-        <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari. L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+        <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
             <music src="knowingsecret" />
+        </frame>
+        <frame id='110'>L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+            <img src="campagne" />
         </frame>
         <frame id='200'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
@@ -41,43 +44,31 @@
             <![CDATA[<i>
             Tu murmures entre tes dents… ‘Mais quel petit con celui la !
             </i>]]>
-
-
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id='800'>
             Quoi ? Insolent !
-
-
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
         <frame id='900'>  
             Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
-
-
             <img src="campagne" />
         </frame>
         <frame id='1000'>
             <![CDATA[<b>AIE.</b>]]>
-
-
             <img src="campagne" />
         </frame>
         <frame id='1100'>
             Tu ne l'avais pas vu venir celle là. Par réflexe, ta main viens délicatement palper le coup violent que viens de t'asséner ton père.
-
-
             <img src="campagne" />
         </frame>
         <frame id='1200'>
             Descends aider ta mère ! TOUT DE SUITE !
             Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’a tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
-
-
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -86,14 +77,10 @@
             <![CDATA[<i>
             Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
             </i>]]>
-
-
             <img src="campagne" />
         </frame>
         <frame id='1400'>
             Suite à cette injonction, tu t'en va en traînant la patte. En ressassant dans ta tête une suite de jurons à l’égard de ton père.
-
-
             <img src="campagne" />
         </frame>
         <frame id='1500'>
@@ -121,8 +108,16 @@
             <expression src="surprise" />
         </frame>
         <frame id="1900">
-            Tu sais que notre famille est pérenne depuis plusieurs générations. Notre fortune s'agrandit lentement et nous avons besoin de nouvelles relations pour garder la tête hors de l’eau lorsque l’hiver viendra. J’ai parlé longuement avec  Ser Dulric cet après-midi pendant ma visite au domaine des Florieux.
+            Tu sais que notre famille est pérenne depuis plusieurs générations. Notre fortune s'agrandit lentement et nous avons besoin de nouvelles relations pour garder la tête hors de l’eau lorsque l’hiver viendra. J’ai parlé longuement avec Ser Dulric cet après-midi pendant ma visite au domaine des Florieux.
+            <img src="salleamanger" />
+            <locuteur personnage="thedris" />
+            <expression src="fierte" />
+        <frame id="1910">
             Tout comme notre famille, ils ont besoin d’une alliance pour les temps rudes à venir, les premiers symptômes de l’hiver se font déjà ressentir. Leur fille vient d’avoir ses premiers sangs, elle est donc en âge de se marier, c’est pourquoi nous allons organiser ton union avec elle au plus tôt.
+            <img src="salleamanger" />
+            <locuteur personnage="thedris" />
+            <expression src="neutre" />
+        <frame id="1920">
             Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
@@ -130,24 +125,17 @@
         </frame>
         <frame id="2000">
             Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
-
-
             <img src="salleamanger" />
         </frame>
         <frame id="2100">
             Attends, quoi ?! C’est une blague non ?
             Je ne vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
-
-
-
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
         </frame>
         <frame id="2200">
             Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
-
-
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
@@ -155,16 +143,12 @@
         <frame id="2300">
             Quoi, mais attend. Je … Je ne veux pas me marier moi !
             C’est nul … Je …
-
-
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id="2400">
             Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
-
-
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -180,7 +164,11 @@
             <img src="salleamanger" />
         </frame>
         <frame id="2700">
-            Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck. C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
+            Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck.
+            <img src="village" />
+        </frame>
+        <frame id="2710">
+            C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
             <img src="village" />
         </frame>
         <frame id="2800">
@@ -189,16 +177,12 @@
         </frame>
         <frame id="2900">
             Salut Chuck.
-
-
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
         </frame>
         <frame id="3000">
             Hey Asiel,  tu devineras jamais ce qui m’est arrivé !
-
-
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
@@ -208,92 +192,85 @@
             <![CDATA[<i>
             Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
             </i>]]>
-
-
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id="3200">
             Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
-            Il y a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincés dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage. Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
-
-
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
+        <frame id="3210">
+            Il y a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincés dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage.
+            <img src="village" />
+            <locuteur personnage="chuck" />
+            <expression src="joie" />
+        </frame>
+        <frame id="3220">
+            Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
+            <img src="village" />
+            <locuteur personnage="chuck" />
+            <expression src="fierte" />
+        </frame>
         <frame id="3300">
             Chuck te lance un bout de pain que tu rattrapes de justesse.
-
-
             <img src="village" />
         </frame>
         <frame id="3400">
             Ahah ! Bien joué mec !
             Bon, … Faut que j’me vide l’esprit. Viens on bouge un peu ...
-
-
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
         </frame>
         <frame id="3500">
             Vous vous tenez tous les deux derrière une pile de caisses dans une ruelle attenante à l’église du culte de Xyrus.
-
-
             <img src="village" />
         </frame>
         <frame id="3600">
             T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
-
-
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
         <frame id="3700">
             Mais oui, t’inquiète ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ?
-
-
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
         <frame id="3800">
             Ouais mais bon.. C’est un abbé quand même, et puis voler un lieu de culte c’est pas une si bonne idée que ça j’pense…
-
-
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
         <frame id="3900">
             Pourtant t’as bien dit que tu voulais sérieusement te changer les idées non ? Bah là t’auras une bonne grosse dose d’adrénaline, si ça, ça ne te sort pas de ta mauvaise humeur, je ne sais pas ce qu’il te faut.
-
-
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
         <frame id="4000">
             C’est pas faux,  mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
-
-
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
         <frame id="4100">
             Okay, allons-y.
-
-
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
         </frame>
         <frame id="4200">
-            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercle, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent. De belles statues et tentures aux effigies de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
+            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercle, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent.
+            <img src="eglise" />
+        </frame>
+        <frame id="4210">
+            De belles statues et tentures aux effigies de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
             <img src="eglise" />
         </frame>
         <frame id="4210">
@@ -374,12 +351,6 @@
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
-
-        <!--AJOUT d'une frame -->
-        <frame id="00">
-            Perdant toute prudence, tu laisses ton ami s’emparer du pendentif.
-        </frame>
-
         <frame id="4700">
             Alors que Chuck empoigne le mince collier du pendentif, une bourrasque de vent gronde dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif et maudissant ta cupidité.
             <img src="eglise" />
@@ -409,6 +380,9 @@
         </frame>
         <frame id="5200">
             Tu penses reconnaître la voix de l’abbé au loin. Ton coeur s'accélère. Tu sprintes dans les ruelles, tes pas claquent sur les pavés sales. Chuck te devance de quelques pas. À bout de souffle, tu jettes un regard vif sur tes arrières. Personne. Te voilà en sécurité, tu ralentis le rythme.
+            <img src="village" />
+        </frame>
+        <frame id="5200">
             Un garde surgit alors quelques ruelles au-devant, vous coupant net la route. Directement, vous faites demi-tour, et vous jetez dans une ruelle adjacente.
             <img src="village" />
         </frame>
@@ -421,6 +395,9 @@
         <frame id="5400">
             La ruelle dans laquelle vous vous trouvez est assez longue, mais il ne semble pas y avoir d’issue.
             Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais chopper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merde !
+            <img src="village" />
+        </frame>
+        <frame id="5400">
             Je vaux bien mieux que ça !! Non, pas moyen.
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapés. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
@@ -438,44 +415,47 @@
         </frame>
         <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
-            <choix consequence="5800" placeholder="Revenir en arrière et l'aider à se relever"/>
-            <choix consequence="5900" placeholder="Partir et abandonner Chuck"/>
+            <choix consequence="???" placeholder="Revenir en arrière et l'aider à se relever"/>
+            <choix consequence="5800" placeholder="Partir et abandonner Chuck"/>
             <img src="village" />
         </frame>
+            
+            
         <!-- CHAPITRE 1 -->
         <frame id="5800">
-
-
-        </frame>
-        <frame id="5900">
             NOOOON CHUCK ! Je dois te laisser …
             Ma vie en dépends.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="stupefaction" />
         </frame>
-        <frame id="5901">
+        <frame id="5900">
             ENCULÉ ! Aide moi !!!
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="stupefaction" />
         </frame>
-        <frame id="5902">
+        <frame id="6000">
             Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé au cliquetis des armures, mais tu continues de courir pour sauver ta peau.
             <img src="village" />
         </frame>
-        <frame id="5903">
+        <frame id="6100">
             C’est trop tard pour lui. Tant pis, au moins ta vie est sauve. Que te serait il arrivé si jamais tu t’étais fait prendre ? Le sort réservé aux voleurs est très violent. Les images de l’exécution publique à laquelle tu as assisté te reviens en mémoire. Tu déglutis de dégoût et ouvres la porte avec fracas.
             <img src="village" />
         </frame>
-        <frame id="5904">
+        <frame id="6200">
             Tu traverses en vitesse la demeure dans laquelle tu t’es engouffré. En passant au travers d’une tenture, tu aperçois qu’elle est à l’effigie de Xyrus, le dieu que tu viens de voler, karma ?
             <img src="village" />
+        </frame>
+        <frame id="6300">
+            Une petite statuette représentant ce se trouve à ta portée.
+            <choix consequence="6400" placeholder="Prendre la statuette"></choix>
+            <choix consequence="???" placeholder="La laisser"></choix>
         </frame>
         <frame id="6400">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
-        </frame>
+        </frame>            
         <frame id="6500">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
