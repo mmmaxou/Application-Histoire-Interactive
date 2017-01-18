@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
@@ -41,43 +41,43 @@
             <![CDATA[<i>
             Tu murmures entre tes dents… ‘Mais quel petit con celui la !
             </i>]]>
-            
-            
+
+
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id='800'>
             Quoi ? Insolent !
-            
-            
+
+
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
         <frame id='900'>  
-           Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
-            
-            
+            Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
+
+
             <img src="campagne" />
         </frame>
         <frame id='1000'>
             <![CDATA[<b>AIE.</b>]]>
-            
-            
+
+
             <img src="campagne" />
         </frame>
         <frame id='1100'>
             Tu ne l'avais pas vu venir celle là. Par réflexe, ta main viens délicatement palper le coup violent que viens de t'asséner ton père.
-            
-            
+
+
             <img src="campagne" />
         </frame>
         <frame id='1200'>
             Descends aider ta mère ! TOUT DE SUITE !
             Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’a tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
-            
-            
+
+
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -86,14 +86,14 @@
             <![CDATA[<i>
             Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
             </i>]]>
-            
-            
+
+
             <img src="campagne" />
         </frame>
         <frame id='1400'>
             Suite à cette injonction, tu t'en va en traînant la patte. En ressassant dans ta tête une suite de jurons à l’égard de ton père.
-            
-            
+
+
             <img src="campagne" />
         </frame>
         <frame id='1500'>
@@ -130,24 +130,24 @@
         </frame>
         <frame id="2000">
             Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
-            
-            
+
+
             <img src="salleamanger" />
         </frame>
         <frame id="2100">
             Attends, quoi ?! C’est une blague non ?
             Je ne vais certainement pas passer ma vie entière avec une grognasse que je n’ai jamais vue, en plus je suis sûr qu’elle est moche.
 
-            
-            
+
+
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
         </frame>
         <frame id="2200">
             Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
-            
-            
+
+
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
@@ -155,16 +155,16 @@
         <frame id="2300">
             Quoi, mais attend. Je … Je ne veux pas me marier moi !
             C’est nul … Je …
-            
-            
+
+
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id="2400">
             Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
-            
-            
+
+
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -189,16 +189,16 @@
         </frame>
         <frame id="2900">
             Salut Chuck.
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
         </frame>
         <frame id="3000">
             Hey Asiel,  tu devineras jamais ce qui m’est arrivé !
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
@@ -208,8 +208,8 @@
             <![CDATA[<i>
             Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
             </i>]]>
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
@@ -217,77 +217,77 @@
         <frame id="3200">
             Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
             Il y a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincés dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage. Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
         <frame id="3300">
             Chuck te lance un bout de pain que tu rattrapes de justesse.
-            
-            
+
+
             <img src="village" />
         </frame>
         <frame id="3400">
             Ahah ! Bien joué mec !
             Bon, … Faut que j’me vide l’esprit. Viens on bouge un peu ...
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
         </frame>
         <frame id="3500">
             Vous vous tenez tous les deux derrière une pile de caisses dans une ruelle attenante à l’église du culte de Xyrus.
-            
-            
+
+
             <img src="village" />
         </frame>
         <frame id="3600">
             T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
         <frame id="3700">
             Mais oui, t’inquiète ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ?
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
         <frame id="3800">
             Ouais mais bon.. C’est un abbé quand même, et puis voler un lieu de culte c’est pas une si bonne idée que ça j’pense…
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
         <frame id="3900">
             Pourtant t’as bien dit que tu voulais sérieusement te changer les idées non ? Bah là t’auras une bonne grosse dose d’adrénaline, si ça, ça ne te sort pas de ta mauvaise humeur, je ne sais pas ce qu’il te faut.
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
         <frame id="4000">
             C’est pas faux,  mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
         <frame id="4100">
             Okay, allons-y.
-            
-            
+
+
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
@@ -349,7 +349,7 @@
             <img src="eglise" />
         </frame>
         <!-- FIN modif -->
-        
+
         <frame id="4300">
             Hé, regarde là-bas, t’as vu ce médaillon ? Il doit valoir une fortune si on le revend au marché noir !
             <img src="eglise" />
@@ -374,12 +374,12 @@
             <locuteur personnage="asiel" />
             <expression src="neutre" />
         </frame>
-        
+
         <!--AJOUT d'une frame -->
         <frame id="00">
             Perdant toute prudence, tu laisses ton ami s’emparer du pendentif.
         </frame>
-        
+
         <frame id="4700">
             Alors que Chuck empoigne le mince collier du pendentif, une bourrasque de vent gronde dans la rotonde, ébouriffant vos cheveux. Une voix grave s’élève dans la pièce, prenant rapidement de l’ampleur tout en devenant de plus en plus stridente. Tu maugrées dans ta tête, te disant que Chuck a été stupide d’avoir voulu prendre ce pendentif et maudissant ta cupidité.
             <img src="eglise" />
@@ -442,32 +442,35 @@
             <choix consequence="5900" placeholder="Partir et abandonner Chuck"/>
             <img src="village" />
         </frame>
-
-        <!--
-
+        <!-- CHAPITRE 1 -->
         <frame id="5800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+
+
         </frame>
         <frame id="5900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            NOOOON CHUCK ! Je dois te laisser …
+            Ma vie en dépends.
+            <img src="village" />
+            <locuteur personnage="asiel" />
+            <expression src="stupefaction" />
         </frame>
-        <frame id="6000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+        <frame id="5901">
+            ENCULÉ ! Aide moi !!!
+            <img src="village" />
+            <locuteur personnage="chuck" />
+            <expression src="stupefaction" />
         </frame>
-        <frame id="6100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+        <frame id="5902">
+            Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé au cliquetis des armures, mais tu continues de courir pour sauver ta peau.
+            <img src="village" />
         </frame>
-        <frame id="6200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+        <frame id="5903">
+            C’est trop tard pour lui. Tant pis, au moins ta vie est sauve. Que te serait il arrivé si jamais tu t’étais fait prendre ? Le sort réservé aux voleurs est très violent. Les images de l’exécution publique à laquelle tu as assisté te reviens en mémoire. Tu déglutis de dégoût et ouvres la porte avec fracas.
+            <img src="village" />
         </frame>
-        <frame id="6300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+        <frame id="5904">
+            Tu traverses en vitesse la demeure dans laquelle tu t’es engouffré. En passant au travers d’une tenture, tu aperçois qu’elle est à l’effigie de Xyrus, le dieu que tu viens de voler, karma ?
+            <img src="village" />
         </frame>
         <frame id="6400">
             <choix consequence="-1"></choix>
@@ -618,7 +621,6 @@
             <choix consequence="-1"></choix>
         </frame>
 
-        -->
 
     </application>
 </PreferenceScreen>
