@@ -45,6 +45,11 @@ public class Data {
                     if (src != null) {
                         currentFrame.img = context.getResources().getIdentifier(src, "mipmap", context.getPackageName());
                     }
+                }else if ("img".equals(xpp.getName())) {// début d'une nouvelle image
+                    String src = xpp.getAttributeValue(null, "src");
+                    if (src != null) {
+                        currentFrame.imgTag = src;
+                    }
                 } else if ("expression".equals(xpp.getName())) {
                     String src = xpp.getAttributeValue(null, "src");
                     if (src != null) {

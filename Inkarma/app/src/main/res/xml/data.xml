@@ -112,11 +112,13 @@
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
+        </frame>
         <frame id="1910">
             Tout comme notre famille, ils ont besoin d’une alliance pour les temps rudes à venir, les premiers symptômes de l’hiver se font déjà ressentir. Leur fille vient d’avoir ses premiers sangs, elle est donc en âge de se marier, c’est pourquoi nous allons organiser ton union avec elle au plus tôt.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+        </frame>
         <frame id="1920">
             Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
             <img src="salleamanger" />
@@ -413,9 +415,10 @@
             Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
             <img src="village" />
         </frame>
+        <!--TODO : changer le 00 en une vraie frame-->
         <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
-            <choix consequence="???" placeholder="Revenir en arrière et l'aider à se relever"/>
+            <choix consequence="00" placeholder="Revenir en arrière et l'aider à se relever"/>
             <choix consequence="5800" placeholder="Partir et abandonner Chuck"/>
             <img src="village" />
         </frame>
@@ -447,10 +450,11 @@
             Tu traverses en vitesse la demeure dans laquelle tu t’es engouffré. En passant au travers d’une tenture, tu aperçois qu’elle est à l’effigie de Xyrus, le dieu que tu viens de voler, karma ?
             <img src="village" />
         </frame>
+        <!--TODO : changer le 00 en une vraie frame-->
         <frame id="6300">
             Une petite statuette représentant ce se trouve à ta portée.
             <choix consequence="6400" placeholder="Prendre la statuette"></choix>
-            <choix consequence="???" placeholder="La laisser"></choix>
+            <choix consequence="00" placeholder="La laisser"></choix>
         </frame>
         <frame id="6400">
             <choix consequence="-1"></choix>

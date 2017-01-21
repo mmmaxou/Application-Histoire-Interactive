@@ -24,6 +24,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -39,6 +40,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     static final String PREFS_NAME = "current";
+    static float MIN_DISTANCE;
+    static float TOUCH_DISTANCE;
     private Data data;
     private Frame frame;
     List<String> historique = new ArrayList<>();
@@ -46,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
     ListView historiqueView;
     private Boolean gameRunning = false;
     private float x1,x2,y1,y2;
-    static float MIN_DISTANCE;
-    static float TOUCH_DISTANCE;
     Script script;
     private Handler handler;
     private MediaPlayer mediaPlayer;
@@ -97,6 +98,27 @@ public class MainActivity extends AppCompatActivity {
 
         // On lance la musique dernièrement chargée
         playSound(script.getInt("music"));
+
+        //IMAGE SWITCHER
+
+        final ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
+
+        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                1.0f        );
+
+        ImageView enabledChart = new ImageView(getBaseContext());
+        enabledChart.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        enabledChart.setImageResource(frame.img);
+        enabledChart.setTag(frame.imgTag);
+        myImageSwitcher.addView(enabledChart, param);
+
+        Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
+        Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
+
+        myImageSwitcher.setOutAnimation(animationOut);
+        myImageSwitcher.setInAnimation(animationIn);
     }
 
     private void setFrame(int i) {
@@ -125,7 +147,8 @@ public class MainActivity extends AppCompatActivity {
             setGameRunning( true );
 
             // Declaration des elements
-            ImageView background =(ImageView) findViewById(R.id.decorImgBox);
+//            ImageView background =(ImageView) findViewById(R.id.decorImgBox);
+            ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
             ImageView personnage =(ImageView) findViewById(R.id.personnage);
             ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
@@ -208,13 +231,28 @@ public class MainActivity extends AppCompatActivity {
                 playSound(frame.music);
             }
 
+
             // Affichage des images
             if (frame.img != -1) {
 
-                Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation);
-                background.startAnimation(animation);
-                background.setImageResource(frame.img);
+                ImageView disabledChart = new ImageView(getBaseContext());
+                disabledChart.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                disabledChart.setImageResource(frame.img);
+
+                // Ajout de la nouvelle.
+
+                myImageSwitcher.removeView(myImageSwitcher.getNextView());
+                LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        1.0f
+                );
+                myImageSwitcher.addView(disabledChart, param);
+                myImageSwitcher.showNext();
+
             }
+
+
 
             //Affichage du layout
             mainLayout.setVisibility(View.VISIBLE);
@@ -570,7 +608,7 @@ public class MainActivity extends AppCompatActivity {
             if ( mediaPlayer != null && mediaPlayer.isPlaying() ) {
                 int currentMusic = script.getInt("music");
                 if ( currentMusic != music) {
-                    mediaPlayer.reset();
+                    mediaPlayer.release();
                     mediaPlayer = MediaPlayer.create(this, music);
                     mediaPlayer.start();
                     mediaPlayer.setLooping(true);

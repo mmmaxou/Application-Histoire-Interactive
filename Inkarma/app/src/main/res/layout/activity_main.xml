@@ -10,14 +10,25 @@
     android:weightSum="1"
     android:background="#cac4c4">
 
-    <ImageView
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:srcCompat="@drawable/frame1"-->
+        <!--android:id="@+id/decorImgBox"-->
+        <!--android:layout_weight="2"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:elevation="0dp" />-->
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/frame1"
-        android:id="@+id/decorImgBox"
         android:layout_weight="2"
-        android:scaleType="centerCrop"
-        android:elevation="0dp" />
+        android:elevation="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+    </ImageSwitcher>
 
     <LinearLayout
         android:layout_width="match_parent"

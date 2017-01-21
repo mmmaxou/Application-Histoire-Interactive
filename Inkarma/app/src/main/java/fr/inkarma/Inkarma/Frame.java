@@ -9,6 +9,7 @@ public class Frame {
     String text;
     int[] choix;
     int img = -1;
+    String imgTag = "";
     int expression = -1;
     int locuteurImg;
     String[] choixText;
