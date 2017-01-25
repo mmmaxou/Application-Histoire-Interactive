@@ -2,9 +2,6 @@
 <?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
-        <frame id='000'>
-            PAGE PAR DEFAUT
-        </frame>
         <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
             <music src="knowingsecret" />

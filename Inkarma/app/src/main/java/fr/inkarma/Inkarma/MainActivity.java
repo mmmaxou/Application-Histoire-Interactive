@@ -154,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
             ImageView expression =(ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.first_layout);
-            TextView debug = (TextView) findViewById(R.id.debug);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
@@ -305,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
             addToHistorique(settings);
 
             //////////// AUTO SKIP
-            autoSkip(textView, debug);
+            autoSkip(textView);
 
         }
     }
@@ -327,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void autoSkip(TextView textView, TextView debug) {
+    private void autoSkip(TextView textView) {
 
         //Recuperation des informations de vitesse de skip
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -335,7 +334,6 @@ public class MainActivity extends AppCompatActivity {
 
         String skipSpeedText = settings.getString("pref_autoSkipSpeed", "30");
         int skipSpeed = Integer.parseInt(skipSpeedText);
-//      debug.setText(skipSpeedText);
 
         // Calcul du temps d'auto skip
         int size = textView.length();
@@ -366,12 +364,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayChoice() {
         if (frame.choix[0] != -1 && frame.choix[1] != -1 && getGameRunning() ) {
-            TextView debug = (TextView) findViewById(R.id.debug);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
 
-            debug.setText("Next");
             locuteur.setVisibility(View.GONE);
             button1.setText(frame.choixText[0]);
             button2.setText(frame.choixText[1]);
@@ -452,11 +448,11 @@ public class MainActivity extends AppCompatActivity {
             historiqueText.remove(historiqueText.size() - 1);
             historiqueText.remove(historiqueText.size() - 1);
         }
+        if ( frame.precedent != null ) {
+            if ( frame.precedent.choix[0] == -1 || frame.precedent.choix[1] == -1 ) {
 
-        if ( frame.precedent.choix[0] == -1 || frame.precedent.choix[1] == -1 ) {
-
-            setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
-
+                setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
+            }
         }
     }
 
@@ -568,9 +564,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Debug", "x1 : " + x1 + " ; x2 : " + x2 + " delta : " + deltaX);
                 if (deltaX > MIN_DISTANCE)
                 {
-//                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
+                    //                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
                     before();
 
+                }
+                else if ( -deltaX > MIN_DISTANCE) {
+                    next();
                 }
                 else if ( Math.abs(deltaX) < TOUCH_DISTANCE && Math.abs(deltaY) < TOUCH_DISTANCE )
                 {
