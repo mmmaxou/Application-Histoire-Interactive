@@ -39,6 +39,7 @@
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
+            <choix consequence="700" />
         </frame>
         <frame id='700'>
             <![CDATA[<i>
@@ -278,8 +279,12 @@
         <frame id="4210">
             Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
             <img src="eglise" />
-            <choix consequence="4211" placeholder="Demander à Chuck de la laisser par terre."></choix>
-            <choix consequence="4213" placeholder="Ne rien faire"></choix>
+            <choix
+                consequence="4211"
+                placeholder="Demander à Chuck de la laisser par terre." />
+            <choix
+                consequence="4213"
+                placeholder="Ne rien faire" />
         </frame>
         <frame id="4211">
             Hey attends Chuck, laisse la par terre, ça pourrait être dangereux. On ne sait jamais, il pourrait y avoir un sortilège caché dedans !
@@ -415,16 +420,29 @@
             Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
             <img src="village" />
         </frame>
-        <!--TODO : changer le 00 en une vraie frame-->
+
         <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
-            <choix consequence="00" placeholder="Revenir en arrière et l'aider à se relever"/>
+            <choix consequence="5710" placeholder="Revenir en arrière et l'aider à se relever"/>
             <choix consequence="5800" placeholder="Partir et abandonner Chuck"/>
             <img src="village" />
         </frame>
             
-            
-        <!-- CHAPITRE 1 -->
+        <!-- ################################# -->
+        <!-- ########## CHAPITRE 1 ########### -->
+        <!-- ################################# -->
+
+        <!-- ########## SAUVER SON POTE  ######## -->
+
+
+        <frame id="5710">
+            Tu te retournes pour aller aider Chuck à se relever. Et, alors que tu t’agenouilles pour le relever, les gardes arrivent sur vous. Il n’y a plus d’échappatoire, ça va être la misère.
+            <img src="village" />
+            <choix consequence="9700" />
+        </frame>
+
+        <!-- ########## S'Enfuir comme un lache  ######## -->
+
         <frame id="5800">
             NOOOON CHUCK ! Je dois te laisser …
             Ma vie en dépends.
@@ -450,160 +468,840 @@
             Tu traverses en vitesse la demeure dans laquelle tu t’es engouffré. En passant au travers d’une tenture, tu aperçois qu’elle est à l’effigie de Xyrus, le dieu que tu viens de voler, karma ?
             <img src="village" />
         </frame>
-        <!--TODO : changer le 00 en une vraie frame-->
         <frame id="6300">
-            Une petite statuette représentant ce se trouve à ta portée.
-            <choix consequence="6400" placeholder="Prendre la statuette"></choix>
-            <choix consequence="00" placeholder="La laisser"></choix>
+            La petite statuette représentant Xyrus se trouve à ta portée.
+            <choix
+                consequence="6400"
+                placeholder="Prendre la statuette" />
+            <choix
+                consequence="6410"
+                placeholder="La laisser" />
         </frame>
         <frame id="6400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
-        </frame>            
+            Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
+            <choix consequence="6500" />
+            <karma value="-1" />
+        </frame>
+        <frame id="6410">
+            Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
+            <choix consequence="6500" />
+        </frame>
         <frame id="6500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Hey t’es qui-toi ?!?! Qu’est-s’tu fous la ! Sors d’ici !!
+            <img src="village" />
+            <locuteur personnage="patriarche" />
+            <expression src="fierte" />
         </frame>
         <frame id="6600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Ne prenant pas garde à cet abruti, tu continues ton chemin et tu sors par la fenêtre donnant sur l’une des artères principales de la ville. Tu fonces dans la ruelle en face. Au fond de cette ruelle se trouve le fleuve traversant la cité. Il y a un risque que les gardes te rattrapent au sol.
+            <img src="village" />
         </frame>
         <frame id="6700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Il y a une échelle à côté de toi, mais tu pourrais tout aussi bien passer par les toits…
+            <choix consequence="6800" placeholder="La ruelle" />
+            <choix consequence="7300" placeholder="Le toît" />
         </frame>
+
+        <!-- ####### ON passe par le sol ####### -->
+
         <frame id="6800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Pas le temps de s’amuser à gambader sur les toits, après tout tu connais la ville comme ta poche. Tu reprends ta course en direction du fleuve.
+            <img src="village" />
         </frame>
         <frame id="6900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Après quelques minutes de course, tu entends encore les voix lointaines des gardes. Tes jambes ont beau te faire mal, ré-entendre ces voix te galvanisent.
+            <img src="village" />
         </frame>
         <frame id="7000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Très vite tu arrives aux abords du fleuve, soudainement, tu entends des cliquetis à ta droite : une patrouille de gardes qui semble à ta recherche. L’un d’entre eux possède un arc et commence à encocher une flèche. Un autre t’interpelle et te demande de t’arrêter.
+            <img src="village" />
+            <choix
+                consequence="7100"
+                placeholder="Tu te laisses attraper" />
+            <choix
+                consequence="8100"
+                placeholder="Tu sautes dans le fleuve" />
         </frame>
+
+        <!-- ####### On se laisse attraper ####### -->
+
         <frame id="7100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Épris de peur, tu te laisses choir sur le sol en levant tes mains tremblantes et t’exclamant :
+            <img src="village" />
         </frame>
         <frame id="7200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            C’EST PAS MOI ! C’EST PAS MOI ! ME FAITES PAS DE MAL !
+            <img src="village" />
+            <locuteur personnage="asiel" />
+            <expression src="tristesse2" />
         </frame>
+
+        <!-- ####### On passe par les toits ####### -->
+
         <frame id="7300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu commences à grimper à l'échelle.
+            <img src="village" />
         </frame>
         <frame id="7400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            FAITES DEMI TOUR !! Le deuxième voleur n’a pas pu aller bien loin.
+            <img src="village" />
+            <locuteur personnage="voix" />
+            <expression src="surprise" />
         </frame>
         <frame id="7500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Arf. C’est plus fatigant que prévu. Non sans effort tu arrives au sommet et te hisses sur le toit. Un garde arrive alors au pied de l’échelle. Tu la renverse et la fait tomber pour les ralentir.
+            <img src="village" />
         </frame>
         <frame id="7600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu commences à progresser sur le toit, en avançant à faible allure pour éviter la chute. Une pierre lancée par un garde siffle près de tes oreilles, il tente de t'arrêter par la manière brute. Tu avance de quelques toits, sautant de maisons en maisons, mais aucune issue facile ne se profile à l’horizon.
+            <img src="village" />
         </frame>
         <frame id="7700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Soudainement, devant toi se trouve le vide, en dessous, le fleuve.
+            <img src="village" />
         </frame>
         <frame id="7800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            IL EST SUR LES TOITS
+            <img src="village" />
+            <locuteur personnage="voix" />
+            <expression src="surprise" />
         </frame>
         <frame id="7900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu te retournes et tu vois deux gardes se précipitant vers toi en essayant du mieux qu’il peuvent de ne pas tomber en sautant de toits en toits. L’un d’eux te mets en joue avec son arc.
+            <img src="village" />
         </frame>
         <frame id="8000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Plus qu’une solution : sauter dans le fleuve devant toi.
+            La chûte risque d'être brutale.
+            <img src="village" />
         </frame>
+
+        <!-- ####### On saute dans le fleuve ####### -->
+
         <frame id="8100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu prends ton élan et te prépare à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
+            <img src="fleuve" />
         </frame>
         <frame id="8200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu atterris lourdement dans l’eau après quelques secondes de chute. Le choc te fais cracher l’air de tes poumons et un peu d’eau vient les remplir.
+            <img src="fleuve" />
         </frame>
         <frame id="8300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu nages comme tu peux dans l’eau mais le courant est bien trop fort pour toi. Bientôt tu te retrouves au plus profond de la forêt, la cime des arbres cache la lumière du soleil.
+            <img src="fleuve" />
         </frame>
         <frame id="8400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Après de longues minutes, les courants se calment enfin et daignent te laisser regagner le rivage. Alors que tu te relèves, tu regardes autour de toi et te rends compte qu’il s’agit d’une partie de la forêt que tu n’as jamais encore exploré.
+            <img src="fleuve" />
         </frame>
+
+        <!-- ####### Mini jeu forêt ####### -->
+
         <frame id="8500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucune marque. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
+            <img src="foret" />
         </frame>
         <frame id="8600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu est determiné à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
+            <choix
+                consequence="8610"
+                placeholder="A gauche" />
+            <choix
+                consequence="8670"
+                placeholder="A droite" />
+            <img src="foret" />
         </frame>
+
+        <frame id="8610">
+            Par où souhaites-tu aller ? Deux autres directions semblent être dégagées.
+            <choix
+                consequence="8620"
+                placeholder="Tout droit" />
+            <choix
+                consequence="8630"
+                placeholder="A gauche" />
+            <img src="foret" />
+        </frame>
+
+        <!--TODO : ajouter un cpt mort ici -->
+        <frame id="8620">
+            Tu as l'impression d'être revenu sur tes pas. Tu reconnaît cette partie de la forêt.
+            <choix consequence="8600"/>
+            <img src="foret" />
+        </frame>
+
+        <frame id="8630">
+            Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
+            <choix
+                consequence="8640"
+                placeholder="Tout droit" />
+            <choix
+                consequence="8650"
+                placeholder="A droite" />
+            <img src="foret" />
+        </frame>
+
+        <!--TODO : ajouter un cpt mort ici -->
+        <frame id="8640">
+            Non, tu as beau avancer et avancer, tu reviens toujours sur tes pas.
+            <![CDATA[<b>
+            Pourtant c'est simple. Il ne faut jamais aller tout droit sauf à la fin.
+            </b>]]>
+            <choix consequence="8600"/>
+            <img src="foret" />
+        </frame>
+
+        <frame id="8650">
+            Tu sens que le vent commences à être plus fort. Tu frissones bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
+            Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
+            <choix
+                consequence="8660"
+                placeholder="A gauche" />
+            <choix
+                consequence="8700"
+                placeholder="Tout droit" />
+            <img src="foret" />
+        </frame>
+
+        <!--TODO : ajouter un cpt mort ici -->
+        <frame id="8660">
+            Tu te perds dans la forêt et préfères revenir sur tes pas.
+            <choix consequence="8600"/>
+            <img src="foret" />
+        </frame>
+
+        <frame id="8670">
+            Par où souhaites-tu aller ? Deux directions semblent être dégagées.
+            <choix
+                consequence="8680"
+                placeholder="A gauche" />
+            <choix
+                consequence="8690"
+                placeholder="A droite" />
+            <img src="foret" />
+        </frame>
+
+        <!--TODO : ajouter un cpt mort ici -->
+        <frame id="8680">
+            Apparement, cette direction ne mène nulle part ...
+            <![CDATA[<b>
+            Pourtant c'est simple. Il faut commencer par aller à gauche.
+            </b>]]>
+            <choix consequence="8600"/>
+            <img src="foret" />
+        </frame>
+
+        <!--TODO : ajouter un cpt mort ici -->
+        <frame id="8690">
+            Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronges un peu plus.
+            <choix consequence="8600"/>
+            <img src="foret" />
+        </frame>
+
         <frame id="8700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu aperçois enfin une éclaircie au loin. Tu fonces vers cette direction, et au fur et à mesure que tu te rapproches, la lumière se fait plus forte, le bruit environnant moins sourd, et l'air plus pur. Tu est soudainement aveuglé par cette lumière éclatante à laquelle tu n'étais plus habitué. Mais tu à réussi à sortir de la forêt en vie !!
+            <img src="forêt" />
         </frame>
+
+        <!-- TODO : Completer -->
         <frame id="8800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Ou souhaites-tu aller maintenant ?
+            <choix
+                consequence="8900"
+                placeholder="A la capitale" />
+            <choix
+                consequence="9300"
+                placeholder="Retourner à la ville" />
+            <img src="forêt" />
         </frame>
+
+        <!-- ####### Aller à la ville d’à côté/capitale ####### -->
+
         <frame id="8900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Soulagé d’être enfin sorti  de cette satanée forêt, tu te presses en direction de la ville. Les heures passent et se ressemblent.
+            <img src="plaine"/>
         </frame>
         <frame id="9000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
+            <img src="plaine"/>
         </frame>
         <frame id="9100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
+            <img src="plaine"/>
         </frame>
+
         <frame id="9200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Les bandits sautent sur ton corps endolori et tranchent ta gorge d’un coup sec à l’aide d’une dague.
+            <img src="plaine"/>
+            <choix consequence="666" />
         </frame>
+
+        <!-- ####### Je rentre à la ville ####### -->
+
         <frame id="9300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu pars donc en direction de Bandari en espérant pouvoir sauver Chuck. Tu peux apercevoir quelques maisonnées marquant le début du bourg au loin, il va te falloir quelques heures pour y arriver.
+            <img src="plaine"/>
         </frame>
         <frame id="9400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu arrives dans le centre de la ville qui a l’air très agitée.
+            <img src="village"/>
         </frame>
         <frame id="9500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            HEY TOI LA !!
+            <img src="village" />
+            <locuteur personnage="garde" />
+            <expression src="stupefaction" />
         </frame>
         <frame id="9600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            La patrouille de gardes te tombe dessus et t'emmène sans ménagement jusqu’à leurs quartiers.
+            <img src="village" />
         </frame>
+
+        <!-- PRISON -->
+        <!-- ########## tu viens d’essayer de sauver chuck ######## -->
+
         <frame id="9700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Quelques heures plus tard, tu te retrouves dans une cellule avec Chuck.
+            <img src="prison" />
         </frame>
+        <frame id="9710">
+            C’est la merde, on va se faire pendre Chuck.
+            <img src="prison" />
+            <locuteur personnage="asiel" />
+            <expression src="tristesse" />
+        </frame>
+        <frame id="9720">
+            Je suis sûr qu’il y a un moyen d’éviter ça…
+            <img src="prison" />
+            <locuteur personnage="chuck" />
+            <expression src="peur" />
+        </frame>
+        <frame id="9730">
+            Dit-il d’un air désemparé, le sang séché sur sa bouche rendant ses mots difficile à entendre.
+            <img src="prison" />
+            <choix consequence="9900" />
+        </frame>
+
+        <!-- ########## tu reviens de la forêt ######## -->
+
         <frame id="9800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Un garde te jette à terre dans la cellule, en te relevant tu aperçois Chuck qui te regarde d’un oeil en colère.
         </frame>
+        <frame id="9810">
+            T’es vraiment qu’un sale enfoiré de m’avoir laissé. Je pensais que je valais plus que ça pour toi.
+            <img src="prison" />
+            <locuteur personnage="chuck" />
+            <expression src="surprise" />
+        </frame>
+        <frame id="9820">
+            Ecoute, je devais bien essayer de m’échapper non ? Et puis je suis revenu pour toi.
+            <img src="prison" />
+            <locuteur personnage="asiel" />
+            <expression src="attente" />
+        </frame>
+        <frame id="9830">
+            Ouais super, ça à l’air de bien fonctionner ton plan.
+            <img src="prison" />
+            <locuteur personnage="chuck" />
+            <expression src="surprise" />
+        </frame>
+        <frame id="9840">
+            Dit-il d’un air sarcastique, la mine renfrognée.
+            <img src="prison" />
+            <choix consequence="9900" />
+        </frame>
+
+        <!-- ########## Suite de la TAULE ######## -->
+
         <frame id="9900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Le jour se lève. Un garde te réveille en te jetant un seau d’eau au visage.
+            <img src="prison" />
         </frame>
         <frame id="10000">
+            Réveille toi voleur ! Tu ne voudrais pas rater tes dernières heures non ?
+            <img src="prison" />
+            <locuteur personnage="garde" />
+            <expression src="fierte" />
+        </frame>
+        <frame id="10100">
+            Trois gardes entrent dans votre cellule, vous passent les fers aux mains et vous ordonnent d’avancer. Chuck semble dépossédé de toute émotion.
+            <img src="prison" />
+        </frame>
+        <frame id="10200">
+            Vous entrez dans la cour. Deux potences vous attendent, mais également un bourreau avide de sang.
+            <img src="prison" />
+        </frame>
+        <frame id="10300">
+            Un préfet s’avance et récite.
+            <img src="prison" />
+        </frame>
+        <frame id="10400">
+            Chuck, Asiel. Selon les lois du royaume, la sentence réservée aux voleurs est la peine capitale. Ici, nous sommes compréhensifs. C’est pourquoi je vous laisse le choix de mourir la tête au bout de la corde, ou bien la tête violemment happée par le bourreau.
+            <img src="prison" />
+            <locuteur personnage="prefet" />
+            <expression src="compatissant" />
+            <choix
+                consequence="10500"
+                placeholder="La décapitation" />
+            <choix
+                consequence="11800"
+                placeholder="La pendaison " />
+        </frame>
+
+        <!-- ########## décapitation  ######## -->
+
+        <frame id="10500">
+            Quitte à mourir autant le faire rapidement…
+            Je choisis la décapitation.
+            <img src="prison" />
+            <locuteur personnage="asiel" />
+            <expression src="emu" />
+        </frame>
+        <frame id="10600">
+            Fort bien, bourreau faites votre office.
+            <img src="prison" />
+            <locuteur personnage="prefet" />
+            <expression src="compatissant" />
+        </frame>
+        <frame id="10700">
+            Alors que les gardes t'emmènent de force vers le bourreau, tu commences à te débattre et à crier, tes instincts primaux prenant le dessus.
+            <img src="prison" />
+        </frame>
+        <frame id="10800">
+            On te forces à t’agenouiller, on te force à rester immobile en maintenant ta tête collée contre le billot, ignorant tes sanglots.
+            <img src="prison" />
+        </frame>
+        <frame id="10900">
+            Tu sens la lame du bourreau se poser sur ta nuque, il prépare son coup.
+            <img src="prison" />
+        </frame>
+        <frame id="11000">
+            Alors que la lame fend l’air pour te trancher la nuque, tu sens une chaleur surgir du plus profond de toi, elle irradie dans tout ton corps.
+            <img src="prison" />
+        </frame>
+        <frame id="11100">
+            . . .
+            <img src="prison" />
+        </frame>
+        <frame id="11200">
+            Tu ouvres les yeux et tout le monde se trouve à terre sauf Chuck et toi.
+            <img src="prison" />
+        </frame>
+        <frame id="11300">
+            Il s’est passé quoi bordel ?
+            <img src="prison" />
+            <locuteur personnage="asiel" />
+            <expression src="surprise2" />
+        </frame>
+        <frame id="11400">
+            Je ne sais pas, j’ai pas compris, t’allais te faire couper la tête et puis une lumière violente a émanée de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
+            <img src="prison" />
+            <locuteur personnage="chuck" />
+            <expression src="surprise2" />
+        </frame>
+        <frame id="11500">
+            Reprenant tes esprits, tu te dis qu’il faudrait peut être filer avant que tout le monde reprenne connaissance.<img src="prison" />
+        </frame>
+        <frame id="11600">
+            Vite, profitons en avant qu’ils ne se réveillent, ce sera peut être notre seule chance de nous en sortir vivant...
+            <img src="prison" />
+            <locuteur personnage="asiel" />
+            <expression src="surprise" />
+        </frame>
+        <frame id="11700">
+            Chuck et toi partez en courant dans les rues de Bandari, fuyant cet endroit où tu as échappé à la mort pour une raison que seuls les dieux connaissent.
+            <img src="village" />
+            <choix consequence="12500" />
+        </frame>
+
+        <!-- ########## pendaison  ######## -->
+
+        <frame id="11800">
+            Les exécutions au sabre rataient une fois sur deux, la pendaison au moins permettait de partir sans douleur dès lors que la nuque se brisait d’un coup.
+            <img src="prison" />
+        </frame>
+        <frame id="11900">
+            Je choisis la pendaison.
+            <img src="prison" />
+            <locuteur personnage="asiel" />
+            <expression src="emu" />
+        </frame>
+        <frame id="12000">
+            Fort bien, amenez le jusqu’à la potence.
+            <img src="prison" />
+            <locuteur personnage="prefet" />
+            <expression src="compatissant" />
+        </frame>
+        <frame id="12100">
+            Alors que les gardes t'emmènent de force vers la potence, tu commences à te débattre et à crier, tes instincts primaux prenant le dessus.
+            <img src="prison" />
+        </frame>
+        <frame id="12200">
+            Dans un état second, tu ne t’aperçois pas que l’on te passe un noeud coulant autour du coup, la corde est râpeuse et te gratte. On te fait ensuite monter sur un petit tabouret.
+            <img src="prison" />
+        </frame>
+        <frame id="12300">
+            Alors que tu sens le coup de pied faire basculer le tabouret en dessous de toi, tu sens une chaleur surgir du plus profond de toi, elle irradie tout ton corps.
+            <img src="prison" />
+        </frame>
+        <frame id="12400">
+            Tu ouvres les yeux et vois que les personnes autour de toi sauf Chuck sont toutes à terre, inconscientes.
+            <img src="prison" />
+            <choix consequence="11300" />
+        </frame>
+
+        <!-- Petit trick ; comme les frames sont les même on repart en arrière a : 11300 -->
+
+        <!-- ########## ID : se faire arrêter par le prêtre ######## -->
+
+        <frame id="12500">
+            Tandis que tu cours avec frénésie pour t’éloigner le plus possible, tu sens une perturbation dans l’air. Tu tournes à gauche au prochain carrefour car c’est celui qui t’emmeneras toi et Chuck sur la route de la ville la plus proche.
+            <img src="village" />
+        </frame>
+        <frame id="12600">
+            Cependant alors que tu amorces la fin de ton virage, tu découvres qu’un vieil homme habillé d’une simple tunique te fait face, l’air de psalmodier dans sa barbe.
+            <img src="village" />
+        </frame>
+        <frame id="12700">
+            Une violente douleur te prends à la tête, tu t’écroules.
+            <img src="village" />
+        </frame>
+
+        <!-- ########## ID : Retour en taule = Altercation avec le père ######## -->
+
+        <frame id="12800">
+            Lorsque tu reprends connaissance, ton père est assis en face de toi sur un petit siège dans une cellule. Chuck n’est plus avec toi.
+            <img src="prison" />
+        </frame>
+        <frame id="12900">
+            Asiel, qu’ai-je donc fait aux dieux pour que tu me fasses ça ...
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="fierte" />
+        </frame>
+        <frame id="13000">
+            Je…
+            <locuteur personnage="asiel" />
+            <expression src="emu" />
+        </frame>
+        <frame id="13100">
+            J’ai pu négocier ta vie avec un prêtre de Xyrus, puisque c’est leur dieu que tu as offensé avec tes conneries. Vois cela comme un cadeau d’adieu, le dernier que je pourrais te faire, car dans tous les cas tu vas devoir quitter cette ville pour le restant de tes jours.
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="neutre" />
+        </frame>
+        <frame id="13200">
+            Tu dois faire un choix, probablement le dernier de ta vie Asiel.
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="neutre" />
+        </frame>
+        <frame id="13300">
+            Soit tu pars avec le prêtre qui t’as stoppé pour aller rejoindre les rangs de leur moines dans un de leur fort reculé aux frontières Sud du Royaume, soit tu peux décliner son offre et dans ce cas tu devras passer ta vie dans une carrière de calcaire au Nord.
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="neutre" />
+            <choix
+                consequence="13340"
+                placeholder="Partir dans les carrières" />
+            <choix
+                consequence="13800"
+                placeholder="Partir avec le prêtre" />
+        </frame>
+
+        <!-- ########## ID partir dans les carrière ######## -->
+
+        <frame id="13400">
+            Très bien, je mettrais le prêtre au courant de ta réponse.
+            Adieu Asiel.
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="tristesse" />
+        </frame>
+        <frame id="13500">
+            Ton père se lève et s’en va, les larmes piquant au coins de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
+            <img src="prison" />
+        </frame>
+        <frame id="13600">
+            À peines quelques mois après ton arrivée dans les  carrières, tu tombes du haut d’un échafaudage. Les gardes, voyant que tu ne pourrais pas guérir de tes blessures t’achèvent  d’un coup d’épée longue.
+            <img src="blackscreen" />
+        </frame>
+        <frame id="13700">
+            Une bouche de moins à nourrir. Au Nord, chaque ration compte.
+            <img src="blackscreen" />
+        </frame>
+
+        <!-- ########## ID partir avec le pretre ######## -->
+
+        <frame id="13800">
+            Très bien, je mettrais le prêtre au courant de ta réponse.
+            Adieu Asiel.
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="tristesse" />
+        </frame>
+        <frame id="13900">
+            Ton père se lève et s’en va, les larmes piquant au coins de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
+            <img src="prison" />
+        </frame>
+        <frame id="14000">
+            Tu pars pour un long périple au travers des forêts, des montagnes et vallées. Qui sait ce qu’il pourrait t’y attendre ? Sans doute une grosse aventure !
+            <img src="blackscreen" />
+        </frame>
+        <frame id="14100">
+            <![CDATA[<i>
+            Les chroniques d’Inkarma chapitre deux, peut être l’année prochaine !
+            </b>]]>
+            <img src="blackscreen" />
+        </frame>
+        <frame id="14200">
             <choix consequence="-1"></choix>
             <choix consequence="-1"></choix>
         </frame>
+        <frame id="14300">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="14400">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="14500">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="14600">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="14700">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="14800">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="14900">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15000">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15100">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15200">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15300">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15400">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15500">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15600">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15700">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15800">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="15900">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16000">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16100">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16200">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16300">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16400">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16500">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16600">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16700">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16800">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="16900">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17000">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17100">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17200">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17300">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17400">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17500">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17600">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17700">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17800">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="17900">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18000">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18100">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18200">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18300">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18400">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18500">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18600">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18700">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18800">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="18900">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19000">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19100">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19200">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19300">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19400">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19500">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19600">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19700">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19800">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+        <frame id="19900">
+            <choix consequence="-1"></choix>
+            <choix consequence="-1"></choix>
+        </frame>
+
+
+
+        <!--Ecran de mort-->
+        <frame id="666">
+            DEAD END
+            <img src="blackscreen"/>
+            <choix consequence="9999999" />
+        </frame>
+
+        <!--Ecran de mort-->
+        <frame id="9999999">
+            Veuillez retourner au menu principal.
+            <img src="blackscreen"/>
+        </frame>
+        
 
 
     </application>

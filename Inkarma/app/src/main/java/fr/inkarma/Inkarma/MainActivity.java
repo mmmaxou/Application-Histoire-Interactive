@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     Script script;
     private Handler handler;
     private MediaPlayer mediaPlayer;
+    private String currentImage;
 
 
     @Override
@@ -111,14 +112,14 @@ public class MainActivity extends AppCompatActivity {
         ImageView enabledChart = new ImageView(getBaseContext());
         enabledChart.setScaleType(ImageView.ScaleType.CENTER_CROP);
         enabledChart.setImageResource(frame.img);
-        enabledChart.setTag(frame.imgTag);
         myImageSwitcher.addView(enabledChart, param);
 
         Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
         Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
-
         myImageSwitcher.setOutAnimation(animationOut);
         myImageSwitcher.setInAnimation(animationIn);
+
+        currentImage = frame.imgTag;
     }
 
     private void setFrame(int i) {
@@ -232,23 +233,33 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+            Log.d("debug image :", " ---- Frame : " + frame.imgTag + " ------ memory : " + currentImage);
+
             // Affichage des images
             if (frame.img != -1) {
 
-                ImageView disabledChart = new ImageView(getBaseContext());
-                disabledChart.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                disabledChart.setImageResource(frame.img);
+                if ( frame.imgTag != currentImage) {
 
-                // Ajout de la nouvelle.
+                    // Creation de la nouvelle image
 
-                myImageSwitcher.removeView(myImageSwitcher.getNextView());
-                LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        1.0f
-                );
-                myImageSwitcher.addView(disabledChart, param);
-                myImageSwitcher.showNext();
+                    ImageView disabledChart = new ImageView(getBaseContext());
+                    disabledChart.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    disabledChart.setImageResource(frame.img);
+
+                    // Ajout de la nouvelle.
+
+                    myImageSwitcher.removeView(myImageSwitcher.getNextView());
+                    LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            1.0f
+                    );
+                    myImageSwitcher.addView(disabledChart, param);
+                    myImageSwitcher.showNext();
+
+                    currentImage = frame.imgTag;
+
+                }
 
             }
 

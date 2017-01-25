@@ -325,8 +325,7 @@ public class Script {
 			 *  string =    '"' {^"$} {'$' program '$' {^"$} } '"'
 			 */
 			private String readString() {
-				// TODO Auto-generated method stub
-				String result = "";				
+				String result = "";
 				globbleSpace();
 				int start;
 				if (accept(TYPE.QUOTE)){ // double quote allows inner $expressions$ evaluation.
