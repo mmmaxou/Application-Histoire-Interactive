@@ -602,7 +602,7 @@
             <music src="tension" />
         </frame>
         <frame id="8600">
-            Tu est determiné à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
+            Tu es determiné à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
             <choix
                 consequence="8610"
                 placeholder="A gauche" />
@@ -699,7 +699,7 @@
         </frame>
 
         <frame id="8700">
-            Tu aperçois enfin une éclaircie au loin. Tu fonces vers cette direction, et au fur et à mesure que tu te rapproches, la lumière se fait plus forte, le bruit environnant moins sourd, et l'air plus pur. Tu est soudainement aveuglé par cette lumière éclatante à laquelle tu n'étais plus habitué. Mais tu à réussi à sortir de la forêt en vie !!
+            Tu aperçois enfin une éclaircie au loin. Tu fonces vers cette direction, et au fur et à mesure que tu te rapproches, la lumière se fait plus forte, le bruit environnant moins sourd, et l'air plus pur. Tu es soudainement aveuglé par cette lumière éclatante à laquelle tu n'étais plus habitué. Mais tu as réussi à sortir de la forêt en vie !!
             <img src="foret" />
         </frame>
 
