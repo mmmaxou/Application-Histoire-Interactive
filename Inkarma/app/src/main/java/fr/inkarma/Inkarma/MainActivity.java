@@ -170,8 +170,9 @@ public class MainActivity extends AppCompatActivity {
             // Affichage du texte
 
 //            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
-            String text = script.evaluate("'#'+frame+' | karma:'+karma+\""+frame.text+"\"").toString();
+//            String text = script.evaluate("'#'+frame+' | karma:'+karma+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("karma=karma+1;'karma:'+karma+\""+frame.text+"\"").toString();
+            String text = script.evaluate("\""+frame.text+"\"").toString();
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
@@ -603,7 +604,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void playSound(int music) {
 
-        if ( music == -1) {
+        if ( music == -1 || music == 0) {
             Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
         } else {
             // Initialisation

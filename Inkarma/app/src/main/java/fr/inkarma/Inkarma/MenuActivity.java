@@ -4,10 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -38,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.knowingsecret);
+        mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
     }
@@ -116,7 +115,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onRestart();
 
         if ( mediaPlayer == null ) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.knowingsecret);
+            mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
         }

@@ -132,3 +132,5 @@
         android:visibility="visible" />
 
 </LinearLayout>
+
+<!--TODO : Add music preferences-->

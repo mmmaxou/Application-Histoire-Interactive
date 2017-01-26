@@ -4,7 +4,7 @@
     <application>
         <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
-            <music src="knowingsecret" />
+            <music src="yggdraop" />
         </frame>
         <frame id='110'>L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
@@ -12,24 +12,20 @@
         <frame id='200'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <img src="campagne" />
-            <music src="doutes" />
         </frame>
         <frame id='300'>
             Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…
             <img src="campagne" />
-            <music src="abidingprincess" />
         </frame>
         <frame id='400'>
             Que donnerais-tu pour retourner à cette douce époque ? ...
             <img src="campagne" />
-            <music src="forme" />
         </frame>
         <frame id='500'>
             Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids.
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="compatissant" />
-            <music src="grandioso" />
         </frame>
         <frame id='600'>
             Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
@@ -37,6 +33,7 @@
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
             <choix consequence="700" />
+            <music src="rockangry" />
         </frame>
         <frame id='700'>
             <![CDATA[<i>
@@ -88,6 +85,7 @@
             </i>]]>
             Ton père te fusille du regard. Il a l’air d’avoir fermé les yeux sur l’incident de tout à l’heure. Rassuré, tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
             <img src="salleamanger" />
+            <music src="tension" />
         </frame>
         <frame id='1600'>
             Pas si vite Asiel, j’ai une nouvelle importante à t’annoncer.
@@ -166,6 +164,7 @@
         <frame id="2700">
             Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck.
             <img src="village" />
+            <music src="yggdraop" />
         </frame>
         <frame id="2710">
             C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
@@ -364,6 +363,7 @@
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
+            <music src="rockangry" />
         </frame>
         <frame id="4900">
             Vous vous précipitez au-dehors ! L'alarme de la garde sonne au loin. Vous courez rapidement sans trop savoir où aller. Le pas de Chuck est très paniqué, jamais tu ne l’as vu comme cela.
@@ -423,6 +423,7 @@
             <choix consequence="5710" placeholder="Revenir en arrière et l'aider à se relever"/>
             <choix consequence="5800" placeholder="Partir et abandonner Chuck"/>
             <img src="village" />
+            <music src="" />
         </frame>
             
         <!-- ################################# -->
@@ -458,7 +459,7 @@
             <img src="village" />
         </frame>
         <frame id="6100">
-            C’est trop tard pour lui. Tant pis, au moins ta vie est sauve. Que te serait il arrivé si jamais tu t’étais fait prendre ? Le sort réservé aux voleurs est très violent. Les images de l’exécution publique à laquelle tu as assisté te reviens en mémoire. Tu déglutis de dégoût et ouvres la porte avec fracas.
+            C’est trop tard pour lui. Tant pis, au moins ta vie est sauve. Que te serait il arrivé si jamais tu t’étais fait prendre ? Le sort réservé aux voleurs est très violent. Les images de l’exécution publique à laquelle tu as assisté te reviennent en mémoire. Tu déglutis de dégoût et ouvres la porte avec fracas.
             <img src="village" />
         </frame>
         <frame id="6200">
@@ -488,6 +489,7 @@
             <img src="village" />
             <locuteur personnage="patriarche" />
             <expression src="fierte" />
+            <music src="rockangry" />
         </frame>
         <frame id="6600">
             Ne prenant pas garde à cet abruti, tu continues ton chemin et tu sors par la fenêtre donnant sur l’une des artères principales de la ville. Tu fonces dans la ruelle en face. Au fond de cette ruelle se trouve le fleuve traversant la cité. Il y a un risque que les gardes te rattrapent au sol.
@@ -597,6 +599,7 @@
         <frame id="8500">
             La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucune marque. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
+            <music src="tension" />
         </frame>
         <frame id="8600">
             Tu est determiné à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
@@ -697,7 +700,7 @@
 
         <frame id="8700">
             Tu aperçois enfin une éclaircie au loin. Tu fonces vers cette direction, et au fur et à mesure que tu te rapproches, la lumière se fait plus forte, le bruit environnant moins sourd, et l'air plus pur. Tu est soudainement aveuglé par cette lumière éclatante à laquelle tu n'étais plus habitué. Mais tu à réussi à sortir de la forêt en vie !!
-            <img src="forêt" />
+            <img src="foret" />
         </frame>
 
         <!-- TODO : Completer -->
@@ -709,7 +712,7 @@
             <choix
                 consequence="9300"
                 placeholder="Retourner à la ville" />
-            <img src="forêt" />
+            <img src="foret" />
         </frame>
 
         <!-- ####### Aller à la ville d’à côté/capitale ####### -->
@@ -717,6 +720,7 @@
         <frame id="8900">
             Soulagé d’être enfin sorti  de cette satanée forêt, tu te presses en direction de la ville. Les heures passent et se ressemblent.
             <img src="plaine"/>
+            <music src="sad" />
         </frame>
         <frame id="9000">
             Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
@@ -738,6 +742,7 @@
         <frame id="9300">
             Tu pars donc en direction de Bandari en espérant pouvoir sauver Chuck. Tu peux apercevoir quelques maisonnées marquant le début du bourg au loin, il va te falloir quelques heures pour y arriver.
             <img src="plaine"/>
+            <music src="yggdraop" />
         </frame>
         <frame id="9400">
             Tu arrives dans le centre de la ville qui a l’air très agitée.
@@ -748,6 +753,7 @@
             <img src="village" />
             <locuteur personnage="garde" />
             <expression src="stupefaction" />
+            <music src="tension" />
         </frame>
         <frame id="9600">
             La patrouille de gardes te tombe dessus et t'emmène sans ménagement jusqu’à leurs quartiers.
@@ -783,6 +789,8 @@
 
         <frame id="9800">
             Un garde te jette à terre dans la cellule, en te relevant tu aperçois Chuck qui te regarde d’un oeil en colère.
+            <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="9810">
             T’es vraiment qu’un sale enfoiré de m’avoir laissé. Je pensais que je valais plus que ça pour toi.
@@ -813,6 +821,7 @@
         <frame id="9900">
             Le jour se lève. Un garde te réveille en te jetant un seau d’eau au visage.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10000">
             Réveille toi voleur ! Tu ne voudrais pas rater tes dernières heures non ?
@@ -853,6 +862,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="emu" />
+            <music src="rockangry" />
         </frame>
         <frame id="10600">
             Fort bien, bourreau faites votre office.
@@ -889,6 +899,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
+            <music src="yggdraop" />
         </frame>
         <frame id="11400">
             Je ne sais pas, j’ai pas compris, t’allais te faire couper la tête et puis une lumière violente a émanée de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
@@ -916,6 +927,7 @@
         <frame id="11800">
             Les exécutions au sabre rataient une fois sur deux, la pendaison au moins permettait de partir sans douleur dès lors que la nuque se brisait d’un coup.
             <img src="prison" />
+            <music src="rockangry" />
         </frame>
         <frame id="11900">
             Je choisis la pendaison.
@@ -954,6 +966,7 @@
         <frame id="12500">
             Tandis que tu cours avec frénésie pour t’éloigner le plus possible, tu sens une perturbation dans l’air. Tu tournes à gauche au prochain carrefour car c’est celui qui t’emmeneras toi et Chuck sur la route de la ville la plus proche.
             <img src="village" />
+            <music src="tension" />
         </frame>
         <frame id="12600">
             Cependant alors que tu amorces la fin de ton virage, tu découvres qu’un vieil homme habillé d’une simple tunique te fait face, l’air de psalmodier dans sa barbe.
@@ -969,6 +982,7 @@
         <frame id="12800">
             Lorsque tu reprends connaissance, ton père est assis en face de toi sur un petit siège dans une cellule. Chuck n’est plus avec toi.
             <img src="prison" />
+            <music src="sad" />
         </frame>
         <frame id="12900">
             Asiel, qu’ai-je donc fait aux dieux pour que tu me fasses ça ...
@@ -1014,6 +1028,7 @@
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="tristesse" />
+            <music src="sad" />
         </frame>
         <frame id="13500">
             Ton père se lève et s’en va, les larmes piquant au coins de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
@@ -1036,6 +1051,7 @@
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="tristesse" />
+            <music src="yggdraop" />
         </frame>
         <frame id="13900">
             Ton père se lève et s’en va, les larmes piquant au coins de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
