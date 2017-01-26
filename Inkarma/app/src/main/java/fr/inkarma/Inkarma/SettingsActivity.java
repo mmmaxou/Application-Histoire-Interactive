@@ -17,11 +17,6 @@ public class SettingsActivity extends AppCompatActivity{
                 .commit();
 
     }
-/*
-    public void onClickMenu(View view) {
-        Intent intent = new Intent(this, MenuActivity.class);
-        startActivity(intent);
-    }
-    */
+
 }
 

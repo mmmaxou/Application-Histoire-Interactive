@@ -18,6 +18,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -120,6 +121,23 @@ public class MainActivity extends AppCompatActivity {
         myImageSwitcher.setInAnimation(animationIn);
 
         currentImage = frame.imgTag;
+
+        // On empêche l'application de se mettre en veille toute seule.
+        // Recuperation des informations depuis les parametres
+        SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean veille = params.getBoolean("pref_veille", false);
+        if ( veille ) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        //On permet a l'application de se mettre en veille a nouveau.
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
     }
 
     private void setFrame(int i) {
@@ -172,7 +190,8 @@ public class MainActivity extends AppCompatActivity {
 //            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("'#'+frame+' | karma:'+karma+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("karma=karma+1;'karma:'+karma+\""+frame.text+"\"").toString();
-            String text = script.evaluate("\""+frame.text+"\"").toString();
+            String text = script.evaluate("'#'+frame+ \""+frame.text+"\"").toString(); // Affichage du numero de frame
+//            String text = script.evaluate("\""+frame.text+"\"").toString();
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
@@ -237,6 +256,14 @@ public class MainActivity extends AppCompatActivity {
 
             // Affichage des images
             if (frame.img != -1) {
+
+                // Si c'est la frame 666 on change l'apparation pour un fade IN
+                if (frame.id == 666) {
+
+                    Animation animationIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
+                    myImageSwitcher.setInAnimation(animationIn);
+
+                }
 
                 if ( frame.imgTag != currentImage) {
 
@@ -381,6 +408,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClick1(View view){
 //        script.put("lastChoiceID", frame.id);
 //        script.put("frameNumber", 0);
+
+        data.get(frame.choix[0]).precedent = frame;
         setFrame(frame.choix[0]); //Les variables script sont sauvegardées dans le setFrame
     }
 
@@ -388,6 +417,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClick2(View view){
 //        script.put("lastChoiceID", frame.id);
 //        script.put("frameNumber", 0);
+
+        data.get(frame.choix[1]).precedent = frame;
         setFrame(frame.choix[1]); //Les variables script sont sauvegardées dans le setFrame
     }
 
@@ -418,21 +449,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void next() {
-        if ( frame.id < 1000000 ) {
+
+        if ( frame.id == 666 ) {
+            this.finish();
+        }
+
+        // On remet a défaut l'animation du textSwitcher
+        ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
+        Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
+        Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
+        myImageSwitcher.setOutAnimation(animationOut);
+        myImageSwitcher.setInAnimation(animationIn);
 //            int frameNumber = script.getInt("frameNumber");
 //            script.put("frameNumber",frameNumber + 1 );
 
-            //Si il n'y a qu'un choix, on va a cet endroit
-            if (frame.choix[0] != -1 && frame.choix[1] == -1 ){
-                data.get(frame.choix[0]).precedent = frame;
-                setFrame(frame.choix[0]);
-            } else if ( frame.choix[0] == -1 || frame.choix[1] == -1) {
-                setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
-            }
-        } else {
-            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
-            textView.setText("fin");
+        //Si il n'y a qu'un choix, on va a cet endroit
+        if (frame.choix[0] != -1 && frame.choix[1] == -1 ){
+            data.get(frame.choix[0]).precedent = frame;
+            setFrame(frame.choix[0]);
+        } else if ( frame.choix[0] == -1 || frame.choix[1] == -1) {
+            setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
         }
+
     }
 
 
@@ -451,6 +489,14 @@ public class MainActivity extends AppCompatActivity {
         }
         if ( frame.precedent != null ) {
             if ( frame.precedent.choix[0] == -1 || frame.precedent.choix[1] == -1 ) {
+
+                // On change l'animation :
+                ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
+                Animation animationOut = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right);
+                Animation animationIn = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+                myImageSwitcher.setOutAnimation(animationOut);
+                myImageSwitcher.setInAnimation(animationIn);
+
 
                 setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
             }
@@ -604,9 +650,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void playSound(int music) {
 
+
+        // On ne met pas de musique en fonction des parametres
+        // Recuperation des informations depuis les parametres
+        SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean musique = params.getBoolean("pref_musique", false);
+
         if ( music == -1 || music == 0) {
             Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
-        } else {
+        } else if ( musique ){
             // Initialisation
             if (mediaPlayer == null) {
                 mediaPlayer = MediaPlayer.create(this, music);
@@ -633,13 +685,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        mediaPlayer.pause();
+        if ( mediaPlayer != null ) {
+            mediaPlayer.pause();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mediaPlayer.start();
+
+        SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean musique = params.getBoolean("pref_musique", false);
+        if ( musique ) {
+            mediaPlayer.start();
+        }
     }
 
     // Affichage caractère par caractère

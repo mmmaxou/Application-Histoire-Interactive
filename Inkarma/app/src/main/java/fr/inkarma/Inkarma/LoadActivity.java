@@ -174,7 +174,11 @@ public class LoadActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Chargement effectué", Toast.LENGTH_SHORT).show ();
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish(); // Call once you redirect to another activity
+
+
 
     }
 
@@ -218,12 +222,16 @@ public class LoadActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Sauvegarde effectué", Toast.LENGTH_SHORT).show ();
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish(); // Call once you redirect to another activity
     }
 
     public void onClickMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish(); // Call once you redirect to another activity
     }
 
 }

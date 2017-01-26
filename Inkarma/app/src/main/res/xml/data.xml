@@ -14,7 +14,7 @@
             <img src="campagne" />
         </frame>
         <frame id='300'>
-            Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité…
+            Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucunes responsabilités…
             <img src="campagne" />
         </frame>
         <frame id='400'>
@@ -122,7 +122,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="2000">
-            Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition et non pas une nouvelle si dure à avaler.
+            Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition voir pire. Mais au grand jamais tu ne t'attendais a ça !
             <img src="salleamanger" />
         </frame>
         <frame id="2100">
@@ -167,7 +167,7 @@
             <music src="yggdraop" />
         </frame>
         <frame id="2710">
-            C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble, voler des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits, jeter des cailloux sur des fenêtres puis se moquer des passants se faisant copieusement insulter par les résidents offusqués de cet affront à leur personne.
+            C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble. Vous voliez des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits. Vous jetiez des cailloux sur des fenêtres puis vous vous moquiez des passants qui se faisaient copieusement insulter par les résidents offusqués de cet affront à leur personne.
             <img src="village" />
         </frame>
         <frame id="2800">
@@ -277,7 +277,7 @@
             <img src="eglise" />
             <choix
                 consequence="4211"
-                placeholder="Demander à Chuck de la laisser par terre." />
+                placeholder="La laisser par terre" />
             <choix
                 consequence="4213"
                 placeholder="Ne rien faire" />
@@ -402,7 +402,9 @@
             <img src="village" />
         </frame>
         <frame id="5400">
+            <![CDATA[<b>
             Je vaux bien mieux que ça !! Non, pas moyen.
+            </b>]]>
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapés. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
             <img src="village" />
@@ -411,17 +413,17 @@
             PUTAAAAAIN !!
             <img src="village" />
             <locuteur personnage="chuck" />
-            <expression src="stupefaction" />
+            <expression src="surprise2" />
         </frame>
         <frame id="5600">
-            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de se relever.
+            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de s'extraire de l'emprise gardes qui lui ont foncés dessus.
             <img src="village" />
         </frame>
 
         <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
-            <choix consequence="5710" placeholder="Revenir en arrière et l'aider à se relever"/>
-            <choix consequence="5800" placeholder="Partir et abandonner Chuck"/>
+            <choix consequence="5710" placeholder="Revenir et l'aider"/>
+            <choix consequence="5800" placeholder="Partir et l'abandonner"/>
             <img src="village" />
             <music src="" />
         </frame>
@@ -452,7 +454,7 @@
             ENCULÉ ! Aide moi !!!
             <img src="village" />
             <locuteur personnage="chuck" />
-            <expression src="stupefaction" />
+            <expression src="surprise2" />
         </frame>
         <frame id="6000">
             Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé au cliquetis des armures, mais tu continues de courir pour sauver ta peau.
@@ -463,7 +465,7 @@
             <img src="village" />
         </frame>
         <frame id="6200">
-            Tu traverses en vitesse la demeure dans laquelle tu t’es engouffré. En passant au travers d’une tenture, tu aperçois qu’elle est à l’effigie de Xyrus, le dieu que tu viens de voler, karma ?
+            Tu traverses en vitesse la demeure dans laquelle tu t’es engouffré. En passant au travers d’une tenture, tu aperçois qu’elle est à l’effigie de Xyrus, le dieu que tu viens de voler. Est-ce le karma ?
             <img src="village" />
         </frame>
         <frame id="6300">
@@ -498,7 +500,7 @@
         <frame id="6700">
             Il y a une échelle à côté de toi, mais tu pourrais tout aussi bien passer par les toits…
             <choix consequence="6800" placeholder="La ruelle" />
-            <choix consequence="7300" placeholder="Le toît" />
+            <choix consequence="7300" placeholder="Le toit" />
         </frame>
 
         <!-- ####### ON passe par le sol ####### -->
@@ -597,12 +599,12 @@
         <!-- ####### Mini jeu forêt ####### -->
 
         <frame id="8500">
-            La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucune marque. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
+            La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucunes marques. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
             <music src="tension" />
         </frame>
         <frame id="8600">
-            Tu es determiné à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
+            Tu es déterminé à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
             <choix
                 consequence="8610"
                 placeholder="A gauche" />
@@ -774,13 +776,15 @@
             <expression src="tristesse" />
         </frame>
         <frame id="9720">
+            <![CDATA[<i>
             Je suis sûr qu’il y a un moyen d’éviter ça…
+            </b>]]>
+            Dit-il d’un air désemparé, le sang séché sur sa bouche rendant ses mots difficile à entendre.
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="peur" />
         </frame>
         <frame id="9730">
-            Dit-il d’un air désemparé, le sang séché sur sa bouche rendant ses mots difficile à entendre.
             <img src="prison" />
             <choix consequence="9900" />
         </frame>
@@ -857,7 +861,7 @@
         <!-- ########## décapitation  ######## -->
 
         <frame id="10500">
-            Quitte à mourir autant le faire rapidement…
+            Quitte à mourir, autant le faire rapidement…
             Je choisis la décapitation.
             <img src="prison" />
             <locuteur personnage="asiel" />
@@ -1013,7 +1017,7 @@
             <locuteur personnage="thedris" />
             <expression src="neutre" />
             <choix
-                consequence="13340"
+                consequence="13400"
                 placeholder="Partir dans les carrières" />
             <choix
                 consequence="13800"
@@ -1041,6 +1045,7 @@
         <frame id="13700">
             Une bouche de moins à nourrir. Au Nord, chaque ration compte.
             <img src="blackscreen" />
+            <choix consequence="666" />
         </frame>
 
         <!-- ########## ID partir avec le pretre ######## -->
@@ -1305,14 +1310,14 @@
         <!--Ecran de mort-->
         <frame id="666">
             DEAD END
-            <img src="blackscreen"/>
+            <img src="gameover"/>
             <choix consequence="9999999" />
         </frame>
 
         <!--Ecran de mort-->
         <frame id="9999999">
             Veuillez retourner au menu principal.
-            <img src="blackscreen"/>
+            <img src="gameover"/>
         </frame>
         
 

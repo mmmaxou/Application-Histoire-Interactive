@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,9 +38,13 @@ public class MenuActivity extends AppCompatActivity {
         }
 
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
-        mediaPlayer.start();
-        mediaPlayer.setLooping(true);
+        SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean musique = params.getBoolean("pref_musique", false);
+        if ( musique ) {
+            mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
+            mediaPlayer.start();
+            mediaPlayer.setLooping(true);
+        }
     }
 
     public boolean saveExists(){
@@ -56,20 +61,27 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void onClickPlay(View view) {
-        mediaPlayer.release();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
 
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish(); // Call once you redirect to another activity
     }
 
     public void onClickNewGame(View view) {
-
-        mediaPlayer.release();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
 
         createNewSave();
 
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish(); // Call once you redirect to another activity
     }
 
     private void createNewSave() {
@@ -93,7 +105,10 @@ public class MenuActivity extends AppCompatActivity {
 
     public void onClickLoad(View view) {
         Intent intent = new Intent(this, LoadActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        finish(); // Call once you redirect to another activity
+
     }
 
     public void onClickParams(View view) {
@@ -114,7 +129,11 @@ public class MenuActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if ( mediaPlayer == null ) {
+
+        SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean musique = params.getBoolean("pref_musique", false);
+
+        if ( mediaPlayer == null && musique) {
             mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
             mediaPlayer.start();
             mediaPlayer.setLooping(true);

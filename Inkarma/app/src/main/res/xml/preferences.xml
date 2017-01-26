@@ -18,7 +18,7 @@
             android:dialogTitle="Vitesse"
             android:entries="@array/pref_autoSkipSpeed_entries"
             android:entryValues="@array/pref_autoSkipSpeed_values"
-            android:defaultValue="30"
+            android:defaultValue="35"
             android:persistent="true"/>
 
     </PreferenceCategory>
@@ -26,7 +26,6 @@
     <PreferenceCategory
         android:title="Texte"
         android:key="pref_key_textSize">
-
         <ListPreference
             android:key="pref_textSize"
             android:title="Taille du texte"
@@ -36,6 +35,28 @@
             android:defaultValue="18"
             android:persistent="true"/>
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Veille"
+        android:key="pref_key_veille">
+        <CheckBoxPreference
+            android:key="pref_veille"
+            android:title="Desactiver la mise en veille de l'appareil"
+            android:summary="Cochez cette case pour que votre application ne se mette plus en veille durant la lecture."
+            android:defaultValue="true"
+            android:persistent="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Musique"
+        android:key="pref_key_musique">
+        <CheckBoxPreference
+            android:key="pref_musique"
+            android:title="Activer la musique"
+            android:summary="Cochez cette case pour que de la musique soit jouée pendant le jeu."
+            android:defaultValue="true"
+            android:persistent="true" />
     </PreferenceCategory>
 
 </PreferenceScreen>
