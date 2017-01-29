@@ -1,5 +1,6 @@
 package fr.inkarma.Inkarma;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
@@ -7,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -88,7 +90,6 @@ public class MenuActivity extends AppCompatActivity {
 
         Script script = new Script();
 
-        script.put("heroName","toto");
         script.put("frame", 100);
         script.put("frameNumber", 0);
         script.put("karma", 0);
@@ -105,9 +106,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void onClickLoad(View view) {
         Intent intent = new Intent(this, LoadActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        finish(); // Call once you redirect to another activity
 
     }
 
@@ -139,4 +138,30 @@ public class MenuActivity extends AppCompatActivity {
             mediaPlayer.setLooping(true);
         }
     }
+
+    // On empeche de quitter en appuyant sur back
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setTitle("Quitter le jeu")
+                .setMessage("Etes-vous sur de vouloir quitter le jeu ?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        // yes
+                        MenuActivity.super.onBackPressed();
+
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
+
 }
+

@@ -402,9 +402,9 @@
             <img src="village" />
         </frame>
         <frame id="5400">
-            <![CDATA[<b>
+            <![CDATA[<i>
             Je vaux bien mieux que ça !! Non, pas moyen.
-            </b>]]>
+            </i>]]>
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapés. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
             <img src="village" />
@@ -416,7 +416,7 @@
             <expression src="surprise2" />
         </frame>
         <frame id="5600">
-            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de s'extraire de l'emprise gardes qui lui ont foncés dessus.
+            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de s'extraire de l'emprise des gardes qui lui ont foncés dessus.
             <img src="village" />
         </frame>
 
@@ -425,7 +425,7 @@
             <choix consequence="5710" placeholder="Revenir et l'aider"/>
             <choix consequence="5800" placeholder="Partir et l'abandonner"/>
             <img src="village" />
-            <music src="" />
+            <music src="yggdraop" />
         </frame>
             
         <!-- ################################# -->
@@ -760,6 +760,7 @@
         <frame id="9600">
             La patrouille de gardes te tombe dessus et t'emmène sans ménagement jusqu’à leurs quartiers.
             <img src="village" />
+            <choix consequence="9800" />
         </frame>
 
         <!-- PRISON -->
@@ -783,9 +784,6 @@
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="peur" />
-        </frame>
-        <frame id="9730">
-            <img src="prison" />
             <choix consequence="9900" />
         </frame>
 
@@ -1311,16 +1309,7 @@
         <frame id="666">
             DEAD END
             <img src="gameover"/>
-            <choix consequence="9999999" />
         </frame>
-
-        <!--Ecran de mort-->
-        <frame id="9999999">
-            Veuillez retourner au menu principal.
-            <img src="gameover"/>
-        </frame>
-        
-
 
     </application>
 </PreferenceScreen>

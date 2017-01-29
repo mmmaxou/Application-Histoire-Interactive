@@ -70,8 +70,10 @@ public class Data {
                 }
             } else if (eventType == XmlPullParser.END_TAG) { // fin d'un tag
             } else if (eventType == XmlPullParser.TEXT) {
-                if (currentFrame != null)
-                    currentFrame.text = xpp.getText(); // On met le text de coté pour la fin de la balise.
+                if (currentFrame != null) {
+                    currentFrame.text = xpp.getText(); // On met le text de coté pour la fin de la balise
+                }
+
             }
             eventType = xpp.next(); // au suivant !
         }

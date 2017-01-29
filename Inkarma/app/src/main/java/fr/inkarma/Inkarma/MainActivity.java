@@ -129,6 +129,32 @@ public class MainActivity extends AppCompatActivity {
         if ( veille ) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
+
+    }
+
+
+    // On empeche de quitter en appuyant sur back
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setTitle("Quitter le jeu")
+                .setMessage("Etes-vous sur de vouloir quitter le jeu ?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        // yes
+                        MainActivity.super.onBackPressed();
+
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 
     @Override
@@ -442,6 +468,16 @@ public class MainActivity extends AppCompatActivity {
                     data.get(currentFrame.id).karmaEvaluated = true;
                 }
             }
+
+            //changement de l'animation
+            ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
+            Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
+            Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
+            myImageSwitcher.setOutAnimation(animationOut);
+            myImageSwitcher.setInAnimation(animationIn);
+
+
+            //On avance
             historique.clear();
             historiqueText.clear();
             setFrame(currentFrame.suivant.id);
@@ -451,7 +487,11 @@ public class MainActivity extends AppCompatActivity {
     private void next() {
 
         if ( frame.id == 666 ) {
-            this.finish();
+            Intent intent = new Intent(this, MenuActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish(); // Call once you redirect to another activity
+            return;
         }
 
         // On remet a défaut l'animation du textSwitcher
@@ -651,14 +691,14 @@ public class MainActivity extends AppCompatActivity {
     private void playSound(int music) {
 
 
-        // On ne met pas de musique en fonction des parametres
+        // On ne met pas de pref_musique en fonction des parametres
         // Recuperation des informations depuis les parametres
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
-        Boolean musique = params.getBoolean("pref_musique", false);
+        Boolean prefMusique = params.getBoolean("pref_musique", false);
 
         if ( music == -1 || music == 0) {
             Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
-        } else if ( musique ){
+        } else if ( prefMusique ){ // la variable musqiue est le param
             // Initialisation
             if (mediaPlayer == null) {
                 mediaPlayer = MediaPlayer.create(this, music);
@@ -696,8 +736,12 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean musique = params.getBoolean("pref_musique", false);
-        if ( musique ) {
+
+        if ( musique && mediaPlayer != null ) {
             mediaPlayer.start();
+        }
+        if ( musique && mediaPlayer == null ) {
+            playSound(frame.music);
         }
     }
 

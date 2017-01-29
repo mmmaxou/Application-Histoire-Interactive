@@ -6,7 +6,7 @@ package fr.inkarma.Inkarma;
 public class Frame {
 
     int id;
-    String text;
+    String text = "";
     int[] choix;
     int img = -1;
     String imgTag = "";
