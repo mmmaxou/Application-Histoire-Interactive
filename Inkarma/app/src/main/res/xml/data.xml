@@ -2,11 +2,14 @@
 <?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
-        <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
+        <frame id='100'>
+            Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
             <music src="yggdraop" />
+            <choix consequence="" />
         </frame>
-        <frame id='110'>L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+        <frame id='110'>
+            L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
         </frame>
         <frame id='200'>
@@ -599,7 +602,7 @@
         <!-- ####### Mini jeu forêt ####### -->
 
         <frame id="8500">
-            La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucunes marques. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
+            La rivière t'as laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucunes marques. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
             <music src="tension" />
         </frame>
@@ -627,8 +630,8 @@
 
         <!--TODO : ajouter un cpt mort ici -->
         <frame id="8620">
-            Tu as l'impression d'être revenu sur tes pas. Tu reconnaît cette partie de la forêt.
-            <choix consequence="8600"/>
+            $cpt=cpt+1;''$ Tu as l'impression d'être revenu sur tes pas. Tu reconnais cette partie de la forêt.
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -649,7 +652,7 @@
             <![CDATA[<b>
             Pourtant c'est simple. Il ne faut jamais aller tout droit sauf à la fin.
             </b>]]>
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -668,7 +671,7 @@
         <!--TODO : ajouter un cpt mort ici -->
         <frame id="8660">
             Tu te perds dans la forêt et préfères revenir sur tes pas.
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -689,14 +692,14 @@
             <![CDATA[<b>
             Pourtant c'est simple. Il faut commencer par aller à gauche.
             </b>]]>
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
         <!--TODO : ajouter un cpt mort ici -->
         <frame id="8690">
             Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronges un peu plus.
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -721,21 +724,21 @@
 
         <frame id="8900">
             Soulagé d’être enfin sorti  de cette satanée forêt, tu te presses en direction de la ville. Les heures passent et se ressemblent.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
             <music src="sad" />
         </frame>
         <frame id="9000">
             Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
         </frame>
         <frame id="9100">
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
         </frame>
 
         <frame id="9200">
             Les bandits sautent sur ton corps endolori et tranchent ta gorge d’un coup sec à l’aide d’une dague.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
             <choix consequence="666" />
         </frame>
 

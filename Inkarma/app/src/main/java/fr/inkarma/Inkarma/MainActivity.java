@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -18,6 +19,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -29,6 +31,7 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,11 +52,12 @@ public class MainActivity extends AppCompatActivity {
     List<Spanned> historiqueText = new ArrayList<>();
     ListView historiqueView;
     private Boolean gameRunning = false;
-    private float x1,x2,y1,y2;
+    private float x1, x2, y1, y2;
     Script script;
     private Handler handler;
     private MediaPlayer mediaPlayer;
     private String currentImage;
+
 
 
     @Override
@@ -70,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
         registerForContextMenu(imageButton);
 
-       // if(newGame)
+        // if(newGame)
         //////////chargement du i qui est la frame sur laquelle on s'est arreté
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         int i;
 
         String save = settings.getString("autosave", null);
-        if ( save != null ) {
+        if (save != null) {
             script.evaluate(save);
             i = script.getInt("frame"); // Initialise le i au travers de la frame
         } else {
@@ -108,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                1.0f        );
+                1.0f);
 
         ImageView enabledChart = new ImageView(getBaseContext());
         enabledChart.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -122,15 +126,16 @@ public class MainActivity extends AppCompatActivity {
 
         currentImage = frame.imgTag;
 
-        // On empêche l'application de se mettre en veille toute seule.
+            // On empêche l'application de se mettre en veille toute seule.
         // Recuperation des informations depuis les parametres
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean veille = params.getBoolean("pref_veille", false);
-        if ( veille ) {
+        if (veille) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
 
     }
+
 
 
     // On empeche de quitter en appuyant sur back
@@ -168,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFrame(int i) {
 
-        if ( handler != null) {
+        if (handler != null) {
             handler.removeCallbacksAndMessages(null);
         }
 
@@ -179,23 +184,23 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         final SharedPreferences.Editor editor = settings.edit();
 
-        editor.putString("autosave",script.serialize());
+        editor.putString("autosave", script.serialize());
 
         // Commit the edits!
         editor.apply();
 
         Frame tmp = data.get(i);
-        if(tmp != null) {
+        if (tmp != null) {
             frame = tmp;
 
             // On relance l'autoRun  :
-            setGameRunning( true );
+            setGameRunning(true);
 
             // Declaration des elements
 //            ImageView background =(ImageView) findViewById(R.id.decorImgBox);
             ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
-            ImageView personnage =(ImageView) findViewById(R.id.personnage);
-            ImageView expression =(ImageView) findViewById(R.id.expression);
+            ImageView personnage = (ImageView) findViewById(R.id.personnage);
+            ImageView expression = (ImageView) findViewById(R.id.expression);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.first_layout);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
@@ -216,22 +221,26 @@ public class MainActivity extends AppCompatActivity {
 //            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("'#'+frame+' | karma:'+karma+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("karma=karma+1;'karma:'+karma+\""+frame.text+"\"").toString();
-            String text = script.evaluate("'#'+frame+ \""+frame.text+"\"").toString(); // Affichage du numero de frame
+            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
 //            String text = script.evaluate("\""+frame.text+"\"").toString();
 
+
+            Spanned spanText;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                textView.setText(Html.fromHtml(text,Html.FROM_HTML_MODE_LEGACY));
+                spanText = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
             } else {
-                textView.setText(Html.fromHtml(text));
+                spanText = Html.fromHtml(text);
             }
 
+            animateText(spanText);
+
+
             // On regarde si il faux modifier le karma
-            if ( frame.karma != 0 && frame.karmaEvaluated == false) {
+            if (frame.karma != 0 && frame.karmaEvaluated == false) {
                 int currentKarma = script.getInt("karma");
                 script.put("karma", currentKarma + frame.karma);
                 frame.karmaEvaluated = true;
             }
-
 
 
             // On cache les choix
@@ -239,13 +248,19 @@ public class MainActivity extends AppCompatActivity {
             button2.setVisibility(View.GONE);
 
             // On affiche le nom du personnage si il y en a un, et on affiche son image;
-            if ( frame.locuteur != "") {
+            if (frame.locuteur != "") {
                 String name = frame.locuteur;
                 String upperName = name.substring(0, 1).toUpperCase() + name.substring(1);
 
                 locuteur.setText(upperName);
                 locuteur.setVisibility(View.VISIBLE);
-                personnage.setImageResource(frame.locuteurImg);
+
+                if (frame.locuteurImg != -1) {
+                    personnage.setImageResource(frame.locuteurImg);
+                } else {
+                    int id = getResources().getIdentifier("", "drawable", getPackageName());
+                    personnage.setImageResource(id);
+                }
 
                 if (frame.expression != -1) {
                     expression.setImageResource(frame.expression);
@@ -273,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
 
             // On lance la musique
 
-            if ( frame.music != -1) {
+            if (frame.music != -1) {
                 playSound(frame.music);
             }
 
@@ -291,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                if ( frame.imgTag != currentImage) {
+                if (frame.imgTag != currentImage) {
 
                     // Creation de la nouvelle image
 
@@ -317,7 +332,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-
             //Affichage du layout
             mainLayout.setVisibility(View.VISIBLE);
 
@@ -334,19 +348,19 @@ public class MainActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    setGameRunning( true );
+                    setGameRunning(true);
                     historiqueView.setVisibility(View.GONE);
                     mainLayout.setVisibility(View.VISIBLE);
-                    String save = historique.get( position );
+                    String save = historique.get(position);
                     editor.putString("autosave", save);
                     script.evaluate(save);
 
                     Log.d("DEBUG : ", "position : " + position + "    ; id : " + id);
 
                     int size = historique.size();
-                    for ( int i = position; i < size ; i++) {
-                        historique.remove( historique.size() - 1 );
-                        historiqueText.remove( historiqueText.size() - 1 );
+                    for (int i = position; i < size; i++) {
+                        historique.remove(historique.size() - 1);
+                        historiqueText.remove(historiqueText.size() - 1);
                     }
 
                     setFrame(script.getInt("frame"));
@@ -358,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
             addToHistorique(settings);
 
             //////////// AUTO SKIP
-            autoSkip(textView);
+            autoSkip();
 
         }
     }
@@ -366,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
     private void addToHistorique(SharedPreferences settings) {
         String currentSave = settings.getString("autosave", null);
 
-        if (historique.size() >= 10 ) {
+        if (historique.size() >= 10) {
             historique.remove(0);
             historiqueText.remove(0);
         }
@@ -380,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void autoSkip(TextView textView) {
+    private void autoSkip() {
 
         //Recuperation des informations de vitesse de skip
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -390,12 +404,12 @@ public class MainActivity extends AppCompatActivity {
         int skipSpeed = Integer.parseInt(skipSpeedText);
 
         // Calcul du temps d'auto skip
-        int size = textView.length();
+        int size = frame.text.length();
         // On essaie d'afficher le choix
         displayChoice();
 
         // Duree en secondes
-        int speed = (size / skipSpeed) + 2;
+        int speed = (size / skipSpeed) + 1;
 
         final int id = frame.id;
 
@@ -407,7 +421,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 //Il n'y a pas de choix; on passe
                 if (id == frame.id && getGameRunning() && autoSpeed) {
-                    if (frame.choix[0] == -1 && frame.choix[1] == -1) {
+                    if (frame.getNbChoix()<2) {
                         next();
                     }
                 }
@@ -417,7 +431,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayChoice() {
-        if (frame.choix[0] != -1 && frame.choix[1] != -1 && getGameRunning() ) {
+        if (frame.getNbChoix() == 2 && getGameRunning()) {
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
@@ -430,26 +444,28 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     // Button choix 1
     public void onClick1(View view){
 //        script.put("lastChoiceID", frame.id);
 //        script.put("frameNumber", 0);
 
-        data.get(frame.choix[0]).precedent = frame;
-        setFrame(frame.choix[0]); //Les variables script sont sauvegardées dans le setFrame
+        int id = (Integer) script.evaluate(frame.choix[0]);
+        data.get(id).precedent = frame;
+        setFrame(id); //Les variables script sont sauvegardées dans le setFrame
     }
 
     // Button choix 2
     public void onClick2(View view){
 //        script.put("lastChoiceID", frame.id);
 //        script.put("frameNumber", 0);
-
-        data.get(frame.choix[1]).precedent = frame;
-        setFrame(frame.choix[1]); //Les variables script sont sauvegardées dans le setFrame
+        int id = (Integer) script.evaluate(frame.choix[1]);
+        data.get(id).precedent = frame;
+        setFrame(id); //Les variables script sont sauvegardées dans le setFrame
     }
 
     // Button Next
-    public void onClick3(View view){
+    public void onClick3(View view) {
 
         next();
 
@@ -459,10 +475,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClickAuto(View view) {
 
         Frame currentFrame = frame;
-        if ( currentFrame.choix[0] == -1 || currentFrame.choix[1] == -1) {
-            while ( currentFrame.suivant.choix[0] == -1 || currentFrame.suivant.choix[1] == -1 ) {
+        if (currentFrame.getNbChoix()<2) {
+            while (currentFrame.suivant.getNbChoix()<2) {
                 currentFrame = currentFrame.suivant;
-                if ( currentFrame.karma != 0 && currentFrame.karmaEvaluated == false) {
+                if (currentFrame.karma != 0 && currentFrame.karmaEvaluated == false) {
                     int currentKarma = script.getInt("karma");
                     script.put("karma", currentKarma + currentFrame.karma);
                     data.get(currentFrame.id).karmaEvaluated = true;
@@ -486,7 +502,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void next() {
 
-        if ( frame.id == 666 ) {
+        if (frame.id == 666) {
             Intent intent = new Intent(this, MenuActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -504,10 +520,10 @@ public class MainActivity extends AppCompatActivity {
 //            script.put("frameNumber",frameNumber + 1 );
 
         //Si il n'y a qu'un choix, on va a cet endroit
-        if (frame.choix[0] != -1 && frame.choix[1] == -1 ){
-            data.get(frame.choix[0]).precedent = frame;
-            setFrame(frame.choix[0]);
-        } else if ( frame.choix[0] == -1 || frame.choix[1] == -1) {
+        if (frame.getNbChoix()==1) {
+            data.get((Integer) script.evaluate(frame.choix[0])).precedent = frame;
+            setFrame((Integer) script.evaluate(frame.choix[0]));
+        } else if (frame.getNbChoix()==0) {
             setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
         }
 
@@ -521,14 +537,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void before() {
 
-        if ( historique.size() >= 2 ) {
+        if (historique.size() >= 2) {
             historique.remove(historique.size() - 1);
             historique.remove(historique.size() - 1);
             historiqueText.remove(historiqueText.size() - 1);
             historiqueText.remove(historiqueText.size() - 1);
         }
-        if ( frame.precedent != null ) {
-            if ( frame.precedent.choix[0] == -1 || frame.precedent.choix[1] == -1 ) {
+        if (frame.precedent != null) {
+            if (frame.precedent.getNbChoix()<2) {
 
                 // On change l'animation :
                 ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
@@ -545,11 +561,11 @@ public class MainActivity extends AppCompatActivity {
 
     // Button Settings
     public void onClickSettings(View view) {
-        setGameRunning( false );
+        setGameRunning(false);
         openContextMenu(view);
     }
 
-       @Override
+    @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
@@ -559,15 +575,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
 
-        setGameRunning( false );
+        setGameRunning(false);
 
-        switch(item.getItemId()) {
-            case R.id.action_settings :
+        switch (item.getItemId()) {
+            case R.id.action_settings:
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
 
-            case R.id.action_menu :
+            case R.id.action_menu:
                 new AlertDialog.Builder(this)
                         .setTitle("Retour au menu Principal")
                         .setMessage("Etes-vous sur de retourner au Menu principal. Cette action peut entrainer une perte des données non sauvegardées. Sauvegardez votre partie avant en cliquant sur Menu > Sauvegarder.")
@@ -589,18 +605,18 @@ public class MainActivity extends AppCompatActivity {
 
                 return true;
 
-            case R.id.action_save :
+            case R.id.action_save:
                 Intent intent2 = new Intent(this, LoadActivity.class);
                 intent2.putExtra("EXTRA_STATE_SAVE", "Oui");
                 startActivity(intent2);
                 return true;
 
-            case R.id.action_load :
+            case R.id.action_load:
                 Intent intent3 = new Intent(this, LoadActivity.class);
                 startActivity(intent3);
 
                 return true;
-            case R.id.action_historique :
+            case R.id.action_historique:
                 LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
                 ListView listView = (ListView) findViewById(R.id.ListViewHistorique);
 
@@ -618,27 +634,25 @@ public class MainActivity extends AppCompatActivity {
         super.onContextMenuClosed(menu);
     }
 
-    public void startMenuActivity () {
+    public void startMenuActivity() {
         Intent intent1 = new Intent(this, MenuActivity.class);
         startActivity(intent1);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event)
-    {
+    public boolean onTouchEvent(MotionEvent event) {
         LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
 
 
-        if ( layout.getVisibility() == View.GONE ) {
+        if (layout.getVisibility() == View.GONE) {
 
-            setGameRunning( true );
+            setGameRunning(true);
 
             layout.setVisibility(View.VISIBLE);
             return super.onTouchEvent(event);
 
         }
-        switch(event.getAction())
-        {
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 x1 = event.getX();
                 y1 = event.getY();
@@ -649,24 +663,18 @@ public class MainActivity extends AppCompatActivity {
                 float deltaX = x2 - x1;
                 float deltaY = y2 - y1;
                 Log.d("Debug", "x1 : " + x1 + " ; x2 : " + x2 + " delta : " + deltaX);
-                if (deltaX > MIN_DISTANCE)
-                {
+                if (deltaX > MIN_DISTANCE) {
                     //                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
                     before();
 
-                }
-                else if ( -deltaX > MIN_DISTANCE) {
+                } else if (-deltaX > MIN_DISTANCE) {
                     next();
-                }
-                else if ( Math.abs(deltaX) < TOUCH_DISTANCE && Math.abs(deltaY) < TOUCH_DISTANCE )
-                {
+                } else if (Math.abs(deltaX) < TOUCH_DISTANCE && Math.abs(deltaY) < TOUCH_DISTANCE) {
 //                    Toast.makeText(this, "Touch", Toast.LENGTH_SHORT).show ();
                     next();
-                }
-                else if ( Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2 )
-                {
+                } else if (Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2) {
 //                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
-                    setGameRunning( false );
+                    setGameRunning(false);
                     layout.setVisibility(View.GONE);
                 }
                 break;
@@ -674,16 +682,16 @@ public class MainActivity extends AppCompatActivity {
         return super.onTouchEvent(event);
     }
 
-    private boolean getGameRunning () {
+    private boolean getGameRunning() {
 
-        Log.d("Game Running state : " , gameRunning.toString());
+        Log.d("Game Running state : ", gameRunning.toString());
         return gameRunning;
 
     }
 
-    private void setGameRunning( boolean state) {
+    private void setGameRunning(boolean state) {
 
-        Log.d("GameRunning state : " , gameRunning.toString());
+        Log.d("GameRunning state : ", gameRunning.toString());
         gameRunning = state;
 
     }
@@ -696,9 +704,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean prefMusique = params.getBoolean("pref_musique", false);
 
-        if ( music == -1 || music == 0) {
+        if (music == -1 || music == 0) {
             Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
-        } else if ( prefMusique ){ // la variable musqiue est le param
+        } else if (prefMusique) { // la variable musqiue est le param
             // Initialisation
             if (mediaPlayer == null) {
                 mediaPlayer = MediaPlayer.create(this, music);
@@ -708,9 +716,9 @@ public class MainActivity extends AppCompatActivity {
                 script.put("music", music);
 
             }
-            if ( mediaPlayer != null && mediaPlayer.isPlaying() ) {
+            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                 int currentMusic = script.getInt("music");
-                if ( currentMusic != music) {
+                if (currentMusic != music) {
                     mediaPlayer.release();
                     mediaPlayer = MediaPlayer.create(this, music);
                     mediaPlayer.start();
@@ -725,7 +733,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ( mediaPlayer != null ) {
+        if (mediaPlayer != null) {
             mediaPlayer.pause();
         }
     }
@@ -737,24 +745,34 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean musique = params.getBoolean("pref_musique", false);
 
-        if ( musique && mediaPlayer != null ) {
+        if (musique && mediaPlayer != null) {
             mediaPlayer.start();
         }
-        if ( musique && mediaPlayer == null ) {
+        if (musique && mediaPlayer == null) {
             playSound(frame.music);
         }
     }
 
     // Affichage caractère par caractère
-/*
+
+    // Variables pour le delay
+    private CharSequence mText;
+    private int mIndex;
+    private long mDelay = 10;
     private Handler mHandler = new Handler();
+
+    // Code
     private Runnable characterAdder = new Runnable() {
         @Override
         public void run() {
+            TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
             tv.setText(mText.subSequence(0, mIndex++));
-            if(mIndex <= mText.length()) {
+            if (mIndex <= mText.length()) {
                 mHandler.postDelayed(characterAdder, mDelay);
             }
+
+            // On verifie si la taille depasse le scroll
+            checkHeight();
         }
     };
 
@@ -762,14 +780,28 @@ public class MainActivity extends AppCompatActivity {
         mText = text;
         mIndex = 0;
 
+        TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
+
         tv.setText("");
         mHandler.removeCallbacks(characterAdder);
         mHandler.postDelayed(characterAdder, mDelay);
+
     }
 
-    public void setCharacterDelay(long millis) {
-        mDelay = millis;
+    private void checkHeight() {
+        TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
+        int lineCount = tv.getLineCount();
+        int lineHeight = tv.getLineHeight();
+
+        int totalHeight = lineHeight * lineCount;
+
+        ScrollView mScrollView = (ScrollView) findViewById(R.id.scrollView);
+        int scrollViewHeight = mScrollView.getHeight();
+
+        if ( totalHeight > scrollViewHeight ) {
+            mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
+        }
     }
-*/
 }
+
 
