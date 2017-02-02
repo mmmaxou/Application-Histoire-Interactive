@@ -37,7 +37,7 @@ public class Data {
                     frame.put(currentFrame.id, currentFrame);
                     cpt = 0;
                 } else if ("choix".equals(xpp.getName())) {// début d'une nouvelle catégorie
-                    currentFrame.choix[cpt] = xpp.getAttributeIntValue(null, "consequence", -1);
+                    currentFrame.choix[cpt] = xpp.getAttributeValue(null, "consequence");
                     currentFrame.choixText[cpt] = xpp.getAttributeValue(null, "placeholder");
                     cpt++;
                 } else if ("img".equals(xpp.getName())) {// début d'une nouvelle image

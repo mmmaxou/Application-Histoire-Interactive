@@ -3,6 +3,7 @@ package fr.inkarma.Inkarma;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -75,23 +76,21 @@ public class LoadActivity extends AppCompatActivity {
         displaySave(script, saves, images, texts, dates);
 
         // REGARDE SI ON TENTE D'ENREGISTRER
-        if ( getIntent().getStringExtra("EXTRA_STATE_SAVE") != null ) {
+        if (getIntent().getStringExtra("EXTRA_STATE_SAVE") != null) {
             String savingState = getIntent().getStringExtra("EXTRA_STATE_SAVE");
-            if ( savingState.equals("Oui")) {
+            if (savingState.equals("Oui")) {
                 // On tente d'enregistrer
                 savingState(saves, images);
             }
         }
-
     }
-
     private void displaySave(Script script, String[] saves, ImageView[] images, TextView[] texts, TextView[] dates) {
         String save;
         ImageView imageView;
         TextView textView;
         TextView textViewDate;
 
-        for ( int i= 0 ; i < saves.length ; i++) {
+        for (int i = 0; i < saves.length; i++) {
             save = saves[i];
             imageView = images[i];
             textView = texts[i];
@@ -110,12 +109,20 @@ public class LoadActivity extends AppCompatActivity {
 
                     script.evaluate(save);
                     imageView.setImageResource(frame.img);
+                    imageView.setBackgroundResource(0);
+                    float density = getResources().getDisplayMetrics().density; // Ajouter du padding pour laisser la date apparaitre.
+                    int paddingDP = (int) (25 * density);
+                    imageView.setPadding(0, 0, 0, paddingDP);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        imageView.setCropToPadding(true);
+                    }
+
                     textView.setVisibility(View.GONE);
                     textViewDate.setVisibility(View.VISIBLE);
 
                     textViewDate.setText(simpleDate.format(date));
 
-                    if ( getIntent().getStringExtra("EXTRA_STATE_SAVE") == null ) {
+                    if (getIntent().getStringExtra("EXTRA_STATE_SAVE") == null) {
                         final int finalI = i;
                         imageView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -135,11 +142,11 @@ public class LoadActivity extends AppCompatActivity {
         String save;
         ImageView imageView;
         TextView textView;
-        for ( int i= 0 ; i < saves.length ; i++) {
+        for (int i = 0; i < saves.length; i++) {
             save = saves[i];
             imageView = images[i];
 
-            if ( save == null) {
+            if (save == null) {
                 final int finalI = i;
                 imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -165,24 +172,23 @@ public class LoadActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         String saveNumber = "save" + Integer.toString(i + 1);
-        String save = settings.getString(saveNumber,null);
+        String save = settings.getString(saveNumber, null);
 
         editor.putString("autosave", save);
         editor.apply();
 
-        Log.d("Save Content : ",save);
+        Log.d("Save Content : ", save);
 
-        Toast.makeText(this, "Chargement effectué", Toast.LENGTH_SHORT).show ();
+        Toast.makeText(this, "Chargement effectué", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish(); // Call once you redirect to another activity
 
 
-
     }
 
-    private void overwriteSaveState (final int i) {
+    private void overwriteSaveState(final int i) {
         new AlertDialog.Builder(this)
                 .setTitle("Ecraser la sauvegarde ?")
                 .setMessage("Etes-vous sur d'écraser la sauvegarde déja existante ? Les données ne pourront plus être récupérées.")
@@ -190,7 +196,7 @@ public class LoadActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
 
                         // yes
-                        saveState( i);
+                        saveState(i);
 
                     }
                 })
@@ -202,10 +208,11 @@ public class LoadActivity extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
+
     private void saveState(int i) {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
-        String save = settings.getString("autosave",null);
+        String save = settings.getString("autosave", null);
         String saveNumber = "save" + Integer.toString(i + 1);
         script = new Script();
 
@@ -220,7 +227,7 @@ public class LoadActivity extends AppCompatActivity {
         editor.putString(saveNumber, script.serialize());
         editor.apply();
 
-        Toast.makeText(this, "Sauvegarde effectué", Toast.LENGTH_SHORT).show ();
+        Toast.makeText(this, "Sauvegarde effectué", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
@@ -233,5 +240,4 @@ public class LoadActivity extends AppCompatActivity {
         startActivity(intent);
         finish(); // Call once you redirect to another activity
     }
-
 }

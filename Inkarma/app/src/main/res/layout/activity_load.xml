@@ -15,7 +15,8 @@
         android:gravity="center_vertical|center_horizontal"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -36,7 +37,9 @@
                     android:scaleType="centerCrop"
                     android:layout_weight="1"
                     android:background="@drawable/cadregris"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    app:srcCompat="@mipmap/campagne"
+                    android:paddingBottom="15dp" />
 
                 <TextView
                     android:text="@string/save_disponible"
@@ -161,19 +164,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="RETOUR VERS LE MENU"
-        android:id="@+id/button2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="onClickMenu"
-        android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:layout_marginLeft="150dp"
-        android:layout_marginRight="150dp"/>
 
 </LinearLayout>

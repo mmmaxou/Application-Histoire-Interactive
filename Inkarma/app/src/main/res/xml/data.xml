@@ -2,11 +2,14 @@
 <?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
-        <frame id='100'>Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
+        <frame id='100'>
+            Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
             <music src="yggdraop" />
+            <choix consequence="110" />
         </frame>
-        <frame id='110'>L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
+        <frame id='110'>
+            L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
         </frame>
         <frame id='200'>
@@ -451,7 +454,7 @@
             <expression src="stupefaction" />
         </frame>
         <frame id="5900">
-            ENCULÉ ! Aide moi !!!
+            ASIEL ! Aide moi !!!
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="surprise2" />
@@ -476,15 +479,18 @@
             <choix
                 consequence="6410"
                 placeholder="La laisser" />
+            <img src="village" />
         </frame>
         <frame id="6400">
-            Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
+            $statuette=1;''$Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
             <choix consequence="6500" />
             <karma value="-1" />
+            <img src="village" />
         </frame>
         <frame id="6410">
             Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
             <choix consequence="6500" />
+            <img src="village" />
         </frame>
         <frame id="6500">
             Hey t’es qui-toi ?!?! Qu’est-s’tu fous la ! Sors d’ici !!
@@ -499,8 +505,13 @@
         </frame>
         <frame id="6700">
             Il y a une échelle à côté de toi, mais tu pourrais tout aussi bien passer par les toits…
-            <choix consequence="6800" placeholder="La ruelle" />
-            <choix consequence="7300" placeholder="Le toit" />
+            <choix
+                consequence="6800"
+                placeholder="La ruelle" />
+            <choix
+                consequence="statuette==1?7310:7300"
+                placeholder="Le toit" />
+            <img src="village" />
         </frame>
 
         <!-- ####### ON passe par le sol ####### -->
@@ -542,11 +553,17 @@
         <frame id="7300">
             Tu commences à grimper à l'échelle.
             <img src="village" />
+            <choix consequence="7400" />
+        </frame>
+        <frame id="7310">
+            Bah non, tu as une statuette dans les mains. Tu ne peut pas grimper à l'échelle.
+            <img src="village" />
+            <choix consequence="6700" />
         </frame>
         <frame id="7400">
             FAITES DEMI TOUR !! Le deuxième voleur n’a pas pu aller bien loin.
             <img src="village" />
-            <locuteur personnage="voix" />
+            <locuteur personnage="garde" />
             <expression src="surprise" />
         </frame>
         <frame id="7500">
@@ -564,7 +581,7 @@
         <frame id="7800">
             IL EST SUR LES TOITS
             <img src="village" />
-            <locuteur personnage="voix" />
+            <locuteur personnage="garde" />
             <expression src="surprise" />
         </frame>
         <frame id="7900">
@@ -580,7 +597,8 @@
         <!-- ####### On saute dans le fleuve ####### -->
 
         <frame id="8100">
-            Tu prends ton élan et te prépare à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
+            $statuette==1?'Tu jettes la statuettes puis tu':'Tu'$
+             prends ton élan et te prépare à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
             <img src="fleuve" />
         </frame>
         <frame id="8200">
@@ -599,7 +617,7 @@
         <!-- ####### Mini jeu forêt ####### -->
 
         <frame id="8500">
-            La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucunes marques. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
+            La rivière t'as laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucunes marques. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
             <music src="tension" />
         </frame>
@@ -625,10 +643,9 @@
             <img src="foret" />
         </frame>
 
-        <!--TODO : ajouter un cpt mort ici -->
         <frame id="8620">
-            Tu as l'impression d'être revenu sur tes pas. Tu reconnaît cette partie de la forêt.
-            <choix consequence="8600"/>
+            $cpt=cpt+1;''$ Tu as l'impression d'être revenu sur tes pas. Tu reconnais cette partie de la forêt.
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -643,13 +660,13 @@
             <img src="foret" />
         </frame>
 
-        <!--TODO : ajouter un cpt mort ici -->
         <frame id="8640">
+            $cpt=cpt+1;''$
             Non, tu as beau avancer et avancer, tu reviens toujours sur tes pas.
             <![CDATA[<b>
             Pourtant c'est simple. Il ne faut jamais aller tout droit sauf à la fin.
             </b>]]>
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -665,10 +682,10 @@
             <img src="foret" />
         </frame>
 
-        <!--TODO : ajouter un cpt mort ici -->
         <frame id="8660">
+            $cpt=cpt+1;''$
             Tu te perds dans la forêt et préfères revenir sur tes pas.
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -683,20 +700,20 @@
             <img src="foret" />
         </frame>
 
-        <!--TODO : ajouter un cpt mort ici -->
         <frame id="8680">
+            $cpt=cpt+1;''$
             Apparement, cette direction ne mène nulle part ...
             <![CDATA[<b>
             Pourtant c'est simple. Il faut commencer par aller à gauche.
             </b>]]>
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
-        <!--TODO : ajouter un cpt mort ici -->
         <frame id="8690">
+            $cpt=cpt+1;''$
             Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronges un peu plus.
-            <choix consequence="8600"/>
+            <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
@@ -708,6 +725,7 @@
         <!-- TODO : Completer -->
         <frame id="8800">
             Ou souhaites-tu aller maintenant ?
+            Tu peux partir plus loin encore et commencer une nouvelle vie à la capitale, affronter les nombreux dangers de la route, ou alors retourner dans Bandari pour essayer de faire quelque chose pour Chuck.
             <choix
                 consequence="8900"
                 placeholder="A la capitale" />
@@ -721,21 +739,21 @@
 
         <frame id="8900">
             Soulagé d’être enfin sorti  de cette satanée forêt, tu te presses en direction de la ville. Les heures passent et se ressemblent.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
             <music src="sad" />
         </frame>
         <frame id="9000">
             Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
         </frame>
         <frame id="9100">
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
         </frame>
 
         <frame id="9200">
             Les bandits sautent sur ton corps endolori et tranchent ta gorge d’un coup sec à l’aide d’une dague.
-            <img src="plaine"/>
+            <img src="blackscreen"/>
             <choix consequence="666" />
         </frame>
 
