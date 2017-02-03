@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private Handler handler;
     private MediaPlayer mediaPlayer;
     private String currentImage;
+    private Boolean isAnimating;
 
 
 
@@ -502,31 +503,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void next() {
+        //Si l'animation n'est pas encore terminée, on la termine.
+        if ( isAnimating ) {
+            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
+//            String text = script.evaluate("\""+frame.text+"\"").toString();
 
-        if (frame.id == 666) {
-            Intent intent = new Intent(this, MenuActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            finish(); // Call once you redirect to another activity
-            return;
-        }
+            Spanned spanText;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                spanText = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
+            } else {
+                spanText = Html.fromHtml(text);
+            }
 
-        // On remet a défaut l'animation du textSwitcher
-        ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
-        Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
-        Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
-        myImageSwitcher.setOutAnimation(animationOut);
-        myImageSwitcher.setInAnimation(animationIn);
+            TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
+            tv.setText(spanText);
+            isAnimating = false;
+        } else {
+
+            if (frame.id == 666) {
+                Intent intent = new Intent(this, MenuActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish(); // Call once you redirect to another activity
+                return;
+            }
+
+            // On remet a défaut l'animation du textSwitcher
+            ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
+            Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
+            Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
+            myImageSwitcher.setOutAnimation(animationOut);
+            myImageSwitcher.setInAnimation(animationIn);
 //            int frameNumber = script.getInt("frameNumber");
 //            script.put("frameNumber",frameNumber + 1 );
 
-        //Si il n'y a qu'un choix, on va a cet endroit
-        if (frame.getNbChoix()==1) {
-            int nextFrame = (int) script.evaluate(frame.getChoix(0));
-            data.get(nextFrame).precedent = frame;
-            setFrame(nextFrame);
-        } else if (frame.getNbChoix()==0) {
-            setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
+            //Si il n'y a qu'un choix, on va a cet endroit
+            if (frame.getNbChoix() == 1) {
+                int nextFrame = (int) script.evaluate(frame.getChoix(0));
+                data.get(nextFrame).precedent = frame;
+                setFrame(nextFrame);
+            } else if (frame.getNbChoix() == 0) {
+                setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
+            }
         }
 
     }
@@ -766,10 +784,14 @@ public class MainActivity extends AppCompatActivity {
     private Runnable characterAdder = new Runnable() {
         @Override
         public void run() {
-            TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
-            tv.setText(mText.subSequence(0, mIndex++));
-            if (mIndex <= mText.length()) {
-                mHandler.postDelayed(characterAdder, mDelay);
+            if ( isAnimating ) {
+                TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
+                tv.setText(mText.subSequence(0, mIndex++));
+                if (mIndex <= mText.length()) {
+                    mHandler.postDelayed(characterAdder, mDelay);
+                } else {
+                    isAnimating = false;
+                }
             }
 
             // On verifie si la taille depasse le scroll
@@ -780,6 +802,7 @@ public class MainActivity extends AppCompatActivity {
     public void animateText(CharSequence text) {
         mText = text;
         mIndex = 0;
+        isAnimating = true;
 
         TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
 

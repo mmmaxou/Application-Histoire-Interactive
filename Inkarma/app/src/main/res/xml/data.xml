@@ -556,7 +556,7 @@
             <choix consequence="7400" />
         </frame>
         <frame id="7310">
-            Bah non, tu as une statuette dans les mains. Tu ne peut pas grimper à l'échelle.
+            Bah non, tu as une statuette dans les mains. Tu ne peux pas grimper à l'échelle.
             <img src="village" />
             <choix consequence="6700" />
         </frame>
