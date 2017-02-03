@@ -40,7 +40,7 @@
         </frame>
         <frame id='700'>
             <![CDATA[<i>
-            Tu murmures entre tes dents… ‘Mais quel petit con celui la !
+            Tu murmures entre tes dents… ‘Mais quel vieux con celui là !
             </i>]]>
             <img src="campagne" />
             <locuteur personnage="asiel" />
@@ -61,12 +61,12 @@
             <img src="campagne" />
         </frame>
         <frame id='1100'>
-            Tu ne l'avais pas vu venir celle là. Par réflexe, ta main viens délicatement palper le coup violent que viens de t'asséner ton père.
+            Tu ne l'avais pas vu venir celle là. Par réflexe, ta main vient délicatement palper le coup violent que vient de t'asséner ton père.
             <img src="campagne" />
         </frame>
         <frame id='1200'>
             Descends aider ta mère ! TOUT DE SUITE !
-            Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’a tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
+            Et si tu oses me désobéir, tu te souviens de ta sortie avec ton compère dont tu m’as tant parlé ? Elle risquerait de finir en récurage de l’écurie de fond en comble.
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -78,7 +78,7 @@
             <img src="campagne" />
         </frame>
         <frame id='1400'>
-            Suite à cette injonction, tu t'en va en traînant la patte. En ressassant dans ta tête une suite de jurons à l’égard de ton père.
+            Suite à cette injonction, tu t'en vas en traînant la patte. Ressassant dans ta tête une suite de jurons à l’égard de ton père.
             <img src="campagne" />
         </frame>
         <frame id='1500'>
@@ -86,7 +86,7 @@
             <![CDATA[<i>
             Cool, je n’avais vraiment pas envie de devoir m’occuper de ce repas.
             </i>]]>
-            Ton père te fusille du regard. Il a l’air d’avoir fermé les yeux sur l’incident de tout à l’heure. Rassuré, tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
+            Ton père te fusille du regard. Il n'a pas l'air d'en avoir parlé à ta mère. Tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
             <img src="salleamanger" />
             <music src="tension" />
         </frame>
@@ -142,14 +142,14 @@
             <expression src="fierte" />
         </frame>
         <frame id="2300">
-            Quoi, mais attend. Je … Je ne veux pas me marier moi !
+            Quoi, mais attends. Je … Je ne veux pas me marier moi !
             C’est nul … Je …
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id="2400">
-            Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
+            Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te feras le plus grand bien.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -268,7 +268,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="4200">
-            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse, en dessous de la voûte, soutenue par douze piliers disposés en cercle, c’est une pièce très grande, dans laquelle chacun de tes pas résonnent.
+            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse alors que tu te situes en dessous de la voûte soutenue par douze piliers disposés en cercle. C’est une pièce très grande dans laquelle chacun de tes pas résonnent.
             <img src="eglise" />
         </frame>
         <frame id="4210">
@@ -276,11 +276,11 @@
             <img src="eglise" />
         </frame>
         <frame id="4210">
-            Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol.
+            Chuck se déplace silencieusement jusqu’à une petite statuette de marbre. Il gratte un peu son doigt, et une petite bague tombe sur le sol. Il a l'air de vouloir la prendre.
             <img src="eglise" />
             <choix
                 consequence="4211"
-                placeholder="La laisser par terre" />
+                placeholder="Avertir Chuck" />
             <choix
                 consequence="4213"
                 placeholder="Ne rien faire" />
@@ -460,7 +460,7 @@
             <expression src="surprise2" />
         </frame>
         <frame id="6000">
-            Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé au cliquetis des armures, mais tu continues de courir pour sauver ta peau.
+            Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé aux cliquetis des armures, mais tu continues de courir pour sauver ta peau.
             <img src="village" />
         </frame>
         <frame id="6100">
@@ -598,7 +598,7 @@
 
         <frame id="8100">
             $statuette==1?'Tu jettes la statuettes puis tu':'Tu'$
-             prends ton élan et te prépare à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
+             prends ton élan et te prépares à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
             <img src="fleuve" />
         </frame>
         <frame id="8200">
@@ -617,7 +617,7 @@
         <!-- ####### Mini jeu forêt ####### -->
 
         <frame id="8500">
-            La rivière t'as laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repères logique, aucunes marques. Rien, tout ce ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
+            La rivière t'as laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucuns repères logique, aucunes marques. Rien, tout se ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
             <music src="tension" />
         </frame>
@@ -922,7 +922,7 @@
             <music src="yggdraop" />
         </frame>
         <frame id="11400">
-            Je ne sais pas, j’ai pas compris, t’allais te faire couper la tête et puis une lumière violente a émanée de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
+            Je ne sais pas, j’ai pas compris, t’allais te faire tuer et puis une lumière violente a émanée de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise2" />
