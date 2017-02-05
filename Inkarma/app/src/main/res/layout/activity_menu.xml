@@ -43,12 +43,12 @@
                 android:onClick="onClickNewGame"
                 android:layout_gravity="bottom"
                 android:layout_weight="1"
-                android:background="@drawable/buttonshape"
-                android:textColor="@android:color/white"
+                android:background="@drawable/brush3"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="120dp"
                 android:layout_marginRight="120dp"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/fontSize_menu" />
 
             <Button
                 android:layout_width="match_parent"
@@ -61,12 +61,13 @@
                 android:layout_gravity="bottom"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/buttonshape"
-                android:textColor="@android:color/white"
+                android:background="@drawable/brush2"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="120dp"
                 android:layout_marginRight="120dp"
                 android:layout_marginTop="5dp"
+                android:textSize="@dimen/fontSize_menu"
                 android:visibility="visible" />
 
             <LinearLayout
@@ -90,9 +91,10 @@
                     android:text="Charger"
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
-                    android:background="@drawable/buttonshape"
-                    android:textColor="@android:color/white"
+                    android:background="@drawable/brush1"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:visibility="visible"
+                    android:textSize="@dimen/fontSize_menu"
                     android:layout_marginRight="5dp"
                     android:layout_marginLeft="5dp" />
                 <Button
@@ -106,9 +108,10 @@
                     android:layout_alignParentStart="true"
                     android:text="Paramètres"
                     android:layout_gravity="bottom"
+                    android:textSize="@dimen/fontSize_menu"
                     android:layout_weight="1"
-                    android:background="@drawable/buttonshape"
-                    android:textColor="@android:color/white"
+                    android:background="@drawable/brush4"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:layout_marginLeft="5dp" />
 
             </LinearLayout>

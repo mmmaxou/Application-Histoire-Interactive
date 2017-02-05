@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
 
 
-    <!--<Preference android:title="Acts like a button"-->
-        <!--android:key="back_button"-->
-        <!--android:summary="This is a cool button"/>-->
 
     <PreferenceCategory
         android:title="Passage automatique"
@@ -26,19 +25,43 @@
             android:defaultValue="25"
             android:persistent="true"/>
 
+
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="Texte"
         android:key="pref_key_textSize">
-        <ListPreference
-            android:key="pref_textSize"
-            android:title="Taille du texte"
-            android:dialogTitle="Taille"
-            android:entries="@array/pref_textSize_entries"
-            android:entryValues="@array/pref_textSize_values"
-            android:defaultValue="18"
-            android:persistent="true"/>
+        <!--<ListPreference-->
+            <!--android:key="pref_textSize"-->
+            <!--android:title="Taille du texte"-->
+            <!--android:dialogTitle="Taille"-->
+            <!--android:entries="@array/pref_textSize_entries"-->
+            <!--android:entryValues="@array/pref_textSize_values"-->
+            <!--android:defaultValue="18"-->
+            <!--android:persistent="true"/>-->
+
+
+        <!--ORDER EQUAL MIN-->
+        <fr.inkarma.Inkarma.SeekBarPreference
+            android:defaultValue="2"
+            android:title="@string/settings_title_size"
+            android:dialogMessage="@string/settings_dialog_message_size"
+            android:key="preference_text_size"
+            android:max="30"
+            android:order="10"
+            android:summary="@string/settings_summary_size"
+            android:text="" />
+        <fr.inkarma.Inkarma.SeekBarPreference
+            android:defaultValue="0"
+            android:dialogMessage="@string/settings_dialog_message_defilement"
+            android:key="preference_defilement"
+            android:max="20"
+            android:order="10"
+            android:summary="@string/settings_summary_defilement"
+            android:text=""
+            android:title="@string/settings_title_defilement" />
+
+
 
     </PreferenceCategory>
 

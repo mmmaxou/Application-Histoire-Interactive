@@ -3,6 +3,7 @@ package fr.inkarma.Inkarma;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,6 +30,7 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -127,6 +129,16 @@ public class MainActivity extends AppCompatActivity {
 
         currentImage = frame.imgTag;
 
+
+        // On change la police des choix
+        Button button1 = (Button) findViewById(R.id.choix1);
+        Button button2 = (Button) findViewById(R.id.choix2);
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/besom.ttf");
+        button1.setTypeface(font);
+        button2.setTypeface(font);
+
+
+
             // On empêche l'application de se mettre en veille toute seule.
         // Recuperation des informations depuis les parametres
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
@@ -202,6 +214,7 @@ public class MainActivity extends AppCompatActivity {
             ImageSwitcher myImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher1);
             ImageView personnage = (ImageView) findViewById(R.id.personnage);
             ImageView expression = (ImageView) findViewById(R.id.expression);
+            RelativeLayout layoutPersonnage = (RelativeLayout) findViewById(R.id.layoutpersonnage);
             TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.first_layout);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
@@ -273,8 +286,10 @@ public class MainActivity extends AppCompatActivity {
                 personnage.setVisibility(View.VISIBLE);
                 expression.setVisibility(View.VISIBLE);
                 locuteur.setVisibility(View.VISIBLE);
+                layoutPersonnage.setVisibility(View.VISIBLE);
 
             } else {
+                layoutPersonnage.setVisibility(View.INVISIBLE);
                 personnage.setVisibility(View.INVISIBLE);
                 expression.setVisibility(View.INVISIBLE);
                 locuteur.setVisibility(View.INVISIBLE);

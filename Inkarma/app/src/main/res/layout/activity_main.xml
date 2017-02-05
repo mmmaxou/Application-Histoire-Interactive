@@ -30,15 +30,101 @@
 
     </ImageSwitcher>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ListViewHistorique"
+        android:layout_margin="30dp"
+        android:background="@android:color/background_light"
+        android:alpha="0.7"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layoutMode="opticalBounds"
+        android:layout_alignBaseline="@+id/ListViewHistorique"
+        android:layout_alignTop="@+id/imageSwitcher1"
+        android:layout_alignBottom="@+id/imageSwitcher1"
+        android:id="@+id/framelayout1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearlayout1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.29"
+                android:id="@+id/spacer1"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.41"
+                android:background="@drawable/cadre5"
+                android:id="@+id/layoutpersonnage">
+
+                <TextView
+                    android:text="Personnage"
+                    android:id="@+id/textViewLocuteur"
+                    android:fontFamily="sans-serif"
+                    android:textSize="30sp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:layout_toRightOf="@+id/expression"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignTop="@+id/expression" />
+
+                <ImageView
+                    app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/expression"
+                    android:layout_weight="2"
+                    android:scaleType="centerInside"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content" />
+
+                <ImageView
+                    app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/personnage"
+                    android:layout_weight="2"
+                    android:scaleType="centerInside"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.04"
+                android:id="@+id/spacer2"></LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
+        android:id="@+id/first_layout"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/first_layout">
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -56,15 +142,16 @@
 
                 <ImageButton
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/settingsicon"
                     android:id="@+id/imageButton"
                     android:elevation="1dp"
-                    android:background="@color/transparent"
                     android:layout_width="wrap_content"
+                    android:onClick="onClickSettings"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:onClick="onClickSettings" />
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button" />
 
             </RelativeLayout>
 
@@ -81,89 +168,16 @@
                     style="@android:style/Widget.Button"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:onClick="onClickAuto" />
-
-                <TextView
-                    android:text="Personnage"
-                    android:id="@+id/textViewLocuteur"
-                    android:fontFamily="sans-serif"
-                    android:background="@drawable/cadre"
-                    android:layout_alignBottom="@+id/expression"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="30sp"
-                    android:layout_width="wrap_content"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="false"
-                    android:layout_toEndOf="@+id/expression"
-                    android:padding="5dp"
-                    android:layout_toRightOf="@+id/expression" />
-
-                <ImageView
-                    app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/expression"
-                    android:layout_weight="2"
-                    android:scaleType="centerInside"
-                    android:layout_alignParentBottom="true"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="wrap_content" />
-
-                <ImageView
-                    app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/personnage"
-                    android:layout_weight="2"
-                    android:scaleType="centerInside"
-                    android:layout_alignParentBottom="true"
-                    android:elevation="1dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp" />
+                    android:onClick="onClickAuto"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:minHeight="100dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5">
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/cadre"
-                            android:text="A"
-                            android:id="@+id/choix1"
-                            android:onClick="onClick1"
-                            android:layout_marginLeft="100dp"
-                            android:layout_marginRight="100dp"
-                            android:layout_weight="1"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
-                            android:textColor="?android:attr/textColorTertiary"
-                            android:textSize="20dp" />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/cadre"
-                            android:text="B"
-                            android:id="@+id/choix2"
-                            android:onClick="onClick2"
-                            android:layout_marginLeft="100dp"
-                            android:layout_marginRight="100dp"
-                            android:layout_weight="1"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"
-                            android:textSize="20dp"
-                            android:textColor="?android:attr/textColorTertiary" />
-
-                    </LinearLayout>
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -190,6 +204,45 @@
                             android:onClick="onClickBefore"
                             android:visibility="gone" />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="A"
+                            android:id="@+id/choix1"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:onClick="onClick1"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:textSize="24sp"
+                            android:background="@drawable/brush1"
+                            android:elevation="0dp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/brush4"
+                            android:text="B"
+                            android:id="@+id/choix2"
+                            android:onClick="onClick2"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="24sp"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
 
@@ -199,17 +252,19 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:baselineAligned="false"
+            android:id="@+id/LinearLayoutText">
 
             <ScrollView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/scrollView"
-                android:background="@drawable/cadre"
+                android:background="@drawable/cadre3"
                 android:minHeight="120dp"
                 android:layout_weight="5"
-                android:layout_margin="6dp"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -217,21 +272,13 @@
                     android:id="@+id/BoiteDialogue"
                     android:layout_weight="5"
                     android:text="Lorem ipsum"
-                    android:textSize="20dp"
-                    android:textColor="?android:attr/textColorTertiary" />
+                    android:textSize="20sp"
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:layout_marginTop="10dp" />
             </ScrollView>
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/ListViewHistorique"
-        android:layout_margin="30dp"
-        android:background="@android:color/background_light"
-        android:alpha="0.7"
-        android:visibility="gone" />
 
 </RelativeLayout>

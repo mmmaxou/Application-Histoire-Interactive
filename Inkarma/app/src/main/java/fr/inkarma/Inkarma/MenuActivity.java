@@ -3,6 +3,7 @@ package fr.inkarma.Inkarma;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,18 +26,28 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Button button1 = (Button) findViewById(R.id.buttonPlay);
-        Button button2 = (Button) findViewById(R.id.buttonLoad);
+        Button buttonPlay = (Button) findViewById(R.id.buttonPlay);
+        Button buttonLoad = (Button) findViewById(R.id.buttonLoad);
+        Button buttonNewGame = (Button) findViewById(R.id.buttonNewGame);
+        Button buttonSettings = (Button) findViewById(R.id.buttonSettings);
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/besom.ttf");
+
+        buttonPlay.setTypeface(font);
+        buttonLoad.setTypeface(font);
+        buttonNewGame.setTypeface(font);
+        buttonSettings.setTypeface(font);
+
 
         if (saveExists()){
 
-            button1.setVisibility(View.VISIBLE);
-            button2.setVisibility(View.VISIBLE);
+            buttonPlay.setVisibility(View.VISIBLE);
+            buttonLoad.setVisibility(View.VISIBLE);
 
         } else {
 
-            button1.setVisibility(View.GONE);
-            button2.setVisibility(View.GONE);
+            buttonPlay.setVisibility(View.GONE);
+            buttonLoad.setVisibility(View.GONE);
         }
 
 

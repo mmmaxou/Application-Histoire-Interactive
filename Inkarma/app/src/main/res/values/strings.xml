@@ -6,4 +6,13 @@
     <string name="action_load">Charger</string>
     <string name="save_disponible">Emplacement disponible</string>
     <string name="action_historique">Historique</string>
+
+    <!--SeekBar for the Font Size -->
+    <string name="settings_summary_size">Taille actuelle : $1</string>
+    <string name="settings_dialog_message_size">Choisissez la taille du texte</string>
+    <string name="settings_title_size">Taille du texte</string>
+
+    <string name="settings_summary_defilement">Vitesse actuelle : $1</string>
+    <string name="settings_dialog_message_defilement">Choisissez la vitesse de défilement du texte</string>
+    <string name="settings_title_defilement">Vitesse de défilement du texte</string>
 </resources>
