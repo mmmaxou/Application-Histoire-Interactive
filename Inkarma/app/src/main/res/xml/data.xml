@@ -40,8 +40,8 @@
         </frame>
         <frame id='700'>
             <![CDATA[<i>
-            Tu murmures entre tes dents… ‘Mais quel vieux con celui là !
-            </i>]]>
+           Tu murmures entre tes dents… ‘Toujours là pour me gâcher l’après midi...’
+           </i>]]>
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
@@ -52,7 +52,7 @@
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
         </frame>
-        <frame id='900'>  
+        <frame id='900'>
             Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
             <img src="campagne" />
         </frame>
@@ -73,8 +73,8 @@
         </frame>
         <frame id='1300'>
             <![CDATA[<i>
-            Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
-            </i>]]>
+           Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
+           </i>]]>
             <img src="campagne" />
         </frame>
         <frame id='1400'>
@@ -84,8 +84,8 @@
         <frame id='1500'>
             Tu arrives timidement à table, fuyant le regard de ton père. Comme à ton habitude, tu t’assois auprès de ta petite soeur, en face de tes parents. Le repas est déjà servi.
             <![CDATA[<i>
-            Cool, je n’avais vraiment pas envie de devoir m’occuper de ce repas.
-            </i>]]>
+           Cool, je n’avais vraiment pas envie de devoir m’occuper de ce repas.
+           </i>]]>
             Ton père te fusille du regard. Il n'a pas l'air d'en avoir parlé à ta mère. Tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
             <img src="salleamanger" />
             <music src="tension" />
@@ -149,7 +149,7 @@
             <expression src="tristesse" />
         </frame>
         <frame id="2400">
-            Ferme-la ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te feras le plus grand bien.
+            ASSEZ ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te feras le plus grand bien.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -192,14 +192,14 @@
         <frame id="3100">
             Hmm... ?
             <![CDATA[<i>
-            Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
-            </i>]]>
+           Ahahah, toi non plus tu ne devineras pas ce qu’il m’est arrivé.
+           </i>]]>
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id="3200">
-            Ce matin, je glandais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
+            Ce matin, je flânais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
@@ -221,30 +221,32 @@
             <img src="village" />
         </frame>
         <frame id="3400">
-            Ahah ! Bien joué mec !
-            Bon, … Faut que j’me vide l’esprit. Viens on bouge un peu ...
+            Ahah ! Bien joué !
+            Bon, … il faut que je me change les idées, allons faire un tour en ville...
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
         </frame>
         <frame id="3500">
-            Vous vous tenez tous les deux derrière une pile de caisses dans une ruelle attenante à l’église du culte de Xyrus.
+            Vous vous tenez tous les deux derrière une pile de caisses dans une ruelle attenante à l’église du culte de Xyrus. La voie est libre, vous vous préparez à entrer dans l’église.
             <img src="village" />
         </frame>
         <frame id="3600">
             T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
+            On a déjà volé quelques objets à des gamins dans la rue mais je ne suis pas sûr que cambrioler un lieu sacré soit une si bonne idée.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
         <frame id="3700">
-            Mais oui, t’inquiète ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ?
+            Mais si, ne t’inquiète pas ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ? Ils sont tellement riches  ces religieux !
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
         </frame>
         <frame id="3800">
-            Ouais mais bon.. C’est un abbé quand même, et puis voler un lieu de culte c’est pas une si bonne idée que ça j’pense…
+            Ouais mais bon... C’est un abbé quand même … C’est vrai qu’ils sont sacrément riches.
+            C’est juste que … Je suis un peu à cran en ce moment.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
@@ -256,7 +258,7 @@
             <expression src="joie" />
         </frame>
         <frame id="4000">
-            C’est pas faux,  mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
+            C’est pas faux, mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
@@ -294,7 +296,7 @@
             <karma value="1" />
         </frame>
         <frame id="4212">
-            Pas faux ! Je la laisse là du coup.
+            Hmm, je n’y avais pas pensé… Je vais la laisser par terre !
             <img src="eglise" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
@@ -313,7 +315,7 @@
         <frame id="4220">
             Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
             <img src="eglise" />
-            <choix consequence="4221" placeholder="Prendre une pierre dans ce monticule" />
+            <choix consequence="4221" placeholder="Voler un joyaux" />
             <choix consequence="4222" placeholder="Ne rien faire"/>
         </frame>
         <frame id="4221">
@@ -323,7 +325,7 @@
             <karma value="-1" />
         </frame>
         <frame id="4222">
-            Tu te dis qu’il faut quand même rester un petit peu prudent pour le moment.
+            Tu te dis qu’il faut quand même rester prudent pour le moment.
             <img src="eglise" />
             <choix consequence="4230" />
         </frame>
@@ -352,7 +354,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="4600">
-            Ça m’va.
+            Ah je suis partant ! Manger au frais de l’église c’est encore plus savoureux tu ne trouves pas ?
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
@@ -373,15 +375,15 @@
             <img src="village" />
         </frame>
         <frame id="5000">
-            Viens, on va se planquer dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par là on est tranquille !
+            Viens, on va se cacher dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par là on est tranquille !
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
         </frame>
         <frame id="5100">
             <![CDATA[<b>
-            AU VOLEUR, LE COLLIER DE XYRUS !
-            </b>]]>
+           AU VOLEUR, LE COLLIER DE XYRUS !
+           </b>]]>
             <img src="village" />
             <locuteur personnage="voix lointaine" />
         </frame>
@@ -394,26 +396,26 @@
             <img src="village" />
         </frame>
         <frame id="5300">
-            Merde !! Comment nous ont-ils retrouvés ?
+            On est mal !! On est mal !! Comment nous ont-ils retrouvés ?
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
         </frame>
         <frame id="5400">
             La ruelle dans laquelle vous vous trouvez est assez longue, mais il ne semble pas y avoir d’issue.
-            Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais chopper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merde !
+            Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais chopper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merdaille.
             <img src="village" />
         </frame>
         <frame id="5400">
             <![CDATA[<i>
-            Je vaux bien mieux que ça !! Non, pas moyen.
-            </i>]]>
+           Je vaux bien mieux que ça !! Non, pas moyen.
+           </i>]]>
             Vous arrivez à la fin de la ruelle. Tu es à bout de souffle, et tu entends Chuck haleter tout aussi fortement.
             La garde est derrière vous. Dans quelques secondes, elle vous aura rattrapés. Vous reprenez votre course, la fatigue attaquant vos nerfs. Dans ce sprint effréné, tu remarques qu’il y a une porte entrouverte quelques mètres plus loin.
             <img src="village" />
         </frame>
         <frame id="5500">
-            PUTAAAAAIN !!
+            AIIIEUUUUUH.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="surprise2" />
@@ -430,7 +432,7 @@
             <img src="village" />
             <music src="yggdraop" />
         </frame>
-            
+
         <!-- ################################# -->
         <!-- ########## CHAPITRE 1 ########### -->
         <!-- ################################# -->
@@ -439,7 +441,7 @@
 
 
         <frame id="5710">
-            Tu te retournes pour aller aider Chuck à se relever. Et, alors que tu t’agenouilles pour le relever, les gardes arrivent sur vous. Il n’y a plus d’échappatoire, ça va être la misère.
+            Tu te retournes pour aller aider Chuck à se relever. Et, alors que tu t’agenouilles pour le relever, les gardes arrivent sur vous. Il n’y a plus d’échappatoire, tu vas devoir assumer ton larcin.
             <img src="village" />
             <choix consequence="9700" />
         </frame>
@@ -464,7 +466,7 @@
             <img src="village" />
         </frame>
         <frame id="6100">
-            C’est trop tard pour lui. Tant pis, au moins ta vie est sauve. Que te serait il arrivé si jamais tu t’étais fait prendre ? Le sort réservé aux voleurs est très violent. Les images de l’exécution publique à laquelle tu as assisté te reviennent en mémoire. Tu déglutis de dégoût et ouvres la porte avec fracas.
+            C’est trop tard pour lui. Tant pis, au moins ta vie est sauve. Que te serait il arrivé si jamais tu t’étais fait prendre ? Le sort réservé aux voleurs est très violent. Les images d’une exécution publique à laquelle tu as assisté te reviennent en mémoire. Tu déglutis de dégoût et ouvres la porte avec fracas.
             <img src="village" />
         </frame>
         <frame id="6200">
@@ -547,6 +549,11 @@
             <locuteur personnage="asiel" />
             <expression src="tristesse2" />
         </frame>
+        <frame id="7210">
+            Les gardes se précipitent vers toi et te plaquent au sol. Quelques instant plus tard, ils te relèvent et t'emmènent sans ménagement vers la prison.
+            <img src="village" />
+            <choix consequence="9800" />
+        </frame>
 
         <!-- ####### On passe par les toits ####### -->
 
@@ -598,15 +605,15 @@
 
         <frame id="8100">
             $statuette==1?'Tu jettes la statuettes puis tu':'Tu'$
-             prends ton élan et te prépares à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
+            prends ton élan et te prépares à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
             <img src="fleuve" />
         </frame>
         <frame id="8200">
-            Tu atterris lourdement dans l’eau après quelques secondes de chute. Le choc te fais cracher l’air de tes poumons et un peu d’eau vient les remplir.
+            Tu atterris lourdement dans l’eau après quelques secondes de chute. Le choc te fais cracher l’air de tes poumons et un peu d’eau vient les remplir. Tu es complètement désorienté et tu te débat pour regagner la surface.
             <img src="fleuve" />
         </frame>
         <frame id="8300">
-            Tu nages comme tu peux dans l’eau mais le courant est bien trop fort pour toi. Bientôt tu te retrouves au plus profond de la forêt, la cime des arbres cache la lumière du soleil.
+            Tu nages comme tu peux dans l’eau mais le courant est bien trop fort pour toi. Le fleuve t’entraîne de plus en plus loin tandis que tu te débat, impuissant. Bientôt tu te retrouves au plus profond de la forêt, la cime des arbres cache la lumière du soleil.
             <img src="fleuve" />
         </frame>
         <frame id="8400">
@@ -620,8 +627,11 @@
             La rivière t'as laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucuns repères logique, aucunes marques. Rien, tout se ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
             <music src="tension" />
+            <choix consequence="cpt=0;8600" />
         </frame>
         <frame id="8600">
+            $cpt==4?'Tu sens tes membres faiblir de plus en plus et ton corps se déshydrater, il se pourrait bien que ce soit ta dernière chance de sortir de cette fichu forêt.':''$
+            $cpt>=1?'Te voilà de retour au point de départ. Fais attention tu risques de mourir de froid.':''$
             Tu es déterminé à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
             <choix
                 consequence="8610"
@@ -635,7 +645,7 @@
         <frame id="8610">
             Par où souhaites-tu aller ? Deux autres directions semblent être dégagées.
             <choix
-                consequence="8620"
+                consequence="cpt=cpt+1;8620"
                 placeholder="Tout droit" />
             <choix
                 consequence="8630"
@@ -644,7 +654,7 @@
         </frame>
 
         <frame id="8620">
-            $cpt=cpt+1;''$ Tu as l'impression d'être revenu sur tes pas. Tu reconnais cette partie de la forêt.
+            Tu as l'impression d'être revenu sur tes pas. Tu reconnais cette partie de la forêt.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
@@ -652,7 +662,7 @@
         <frame id="8630">
             Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
             <choix
-                consequence="8640"
+                consequence="cpt=cpt+1;8640"
                 placeholder="Tout droit" />
             <choix
                 consequence="8650"
@@ -661,20 +671,19 @@
         </frame>
 
         <frame id="8640">
-            $cpt=cpt+1;''$
             Non, tu as beau avancer et avancer, tu reviens toujours sur tes pas.
             <![CDATA[<b>
-            Pourtant c'est simple. Il ne faut jamais aller tout droit sauf à la fin.
-            </b>]]>
+   Pourtant c'est simple. Il ne faut jamais aller tout droit sauf à la fin.
+   </b>]]>
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
         <frame id="8650">
-            Tu sens que le vent commences à être plus fort. Tu frissones bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
+            Tu sens que le vent devient de plus en plus fort. Tu frissones bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
             Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
             <choix
-                consequence="8660"
+                consequence="cpt=cpt+1;8660"
                 placeholder="A gauche" />
             <choix
                 consequence="8700"
@@ -683,7 +692,6 @@
         </frame>
 
         <frame id="8660">
-            $cpt=cpt+1;''$
             Tu te perds dans la forêt et préfères revenir sur tes pas.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
@@ -692,26 +700,24 @@
         <frame id="8670">
             Par où souhaites-tu aller ? Deux directions semblent être dégagées.
             <choix
-                consequence="8680"
+                consequence="cpt=cpt+1;8680"
                 placeholder="A gauche" />
             <choix
-                consequence="8690"
+                consequence="cpt=cpt+1;8690"
                 placeholder="A droite" />
             <img src="foret" />
         </frame>
 
         <frame id="8680">
-            $cpt=cpt+1;''$
             Apparement, cette direction ne mène nulle part ...
             <![CDATA[<b>
-            Pourtant c'est simple. Il faut commencer par aller à gauche.
-            </b>]]>
+   Pourtant c'est simple. Il faut commencer par aller à gauche.
+   </b>]]>
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
 
         <frame id="8690">
-            $cpt=cpt+1;''$
             Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronges un peu plus.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
@@ -722,10 +728,9 @@
             <img src="foret" />
         </frame>
 
-        <!-- TODO : Completer -->
         <frame id="8800">
             Ou souhaites-tu aller maintenant ?
-            Tu peux partir plus loin encore et commencer une nouvelle vie à la capitale, affronter les nombreux dangers de la route, ou alors retourner dans Bandari pour essayer de faire quelque chose pour Chuck.
+            Tu peux partir plus loin encore et commencer une nouvelle vie à la capitale, affronter les nombreux dangers de la route, ou alors retourner dans Bandari pour essayer de faire quelque chose pour aider Chuck.
             <choix
                 consequence="8900"
                 placeholder="A la capitale" />
@@ -751,8 +756,13 @@
             <img src="blackscreen"/>
         </frame>
 
+        <!-- #######AJOUTER UN CHOIX AVEC L’ARGENT / KARMA ICI ?
+       =>> Survivre ( si argent ++ )
+       =>> Rejoindre les voleurs ( Si karma - ) ####### -->
+
+
         <frame id="9200">
-            Les bandits sautent sur ton corps endolori et tranchent ta gorge d’un coup sec à l’aide d’une dague.
+            Les bandits sautent sur ton corps endolori et tranchent la gorge d’un coup sec à l’aide d’une dague.
             <img src="blackscreen"/>
             <choix consequence="666" />
         </frame>
@@ -789,15 +799,16 @@
             <img src="prison" />
         </frame>
         <frame id="9710">
-            C’est la merde, on va se faire pendre Chuck.
+            C’est la galère, on va se faire pendre Chuck.
+            Je ne veux pas mourir. Je ne mérite pas la mort … Il faut faire quelque chose Chuck !!!
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
         </frame>
         <frame id="9720">
             <![CDATA[<i>
-            Je suis sûr qu’il y a un moyen d’éviter ça…
-            </b>]]>
+           Je suis sûr qu’il y a un moyen d’éviter ça…
+           </i>]]>
             Dit-il d’un air désemparé, le sang séché sur sa bouche rendant ses mots difficile à entendre.
             <img src="prison" />
             <locuteur personnage="chuck" />
@@ -813,26 +824,26 @@
             <music src="tension" />
         </frame>
         <frame id="9810">
-            T’es vraiment qu’un sale enfoiré de m’avoir laissé. Je pensais que je valais plus que ça pour toi.
+            T’es vraiment qu’un salaud de m’avoir laissé. Je pensais que je valais plus que ça pour toi.
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
         </frame>
         <frame id="9820">
+            Calme toi Chuck !
             Ecoute, je devais bien essayer de m’échapper non ? Et puis je suis revenu pour toi.
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
         </frame>
         <frame id="9830">
-            Ouais super, ça à l’air de bien fonctionner ton plan.
+            <![CDATA[<i>
+           Ouais super, ça à l’air de bien fonctionner ton plan.
+           </i>]]>
+            Dit-il d’un air sarcastique, la mine renfrognée.
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
-        </frame>
-        <frame id="9840">
-            Dit-il d’un air sarcastique, la mine renfrognée.
-            <img src="prison" />
             <choix consequence="9900" />
         </frame>
 
@@ -844,13 +855,18 @@
             <music src="tension" />
         </frame>
         <frame id="10000">
-            Réveille toi voleur ! Tu ne voudrais pas rater tes dernières heures non ?
+            REVEILLE TOI VOLEUR ! Tu ne voudrais pas rater tes dernières heures non ?
             <img src="prison" />
             <locuteur personnage="garde" />
             <expression src="fierte" />
         </frame>
         <frame id="10100">
-            Trois gardes entrent dans votre cellule, vous passent les fers aux mains et vous ordonnent d’avancer. Chuck semble dépossédé de toute émotion.
+            Trois gardes entrent bruyamment dans votre cellule, vous passent les fers aux mains et vous ordonnent d’avancer. Chuck semble dépossédé de toute émotion.
+            <img src="prison" />
+        </frame>
+        <frame id="10110">
+            Vous avancez dans les longs couloirs sales de la prison. D’autres détenus vous regardent, d’un air parfois compatissant, parfois d’un air moqueur.
+            Tu sens que ton estomac se crispe de plus en plus et tes mains tremblent légèrement.
             <img src="prison" />
         </frame>
         <frame id="10200">
@@ -886,6 +902,7 @@
         </frame>
         <frame id="10600">
             Fort bien, bourreau faites votre office.
+            Offrez un beau spectacle à la foule et aux gardes !
             <img src="prison" />
             <locuteur personnage="prefet" />
             <expression src="compatissant" />
@@ -908,7 +925,7 @@
         </frame>
         <frame id="11100">
             . . .
-            <img src="prison" />
+            <img src="blackscreen" />
         </frame>
         <frame id="11200">
             Tu ouvres les yeux et tout le monde se trouve à terre sauf Chuck et toi.
@@ -958,6 +975,7 @@
         </frame>
         <frame id="12000">
             Fort bien, amenez le jusqu’à la potence.
+            Offrez un beau spectacle à la foule et aux gardes !
             <img src="prison" />
             <locuteur personnage="prefet" />
             <expression src="compatissant" />
@@ -974,6 +992,10 @@
             Alors que tu sens le coup de pied faire basculer le tabouret en dessous de toi, tu sens une chaleur surgir du plus profond de toi, elle irradie tout ton corps.
             <img src="prison" />
         </frame>
+        <frame id="12310">
+            . . .
+            <img src="blackscreen" />
+        </frame>
         <frame id="12400">
             Tu ouvres les yeux et vois que les personnes autour de toi sauf Chuck sont toutes à terre, inconscientes.
             <img src="prison" />
@@ -982,7 +1004,8 @@
 
         <!-- Petit trick ; comme les frames sont les même on repart en arrière a : 11300 -->
 
-        <!-- ########## ID : se faire arrêter par le prêtre ######## -->
+        <!-- ########## ID : se faire arrêter par le prêtre ########
+          TODO : ####### Ce passage la parait beaucoup trop rapide et vide. Il faut l'étoffer !!####### -->
 
         <frame id="12500">
             Tandis que tu cours avec frénésie pour t’éloigner le plus possible, tu sens une perturbation dans l’air. Tu tournes à gauche au prochain carrefour car c’est celui qui t’emmeneras toi et Chuck sur la route de la ville la plus proche.
@@ -1016,8 +1039,16 @@
             <locuteur personnage="asiel" />
             <expression src="emu" />
         </frame>
+        <frame id="13010">
+            Asiel … Tu es un voleur, fainéant et insolent !
+            Tu es vraiment indigne de notre famille, une honte pour notre nom. Je ne peux pas te laisser continuer sur cette voie Asiel. Tu es ici dans les sous bassement de l’ordre de Xyrus.
+            Le prêtre m’a dit qu’il avait l’air … intéressé … par ce qui s’est produit pendant ton exécution.
+            <img src="prison" />
+            <locuteur personnage="thedris" />
+            <expression src="neutre" />
+        </frame>
         <frame id="13100">
-            J’ai pu négocier ta vie avec un prêtre de Xyrus, puisque c’est leur dieu que tu as offensé avec tes conneries. Vois cela comme un cadeau d’adieu, le dernier que je pourrais te faire, car dans tous les cas tu vas devoir quitter cette ville pour le restant de tes jours.
+            Il… m’a fait une proposition vu que je suis ton père, j’ai pesé le pour et le contre et j’ai accepté. Vois cela comme un cadeau d’adieu, le dernier que je pourrais te faire, car dans tous les cas tu vas devoir quitter cette ville pour le restant de tes jours.
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
@@ -1029,7 +1060,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="13300">
-            Soit tu pars avec le prêtre qui t’as stoppé pour aller rejoindre les rangs de leur moines dans un de leur fort reculé aux frontières Sud du Royaume, soit tu peux décliner son offre et dans ce cas tu devras passer ta vie dans une carrière de calcaire au Nord.
+            Soit tu pars avec le prêtre qui t’as stoppé pour aller rejoindre les rangs de leur moines dans un de leur fort reculé aux frontières Sud du Royaume, soit tu peux décliner son offre et dans ce cas tu devras finir ta vie dans l’anonymat, dans une carrière de calcaire au Nord.
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
@@ -1056,7 +1087,7 @@
             <img src="prison" />
         </frame>
         <frame id="13600">
-            À peines quelques mois après ton arrivée dans les  carrières, tu tombes du haut d’un échafaudage. Les gardes, voyant que tu ne pourrais pas guérir de tes blessures t’achèvent  d’un coup d’épée longue.
+            À peines quelques mois après ton arrivée dans les carrières, tu tombes du haut d’un échafaudage. Les gardes, voyant que tu ne pourrais pas guérir de tes blessures t’achèvent  d’un coup d’épée longue.
             <img src="blackscreen" />
         </frame>
         <frame id="13700">
@@ -1085,8 +1116,8 @@
         </frame>
         <frame id="14100">
             <![CDATA[<i>
-            Les chroniques d’Inkarma chapitre deux, peut être l’année prochaine !
-            </b>]]>
+           Les chroniques d’Inkarma chapitre deux, peut être l’année prochaine !
+           </b>]]>
             <img src="blackscreen" />
         </frame>
         <frame id="14200">
@@ -1332,3 +1363,4 @@
 
     </application>
 </PreferenceScreen>
+

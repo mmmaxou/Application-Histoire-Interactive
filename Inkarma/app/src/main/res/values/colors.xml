@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="transparent">#00ffffff</color>
     <color name="buttonMenuBG">#95f0f4</color>
+    <color name="mainColor">#BA5DB6</color>
 </resources>
