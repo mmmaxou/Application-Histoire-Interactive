@@ -25,6 +25,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
@@ -225,8 +226,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Reglage de la taille du texte
             SharedPreferences reglages = PreferenceManager.getDefaultSharedPreferences(this);
-            String a = reglages.getString("pref_textSize", "14");
-            Float textSize = Float.parseFloat(a);
+            int textSize = reglages.getInt("text_size", 2) + 10; // On ajoute 10 qui correspond au minimum
 
             textView.setTextSize(textSize);
 
@@ -368,6 +368,8 @@ public class MainActivity extends AppCompatActivity {
                     setGameRunning(true);
                     historiqueView.setVisibility(View.GONE);
                     mainLayout.setVisibility(View.VISIBLE);
+                    FrameLayout layoutpersonnage = (FrameLayout) findViewById(R.id.framelayout1);
+                    layoutpersonnage.setVisibility(View.VISIBLE);
                     String save = historique.get(position);
                     editor.putString("autosave", save);
                     script.evaluate(save);
@@ -654,9 +656,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_historique:
                 LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
                 ListView listView = (ListView) findViewById(R.id.ListViewHistorique);
+                FrameLayout layoutpersonnage = (FrameLayout) findViewById(R.id.framelayout1);
 
                 listView.setVisibility(View.VISIBLE);
                 layout.setVisibility(View.GONE);
+                layoutpersonnage.setVisibility(View.GONE);
+
 
                 return true;
         }
@@ -818,6 +823,11 @@ public class MainActivity extends AppCompatActivity {
         mText = text;
         mIndex = 0;
         isAnimating = true;
+
+        //Reglage de la vitesse de defilement
+        SharedPreferences reglages = PreferenceManager.getDefaultSharedPreferences(this);
+        mDelay = reglages.getInt("defilement", 2) + 10; // On rajoute 10 qui correspond au minimum
+
 
         TextView tv = (TextView) findViewById(R.id.BoiteDialogue);
 

@@ -1,5 +1,6 @@
 package fr.inkarma.Inkarma;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
@@ -25,11 +26,12 @@ public class SettingsActivity extends AppCompatActivity{
 
         private SeekBarPreference _seekBarPrefTextSize;
         private SeekBarPreference _seekBarPrefDefilement;
+        private Activity activity;
 
-        String valueTextSize = "preference_text_size";
+        String valueTextSize = "text_size";
         int minTextSize = 10;
 
-        String valueDefilement = "preference_defilement";
+        String valueDefilement = "defilement";
         int minDefilement = 10;
 
         @Override
@@ -49,7 +51,7 @@ public class SettingsActivity extends AppCompatActivity{
             getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
 
             // Set seekbar summary :
-            int radiusTextSize = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueTextSize, minTextSize) + minTextSize ;
+            int radiusTextSize = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueTextSize, minTextSize) + minTextSize;
             _seekBarPrefTextSize.setSummary(this.getString(R.string.settings_summary_size).replace("$1", ""+radiusTextSize));
             int radiusDefilement = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueDefilement, minDefilement) + minDefilement;
             _seekBarPrefDefilement.setSummary(this.getString(R.string.settings_summary_defilement).replace("$1", ""+radiusDefilement));
@@ -60,11 +62,17 @@ public class SettingsActivity extends AppCompatActivity{
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
             // Set seekbar summary :
-            int radiusTextSize = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueTextSize, minTextSize) + minTextSize;
-            _seekBarPrefTextSize.setSummary(this.getString(R.string.settings_summary_size).replace("$1", ""+radiusTextSize));
-            int radiusDefilement = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueDefilement, minDefilement) + minDefilement;
-            _seekBarPrefDefilement.setSummary(this.getString(R.string.settings_summary_defilement).replace("$1", ""+radiusDefilement));
+            int radiusTextSize = minTextSize, radiusDefilement = minDefilement;
+            activity = getActivity();
+            if ( activity != null && isAdded() ) {
+                radiusTextSize = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueTextSize, minTextSize) + minTextSize;
+                _seekBarPrefTextSize.setSummary(this.getString(R.string.settings_summary_size).replace("$1", ""+radiusTextSize));
+
+                radiusDefilement = PreferenceManager.getDefaultSharedPreferences(this.getActivity()).getInt(valueDefilement, minDefilement) + minDefilement;
+                _seekBarPrefDefilement.setSummary(this.getString(R.string.settings_summary_defilement).replace("$1", ""+radiusDefilement));
+            }
         }
+
     }
 
 }

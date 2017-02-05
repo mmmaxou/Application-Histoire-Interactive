@@ -46,15 +46,15 @@
             android:defaultValue="2"
             android:title="@string/settings_title_size"
             android:dialogMessage="@string/settings_dialog_message_size"
-            android:key="preference_text_size"
-            android:max="30"
+            android:key="text_size"
+            android:max="20"
             android:order="10"
             android:summary="@string/settings_summary_size"
             android:text="" />
         <fr.inkarma.Inkarma.SeekBarPreference
             android:defaultValue="0"
             android:dialogMessage="@string/settings_dialog_message_defilement"
-            android:key="preference_defilement"
+            android:key="defilement"
             android:max="20"
             android:order="10"
             android:summary="@string/settings_summary_defilement"

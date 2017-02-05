@@ -106,7 +106,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:text="Paramètres"
+                    android:text="Parametres"
                     android:layout_gravity="bottom"
                     android:textSize="@dimen/fontSize_menu"
                     android:layout_weight="1"
