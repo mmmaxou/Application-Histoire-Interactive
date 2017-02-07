@@ -315,7 +315,7 @@
         <frame id="4220">
             Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
             <img src="eglise" />
-            <choix consequence="4221" placeholder="Voler un joyaux" />
+            <choix consequence="or=or+70;4221" placeholder="Voler un joyaux" /> <!-- ON AUGMENTE L'OR DU JOUEUR-->
             <choix consequence="4222" placeholder="Ne rien faire"/>
         </frame>
         <frame id="4221">
@@ -427,8 +427,12 @@
 
         <frame id="5700">
             Deux possibilités s’offrent à toi, laquelle choisis-tu ?
-            <choix consequence="5710" placeholder="Revenir et l'aider"/>
-            <choix consequence="5800" placeholder="Partir et l'abandonner"/>
+            <choix
+                consequence="5710"
+                placeholder="Revenir et l'aider"/>
+            <choix
+                consequence="5800"
+                placeholder="Partir et l'abandonner"/>
             <img src="village" />
             <music src="yggdraop" />
         </frame>
@@ -476,7 +480,7 @@
         <frame id="6300">
             La petite statuette représentant Xyrus se trouve à ta portée.
             <choix
-                consequence="6400"
+                consequence="or=or+40;statuette=1;6400"
                 placeholder="Prendre la statuette" />
             <choix
                 consequence="6410"
@@ -484,7 +488,7 @@
             <img src="village" />
         </frame>
         <frame id="6400">
-            $statuette=1;''$Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
+            Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
             <choix consequence="6500" />
             <karma value="-1" />
             <img src="village" />
@@ -641,7 +645,6 @@
                 placeholder="A droite" />
             <img src="foret" />
         </frame>
-
         <frame id="8610">
             Par où souhaites-tu aller ? Deux autres directions semblent être dégagées.
             <choix
@@ -652,13 +655,11 @@
                 placeholder="A gauche" />
             <img src="foret" />
         </frame>
-
         <frame id="8620">
             Tu as l'impression d'être revenu sur tes pas. Tu reconnais cette partie de la forêt.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
-
         <frame id="8630">
             Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
             <choix
@@ -669,7 +670,6 @@
                 placeholder="A droite" />
             <img src="foret" />
         </frame>
-
         <frame id="8640">
             Non, tu as beau avancer et avancer, tu reviens toujours sur tes pas.
             <![CDATA[<b>
@@ -678,7 +678,6 @@
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
-
         <frame id="8650">
             Tu sens que le vent devient de plus en plus fort. Tu frissones bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
             Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
@@ -690,13 +689,11 @@
                 placeholder="Tout droit" />
             <img src="foret" />
         </frame>
-
         <frame id="8660">
             Tu te perds dans la forêt et préfères revenir sur tes pas.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
-
         <frame id="8670">
             Par où souhaites-tu aller ? Deux directions semblent être dégagées.
             <choix
@@ -707,7 +704,6 @@
                 placeholder="A droite" />
             <img src="foret" />
         </frame>
-
         <frame id="8680">
             Apparement, cette direction ne mène nulle part ...
             <![CDATA[<b>
@@ -716,18 +712,15 @@
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
-
         <frame id="8690">
             Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronges un peu plus.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
-
         <frame id="8700">
             Tu aperçois enfin une éclaircie au loin. Tu fonces vers cette direction, et au fur et à mesure que tu te rapproches, la lumière se fait plus forte, le bruit environnant moins sourd, et l'air plus pur. Tu es soudainement aveuglé par cette lumière éclatante à laquelle tu n'étais plus habitué. Mais tu as réussi à sortir de la forêt en vie !!
             <img src="foret" />
         </frame>
-
         <frame id="8800">
             Ou souhaites-tu aller maintenant ?
             Tu peux partir plus loin encore et commencer une nouvelle vie à la capitale, affronter les nombreux dangers de la route, ou alors retourner dans Bandari pour essayer de faire quelque chose pour aider Chuck.
@@ -739,28 +732,30 @@
                 placeholder="Retourner à la ville" />
             <img src="foret" />
         </frame>
-
         <!-- ####### Aller à la ville d’à côté/capitale ####### -->
+        <!-- Entrée de l'arc voleur si karma == -2 && or == 110 -->
 
         <frame id="8900">
             Soulagé d’être enfin sorti  de cette satanée forêt, tu te presses en direction de la ville. Les heures passent et se ressemblent.
             <img src="blackscreen"/>
             <music src="sad" />
         </frame>
+        <frame id="8910">
+            FRAME DE DEBUG :
+            Ton karma est de $karma$ et tu possedes $or$ or;
+            <img src="blackscreen"/>
+            <music src="sad" />
+        </frame>
         <frame id="9000">
             Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
             <img src="blackscreen"/>
+            <choix consequence="or==110&amp;karma==-2?14200:9100" />
         </frame>
         <frame id="9100">
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
+            Ils arrivent à ta hauteur, te fouillent rapidement, et, déçus de ne pas avoir trouver d'objet de valeur, t'achèvent d'un coup de dague à la gorge.
             <img src="blackscreen"/>
         </frame>
-
-        <!-- #######AJOUTER UN CHOIX AVEC L’ARGENT / KARMA ICI ?
-       =>> Survivre ( si argent ++ )
-       =>> Rejoindre les voleurs ( Si karma - ) ####### -->
-
-
         <frame id="9200">
             Les bandits sautent sur ton corps endolori et tranchent la gorge d’un coup sec à l’aide d’une dague.
             <img src="blackscreen"/>
@@ -771,7 +766,7 @@
 
         <frame id="9300">
             Tu pars donc en direction de Bandari en espérant pouvoir sauver Chuck. Tu peux apercevoir quelques maisonnées marquant le début du bourg au loin, il va te falloir quelques heures pour y arriver.
-            <img src="plaine"/>
+            <img src="foret"/>
             <music src="yggdraop" />
         </frame>
         <frame id="9400">
@@ -1119,238 +1114,406 @@
            Les chroniques d’Inkarma chapitre deux, peut être l’année prochaine !
            </b>]]>
             <img src="blackscreen" />
+            <choix consequence="666" />
         </frame>
+
+
+        <!-- ########## -->
+        <!-- ARC VOLEUR -->
+        <!-- ########## -->
         <frame id="14200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $or=0;''$
+            Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
+            Ils arrivent à ta hauteur, te fouillent rapidement.
+            Un voleur trouves le joyaux que tu a voler dans l'église.
+            <img src="blackscreen"/>
         </frame>
         <frame id="14300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Hey !! Regardez ca les gars! On a toucher le gros lot aujourd'hui !
+            <locuteur personnage="voleur" />
+            <expression src="surprise" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="14400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Il lève alors le joyaux en l'air et tous s'esclaffent bruyamment, l'air ravi.
+            <img src="blackscreen"/>
         </frame>
         <frame id="14500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Bien vu l'ami. Tu as bien fait de venir ici aujourd'hui ! Nous voila riche ! Un joyaux de Xyrus ! Cette beauté vaut une petite fortune ! Hahaha!
+            Tu as fait ma journée toi ! Pour la peine je te laisse la vie sauve, avec même un petit cadeau de notre bande.
+            <locuteur personnage="voleur" />
+            <expression src="attente" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="14600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Sur ces mots, il se met à rire bruyamment et t'assènne un violent coup derrière la nuque. Ton champs de vision se brouille, tu vois des étoiles.
+            Puis luttant contre la douleur, tu tombes dans les pommes.
+            <img src="blackscreen"/>
         </frame>
         <frame id="14700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            . . .
+            <img src="blackscreen"/>
         </frame>
         <frame id="14800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu te réveilles et palpes ta nuque. La douleur ressentie est horrible. Tu relèves ton dos et t'assied contre un tronc d'arbre. Quel malchance aujourd'hui !
+            Tu essaie de te rappeller de ce qui s'est passé plus tôt.
+            <img src="blackscreen"/>
         </frame>
         <frame id="14900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <![CDATA[<b>
+            SATANÉS VOLEURS !
+            </b>]]>
+            <locuteur personnage="asiel" />
+            <expression src="tristesse2" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="15000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu retrouves lentement tes esprits, mais la douleur lancinante rend tes mouvements difficiles. Tu te poses alors quelques instants, en attendant que la douleur passe, et tu repenses à ce qui t'es arrivé aujourd'hui. Quelle journée !
+            <img src="blackscreen"/>
         </frame>
         <frame id="15100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Quelques minutes plus tard, tu arrives enfin à te relever malgrè la douleur. Tu remarques des traces de pas au sol. Après une rapide inspection, tu penses qu'elles pourraient être celles des voleurs.
+            <img src="blackscreen"/>
+            <choix
+                consequence="15200"
+                placeholder="Suivre les traces" />
+            <choix
+                consequence="9300"
+                placeholder="Fuir et aider Chuck" />
         </frame>
+        <!-- SUIVRE LES TRACES DE PAS DES VOLEURS -->
         <frame id="15200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu suis les traces de pas lentement. Celles ci s'enfoncent rapidement de nouveau dans la forêt, ce qui rend la traque difficile. Heuresement, tu aperçois rapidement un petit cabanon au loin entre les troncs.
+            <img src="blackscreen"/>
         </frame>
         <frame id="15300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu t'approches lentement. Aucun bruit n'émmane de la bicoque, c'est bon signe pour toi. Tu jettes un coup d'oeil vif à l'intérieur par la fenêtre. Le lieu est effectivement desert. Tu presses légèrement la poignée, et la porte s'entrouve. Apparement elle n'a pas été vérouillée ... Bizarre. Tu y rentres prudement, les yeux grand ouverts.
+            <img src="blackscreen"/>
         </frame>
         <frame id="15400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Alors c'est à ca que ressemble une planque de voleur ! Pas aussi impréssionant que ce que j'imaginais.
+            <locuteur personnage="asiel" />
+            <expression src="attente" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="15500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            En effet la cabane en bois est très petite et un desordre énorme règne dans la pièce. C'est une simple pièce, elle doit certainement servir de planque aux voleurs. Il y deux lits au sol dans un coin, sur lesquels trainent deux petits sacs. Au milieu de la pièce, une grande table en bois sale et en désordre, avec de nombreux verres, une bouteille de vin et plusieurs gourdes à moitié vide. Il y a également des vêtements qui trainent sur le sol, l'un d'eux se trouvant sur un petit coffre en bois entrouvert.
+            <img src="blackscreen"/>
         </frame>
         <frame id="15600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Une grande armoire fermée repose sur le mur du fond, celle-ci est assez vieille et présente plusieurs coups et entailles. Le sol et le mobilier est très poussièreux, et le toit n'a pas l'air de première fraicheur.
+            <img src="blackscreen"/>
         </frame>
         <frame id="15700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tout laisse à croire que les bandits ont du partir précipitamment et sans prendre leurs précautions. Aussi pourraient-ils revenir d'un instant à l'autre. Tu écoutes prudemment ce qui se passe à l'extérieur pour guetter le moindre bruit. S'ils te trouvent ici, ils ne te laisseront certainement pas la vie sauve. Mieux vaut faire vite !!
+            <img src="blackscreen"/>
         </frame>
         <frame id="15800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $cpt=0;''$
+            Tu tentes de rester calme malgrè la sueur et ton crane qui te fait encore souffrir, tu regardes à nouveau l'intérieur, avide de découvrir ce qu'il s'y cache vraiment.
+            Souhaites-tu ouvrir le coffre ?
+            <img src="blackscreen"/>
+            <choix
+                consequence="cpt=cpt+1;or=200;15900"
+                placeholder="Oui" />
+            <choix
+                consequence="16100"
+                placeholder="Non" />
         </frame>
+        <!-- Ouvrir le coffre -->
         <frame id="15900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu trouves dans ce coffre le joyaux que t'ont dérober les voleurs, ainsi qu'une petite bourse pleine de centils! Tu voila riche à nouveau !
+            <img src="blackscreen"/>
         </frame>
         <frame id="16000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Haha !! C'est le voleur qui est volé !!
+            <locuteur personnage="asiel" />
+            <expression src="joie" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="16100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Souhaites-tu fouiller la table et les papiers qui s'y trouvent ?
+            <img src="blackscreen"/>
+            <choix
+                consequence="cpt=cpt+1;infovoleur=1;16200"
+                placeholder="Oui" />
+            <choix
+                consequence="16400"
+                placeholder="Non" />
         </frame>
+        <!-- Fouiller la table -->
+        <!-- TODO : Problemes : Nom d'un méchant ; la Date -->
         <frame id="16200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu fouilles rapidement la table, soulevant délicatement chaque papiers, puis remettant tout à sa place. Tu découvres que les voleurs ont de piètres goûts en matière de vins, qu'ils correspondent beaucoup par mail avec un certain $mechant$. Tu trouves également un dossier qui contient beaucoup d'informations et de schémas sur une boutique dans une ville. L'adresse indique que cette boutique se trouves dans la capitale.
+            <img src="blackscreen"/>
         </frame>
         <frame id="16300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Apparement les bandits préparent un gros coup. Une rapine de haut niveau ! Tu inspectes un peu plus longuement ce dossier et tu remarques une date. Mince !!! C'est demain après-midi.
+            <img src="blackscreen"/>
         </frame>
         <frame id="16400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Souhaites-tu fouiller les armoires ?
+            <img src="blackscreen"/>
+            <choix
+                consequence="cpt=cpt+1;dague=1;or=or+36;16500"
+                placeholder="Oui" />
+            <choix
+                consequence="17000"
+                placeholder="Non" />
         </frame>
+        <!-- Fouiller les armoires -->
         <frame id="16500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu fouilles cette grande armoire. Il y a des grands vêtements qui sont vraiment de mauvais goûts, des bottes sales et pleines de boue. Tu remarques une petite dague dans l'un des vêtements, dont tu t'empares et caches dans ta tunique. En fouillant dans les poches tu arrives également à trouver quelques pièces.
+            <img src="blackscreen"/>
+            <choix consequence="cpt==3?16600:17000" />
         </frame>
+
+        <!-- Trop attendu : mort -->
         <frame id="16600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Mais dis donc, ce ne serait pas notre jeune riche. Comme on se retrouve !
+            <locuteur personnage="voleur" />
+            <expression src="surprise" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="16700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Le voleur te bondit dessus et te plaque au sol, t'imobilisant completement. Tu crie de douleur et essaie de te débattre de toutes tes forces. Tu sens la lame de la dague que tu viens s'enfoncer dans ton ventre. Miiiince ! <![CDATA[<i>Pourquoi ne l'ai-je pas garder à la main celle la !!</i>]]>
+            <img src="blackscreen"/>
         </frame>
         <frame id="16800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Cette fois-ci par contre, je ne te laisserais pas la vie sauve sale pourriture !
+            <locuteur personnage="voleur" />
+            <expression src="surprise" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="16900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Sur ces mots, le voleur enfonce sa lame dans ta gorge.
+            <img src="blackscreen"/>
+            <choix consequence="666" />
         </frame>
+
+        <!-- On s'enfuit aves nos prises -->
         <frame id="17000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $cpt=0;''$
+            Satisfait de ce que tu as trouvé ici, tu prend soin de refermer et cacher au mieux ton larcin, puis tu ressort et fermes la porte derrière toi. Tu t'enfuis ensuite en courant loin de cette cabane, de peur que les bandits n'arrivent.
+            <img src="blackscreen"/>
         </frame>
         <frame id="17100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu pars desormais à la capitale, car
+            $infovoleur==1?'tu veut être là à temps pour aller à la boutique avant les voleurs.':(or>0?'tu es desormais riche et compte bien te ravitailler un peu au marché':'tu n\'a rien d\'autre à faire, ... vraiment ...')$
+            <img src="blackscreen"/>
         </frame>
         <frame id="17200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Le soir se couche alors que tu marches encore et toujours vers cette capitale. La température se refroidit et tes muscles fatiguent. Éreinté de cette dure journée, tu tente de t'allonger et te fabriquer une couverture de fortune avec ce que tu trouves la. C'est la première nuit que tu passes dehors.
+            <img src="blackscreen"/>
         </frame>
         <frame id="17300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Hier encore, tu n'aurais jamais imaginer que tu te retrouverais ainsi, à dormir à la belle étoile, alors qu'il fait encore assez froid dehors. Ta couchette est a quelques minutes de la route. Tu dors tel un mendiant, gelé et aigri par ta journée.
+            La tête pleine et l'esprit extrèmement fatigué, tu t'endors rapidement en regardant le ciel.
+            <img src="blackscreen"/>
         </frame>
         <frame id="17400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            AIE ! Mon dos ! Ma tête !
+            <img src="blackscreen"/>
+            <locuteur personnage="asiel" />
+            <expression src="emu" />
         </frame>
         <frame id="17500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Les premières lueurs du jour t'ont réveillées, et tu es encore plus grincheux que la veille. Cette nuit n'a pas été très reposante. Te te relève et t'étire lentement.
+            Ton ventre gargouillant te rappelle qu'il est vide et reclame d'être rempli.
+            <img src="blackscreen"/>
         </frame>
         <frame id="17600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Sur ces pensées fort peu joyeuses, tu te remet en chemin en esperant que cette journée sera meilleure.
+            <img src="blackscreen"/>
         </frame>
         <frame id="17700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Au bout de quelques heures de marche, tu arrives enfin dans la capitale. Extenué, tu t'assied quelques minutes et observe ce qui se passe autour de toi. Quelle étrange atmoshpère !!! La population de cette ville est bien plus importante qu'à Bandari, et crée ainsi un brouhaha ambient en incéssant. Une faible odeur attire ton attention. Ici, ca sent ... différement.
+            Tu ne sais pas exactement ce que c'est. Peut-être un mix entre de la nourriture, des épices, des ordures et de la sueur.
+            <img src="blackscreen"/>
         </frame>
         <frame id="17800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Le passage des gens est incéssant, surtout ici, aux portes de la ville. Tu peux aperçevoir des marchand, qui passent en bousculant des artisans de toutes sortes, occupés et pressés. Des enfants courent aussi un peu dans tous les sens.
+            Que d'animation !!
+            <img src="blackscreen"/>
         </frame>
         <frame id="17900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Toute cette animosité t'égaille l'esprit, et tu repars avec une impression de légereté assez agréable.
+            Ou souhaites tu aller ?
+            <img src="blackscreen"/>
+            <choix
+                consequence="18000"
+                placeholder="Au marché" />
+            <choix
+                consequence="19100"
+                placeholder="A la boutique" />
         </frame>
         <frame id="18000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu arrives dans le marché et tu en profites pour compter ton fier pactole.
+            Tu as $or$ centils.
+            <img src="blackscreen"/>
         </frame>
         <frame id="18100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $achat=0;''$
+            Tu te ballades entre les étals, et te laisse porter pas l'odeur de la nourriture, puis te lèche les babines. Tu passes devant un vendeur de poulet grillé !! Ton plat préféré !!!
+            <img src="blackscreen"/>
+            <choix
+                consequence="achat=or>13?1:0;or=or>13?or-13:or;achat==1?18200:18110"
+                placeholder="En acheter" />
+            <choix
+                consequence="18500"
+                placeholder="Passer son chemin" />
         </frame>
+            <frame id="18110">
+                Pas assez d'or. Tu va devoir te serrer la ceinture.
+                <img src="blackscreen"/>
+                <choix consequence="18500" />
+            </frame>
         <frame id="18200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Bonjour monsieur !! Je voudrais un bon petit poulet !
+            <locuteur personnage="asiel" />
+            <expression src="joie" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="18300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Voila pour vous! Ca fera 13 centils!
+            <locuteur personnage="vendeur" />
+            <expression src="joie" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="18400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu continue ta route en mangeant tranquillement ton délicieux poulet.
+            <img src="blackscreen"/>
         </frame>
         <frame id="18500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $cpt=0;''$
+            Tu aperçois une fontaine publique, tu t'en approches fais la queue, pour boire un peu d'eau et te decrotter brièvement. Souhaites tu rester dans le marché ?
+            <img src="blackscreen"/>
+            <choix
+                consequence="retard=1;18600"
+                placeholder="Rester un peu plus" />
+            <choix
+                consequence="19100"
+                placeholder="Partir vers la boutique" />
         </frame>
         <frame id="18600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu continue de marcher dans le marché, repu et desaltéré. Tu es intrigué par un vendeur d'objets en tout genre. Tu t'approches de son étal : \"<![CDATA[<i>Les délices de l'aventurier</i>]]>\". Il vend toutes sorte d'équipement qui ont l'air utiles.
+            <img src="blackscreen"/>
         </frame>
         <frame id="18700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Il te reste $or$ centils.
+            Souhaites-tu acheter un sac à dos pour entreposer tous tes objets ?
+            Il coûte 59 centils.
+            <choix
+                consequence="sac=or>59?1:0;or=or>59?or-59:or;sac==1?18800:18710"
+                placeholder="Oui" />
+            <choix
+                consequence="18800"
+                placeholder="Non" />
+            <img src="blackscreen"/>
+        </frame>
+        <frame id="18710">
+            Pas assez d'or. Il va falloir faire sans.
+            <img src="blackscreen"/>
+            <choix consequence="18800" />
         </frame>
         <frame id="18800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $achat=0;''$
+            Il te reste $or$ centils.
+            Souhaites-tu acheter une $dague==1?'autre':''$ dague ?
+            Elle coûte 23 centils.
+            <choix
+                consequence="achat=or>23?1:0;dague=dague+achat;or=or>23?or-23:or;achat==1?18900:18810"
+                placeholder="Oui" />
+            <choix
+                consequence="18900"
+                placeholder="Non" />
+            <img src="blackscreen"/>
+        </frame>
+        <frame id="18810">
+            Pas assez d'or. Il va falloir faire sans.
+            <img src="blackscreen"/>
+            <choix consequence="18900" />
         </frame>
         <frame id="18900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            $achat=0;''$
+            Il te reste $or$ centils.
+            Souhaites-tu acheter une gourde remplie d'eau pour éviter de mourrir de soif à nouveau ?
+            Elle coûte 10 centils.
+            <choix
+                consequence="gourde=or>10?1:0;or=or>10?or-10:or;gourde==1?19000:18910"
+                placeholder="Oui" />
+            <choix
+                consequence="19000"
+                placeholder="Non" />
+            <img src="blackscreen"/>
+        </frame>
+        <frame id="18910">
+            Pas assez d'or. Il va falloir faire sans.
+            <img src="blackscreen"/>
+            <choix consequence="19000" />
         </frame>
         <frame id="19000">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Les poches remplies et la bourse plus lègere, tu quittes le marché et tu va vers la boutique.
+            <img src="blackscreen"/>
         </frame>
         <frame id="19100">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu cherches un peu et te perds dans les ruelles de la capitale. Au bout de quelques longues minutes, tu arrives enfin à la boutique que tu recherchais. C'est enfait un antiquaire !
+            Tu t'approches un peu, et remarques l'un des voleurs qui t'avait aggresser passer devant la boutique, l'air de rien.
+            <img src="blackscreen"/>
         </frame>
         <frame id="19200">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu passes la porte de l'antiquaire, une clochette retentie. L'antiquaire te parle de loin.
+            <img src="blackscreen"/>
         </frame>
         <frame id="19300">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Oui oui !! Une seconde j'arrive !!
+            <locuteur personnage="antiquaire" />
+            <expression src="neutre" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="19400">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            La boutique est peu large, mais très profonde. D'innombrables commodes arborent les murs, remplies de babioles et objets rares en tout genre.
+            Il y a une grande bibliothèque, et quelques objets et de vieux os mis sous verre. Cette boutique ressemble plus à un salon des curiositées qu'un antiquaire.
+            <img src="blackscreen"/>
         </frame>
         <frame id="19500">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu t'approches d'une petite table en attendant l'antiquaire. Il y a une petite boussole de cuivre étrange, aux cotés d'une ceinture géante.
+            Au mur sont accrochées des bottes métalliques ornées et décorrées, avec un petit écritaux disant : \"<![CDATA[<i>Testées et approuvées par Olaf, le plus fin des barbares.</i>]]>\"
+            Pleins d'autres objets similaires ornent les murs et décorent les étagères de cette boutique assez singulière.
+            <img src="blackscreen"/>
         </frame>
         <frame id="19600">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            <img src="blackscreen"/>
         </frame>
         <frame id="19700">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Je suis là Je suis là !! Que souhaitez-vous cher client ? Oh mais vous m'avez l'air bien jeune.
+            <locuteur personnage="antiquaire" />
+            <expression src="joie" />
+            <img src="blackscreen"/>
         </frame>
         <frame id="19800">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+            Tu balbutie un peu devant l'antiquaire ... C'est vrai ca ? Que souhaites tu faire ?
+            Tu pourrais l'informer de l'attaque imminente des voleurs ...
+            Ou bien tu pourrais aussi ne rien dire, et tenter de récuperer une partie du butin en aidant les voleurs.
+            <img src="blackscreen"/>
+            <choix
+                consequence="19900"
+                placeholder="Informer l'antiquaire" />
+            <choix
+                consequence="20000"
+                placeholder="Ne pas trahir les voleurs" />
         </frame>
         <frame id="19900">
-            <choix consequence="-1"></choix>
-            <choix consequence="-1"></choix>
+
+            INFORMER
+
+            <img src="blackscreen"/>
+        </frame>
+        <frame id="20000">
+
+            NE PAS TRAHIR
+
+            <img src="blackscreen"/>
         </frame>
 
 

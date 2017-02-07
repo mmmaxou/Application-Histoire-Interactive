@@ -256,6 +256,9 @@ public class MainActivity extends AppCompatActivity {
                 frame.karmaEvaluated = true;
             }
 
+            //DEBUG
+            Log.d("SCRIPT : ", script.serialize());
+
 
             // On cache les choix
             button1.setVisibility(View.GONE);
@@ -537,6 +540,7 @@ public class MainActivity extends AppCompatActivity {
             isAnimating = false;
         } else {
 
+            // Si c'est la frame de mort alors on quitte;
             if (frame.id == 666) {
                 Intent intent = new Intent(this, MenuActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

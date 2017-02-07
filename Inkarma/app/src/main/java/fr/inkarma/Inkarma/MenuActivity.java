@@ -106,9 +106,8 @@ public class MenuActivity extends AppCompatActivity {
         Script script = new Script();
 
         script.put("frame", 100);
-        script.put("frameNumber", 0);
         script.put("karma", 0);
-        script.put("lastChoiceID", 100);
+        script.put("mechant", "NOM DE MECHANT RANDOM");
 
         SharedPreferences settings = getSharedPreferences(MainActivity.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
