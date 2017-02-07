@@ -30,6 +30,8 @@ public class MenuActivity extends AppCompatActivity {
         Button buttonLoad = (Button) findViewById(R.id.buttonLoad);
         Button buttonNewGame = (Button) findViewById(R.id.buttonNewGame);
         Button buttonSettings = (Button) findViewById(R.id.buttonSettings);
+        Button buttonCredit = (Button) findViewById(R.id.buttonCredit);
+        Button buttonGalerie = (Button) findViewById(R.id.buttonGalerie);
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/besom.ttf");
 
@@ -37,6 +39,8 @@ public class MenuActivity extends AppCompatActivity {
         buttonLoad.setTypeface(font);
         buttonNewGame.setTypeface(font);
         buttonSettings.setTypeface(font);
+        buttonCredit.setTypeface(font);
+        buttonGalerie.setTypeface(font);
 
 
         if (saveExists()){
@@ -124,7 +128,15 @@ public class MenuActivity extends AppCompatActivity {
     public void onClickParams(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+
     }
+
+    public void onClickCredit(View view) {
+        Intent intent = new Intent(this, CreditActivity.class);
+        startActivity(intent);
+
+    }
+
 
     @Override
     protected void onStop() {

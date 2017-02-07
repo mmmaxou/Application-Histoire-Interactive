@@ -10,15 +10,6 @@
     android:weightSum="1"
     android:background="#cac4c4">
 
-    <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--app:srcCompat="@drawable/frame1"-->
-        <!--android:id="@+id/decorImgBox"-->
-        <!--android:layout_weight="2"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:elevation="0dp" />-->
-
     <ImageSwitcher
         android:id="@+id/imageSwitcher1"
         android:layout_width="match_parent"
@@ -144,15 +135,14 @@
                 <ImageButton
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton"
-                    android:elevation="1dp"
                     android:layout_width="wrap_content"
                     android:onClick="onClickSettings"
-                    android:scaleX="0.8"
-                    android:scaleY="0.8"
+                    android:background="@drawable/button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/button" />
+                    android:adjustViewBounds="true"
+                    android:padding="25dp"
+                    android:layout_margin="5dp" />
 
             </RelativeLayout>
 
@@ -264,8 +254,8 @@
                 android:background="@drawable/cadre3"
                 android:minHeight="120dp"
                 android:layout_weight="5"
-                android:padding="10dp"
-                android:scrollbarAlwaysDrawVerticalTrack="true">
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -275,7 +265,7 @@
                     android:text="Lorem ipsum"
                     android:textSize="20sp"
                     android:textColor="?android:attr/textColorPrimaryInverse"
-                    android:layout_marginTop="10dp" />
+                    android:padding="5dp" />
             </ScrollView>
 
         </LinearLayout>

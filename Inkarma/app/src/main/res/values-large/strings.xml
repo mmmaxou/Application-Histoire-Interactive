@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Default Preferences values for HDPI-->
+    <string name="pref_default_size">12</string>
+
+</resources>

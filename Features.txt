@@ -2,9 +2,9 @@ Features
 
 Système de sauvegarde :
 {
-	Plusieurs sauvegardes ( environ 16 )
-	Affichage de l'état d'une sauvegarde
-	Contenu de la sauvegarde : {
+	-- Plusieurs sauvegardes ( environ 16 )
+	-- Affichage de l'état d'une sauvegarde
+	-- Contenu de la sauvegarde : {
 		Choix déjà effectués
 		Texte affiché actuel
 		-- Date et Heure
@@ -16,7 +16,7 @@ Système d'affichage :
 {
 	En jeu : {	
 		-- Le texte : 
-			S’affiche lettre par lettre
+			-- S’affiche lettre par lettre
 		-- L'image de fond avec éventuellement plusieurs couches
 		-- Image Personnage
 		-- Image Expression
@@ -27,31 +27,28 @@ Achievment pour les différentes fins (?)
 		-- Accès aux sauvegardes
 		-- Sauvegarde instantanée
 		-- Accès aux paramètres
-		Historique 
+		-- Historique 
 	}
 }
 
 Paramètres : {
 	-- Taille du texte
-	Vitesse de défilement
-	Son ( couper/régler le volume / arrêter lors d’un appel)
+	-- Vitesse de défilement
+	-- Son ( couper/régler le volume / arrêter lors d’un appel)
 	-- Auto-Skip ( Change de dialogue au bout d’un certain temps)
 	-- Vitesse à laquelle le texte apparaît.
 	Afficher / Cacher les achievment (?)
 }
 Menu principal : {
 	-- Nouvelle partie
-	Charger une sauvegarde rapide( Optionnel )
+	-- Charger une sauvegarde rapide( Optionnel )
 	-- Charger une sauvegarde
 	-- Paramètres
 	Galerie ( Optionnel )
 }
 
-
-
-
 Contenu secondaire :
 Galerie d’images du jeu : {
 	Se débloque au fur et à mesure de l’avancement du jeu
-Affiche les images du jeu
+	Affiche les images du jeu
 }

@@ -15,14 +15,17 @@
             android:summary="Au bout d'une certaine durée, on passe automatiquement à l'écran suivant."
             android:defaultValue="true"
             android:persistent="true"/>
-        <ListPreference
+
+        <!--ORDER EQUAL MIN-->
+        <fr.inkarma.Inkarma.SeekBarPreference
             android:dependency="pref_autoSkip"
-            android:key="pref_autoSkipSpeed"
-            android:title="Vitesse de passage automatique"
-            android:dialogTitle="Vitesse"
-            android:entries="@array/pref_autoSkipSpeed_entries"
-            android:entryValues="@array/pref_autoSkipSpeed_values"
-            android:defaultValue="25"
+            android:key="autoSkipSpeed"
+            android:defaultValue="@string/pref_default_autoSkip"
+            android:title="@string/settings_title_skipSpeed"
+            android:dialogMessage="@string/settings_dialog_skipSpeed"
+            android:max="25"
+            android:order="15"
+            android:summary="@string/settings_summary_skipSpeed"
             android:persistent="true"/>
 
 
@@ -31,34 +34,25 @@
     <PreferenceCategory
         android:title="Texte"
         android:key="pref_key_textSize">
-        <!--<ListPreference-->
-            <!--android:key="pref_textSize"-->
-            <!--android:title="Taille du texte"-->
-            <!--android:dialogTitle="Taille"-->
-            <!--android:entries="@array/pref_textSize_entries"-->
-            <!--android:entryValues="@array/pref_textSize_values"-->
-            <!--android:defaultValue="18"-->
-            <!--android:persistent="true"/>-->
-
 
         <!--ORDER EQUAL MIN-->
         <fr.inkarma.Inkarma.SeekBarPreference
-            android:defaultValue="2"
+            android:defaultValue="@string/pref_default_size"
             android:title="@string/settings_title_size"
             android:dialogMessage="@string/settings_dialog_message_size"
             android:key="text_size"
             android:max="20"
             android:order="10"
-            android:summary="@string/settings_summary_size"
-            android:text="" />
+            android:persistent="true"
+            android:summary="@string/settings_summary_size"/>
         <fr.inkarma.Inkarma.SeekBarPreference
-            android:defaultValue="0"
+            android:defaultValue="@string/pref_default_defilement"
             android:dialogMessage="@string/settings_dialog_message_defilement"
             android:key="defilement"
             android:max="20"
             android:order="10"
+            android:persistent="true"
             android:summary="@string/settings_summary_defilement"
-            android:text=""
             android:title="@string/settings_title_defilement" />
 
 

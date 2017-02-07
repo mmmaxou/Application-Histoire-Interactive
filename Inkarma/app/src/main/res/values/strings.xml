@@ -7,12 +7,28 @@
     <string name="save_disponible">Emplacement disponible</string>
     <string name="action_historique">Historique</string>
 
-    <!--SeekBar for the Font Size -->
+    <!--SeekBar Size -->
     <string name="settings_summary_size">Taille actuelle : $1</string>
     <string name="settings_dialog_message_size">Choisissez la taille du texte</string>
     <string name="settings_title_size">Taille du texte</string>
 
     <string name="settings_summary_defilement">Vitesse actuelle : $1</string>
-    <string name="settings_dialog_message_defilement">Choisissez la vitesse de défilement du texte</string>
+    <string name="settings_dialog_message_defilement">Choisissez la vitesse de défilement du texte. Attention : Plus c\'est grand, plus c\'est rapide !!</string>
     <string name="settings_title_defilement">Vitesse de défilement du texte</string>
+
+    <string name="settings_skipSpeed">Vitesse de passage automatique</string>
+    <string name="settings_title_skipSpeed">Vitesse</string>
+    <string name="settings_summary_skipSpeed">Vitesse actuelle : $1</string>
+    <string name="settings_dialog_skipSpeed">Choisissez la vitesse de passage entre les frames. Attention : Plus c\'est grand, plus c\'est rapide !!</string>
+
+    <!--Default Preferences values for MDPI-->
+    <string name="pref_default_size">2</string>
+    <string name="pref_default_defilement">0</string>
+    <string name="pref_default_autoSkip">10</string>
+    <string name="credit_text1">Développé par deux étudiants MMI de L\'IUT de Lens, dans le cadre du projet tutoré de 2e année.</string>
+    <string name="credit_text2">Code, developpement, graphisme par Maximilien Pluchard.</string>
+    <string name="credit_text3">Histoire, Communication et musique par Guillaume Lollier.</string>
+    <string name="credit_text4">Encadré par M. Dubois.</string>
+    <string name="credit_text5">© All Rights Reserved.</string>
+
 </resources>

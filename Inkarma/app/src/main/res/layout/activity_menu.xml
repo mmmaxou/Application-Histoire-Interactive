@@ -23,14 +23,14 @@
             app:srcCompat="@mipmap/logo10blanc"
             android:id="@+id/mainlogo"
             android:scaleType="centerInside"
-            android:layout_weight="0.5"
-            android:layout_height="0dp" />
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="0.7">
 
             <Button
                 android:layout_width="match_parent"
@@ -48,7 +48,8 @@
                 android:layout_marginLeft="120dp"
                 android:layout_marginRight="120dp"
                 android:layout_marginTop="5dp"
-                android:textSize="@dimen/fontSize_menu" />
+                android:textSize="@dimen/fontSize_menu"
+                android:fontFamily="sans-serif-medium" />
 
             <Button
                 android:layout_width="match_parent"
@@ -113,6 +114,52 @@
                     android:background="@drawable/brush4"
                     android:textColor="?android:attr/textColorPrimary"
                     android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="115dp"
+                android:layout_marginRight="120dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/buttonCredit"
+                    android:layout_below="@+id/buttonPlay"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Credits"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/brush2"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:visibility="visible"
+                    android:textSize="@dimen/fontSize_menu"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="onClickCredit" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/buttonGalerie"
+                    android:layout_below="@+id/buttonPlay"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Galerie"
+                    android:layout_gravity="bottom"
+                    android:textSize="@dimen/fontSize_menu"
+                    android:layout_weight="1"
+                    android:background="@drawable/brush1"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_marginLeft="5dp" />
+
 
             </LinearLayout>
 
