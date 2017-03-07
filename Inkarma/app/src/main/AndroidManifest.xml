@@ -14,6 +14,8 @@
             android:screenOrientation="landscape" />
         <activity android:name=".CreditActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".GalleryActivity"
+            android:screenOrientation="landscape"/>
         <activity android:name=".SettingsActivity"
             android:screenOrientation="landscape"/>
         <activity android:name=".MenuActivity"
