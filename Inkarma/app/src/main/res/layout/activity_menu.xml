@@ -139,7 +139,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/brush2"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:visibility="visible"
                     android:textSize="@dimen/fontSize_menu"
                     android:layout_marginRight="5dp"
                     android:layout_marginLeft="5dp"
@@ -158,7 +157,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/brush1"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:layout_marginLeft="5dp" />
+                    android:layout_marginLeft="5dp"
+                    android:onClick="onClickGallery" />
 
 
             </LinearLayout>

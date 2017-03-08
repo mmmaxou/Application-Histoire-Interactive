@@ -1126,11 +1126,11 @@
             $or=0;''$
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
             Ils arrivent à ta hauteur, te fouillent rapidement.
-            Un voleur trouves le joyaux que tu a voler dans l'église.
+            Un voleur trouve le joyaux que tu as volé dans l'église.
             <img src="blackscreen"/>
         </frame>
         <frame id="14300">
-            Hey !! Regardez ca les gars! On a toucher le gros lot aujourd'hui !
+            Hey !! Regardez ça les gars! On a touché le gros lot aujourd'hui !
             <locuteur personnage="voleur" />
             <expression src="surprise" />
             <img src="blackscreen"/>
@@ -1156,8 +1156,8 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="14800">
-            Tu te réveilles et palpes ta nuque. La douleur ressentie est horrible. Tu relèves ton dos et t'assied contre un tronc d'arbre. Quel malchance aujourd'hui !
-            Tu essaie de te rappeller de ce qui s'est passé plus tôt.
+            Tu te réveilles et palpes ta nuque. La douleur ressentie est horrible. Tu relèves ton dos et t'assieds contre un tronc d'arbre. Quel malchance aujourd'hui !
+            Tu essaies de te rappeller de ce qui s'est passé plus tôt.
             <img src="blackscreen"/>
         </frame>
         <frame id="14900">
@@ -1173,7 +1173,7 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="15100">
-            Quelques minutes plus tard, tu arrives enfin à te relever malgrè la douleur. Tu remarques des traces de pas au sol. Après une rapide inspection, tu penses qu'elles pourraient être celles des voleurs.
+            Quelques minutes plus tard, tu arrives enfin à te relever malgré la douleur. Tu remarques des traces de pas au sol. Après une rapide inspection, tu penses qu'elles pourraient être celles des voleurs.
             <img src="blackscreen"/>
             <choix
                 consequence="15200"
@@ -1184,7 +1184,7 @@
         </frame>
         <!-- SUIVRE LES TRACES DE PAS DES VOLEURS -->
         <frame id="15200">
-            Tu suis les traces de pas lentement. Celles ci s'enfoncent rapidement de nouveau dans la forêt, ce qui rend la traque difficile. Heuresement, tu aperçois rapidement un petit cabanon au loin entre les troncs.
+            Tu suis les traces de pas lentement. Celles ci s'enfoncent rapidement de nouveau dans la forêt, ce qui rend la traque difficile. Heureusement, tu aperçois rapidement un petit cabanon au loin entre les troncs.
             <img src="blackscreen"/>
         </frame>
         <frame id="15300">
@@ -1192,7 +1192,7 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="15400">
-            Alors c'est à ca que ressemble une planque de voleur ! Pas aussi impréssionant que ce que j'imaginais.
+            Alors c'est à ça que ressemble une planque de voleur ! Pas aussi impressionant que ce que j'imaginais.
             <locuteur personnage="asiel" />
             <expression src="attente" />
             <img src="blackscreen"/>
@@ -1202,11 +1202,11 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="15600">
-            Une grande armoire fermée repose sur le mur du fond, celle-ci est assez vieille et présente plusieurs coups et entailles. Le sol et le mobilier est très poussièreux, et le toit n'a pas l'air de première fraicheur.
+            Une grande armoire fermée repose sur le mur du fond, celle-ci est assez vieille et présente plusieurs coups et entailles. Le sol et le mobilier sont très poussièreux, et le toit n'a pas l'air de première fraicheur.
             <img src="blackscreen"/>
         </frame>
         <frame id="15700">
-            Tout laisse à croire que les bandits ont du partir précipitamment et sans prendre leurs précautions. Aussi pourraient-ils revenir d'un instant à l'autre. Tu écoutes prudemment ce qui se passe à l'extérieur pour guetter le moindre bruit. S'ils te trouvent ici, ils ne te laisseront certainement pas la vie sauve. Mieux vaut faire vite !!
+            Tout laisse à croire que les bandits ont dû partir précipitemment et sans prendre leurs précautions. Aussi pourraient-ils revenir d'un instant à l'autre. Tu écoutes prudemment ce qui se passe à l'extérieur pour guetter le moindre bruit. S'ils te trouvent ici, ils ne te laisseront certainement pas la vie sauve. Mieux vaut faire vite !!
             <img src="blackscreen"/>
         </frame>
         <frame id="15800">
@@ -1223,7 +1223,7 @@
         </frame>
         <!-- Ouvrir le coffre -->
         <frame id="15900">
-            Tu trouves dans ce coffre le joyaux que t'ont dérober les voleurs, ainsi qu'une petite bourse pleine de centils! Tu voila riche à nouveau !
+            Tu trouves dans ce coffre le joyaux que t'ont dérobé les voleurs, ainsi qu'une petite bourse pleine de centils! Tu voila riche à nouveau !
             <img src="blackscreen"/>
         </frame>
         <frame id="16000">
@@ -1245,7 +1245,7 @@
         <!-- Fouiller la table -->
         <!-- TODO : Problemes : Nom d'un méchant ; la Date -->
         <frame id="16200">
-            Tu fouilles rapidement la table, soulevant délicatement chaque papiers, puis remettant tout à sa place. Tu découvres que les voleurs ont de piètres goûts en matière de vins, qu'ils correspondent beaucoup par mail avec un certain $mechant$. Tu trouves également un dossier qui contient beaucoup d'informations et de schémas sur une boutique dans une ville. L'adresse indique que cette boutique se trouves dans la capitale.
+            Tu fouilles rapidement la table, soulevant délicatement chaque papiers, puis remettant tout à sa place. Tu découvres que les voleurs ont de piètres goûts en matière de vins, qu'ils correspondent beaucoup par lettre avec un certain $mechant$. Tu trouves également un dossier qui contient beaucoup d'informations et de schémas sur une boutique dans une ville. L'adresse indique que cette boutique se trouves dans la capitale.
             <img src="blackscreen"/>
         </frame>
         <frame id="16300">
@@ -1264,7 +1264,7 @@
         </frame>
         <!-- Fouiller les armoires -->
         <frame id="16500">
-            Tu fouilles cette grande armoire. Il y a des grands vêtements qui sont vraiment de mauvais goûts, des bottes sales et pleines de boue. Tu remarques une petite dague dans l'un des vêtements, dont tu t'empares et caches dans ta tunique. En fouillant dans les poches tu arrives également à trouver quelques pièces.
+            Tu fouilles cette grande armoire. Il y a des grands vêtements qui sont vraiment de mauvais goûts, des bottes sales et pleines de boue. Tu remarques une petite dague dans l'un des vêtements, tu t'en empares et la cache dans ta tunique. En fouillant dans les poches tu arrives également à trouver quelques pièces.
             <img src="blackscreen"/>
             <choix consequence="cpt==3?16600:17000" />
         </frame>
@@ -1277,7 +1277,7 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="16700">
-            Le voleur te bondit dessus et te plaque au sol, t'imobilisant completement. Tu crie de douleur et essaie de te débattre de toutes tes forces. Tu sens la lame de la dague que tu viens s'enfoncer dans ton ventre. Miiiince ! <![CDATA[<i>Pourquoi ne l'ai-je pas garder à la main celle la !!</i>]]>
+            Le voleur te bondit dessus et te plaque au sol, t'immobilisant completement. Tu cries de douleur et essaies de te débattre de toutes tes forces. Tu sens la lame de la dague que tu viens de prendre s'enfoncer dans ton ventre. Miiiince ! <![CDATA[<i>Pourquoi ne l'ai-je pas gardée à la main celle la !!</i>]]>
             <img src="blackscreen"/>
         </frame>
         <frame id="16800">
@@ -1295,21 +1295,21 @@
         <!-- On s'enfuit aves nos prises -->
         <frame id="17000">
             $cpt=0;''$
-            Satisfait de ce que tu as trouvé ici, tu prend soin de refermer et cacher au mieux ton larcin, puis tu ressort et fermes la porte derrière toi. Tu t'enfuis ensuite en courant loin de cette cabane, de peur que les bandits n'arrivent.
+            Satisfait de ce que tu as trouvé ici, tu prend soin de refermer et cacher au mieux ton larcin, puis tu ressors et fermes la porte derrière toi. Tu t'enfuis ensuite en courant loin de cette cabane, de peur que les bandits n'arrivent.
             <img src="blackscreen"/>
         </frame>
         <frame id="17100">
             Tu pars desormais à la capitale, car
-            $infovoleur==1?'tu veut être là à temps pour aller à la boutique avant les voleurs.':(or>0?'tu es desormais riche et compte bien te ravitailler un peu au marché':'tu n\'a rien d\'autre à faire, ... vraiment ...')$
+            $infovoleur==1?'tu veux être là à temps pour aller à la boutique avant les voleurs.':(or>0?'tu es desormais riche et comptes bien te ravitailler un peu au marché':'tu n\'a rien d\'autre à faire, ... vraiment ...')$
             <img src="blackscreen"/>
         </frame>
         <frame id="17200">
-            Le soir se couche alors que tu marches encore et toujours vers cette capitale. La température se refroidit et tes muscles fatiguent. Éreinté de cette dure journée, tu tente de t'allonger et te fabriquer une couverture de fortune avec ce que tu trouves la. C'est la première nuit que tu passes dehors.
+            Le soir se couche alors que tu marches encore et toujours vers cette capitale. La température se refroidit et tes muscles fatiguent. Éreinté de cette dure journée, tu tentes de t'allonger et de te fabriquer une couverture de fortune avec ce que tu trouves la. C'est la première nuit que tu passes dehors depuis un bon bout de temps
             <img src="blackscreen"/>
         </frame>
         <frame id="17300">
-            Hier encore, tu n'aurais jamais imaginer que tu te retrouverais ainsi, à dormir à la belle étoile, alors qu'il fait encore assez froid dehors. Ta couchette est a quelques minutes de la route. Tu dors tel un mendiant, gelé et aigri par ta journée.
-            La tête pleine et l'esprit extrèmement fatigué, tu t'endors rapidement en regardant le ciel.
+            Hier encore, tu n'aurais jamais imaginé que tu te retrouverais ainsi, à dormir à la belle étoile, alors qu'il fait encore assez froid dehors. Ta couchette est a quelques minutes de la route sous les arbres. Tu dors tel un mendiant, gelé et aigri par ta journée.
+            La tête pleine et l'esprit extrêmement fatigué, tu t'endors rapidement en regardant le ciel.
             <img src="blackscreen"/>
         </frame>
         <frame id="17400">
@@ -1319,21 +1319,21 @@
             <expression src="emu" />
         </frame>
         <frame id="17500">
-            Les premières lueurs du jour t'ont réveillées, et tu es encore plus grincheux que la veille. Cette nuit n'a pas été très reposante. Te te relève et t'étire lentement.
+            Les premières lueurs du jour t'ont réveillées, et tu es encore plus grincheux que la veille. Cette nuit n'a pas été très reposante. Te te relèves et t'étires lentement.
             Ton ventre gargouillant te rappelle qu'il est vide et reclame d'être rempli.
             <img src="blackscreen"/>
         </frame>
         <frame id="17600">
-            Sur ces pensées fort peu joyeuses, tu te remet en chemin en esperant que cette journée sera meilleure.
+            Sur ces pensées fort peu joyeuses, tu te remets en chemin en espérant que cette journée sera meilleure.
             <img src="blackscreen"/>
         </frame>
         <frame id="17700">
-            Au bout de quelques heures de marche, tu arrives enfin dans la capitale. Extenué, tu t'assied quelques minutes et observe ce qui se passe autour de toi. Quelle étrange atmoshpère !!! La population de cette ville est bien plus importante qu'à Bandari, et crée ainsi un brouhaha ambient en incéssant. Une faible odeur attire ton attention. Ici, ca sent ... différement.
+            Au bout de quelques heures de marche, tu arrives enfin dans la capitale. Extenué, tu t'assieds quelques minutes et observe ce qui se passe autour de toi. Quelle étrange atmoshpère !!! La population de cette ville est bien plus importante qu'à Bandari, et créée ainsi un brouhaha ambient en incéssant. Une faible odeur attire ton attention. Ici, ca sent ... différement.
             Tu ne sais pas exactement ce que c'est. Peut-être un mix entre de la nourriture, des épices, des ordures et de la sueur.
             <img src="blackscreen"/>
         </frame>
         <frame id="17800">
-            Le passage des gens est incéssant, surtout ici, aux portes de la ville. Tu peux aperçevoir des marchand, qui passent en bousculant des artisans de toutes sortes, occupés et pressés. Des enfants courent aussi un peu dans tous les sens.
+            Le passage des gens est incessant, surtout ici, aux portes de la ville. Tu peux aperçevoir des marchand, qui passent en bousculant des artisans de toutes sortes, occupés et pressés. Des enfants courent aussi un peu dans tous les sens.
             Que d'animation !!
             <img src="blackscreen"/>
         </frame>
@@ -1355,7 +1355,7 @@
         </frame>
         <frame id="18100">
             $achat=0;''$
-            Tu te ballades entre les étals, et te laisse porter pas l'odeur de la nourriture, puis te lèche les babines. Tu passes devant un vendeur de poulet grillé !! Ton plat préféré !!!
+            Tu te ballades entre les étals, et te laisse porter par l'odeur de la nourriture, puis te lèche les babines. Tu passes devant un vendeur de poulet grillé !! Ton plat préféré !!!
             <img src="blackscreen"/>
             <choix
                 consequence="achat=or>13?1:0;or=or>13?or-13:or;achat==1?18200:18110"
@@ -1382,12 +1382,12 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="18400">
-            Tu continue ta route en mangeant tranquillement ton délicieux poulet.
+            Tu continues ta route en mangeant tranquillement ton délicieux poulet.
             <img src="blackscreen"/>
         </frame>
         <frame id="18500">
             $cpt=0;''$
-            Tu aperçois une fontaine publique, tu t'en approches fais la queue, pour boire un peu d'eau et te decrotter brièvement. Souhaites tu rester dans le marché ?
+            Tu aperçois une fontaine publique, tu t'en approches fais la queue, pour boire un peu d'eau et te laver le visage brièvement. Souhaites tu rester dans le marché ?
             <img src="blackscreen"/>
             <choix
                 consequence="retard=1;18600"
@@ -1397,7 +1397,7 @@
                 placeholder="Partir vers la boutique" />
         </frame>
         <frame id="18600">
-            Tu continue de marcher dans le marché, repu et desaltéré. Tu es intrigué par un vendeur d'objets en tout genre. Tu t'approches de son étal : \"<![CDATA[<i>Les délices de l'aventurier</i>]]>\". Il vend toutes sorte d'équipement qui ont l'air utiles.
+            Tu continues de marcher dans le marché, repu et desaltéré. Tu es intrigué par un vendeur d'objets en tout genre. Tu t'approches de son étal : \"<![CDATA[<i>Les délices de l'aventurier</i>]]>\". Il vend toutes sorte d'équipement qui ont l'air utiles.
             <img src="blackscreen"/>
         </frame>
         <frame id="18700">
@@ -1459,7 +1459,7 @@
         </frame>
         <frame id="19100">
             Tu cherches un peu et te perds dans les ruelles de la capitale. Au bout de quelques longues minutes, tu arrives enfin à la boutique que tu recherchais. C'est enfait un antiquaire !
-            Tu t'approches un peu, et remarques l'un des voleurs qui t'avait aggresser passer devant la boutique, l'air de rien.
+            Tu t'approches un peu, et remarques l'un des voleurs qui t'avait aggressé passer devant la boutique, l'air de rien.
             <img src="blackscreen"/>
         </frame>
         <frame id="19200">
@@ -1474,7 +1474,7 @@
         </frame>
         <frame id="19400">
             La boutique est peu large, mais très profonde. D'innombrables commodes arborent les murs, remplies de babioles et objets rares en tout genre.
-            Il y a une grande bibliothèque, et quelques objets et de vieux os mis sous verre. Cette boutique ressemble plus à un salon des curiositées qu'un antiquaire.
+            Il y a une grande bibliothèque, quelques objets et de vieux os mis sous verre. Cette boutique ressemble plus à un salon des curiositées qu'un antiquaire.
             <img src="blackscreen"/>
         </frame>
         <frame id="19500">
@@ -1527,4 +1527,3 @@
 
     </application>
 </PreferenceScreen>
-
