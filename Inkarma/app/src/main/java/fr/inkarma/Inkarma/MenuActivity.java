@@ -136,6 +136,12 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    public void onClickGallery(View view) {
+        Intent intent = new Intent(this, GalleryActivity.class);
+        startActivity(intent);
+
+    }
+
 
     @Override
     protected void onStop() {

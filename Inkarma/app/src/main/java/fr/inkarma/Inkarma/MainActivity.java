@@ -686,6 +686,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         LinearLayout layout = (LinearLayout) findViewById(R.id.first_layout);
+        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.framelayout1);
 
 
         if (layout.getVisibility() == View.GONE) {
@@ -693,6 +694,7 @@ public class MainActivity extends AppCompatActivity {
             setGameRunning(true);
 
             layout.setVisibility(View.VISIBLE);
+            frameLayout.setVisibility(View.VISIBLE);
             return super.onTouchEvent(event);
 
         }
@@ -716,10 +718,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (Math.abs(deltaX) < TOUCH_DISTANCE && Math.abs(deltaY) < TOUCH_DISTANCE) {
 //                    Toast.makeText(this, "Touch", Toast.LENGTH_SHORT).show ();
                     next();
-                } else if (Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 2) {
+                } else if (Math.abs(deltaX) < TOUCH_DISTANCE && deltaY > MIN_DISTANCE * 3) {
 //                    Toast.makeText(this, "Background Show", Toast.LENGTH_SHORT).show ();
                     setGameRunning(false);
                     layout.setVisibility(View.GONE);
+                    frameLayout.setVisibility(View.GONE);
                 }
                 break;
         }
