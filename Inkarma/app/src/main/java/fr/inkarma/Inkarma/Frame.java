@@ -1,7 +1,7 @@
 package fr.inkarma.Inkarma;
 
 /**
- * Created by paul.rodrigues on 24/02/16.
+ * Created by XullMaster on 21/02/2016
  */
 public class Frame {
 

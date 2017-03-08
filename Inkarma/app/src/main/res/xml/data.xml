@@ -313,7 +313,8 @@
             <choix consequence="4220" />
         </frame>
         <frame id="4220">
-            Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
+            Tu t’approches de l’autel et l’inspectes. Sur celui-ci repose une coupelle débordante de joyaux, les lumières des
+            torches fixées aux différents piliers se reflétant dans le monticule de pierres précieuses.
             <img src="eglise" />
             <choix consequence="or=or+70;4221" placeholder="Voler un joyaux" /> <!-- ON AUGMENTE L'OR DU JOUEUR-->
             <choix consequence="4222" placeholder="Ne rien faire"/>
