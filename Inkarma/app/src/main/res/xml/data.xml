@@ -3,7 +3,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
         <frame id='100'>
-            Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grès des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Aux sommets de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
+            Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grè des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Au sommet de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
             <music src="yggdraop" />
             <choix consequence="110" />
@@ -17,7 +17,7 @@
             <img src="campagne" />
         </frame>
         <frame id='300'>
-            Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines.. Ah ! Qu’ils étaient bien ces moments d’insouciance où tout semblait si simple et là où il ne t'incombait aucunes responsabilités…
+            Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines... Ah ! Qu’ils étaient bien ces moments  d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité...
             <img src="campagne" />
         </frame>
         <frame id='400'>
@@ -31,7 +31,7 @@
             <expression src="compatissant" />
         </frame>
         <frame id='600'>
-            Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite soeur, et que tu as aidé ta mère à préparer le repas de ce soir !
+            Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite sœur, et que tu as aidé ta mère à préparer le repas de ce soir !
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
@@ -61,7 +61,7 @@
             <img src="campagne" />
         </frame>
         <frame id='1100'>
-            Tu ne l'avais pas vu venir celle là. Par réflexe, ta main vient délicatement palper le coup violent que vient de t'asséner ton père.
+            Tu ne l'avais pas vue venir celle là. Par réflexe, ta main vient délicatement palper le coup violent que vient de t'asséner ton père.
             <img src="campagne" />
         </frame>
         <frame id='1200'>
@@ -125,7 +125,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="2000">
-            Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition voir pire. Mais au grand jamais tu ne t'attendais a ça !
+            Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition voire pire. Mais au grand jamais tu ne t'attendais à ça !
             <img src="salleamanger" />
         </frame>
         <frame id="2100">
@@ -149,7 +149,7 @@
             <expression src="tristesse" />
         </frame>
         <frame id="2400">
-            ASSEZ ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te feras le plus grand bien.
+            ASSEZ ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
@@ -161,7 +161,7 @@
             <expression src="tristesse2" />
         </frame>
         <frame id="2600">
-            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormis, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
+            La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormi, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
             <img src="salleamanger" />
         </frame>
         <frame id="2700">
@@ -199,7 +199,7 @@
             <expression src="tristesse" />
         </frame>
         <frame id="3200">
-            Ce matin, je flânais dans les charrettes de blé, quand j’ai vu deux gosses qui courraient, ils avaient l’air de fuir quelque chose.
+            Ce matin, je flânais dans les charrettes de blé, quand j’ai vu deux gosses qui couraient, ils avaient l’air de fuir quelque chose.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
@@ -270,7 +270,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="4200">
-            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse alors que tu te situes en dessous de la voûte soutenue par douze piliers disposés en cercle. C’est une pièce très grande dans laquelle chacun de tes pas résonnent.
+            Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse alors que tu te situes en dessous de la voûte soutenue par douze piliers disposés en cercle. C’est une pièce très grande dans laquelle chacun de tes pas résonne.
             <img src="eglise" />
         </frame>
         <frame id="4210">
@@ -355,7 +355,7 @@
             <expression src="neutre" />
         </frame>
         <frame id="4600">
-            Ah je suis partant ! Manger au frais de l’église c’est encore plus savoureux tu ne trouves pas ?
+            Ah je suis partant ! Manger aux frais de l’église c’est encore plus savoureux tu ne trouves pas ?
             <img src="eglise" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
@@ -376,7 +376,7 @@
             <img src="village" />
         </frame>
         <frame id="5000">
-            Viens, on va se cacher dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par là on est tranquille !
+            Viens, on va se cacher dans la ruelle derrière l’écurie. Il n’y a jamais personne qui passe par là on est tranquilles !
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
@@ -404,7 +404,7 @@
         </frame>
         <frame id="5400">
             La ruelle dans laquelle vous vous trouvez est assez longue, mais il ne semble pas y avoir d’issue.
-            Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais chopper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merdaille.
+            Tu repenses alors à la mise en garde de ton père et au mariage à venir. Peut-être est-ce le bon moment pour fuir la ville ? Si tu te fais choper maintenant, c’est la fin. La garde ne rigole pas avec les voleurs, c’est sûrement le trou qui vous attend. Merdaille.
             <img src="village" />
         </frame>
         <frame id="5400">
@@ -422,7 +422,7 @@
             <expression src="surprise2" />
         </frame>
         <frame id="5600">
-            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de s'extraire de l'emprise des gardes qui lui ont foncés dessus.
+            Tu te retournes brusquement, et te rends compte que Chuck est tombé au sol, face contre terre. Relevant péniblement la tête, tu aperçois son visage ensanglanté qui te regarde d’un air cherchant la compassion et l’aide. Il a l’air de souffrir et tente vainement de s'extraire de l'emprise des gardes qui lui ont foncé dessus.
             <img src="village" />
         </frame>
 
@@ -446,7 +446,7 @@
 
 
         <frame id="5710">
-            Tu te retournes pour aller aider Chuck à se relever. Et, alors que tu t’agenouilles pour le relever, les gardes arrivent sur vous. Il n’y a plus d’échappatoire, tu vas devoir assumer ton larcin.
+            Tu te retournes pour aller aider Chuck à se relever. Et, alors que tu t’agenouilles pour le relever, les gardes arrivent sur vous. Il n’y a plus d’échapatoire, tu vas devoir assumer ton larcin.
             <img src="village" />
             <choix consequence="9700" />
         </frame>
@@ -455,19 +455,19 @@
 
         <frame id="5800">
             NOOOON CHUCK ! Je dois te laisser …
-            Ma vie en dépends.
+            Ma vie en dépend.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="stupefaction" />
         </frame>
         <frame id="5900">
-            ASIEL ! Aide moi !!!
+            ASIEL ! Aide-moi !!!
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="surprise2" />
         </frame>
         <frame id="6000">
-            Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé aux cliquetis des armures, mais tu continues de courir pour sauver ta peau.
+            Chuck se fait plaquer par un garde qui lui éclate les dents au sol. Tu entends son râle mêlé au cliquetis des armures, mais tu continues de courir pour sauver ta peau.
             <img src="village" />
         </frame>
         <frame id="6100">
@@ -489,18 +489,18 @@
             <img src="village" />
         </frame>
         <frame id="6400">
-            Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
+            Les occupants te regardent d’un air ahuri et le patriarche te somme de sortir de sa demeure.
             <choix consequence="6500" />
             <karma value="-1" />
             <img src="village" />
         </frame>
         <frame id="6410">
-            Les occupants te regardent d’un air ahuris et le patriarche te scande de sortir de sa demeure.
+            Les occupants te regardent d’un air ahuris et le patriarche te somme de sortir de sa demeure.
             <choix consequence="6500" />
             <img src="village" />
         </frame>
         <frame id="6500">
-            Hey t’es qui-toi ?!?! Qu’est-s’tu fous la ! Sors d’ici !!
+            Hey t’es qui-toi ?!?! Qu’est-ce’tu fous la ! Sors d’ici !!
             <img src="village" />
             <locuteur personnage="patriarche" />
             <expression src="fierte" />
@@ -528,7 +528,7 @@
             <img src="village" />
         </frame>
         <frame id="6900">
-            Après quelques minutes de course, tu entends encore les voix lointaines des gardes. Tes jambes ont beau te faire mal, ré-entendre ces voix te galvanisent.
+            Après quelques minutes de course, tu entends encore les voix lointaines des gardes. Tes jambes ont beau te faire mal, ré-entendre ces voix te galvanise.
             <img src="village" />
         </frame>
         <frame id="7000">
@@ -545,7 +545,7 @@
         <!-- ####### On se laisse attraper ####### -->
 
         <frame id="7100">
-            Épris de peur, tu te laisses choir sur le sol en levant tes mains tremblantes et t’exclamant :
+            Perclus de peur, tu te laisses choir sur le sol en levant tes mains tremblantes et t’exclamant :
             <img src="village" />
         </frame>
         <frame id="7200">
@@ -579,11 +579,11 @@
             <expression src="surprise" />
         </frame>
         <frame id="7500">
-            Arf. C’est plus fatigant que prévu. Non sans effort tu arrives au sommet et te hisses sur le toit. Un garde arrive alors au pied de l’échelle. Tu la renverse et la fait tomber pour les ralentir.
+            Arf. C’est plus fatigant que prévu. Non sans effort tu arrives au sommet et te hisses sur le toit. Un garde arrive alors au pied de l’échelle. Tu la renverses et la fais tomber pour les ralentir.
             <img src="village" />
         </frame>
         <frame id="7600">
-            Tu commences à progresser sur le toit, en avançant à faible allure pour éviter la chute. Une pierre lancée par un garde siffle près de tes oreilles, il tente de t'arrêter par la manière brute. Tu avance de quelques toits, sautant de maisons en maisons, mais aucune issue facile ne se profile à l’horizon.
+            Tu commences à progresser sur le toit, en avançant à faible allure pour éviter la chute. Une pierre lancée par un garde siffle près de tes oreilles, il tente de t'arrêter par la manière brute. Tu avances de quelques toits, sautant de maison en maison, mais aucune issue facile ne se profile à l’horizon.
             <img src="village" />
         </frame>
         <frame id="7700">
@@ -597,45 +597,45 @@
             <expression src="surprise" />
         </frame>
         <frame id="7900">
-            Tu te retournes et tu vois deux gardes se précipitant vers toi en essayant du mieux qu’il peuvent de ne pas tomber en sautant de toits en toits. L’un d’eux te mets en joue avec son arc.
+            Tu te retournes et tu vois deux gardes se précipitant vers toi en essayant du mieux qu’ils peuvent de ne pas tomber en sautant de toit en toit. L’un d’eux te met en joue avec son arc.
             <img src="village" />
         </frame>
         <frame id="8000">
             Plus qu’une solution : sauter dans le fleuve devant toi.
-            La chûte risque d'être brutale.
+            La chute risque d'être brutale.
             <img src="village" />
         </frame>
 
         <!-- ####### On saute dans le fleuve ####### -->
 
         <frame id="8100">
-            $statuette==1?'Tu jettes la statuettes puis tu':'Tu'$
+            $statuette==1?'Tu jettes la statuette puis tu':'Tu'$
             prends ton élan et te prépares à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
             <img src="fleuve" />
         </frame>
         <frame id="8200">
-            Tu atterris lourdement dans l’eau après quelques secondes de chute. Le choc te fais cracher l’air de tes poumons et un peu d’eau vient les remplir. Tu es complètement désorienté et tu te débat pour regagner la surface.
+            Tu atterris lourdement dans l’eau après quelques secondes de chute. Le choc te fait cracher l’air de tes poumons et un peu d’eau vient les remplir. Tu es complètement désorienté et tu te débats pour regagner la surface.
             <img src="fleuve" />
         </frame>
         <frame id="8300">
-            Tu nages comme tu peux dans l’eau mais le courant est bien trop fort pour toi. Le fleuve t’entraîne de plus en plus loin tandis que tu te débat, impuissant. Bientôt tu te retrouves au plus profond de la forêt, la cime des arbres cache la lumière du soleil.
+            Tu nages comme tu peux dans l’eau mais le courant est bien trop fort pour toi. Le fleuve t’entraîne de plus en plus loin tandis que tu te débats, impuissant. Bientôt tu te retrouves au plus profond de la forêt, la cime des arbres cache la lumière du soleil.
             <img src="fleuve" />
         </frame>
         <frame id="8400">
-            Après de longues minutes, les courants se calment enfin et daignent te laisser regagner le rivage. Alors que tu te relèves, tu regardes autour de toi et te rends compte qu’il s’agit d’une partie de la forêt que tu n’as jamais encore exploré.
+            Après de longues minutes, les courants se calment enfin et daignent te laisser regagner le rivage. Alors que tu te relèves, tu regardes autour de toi et te rends compte qu’il s’agit d’une partie de la forêt que tu n’as jamais encore explorée.
             <img src="fleuve" />
         </frame>
 
         <!-- ####### Mini jeu forêt ####### -->
 
         <frame id="8500">
-            La rivière t'as laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucuns repères logique, aucunes marques. Rien, tout se ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
+            La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repère logique, aucune marque. Rien, tout se ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
             <music src="tension" />
             <choix consequence="cpt=0;8600" />
         </frame>
         <frame id="8600">
-            $cpt==4?'Tu sens tes membres faiblir de plus en plus et ton corps se déshydrater, il se pourrait bien que ce soit ta dernière chance de sortir de cette fichu forêt.':''$
+            $cpt==4?'Tu sens tes membres faiblir de plus en plus et ton corps se déshydrater, il se pourrait bien que ce soit ta dernière chance de sortir de cette fichue forêt.':''$
             $cpt>=1?'Te voilà de retour au point de départ. Fais attention tu risques de mourir de froid.':''$
             Tu es déterminé à sortir de la forêt. Par où souhaites-tu aller ? Deux directions semblent être dégagées.
             <choix
@@ -680,7 +680,7 @@
             <img src="foret" />
         </frame>
         <frame id="8650">
-            Tu sens que le vent devient de plus en plus fort. Tu frissones bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
+            Tu sens que le vent devient de plus en plus fort. Tu frissonnes bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
             Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
             <choix
                 consequence="cpt=cpt+1;8660"
@@ -706,7 +706,7 @@
             <img src="foret" />
         </frame>
         <frame id="8680">
-            Apparement, cette direction ne mène nulle part ...
+            Apparemment, cette direction ne mène nulle part ...
             <![CDATA[<b>
    Pourtant c'est simple. Il faut commencer par aller à gauche.
    </b>]]>
@@ -714,7 +714,7 @@
             <img src="foret" />
         </frame>
         <frame id="8690">
-            Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronges un peu plus.
+            Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronge un peu plus.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
         </frame>
@@ -730,7 +730,7 @@
                 placeholder="A la capitale" />
             <choix
                 consequence="9300"
-                placeholder="Retourner à la ville" />
+                placeholder="Retourner a la ville" />
             <img src="foret" />
         </frame>
         <!-- ####### Aller à la ville d’à côté/capitale ####### -->
@@ -743,7 +743,7 @@
         </frame>
         <frame id="8910">
             FRAME DE DEBUG :
-            Ton karma est de $karma$ et tu possedes $or$ or;
+            Ton karma est de $karma$ et tu possèdes $or$ or;
             <img src="blackscreen"/>
             <music src="sad" />
         </frame>
@@ -754,7 +754,7 @@
         </frame>
         <frame id="9100">
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
-            Ils arrivent à ta hauteur, te fouillent rapidement, et, déçus de ne pas avoir trouver d'objet de valeur, t'achèvent d'un coup de dague à la gorge.
+            Ils arrivent à ta hauteur, te fouillent rapidement, et, déçus de ne pas avoir trouvé d'objet de valeur, t'achèvent d'un coup de dague à la gorge.
             <img src="blackscreen"/>
         </frame>
         <frame id="9200">
@@ -771,7 +771,7 @@
             <music src="yggdraop" />
         </frame>
         <frame id="9400">
-            Tu arrives dans le centre de la ville qui a l’air très agitée.
+            Tu arrives dans le centre de la ville qui a l’air très agité.
             <img src="village"/>
         </frame>
         <frame id="9500">
@@ -805,7 +805,7 @@
             <![CDATA[<i>
            Je suis sûr qu’il y a un moyen d’éviter ça…
            </i>]]>
-            Dit-il d’un air désemparé, le sang séché sur sa bouche rendant ses mots difficile à entendre.
+            Dit-il d’un air désemparé, le sang séché sur sa bouche rendant ses mots difficiles à entendre.
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="peur" />
@@ -826,7 +826,7 @@
             <expression src="surprise" />
         </frame>
         <frame id="9820">
-            Calme toi Chuck !
+            Calme-toi Chuck !
             Ecoute, je devais bien essayer de m’échapper non ? Et puis je suis revenu pour toi.
             <img src="prison" />
             <locuteur personnage="asiel" />
@@ -880,7 +880,7 @@
             <expression src="compatissant" />
             <choix
                 consequence="10500"
-                placeholder="La décapitation" />
+                placeholder="La decapitation" />
             <choix
                 consequence="11800"
                 placeholder="La pendaison " />
@@ -908,7 +908,7 @@
             <img src="prison" />
         </frame>
         <frame id="10800">
-            On te forces à t’agenouiller, on te force à rester immobile en maintenant ta tête collée contre le billot, ignorant tes sanglots.
+            On te force à t’agenouiller, on te force à rester immobile en maintenant ta tête collée contre le billot, ignorant tes sanglots.
             <img src="prison" />
         </frame>
         <frame id="10900">
@@ -935,7 +935,7 @@
             <music src="yggdraop" />
         </frame>
         <frame id="11400">
-            Je ne sais pas, j’ai pas compris, t’allais te faire tuer et puis une lumière violente a émanée de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
+            Je ne sais pas, j’ai pas compris, t’allais te faire tuer et puis une lumière violente a émané de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise2" />
@@ -1004,7 +1004,7 @@
           TODO : ####### Ce passage la parait beaucoup trop rapide et vide. Il faut l'étoffer !!####### -->
 
         <frame id="12500">
-            Tandis que tu cours avec frénésie pour t’éloigner le plus possible, tu sens une perturbation dans l’air. Tu tournes à gauche au prochain carrefour car c’est celui qui t’emmeneras toi et Chuck sur la route de la ville la plus proche.
+            Tandis que tu cours avec frénésie pour t’éloigner le plus possible, tu sens une perturbation dans l’air. Tu tournes à gauche au prochain carrefour car c’est celui qui t’emmènera toi et Chuck sur la route de la ville la plus proche.
             <img src="village" />
             <music src="tension" />
         </frame>
@@ -1013,7 +1013,7 @@
             <img src="village" />
         </frame>
         <frame id="12700">
-            Une violente douleur te prends à la tête, tu t’écroules.
+            Une violente douleur te prend à la tête, tu t’écroules.
             <img src="village" />
         </frame>
 
@@ -1037,7 +1037,7 @@
         </frame>
         <frame id="13010">
             Asiel … Tu es un voleur, fainéant et insolent !
-            Tu es vraiment indigne de notre famille, une honte pour notre nom. Je ne peux pas te laisser continuer sur cette voie Asiel. Tu es ici dans les sous bassement de l’ordre de Xyrus.
+            Tu es vraiment indigne de notre famille, une honte pour notre nom. Je ne peux pas te laisser continuer sur cette voie Asiel. Tu es ici dans les soubassement de l’ordre de Xyrus.
             Le prêtre m’a dit qu’il avait l’air … intéressé … par ce qui s’est produit pendant ton exécution.
             <img src="prison" />
             <locuteur personnage="thedris" />
@@ -1062,16 +1062,16 @@
             <expression src="neutre" />
             <choix
                 consequence="13400"
-                placeholder="Partir dans les carrières" />
+                placeholder="Partir dans les carrieres" />
             <choix
                 consequence="13800"
-                placeholder="Partir avec le prêtre" />
+                placeholder="Partir avec le pretre" />
         </frame>
 
         <!-- ########## ID partir dans les carrière ######## -->
 
         <frame id="13400">
-            Très bien, je mettrais le prêtre au courant de ta réponse.
+            Très bien, je mettrai le prêtre au courant de ta réponse.
             Adieu Asiel.
             <img src="prison" />
             <locuteur personnage="thedris" />
@@ -1079,7 +1079,7 @@
             <music src="sad" />
         </frame>
         <frame id="13500">
-            Ton père se lève et s’en va, les larmes piquant au coins de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
+            Ton père se lève et s’en va, les larmes piquant au coin de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
             <img src="prison" />
         </frame>
         <frame id="13600">
@@ -1103,7 +1103,7 @@
             <music src="yggdraop" />
         </frame>
         <frame id="13900">
-            Ton père se lève et s’en va, les larmes piquant au coins de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
+            Ton père se lève et s’en va, les larmes piquant au coin de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
             <img src="prison" />
         </frame>
         <frame id="14000">
@@ -1126,7 +1126,7 @@
             $or=0;''$
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
             Ils arrivent à ta hauteur, te fouillent rapidement.
-            Un voleur trouve le joyaux que tu as volé dans l'église.
+            Un voleur trouve le joyau que tu as volé dans l'église.
             <img src="blackscreen"/>
         </frame>
         <frame id="14300">
@@ -1136,18 +1136,18 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="14400">
-            Il lève alors le joyaux en l'air et tous s'esclaffent bruyamment, l'air ravi.
+            Il lève alors le joyau en l'air et tous s'esclaffent bruyamment, l'air ravi.
             <img src="blackscreen"/>
         </frame>
         <frame id="14500">
-            Bien vu l'ami. Tu as bien fait de venir ici aujourd'hui ! Nous voila riche ! Un joyaux de Xyrus ! Cette beauté vaut une petite fortune ! Hahaha!
+            Bien vu l'ami. Tu as bien fait de venir ici aujourd'hui ! Nous voila riches ! Un joyau de Xyrus ! Cette beauté vaut une petite fortune ! Hahaha!
             Tu as fait ma journée toi ! Pour la peine je te laisse la vie sauve, avec même un petit cadeau de notre bande.
             <locuteur personnage="voleur" />
             <expression src="attente" />
             <img src="blackscreen"/>
         </frame>
         <frame id="14600">
-            Sur ces mots, il se met à rire bruyamment et t'assènne un violent coup derrière la nuque. Ton champs de vision se brouille, tu vois des étoiles.
+            Sur ces mots, il se met à rire bruyamment et t'assène un violent coup derrière la nuque. Ton champ de vision se brouille, tu vois des étoiles.
             Puis luttant contre la douleur, tu tombes dans les pommes.
             <img src="blackscreen"/>
         </frame>
@@ -1156,8 +1156,8 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="14800">
-            Tu te réveilles et palpes ta nuque. La douleur ressentie est horrible. Tu relèves ton dos et t'assieds contre un tronc d'arbre. Quel malchance aujourd'hui !
-            Tu essaies de te rappeller de ce qui s'est passé plus tôt.
+            Tu te réveilles et palpes ta nuque. La douleur ressentie est horrible. Tu relèves ton dos et t'assieds contre un tronc d'arbre. Quelle malchance aujourd'hui !
+            Tu essaies de te rappeler de ce qui s'est passé plus tôt.
             <img src="blackscreen"/>
         </frame>
         <frame id="14900">
@@ -1188,30 +1188,30 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="15300">
-            Tu t'approches lentement. Aucun bruit n'émmane de la bicoque, c'est bon signe pour toi. Tu jettes un coup d'oeil vif à l'intérieur par la fenêtre. Le lieu est effectivement desert. Tu presses légèrement la poignée, et la porte s'entrouve. Apparement elle n'a pas été vérouillée ... Bizarre. Tu y rentres prudement, les yeux grand ouverts.
+            Tu t'approches lentement. Aucun bruit n'émane de la bicoque, c'est bon signe pour toi. Tu jettes un coup d'oeil vif à l'intérieur par la fenêtre. Le lieu est effectivement désert. Tu presses légèrement la poignée, et la porte s'entrouvre. Apparemment elle n'a pas été verrouillée ... Bizarre. Tu y rentres prudemment, les yeux grand ouverts.
             <img src="blackscreen"/>
         </frame>
         <frame id="15400">
-            Alors c'est à ça que ressemble une planque de voleur ! Pas aussi impressionant que ce que j'imaginais.
+            Alors c'est à ça que ressemble une planque de voleur ! Pas aussi impressionnant que ce que j'imaginais.
             <locuteur personnage="asiel" />
             <expression src="attente" />
             <img src="blackscreen"/>
         </frame>
         <frame id="15500">
-            En effet la cabane en bois est très petite et un desordre énorme règne dans la pièce. C'est une simple pièce, elle doit certainement servir de planque aux voleurs. Il y deux lits au sol dans un coin, sur lesquels trainent deux petits sacs. Au milieu de la pièce, une grande table en bois sale et en désordre, avec de nombreux verres, une bouteille de vin et plusieurs gourdes à moitié vide. Il y a également des vêtements qui trainent sur le sol, l'un d'eux se trouvant sur un petit coffre en bois entrouvert.
+            En effet la cabane en bois est très petite et un désordre énorme règne dans la pièce. C'est une simple pièce, elle doit certainement servir de planque aux voleurs. Il y a deux lits au sol dans un coin, sur lesquels trainent deux petits sacs. Au milieu de la pièce, une grande table en bois sale et en désordre, avec de nombreux verres, une bouteille de vin et plusieurs gourdes à moitié vide. Il y a également des vêtements qui trainent sur le sol, l'un d'eux se trouvant sur un petit coffre en bois entrouvert.
             <img src="blackscreen"/>
         </frame>
         <frame id="15600">
-            Une grande armoire fermée repose sur le mur du fond, celle-ci est assez vieille et présente plusieurs coups et entailles. Le sol et le mobilier sont très poussièreux, et le toit n'a pas l'air de première fraicheur.
+            Une grande armoire fermée repose sur le mur du fond, celle-ci est assez vieille et présente plusieurs coups et entailles. Le sol et le mobilier sont très poussiéreux, et le toit n'a pas l'air de première fraicheur.
             <img src="blackscreen"/>
         </frame>
         <frame id="15700">
-            Tout laisse à croire que les bandits ont dû partir précipitemment et sans prendre leurs précautions. Aussi pourraient-ils revenir d'un instant à l'autre. Tu écoutes prudemment ce qui se passe à l'extérieur pour guetter le moindre bruit. S'ils te trouvent ici, ils ne te laisseront certainement pas la vie sauve. Mieux vaut faire vite !!
+            Tout laisse à croire que les bandits ont dû partir précipitamment et sans prendre leurs précautions. Aussi pourraient-ils revenir d'un instant à l'autre. Tu écoutes prudemment ce qui se passe à l'extérieur pour guetter le moindre bruit. S'ils te trouvent ici, ils ne te laisseront certainement pas la vie sauve. Mieux vaut faire vite !!
             <img src="blackscreen"/>
         </frame>
         <frame id="15800">
             $cpt=0;''$
-            Tu tentes de rester calme malgrè la sueur et ton crane qui te fait encore souffrir, tu regardes à nouveau l'intérieur, avide de découvrir ce qu'il s'y cache vraiment.
+            Tu tentes de rester calme malgré la sueur et ton crane qui te fait encore souffrir, tu regardes à nouveau l'intérieur, avide de découvrir ce qu'il s'y cache vraiment.
             Souhaites-tu ouvrir le coffre ?
             <img src="blackscreen"/>
             <choix
@@ -1223,7 +1223,7 @@
         </frame>
         <!-- Ouvrir le coffre -->
         <frame id="15900">
-            Tu trouves dans ce coffre le joyaux que t'ont dérobé les voleurs, ainsi qu'une petite bourse pleine de centils! Tu voila riche à nouveau !
+            Tu trouves dans ce coffre le joyau que t'ont dérobé les voleurs, ainsi qu'une petite bourse pleine de centils! Te voila riche à nouveau !
             <img src="blackscreen"/>
         </frame>
         <frame id="16000">
@@ -1245,11 +1245,11 @@
         <!-- Fouiller la table -->
         <!-- TODO : Problemes : Nom d'un méchant ; la Date -->
         <frame id="16200">
-            Tu fouilles rapidement la table, soulevant délicatement chaque papiers, puis remettant tout à sa place. Tu découvres que les voleurs ont de piètres goûts en matière de vins, qu'ils correspondent beaucoup par lettre avec un certain $mechant$. Tu trouves également un dossier qui contient beaucoup d'informations et de schémas sur une boutique dans une ville. L'adresse indique que cette boutique se trouves dans la capitale.
+            Tu fouilles rapidement la table, soulevant délicatement chaque papier, puis remettant tout à sa place. Tu découvres que les voleurs ont de piètres goûts en matière de vins, qu'ils correspondent beaucoup par lettre avec un certain $mechant$. Tu trouves également un dossier qui contient beaucoup d'informations et de schémas sur une boutique dans une ville. L'adresse indique que cette boutique se trouve dans la capitale.
             <img src="blackscreen"/>
         </frame>
         <frame id="16300">
-            Apparement les bandits préparent un gros coup. Une rapine de haut niveau ! Tu inspectes un peu plus longuement ce dossier et tu remarques une date. Mince !!! C'est demain après-midi.
+            Apparemment les bandits préparent un gros coup. Une rapine de haut niveau ! Tu inspectes un peu plus longuement ce dossier et tu remarques une date. Mince !!! C'est demain après-midi.
             <img src="blackscreen"/>
         </frame>
         <frame id="16400">
@@ -1264,7 +1264,7 @@
         </frame>
         <!-- Fouiller les armoires -->
         <frame id="16500">
-            Tu fouilles cette grande armoire. Il y a des grands vêtements qui sont vraiment de mauvais goûts, des bottes sales et pleines de boue. Tu remarques une petite dague dans l'un des vêtements, tu t'en empares et la cache dans ta tunique. En fouillant dans les poches tu arrives également à trouver quelques pièces.
+            Tu fouilles cette grande armoire. Il y a des grands vêtements qui sont vraiment de mauvais goût, des bottes sales et pleines de boue. Tu remarques une petite dague dans l'un des vêtements, tu t'en empares et la caches dans ta tunique. En fouillant dans les poches tu arrives également à trouver quelques pièces.
             <img src="blackscreen"/>
             <choix consequence="cpt==3?16600:17000" />
         </frame>
@@ -1277,11 +1277,11 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="16700">
-            Le voleur te bondit dessus et te plaque au sol, t'immobilisant completement. Tu cries de douleur et essaies de te débattre de toutes tes forces. Tu sens la lame de la dague que tu viens de prendre s'enfoncer dans ton ventre. Miiiince ! <![CDATA[<i>Pourquoi ne l'ai-je pas gardée à la main celle la !!</i>]]>
+            Le voleur te bondit dessus et te plaque au sol, t'immobilisant complètement. Tu cries de douleur et essaies de te débattre de toutes tes forces. Tu sens la lame de la dague que tu viens de prendre s'enfoncer dans ton ventre. Miiiince ! <![CDATA[<i>Pourquoi ne l'ai-je pas gardée à la main celle la !!</i>]]>
             <img src="blackscreen"/>
         </frame>
         <frame id="16800">
-            Cette fois-ci par contre, je ne te laisserais pas la vie sauve sale pourriture !
+            Cette fois-ci par contre, je ne te laisserai pas la vie sauve sale pourriture !
             <locuteur personnage="voleur" />
             <expression src="surprise" />
             <img src="blackscreen"/>
@@ -1295,12 +1295,12 @@
         <!-- On s'enfuit aves nos prises -->
         <frame id="17000">
             $cpt=0;''$
-            Satisfait de ce que tu as trouvé ici, tu prend soin de refermer et cacher au mieux ton larcin, puis tu ressors et fermes la porte derrière toi. Tu t'enfuis ensuite en courant loin de cette cabane, de peur que les bandits n'arrivent.
+            Satisfait de ce que tu as trouvé ici, tu prends soin de refermer et cacher au mieux ton larcin, puis tu ressors et fermes la porte derrière toi. Tu t'enfuis ensuite en courant loin de cette cabane, de peur que les bandits n'arrivent.
             <img src="blackscreen"/>
         </frame>
         <frame id="17100">
-            Tu pars desormais à la capitale, car
-            $infovoleur==1?'tu veux être là à temps pour aller à la boutique avant les voleurs.':(or>0?'tu es desormais riche et comptes bien te ravitailler un peu au marché':'tu n\'a rien d\'autre à faire, ... vraiment ...')$
+            Tu pars désormais à la capitale, car
+            $infovoleur==1?'tu veux être là à temps pour aller à la boutique avant les voleurs.':(or>0?'tu es désormais riche et comptes bien te ravitailler un peu au marché':'tu n\'as rien d\'autre à faire, ... vraiment ...')$
             <img src="blackscreen"/>
         </frame>
         <frame id="17200">
@@ -1308,7 +1308,7 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="17300">
-            Hier encore, tu n'aurais jamais imaginé que tu te retrouverais ainsi, à dormir à la belle étoile, alors qu'il fait encore assez froid dehors. Ta couchette est a quelques minutes de la route sous les arbres. Tu dors tel un mendiant, gelé et aigri par ta journée.
+            Hier encore, tu n'aurais jamais imaginé que tu te retrouverais ainsi, à dormir à la belle étoile, alors qu'il fait encore assez froid dehors. Ta couchette est à quelques minutes de la route sous les arbres. Tu dors tel un mendiant, gelé et aigri par ta journée.
             La tête pleine et l'esprit extrêmement fatigué, tu t'endors rapidement en regardant le ciel.
             <img src="blackscreen"/>
         </frame>
@@ -1319,8 +1319,8 @@
             <expression src="emu" />
         </frame>
         <frame id="17500">
-            Les premières lueurs du jour t'ont réveillées, et tu es encore plus grincheux que la veille. Cette nuit n'a pas été très reposante. Te te relèves et t'étires lentement.
-            Ton ventre gargouillant te rappelle qu'il est vide et reclame d'être rempli.
+            Les premières lueurs du jour t'ont réveillé, et tu es encore plus grincheux que la veille. Cette nuit n'a pas été très reposante. Tu te relèves et t'étires lentement.
+            Ton ventre gargouillant te rappelle qu'il est vide et réclame d'être rempli.
             <img src="blackscreen"/>
         </frame>
         <frame id="17600">
@@ -1328,22 +1328,22 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="17700">
-            Au bout de quelques heures de marche, tu arrives enfin dans la capitale. Extenué, tu t'assieds quelques minutes et observe ce qui se passe autour de toi. Quelle étrange atmoshpère !!! La population de cette ville est bien plus importante qu'à Bandari, et créée ainsi un brouhaha ambient en incéssant. Une faible odeur attire ton attention. Ici, ca sent ... différement.
+            Au bout de quelques heures de marche, tu arrives enfin dans la capitale. Extenué, tu t'assieds quelques minutes et observes ce qui se passe autour de toi. Quelle étrange atmosphère !!! La population de cette ville est bien plus importante qu'à Bandari, et créée ainsi un brouhaha ambiant en incessant. Une faible odeur attire ton attention. Ici, ca sent ... différemment.
             Tu ne sais pas exactement ce que c'est. Peut-être un mix entre de la nourriture, des épices, des ordures et de la sueur.
             <img src="blackscreen"/>
         </frame>
         <frame id="17800">
-            Le passage des gens est incessant, surtout ici, aux portes de la ville. Tu peux aperçevoir des marchand, qui passent en bousculant des artisans de toutes sortes, occupés et pressés. Des enfants courent aussi un peu dans tous les sens.
+            Le passage des gens est incessant, surtout ici, aux portes de la ville. Tu peux apercevoir des marchands, qui passent en bousculant des artisans de toutes sortes, occupés et pressés. Des enfants courent aussi un peu dans tous les sens.
             Que d'animation !!
             <img src="blackscreen"/>
         </frame>
         <frame id="17900">
-            Toute cette animosité t'égaille l'esprit, et tu repars avec une impression de légereté assez agréable.
-            Ou souhaites tu aller ?
+            Toute cette animosité t'égaille l'esprit, et tu repars avec une impression de légèreté assez agréable.
+            Ou souhaites-tu aller ?
             <img src="blackscreen"/>
             <choix
                 consequence="18000"
-                placeholder="Au marché" />
+                placeholder="Au marche" />
             <choix
                 consequence="19100"
                 placeholder="A la boutique" />
@@ -1355,7 +1355,7 @@
         </frame>
         <frame id="18100">
             $achat=0;''$
-            Tu te ballades entre les étals, et te laisse porter par l'odeur de la nourriture, puis te lèche les babines. Tu passes devant un vendeur de poulet grillé !! Ton plat préféré !!!
+            Tu te ballades entre les étals, et te laisse porter par l'odeur de la nourriture, puis te lèches les babines. Tu passes devant un vendeur de poulet grillé !! Ton plat préféré !!!
             <img src="blackscreen"/>
             <choix
                 consequence="achat=or>13?1:0;or=or>13?or-13:or;achat==1?18200:18110"
@@ -1387,7 +1387,7 @@
         </frame>
         <frame id="18500">
             $cpt=0;''$
-            Tu aperçois une fontaine publique, tu t'en approches fais la queue, pour boire un peu d'eau et te laver le visage brièvement. Souhaites tu rester dans le marché ?
+            Tu aperçois une fontaine publique, tu t'en approches fais la queue, pour boire un peu d'eau et te laver le visage brièvement. Souhaites-tu rester dans le marché ?
             <img src="blackscreen"/>
             <choix
                 consequence="retard=1;18600"
@@ -1397,7 +1397,7 @@
                 placeholder="Partir vers la boutique" />
         </frame>
         <frame id="18600">
-            Tu continues de marcher dans le marché, repu et desaltéré. Tu es intrigué par un vendeur d'objets en tout genre. Tu t'approches de son étal : \"<![CDATA[<i>Les délices de l'aventurier</i>]]>\". Il vend toutes sorte d'équipement qui ont l'air utiles.
+            Tu continues de marcher dans le marché, repu et désaltéré. Tu es intrigué par un vendeur d'objets en tout genre. Tu t'approches de son étal : \"<![CDATA[<i>Les délices de l'aventurier</i>]]>\". Il vend toutes sortes d'équipement qui ont l'air utiles.
             <img src="blackscreen"/>
         </frame>
         <frame id="18700">
@@ -1438,7 +1438,7 @@
         <frame id="18900">
             $achat=0;''$
             Il te reste $or$ centils.
-            Souhaites-tu acheter une gourde remplie d'eau pour éviter de mourrir de soif à nouveau ?
+            Souhaites-tu acheter une gourde remplie d'eau pour éviter de mourir de soif à nouveau ?
             Elle coûte 10 centils.
             <choix
                 consequence="gourde=or>10?1:0;or=or>10?or-10:or;gourde==1?19000:18910"
@@ -1454,16 +1454,16 @@
             <choix consequence="19000" />
         </frame>
         <frame id="19000">
-            Les poches remplies et la bourse plus lègere, tu quittes le marché et tu va vers la boutique.
+            Les poches remplies et la bourse plus légère, tu quittes le marché et tu va vers la boutique.
             <img src="blackscreen"/>
         </frame>
         <frame id="19100">
-            Tu cherches un peu et te perds dans les ruelles de la capitale. Au bout de quelques longues minutes, tu arrives enfin à la boutique que tu recherchais. C'est enfait un antiquaire !
-            Tu t'approches un peu, et remarques l'un des voleurs qui t'avait aggressé passer devant la boutique, l'air de rien.
+            Tu cherches un peu et te perds dans les ruelles de la capitale. Au bout de quelques longues minutes, tu arrives enfin à la boutique que tu recherchais. C'est en fait un antiquaire !
+            Tu t'approches un peu, et remarques l'un des voleurs qui t'avait agressé passer devant la boutique, l'air de rien.
             <img src="blackscreen"/>
         </frame>
         <frame id="19200">
-            Tu passes la porte de l'antiquaire, une clochette retentie. L'antiquaire te parle de loin.
+            Tu passes la porte de l'antiquaire, une clochette retentit. L'antiquaire te parle de loin.
             <img src="blackscreen"/>
         </frame>
         <frame id="19300">
@@ -1474,12 +1474,12 @@
         </frame>
         <frame id="19400">
             La boutique est peu large, mais très profonde. D'innombrables commodes arborent les murs, remplies de babioles et objets rares en tout genre.
-            Il y a une grande bibliothèque, quelques objets et de vieux os mis sous verre. Cette boutique ressemble plus à un salon des curiositées qu'un antiquaire.
+            Il y a une grande bibliothèque, quelques objets et de vieux os mis sous verre. Cette boutique ressemble plus à un salon des curiosités qu'un antiquaire.
             <img src="blackscreen"/>
         </frame>
         <frame id="19500">
             Tu t'approches d'une petite table en attendant l'antiquaire. Il y a une petite boussole de cuivre étrange, aux cotés d'une ceinture géante.
-            Au mur sont accrochées des bottes métalliques ornées et décorrées, avec un petit écritaux disant : \"<![CDATA[<i>Testées et approuvées par Olaf, le plus fin des barbares.</i>]]>\"
+            Au mur sont accrochées des bottes métalliques ornées et décorées, avec un petit écriteau disant : \"<![CDATA[<i>Testées et approuvées par Olaf, le plus fin des barbares.</i>]]>\"
             Pleins d'autres objets similaires ornent les murs et décorent les étagères de cette boutique assez singulière.
             <img src="blackscreen"/>
         </frame>
@@ -1493,9 +1493,9 @@
             <img src="blackscreen"/>
         </frame>
         <frame id="19800">
-            Tu balbutie un peu devant l'antiquaire ... C'est vrai ca ? Que souhaites tu faire ?
+            Tu balbuties un peu devant l'antiquaire ... C'est vrai ca ? Que souhaites-tu faire ?
             Tu pourrais l'informer de l'attaque imminente des voleurs ...
-            Ou bien tu pourrais aussi ne rien dire, et tenter de récuperer une partie du butin en aidant les voleurs.
+            Ou bien tu pourrais aussi ne rien dire, et tenter de récupérer une partie du butin en aidant les voleurs.
             <img src="blackscreen"/>
             <choix
                 consequence="19900"
