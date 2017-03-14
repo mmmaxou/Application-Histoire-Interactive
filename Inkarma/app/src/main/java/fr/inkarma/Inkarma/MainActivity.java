@@ -235,8 +235,8 @@ public class MainActivity extends AppCompatActivity {
 //            String text = script.evaluate("'#'+frame+' ('+lastChoiceID+') + '+frameNumber+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("'#'+frame+' | karma:'+karma+\""+frame.text+"\"").toString();
 //            String text = script.evaluate("karma=karma+1;'karma:'+karma+\""+frame.text+"\"").toString();
-            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
-//            String text = script.evaluate("\""+frame.text+"\"").toString();
+//            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
+            String text = script.evaluate("\""+frame.text+"\"").toString();
 
 
             Spanned spanText;
@@ -525,8 +525,8 @@ public class MainActivity extends AppCompatActivity {
     private void next() {
         //Si l'animation n'est pas encore terminée, on la termine.
         if ( isAnimating ) {
-            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
-//            String text = script.evaluate("\""+frame.text+"\"").toString();
+//            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
+            String text = script.evaluate("\""+frame.text+"\"").toString();
 
             Spanned spanText;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
