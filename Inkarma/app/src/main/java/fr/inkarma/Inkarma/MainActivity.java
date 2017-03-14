@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
             if (frame.img != -1) {
 
                 // Si c'est la frame 666 on change l'apparation pour un fade IN
-                if (frame.id == 666) {
+                if (frame.id == 666 || frame.id == 777) {
 
                     Animation animationIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
                     myImageSwitcher.setInAnimation(animationIn);
@@ -541,7 +541,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
 
             // Si c'est la frame de mort alors on quitte;
-            if (frame.id == 666) {
+            if (frame.id == 666 || frame.id == 777) {
                 Intent intent = new Intent(this, MenuActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

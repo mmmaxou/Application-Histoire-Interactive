@@ -45,6 +45,7 @@
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
+            <choix consequence="800" />
         </frame>
         <frame id='800'>
             Quoi ? Insolent !
@@ -1116,7 +1117,7 @@
            Les chroniques d’Inkarma chapitre deux, peut être l’année prochaine !
            </b>]]>
             <img src="blackscreen" />
-            <choix consequence="666" />
+            <choix consequence="777" />
         </frame>
 
 
@@ -1524,6 +1525,11 @@
         <frame id="666">
             DEAD END
             <img src="gameover"/>
+        </frame>
+        <!--Ecran de win-->
+        <frame id="666">
+            Felicitation ! Vous avez trouvé une bonne fin !
+            <img src="goodgame"/>
         </frame>
 
     </application>
