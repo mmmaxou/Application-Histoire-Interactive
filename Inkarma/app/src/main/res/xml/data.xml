@@ -750,7 +750,8 @@
         <frame id="9000">
             Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
             <img src="blackscreen"/>
-            <choix consequence="or==110&amp;karma==-2?14200:9100" />
+            <!-- TODO : finir acte voleur -->
+            <!--<choix consequence="or==110&amp;karma==-2?14200:9100" />-->
         </frame>
         <frame id="9100">
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
