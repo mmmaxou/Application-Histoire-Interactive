@@ -58,7 +58,7 @@ public class MenuActivity extends AppCompatActivity {
         SharedPreferences params = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean musique = params.getBoolean("pref_musique", false);
         if ( musique ) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
+            mediaPlayer = MediaPlayer.create(this, R.raw.pianointro);
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
         }
@@ -161,7 +161,7 @@ public class MenuActivity extends AppCompatActivity {
         Boolean musique = params.getBoolean("pref_musique", false);
 
         if ( mediaPlayer == null && musique) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.yggdraop);
+            mediaPlayer = MediaPlayer.create(this, R.raw.pianointro);
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
         }

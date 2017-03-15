@@ -5,30 +5,35 @@
         <frame id='100'>
             Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grè des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Au sommet de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />
-            <music src="yggdraop" />
+            <music src="medievalbalad" />
             <choix consequence="110" />
         </frame>
         <frame id='110'>
             L’orée du bois du Vercors semble vous attirer inconsciemment. On peut y distinguer furtivement quelques taches brunes, il s’agit de daims aventureux louvoyant entre les arbres, peu soucieux des braconniers ou des chasseurs les traquant.
             <img src="campagne" />
+            <music src="medievalbalad" />
         </frame>
         <frame id='200'>
             Ton ami Chuck allongé sur le dos fredonne, depuis l’autre côté de cette grande pièce. Ces moments d’insouciances avec lui te sont très agréables. Ici, tu ne te soucies pas des demandes incessantes et horripilantes de ton père. Tu peux enfin souffler et te reposer.
             <img src="campagne" />
+            <music src="medievalbalad" />
         </frame>
         <frame id='300'>
             Ce paysage te rappelle de nombreux souvenirs de balades équestres enfantines... Ah ! Qu’ils étaient bien ces moments  d’insouciance où tout semblait si simple et là où il ne t'incombait aucune responsabilité...
             <img src="campagne" />
+            <music src="medievalbalad" />
         </frame>
         <frame id='400'>
             Que donnerais-tu pour retourner à cette douce époque ? ...
             <img src="campagne" />
+            <music src="medievalbalad" />
         </frame>
         <frame id='500'>
             Merdaille, il fait froid tout d’un coup. Pourquoi faut-il que ce foutu vent tourne vers le sud ? Ça ramène les courants froids.
             <img src="campagne" />
             <locuteur personnage="asiel" />
             <expression src="compatissant" />
+            <music src="medievalbalad" />
         </frame>
         <frame id='600'>
             Asiel ?! Tu es encore là, seul dans ce vieux grenier ?! J’espère que tu t’es occupé de ta petite sœur, et que tu as aidé ta mère à préparer le repas de ce soir !
@@ -46,24 +51,29 @@
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
             <choix consequence="800" />
+            <music src="rockangry" />
         </frame>
         <frame id='800'>
             Quoi ? Insolent !
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise2" />
+            <music src="rockangry" />
         </frame>
         <frame id='900'>
             Thedris se rapproche furieusement de toi, et te colle une grosse beigne dans les dents.
             <img src="campagne" />
+            <music src="rockangry" />
         </frame>
         <frame id='1000'>
             <![CDATA[<b>AIE.</b>]]>
             <img src="campagne" />
+            <music src="rockangry" />
         </frame>
         <frame id='1100'>
             Tu ne l'avais pas vue venir celle là. Par réflexe, ta main vient délicatement palper le coup violent que vient de t'asséner ton père.
             <img src="campagne" />
+            <music src="rockangry" />
         </frame>
         <frame id='1200'>
             Descends aider ta mère ! TOUT DE SUITE !
@@ -71,16 +81,19 @@
             <img src="campagne" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
+            <music src="rockangry" />
         </frame>
         <frame id='1300'>
             <![CDATA[<i>
            Pourquoi est-il toujours aussi relou lui. C’est pas grave si je n’ai pas aidé mère pour le repas aujourd’hui. Ça ne va pas changer grand chose. De toute façon la cuisine ce n’est pas ma tasse de thé.
            </i>]]>
             <img src="campagne" />
+            <music src="rockangry" />
         </frame>
         <frame id='1400'>
             Suite à cette injonction, tu t'en vas en traînant la patte. Ressassant dans ta tête une suite de jurons à l’égard de ton père.
             <img src="campagne" />
+            <music src="rockangry" />
         </frame>
         <frame id='1500'>
             Tu arrives timidement à table, fuyant le regard de ton père. Comme à ton habitude, tu t’assois auprès de ta petite soeur, en face de tes parents. Le repas est déjà servi.
@@ -89,17 +102,19 @@
            </i>]]>
             Ton père te fusille du regard. Il n'a pas l'air d'en avoir parlé à ta mère. Tu finis rapidement ton repas. Cependant alors que tu te levais de la table, jetant négligemment l’os de ton poulet au chien, ton père t’intime l’ordre de te rasseoir d’un geste sec de sa main droite.
             <img src="salleamanger" />
-            <music src="tension" />
+            <music src="medievalbalad" />
         </frame>
         <frame id='1600'>
             Pas si vite Asiel, j’ai une nouvelle importante à t’annoncer.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="1700">
             Tu grommelles, inquiet et intrigué, et te rassois docilement.
             <img src="salleamanger" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="1800">
             Ah ? Quoi donc père ?
@@ -112,22 +127,26 @@
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="1910">
             Tout comme notre famille, ils ont besoin d’une alliance pour les temps rudes à venir, les premiers symptômes de l’hiver se font déjà ressentir. Leur fille vient d’avoir ses premiers sangs, elle est donc en âge de se marier, c’est pourquoi nous allons organiser ton union avec elle au plus tôt.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="1920">
             Nous avons déjà convenu d’une date à laquelle la cérémonie se déroulera ainsi que les convives invités. Ce sera l’abbé Dolan qui scellera votre mariage. Dans trois jours, tu t'uniras avec Guenièvre.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="2000">
             Ces mots sonnent comme un coup de tonnerre dans ton crâne. Tu t’attendais à une dure nouvelle, à l’annonce d’une punition voire pire. Mais au grand jamais tu ne t'attendais à ça !
             <img src="salleamanger" />
+            <music src="sad" />
         </frame>
         <frame id="2100">
             Attends, quoi ?! C’est une blague non ?
@@ -135,12 +154,14 @@
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
+            <music src="sad" />
         </frame>
         <frame id="2200">
             Tu te plieras à ma volonté, que tu le veuilles ou non. L’avenir de la famille est en jeu, tu n’as pas à laisser la vacuité de ton esprit ruiner notre réputation. Tu as déjà assez sali ma lignée pour continuer à faire comme bon te semble.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
+            <music src="sad" />
         </frame>
         <frame id="2300">
             Quoi, mais attends. Je … Je ne veux pas me marier moi !
@@ -148,47 +169,56 @@
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
+            <music src="sad" />
         </frame>
         <frame id="2400">
             ASSEZ ! J’en ai assez de tes gamineries. Tu as intérêt à évoluer Asiel, et dans le bon sens. Il serait peut-être temps que tu deviennes un tant soit peu mature. Vivre en dehors du cocon familial te fera le plus grand bien.
             <img src="salleamanger" />
             <locuteur personnage="thedris" />
             <expression src="surprise" />
+            <music src="sad" />
         </frame>
         <frame id="2500">
             Mais… Non… Je….
             <img src="salleamanger" />
             <locuteur personnage="asiel" />
             <expression src="tristesse2" />
+            <music src="sad" />
         </frame>
         <frame id="2600">
             La nuit passe et tu te sens tiraillé par un mélange de colère et de tristesse, tu n’as pas beaucoup dormi, en conséquence, tu es assez irritable et sur les nerfs. La journée d’aujourd’hui a intérêt à te remonter le moral, car cela ne pourrait pas être pire.
             <img src="salleamanger" />
+            <music src="sad" />
         </frame>
         <frame id="2700">
             Tu attends patiemment sous l’ombrage d’une tonnelle du marché du centre-ville de Bandari, l’activité autour de toi est fourmillante et remplit tes oreilles, c’est alors que tu aperçois enfin Chuck.
             <img src="village" />
-            <music src="yggdraop" />
+            <music src="pianointro" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="2710">
             C’est ton compagnon de toujours, vous avez fait les quatre cent coups ensemble. Vous voliez des oranges sur des étals lorsque la faim vous guettait lors des innombrables après-midi passées ensemble à crapahuter dans la ville et sur ses toits. Vous jetiez des cailloux sur des fenêtres puis vous vous moquiez des passants qui se faisaient copieusement insulter par les résidents offusqués de cet affront à leur personne.
             <img src="village" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="2800">
             Toutes ces escapades nocturnes à l’encontre des règles établies par vos parents respectifs, toute cette adrénaline générée par la sensation de l’interdit, d’être tous les deux ensemble à braver les diktats du monde qui semblent immuables. Il est en quelque sorte un frère pour toi.
             <img src="village" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="2900">
             Salut Chuck.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3000">
             Hey Asiel,  tu devineras jamais ce qui m’est arrivé !
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3100">
             Hmm... ?
@@ -198,28 +228,33 @@
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3200">
             Ce matin, je flânais dans les charrettes de blé, quand j’ai vu deux gosses qui couraient, ils avaient l’air de fuir quelque chose.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3210">
             Il y a alors le boulanger qui s’est mis à crier au vol. Ni une ni deux, j’ai compris, je les ai coincés dans la ruelle du dessus, et j’ai récupéré le superbe pain qu’ils avaient subtilisé. Je leur ai dit qu’ils feraient mieux de ne pas recommencer, et que le pâtissier allait être en rage.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3220">
             Ils m’ont cru ces idiots. Tiens, t’en veux un peu ?
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="fierte" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3300">
             Chuck te lance un bout de pain que tu rattrapes de justesse.
             <img src="village" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3400">
             Ahah ! Bien joué !
@@ -227,10 +262,12 @@
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="joie" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3500">
             Vous vous tenez tous les deux derrière une pile de caisses dans une ruelle attenante à l’église du culte de Xyrus. La voie est libre, vous vous préparez à entrer dans l’église.
             <img src="village" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3600">
             T’es sûr de ce que tu voudrais qu’on fasse là ? Ça sent le coup foireux…
@@ -238,12 +275,14 @@
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3700">
             Mais si, ne t’inquiète pas ! C’est pas deux trois pièces de cuivre qui vont manquer à l’abbé Dolan, tu crois pas ? Ils sont tellement riches  ces religieux !
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3800">
             Ouais mais bon... C’est un abbé quand même … C’est vrai qu’ils sont sacrément riches.
@@ -251,28 +290,33 @@
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="neutre" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="3900">
             Pourtant t’as bien dit que tu voulais sérieusement te changer les idées non ? Bah là t’auras une bonne grosse dose d’adrénaline, si ça, ça ne te sort pas de ta mauvaise humeur, je ne sais pas ce qu’il te faut.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="joie" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="4000">
             C’est pas faux, mais on triple de prudence, si jamais on se fait chopper je me fais tuer par mon père, et je déconne pas là.
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="peur" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="4100">
             Okay, allons-y.
             <img src="village" />
             <locuteur personnage="chuck" />
             <expression src="neutre" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="4200">
             Vous entrez dans le sanctuaire du culte de Xyrus. L’architecture du lieu vous oppresse alors que tu te situes en dessous de la voûte soutenue par douze piliers disposés en cercle. C’est une pièce très grande dans laquelle chacun de tes pas résonne.
             <img src="eglise" />
+            <music src="foret"/>
         </frame>
         <frame id="4210">
             De belles statues et tentures aux effigies de Xyrus ornent les murs de la splendide pièce. Tu n’es pas souvent entré ici, cependant, tu apprécies la magnificence de ce lieu de culte.
@@ -436,7 +480,7 @@
                 consequence="5800"
                 placeholder="Partir et l'abandonner"/>
             <img src="village" />
-            <music src="yggdraop" />
+            <music src="sad" />
         </frame>
 
         <!-- ################################# -->
@@ -450,6 +494,7 @@
             Tu te retournes pour aller aider Chuck à se relever. Et, alors que tu t’agenouilles pour le relever, les gardes arrivent sur vous. Il n’y a plus d’échapatoire, tu vas devoir assumer ton larcin.
             <img src="village" />
             <choix consequence="9700" />
+            <music src="tension"/>
         </frame>
 
         <!-- ########## S'Enfuir comme un lache  ######## -->
@@ -460,6 +505,7 @@
             <img src="village" />
             <locuteur personnage="asiel" />
             <expression src="stupefaction" />
+            <music src="rockangry"/>
         </frame>
         <frame id="5900">
             ASIEL ! Aide-moi !!!
@@ -510,6 +556,7 @@
         <frame id="6600">
             Ne prenant pas garde à cet abruti, tu continues ton chemin et tu sors par la fenêtre donnant sur l’une des artères principales de la ville. Tu fonces dans la ruelle en face. Au fond de cette ruelle se trouve le fleuve traversant la cité. Il y a un risque que les gardes te rattrapent au sol.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="6700">
             Il y a une échelle à côté de toi, mais tu pourrais tout aussi bien passer par les toits…
@@ -520,6 +567,7 @@
                 consequence="statuette==1?7310:7300"
                 placeholder="Le toit" />
             <img src="village" />
+            <music src="rockangry" />
         </frame>
 
         <!-- ####### ON passe par le sol ####### -->
@@ -527,10 +575,12 @@
         <frame id="6800">
             Pas le temps de s’amuser à gambader sur les toits, après tout tu connais la ville comme ta poche. Tu reprends ta course en direction du fleuve.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="6900">
             Après quelques minutes de course, tu entends encore les voix lointaines des gardes. Tes jambes ont beau te faire mal, ré-entendre ces voix te galvanise.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="7000">
             Très vite tu arrives aux abords du fleuve, soudainement, tu entends des cliquetis à ta droite : une patrouille de gardes qui semble à ta recherche. L’un d’entre eux possède un arc et commence à encocher une flèche. Un autre t’interpelle et te demande de t’arrêter.
@@ -541,6 +591,7 @@
             <choix
                 consequence="8100"
                 placeholder="Tu sautes dans le fleuve" />
+            <music src="rockangry" />
         </frame>
 
         <!-- ####### On se laisse attraper ####### -->
@@ -548,6 +599,7 @@
         <frame id="7100">
             Perclus de peur, tu te laisses choir sur le sol en levant tes mains tremblantes et t’exclamant :
             <img src="village" />
+            <music src="sad"/>
         </frame>
         <frame id="7200">
             C’EST PAS MOI ! C’EST PAS MOI ! ME FAITES PAS DE MAL !
@@ -567,44 +619,53 @@
             Tu commences à grimper à l'échelle.
             <img src="village" />
             <choix consequence="7400" />
+            <music src="rockangry" />
         </frame>
         <frame id="7310">
             Bah non, tu as une statuette dans les mains. Tu ne peux pas grimper à l'échelle.
             <img src="village" />
             <choix consequence="6700" />
+            <music src="rockangry" />
         </frame>
         <frame id="7400">
             FAITES DEMI TOUR !! Le deuxième voleur n’a pas pu aller bien loin.
             <img src="village" />
             <locuteur personnage="garde" />
             <expression src="surprise" />
+            <music src="rockangry" />
         </frame>
         <frame id="7500">
             Arf. C’est plus fatigant que prévu. Non sans effort tu arrives au sommet et te hisses sur le toit. Un garde arrive alors au pied de l’échelle. Tu la renverses et la fais tomber pour les ralentir.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="7600">
             Tu commences à progresser sur le toit, en avançant à faible allure pour éviter la chute. Une pierre lancée par un garde siffle près de tes oreilles, il tente de t'arrêter par la manière brute. Tu avances de quelques toits, sautant de maison en maison, mais aucune issue facile ne se profile à l’horizon.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="7700">
             Soudainement, devant toi se trouve le vide, en dessous, le fleuve.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="7800">
             IL EST SUR LES TOITS
             <img src="village" />
             <locuteur personnage="garde" />
             <expression src="surprise" />
+            <music src="rockangry" />
         </frame>
         <frame id="7900">
             Tu te retournes et tu vois deux gardes se précipitant vers toi en essayant du mieux qu’ils peuvent de ne pas tomber en sautant de toit en toit. L’un d’eux te met en joue avec son arc.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
         <frame id="8000">
             Plus qu’une solution : sauter dans le fleuve devant toi.
             La chute risque d'être brutale.
             <img src="village" />
+            <music src="rockangry" />
         </frame>
 
         <!-- ####### On saute dans le fleuve ####### -->
@@ -613,18 +674,22 @@
             $statuette==1?'Tu jettes la statuette puis tu':'Tu'$
             prends ton élan et te prépares à sauter. Alors que tu t’élances dans les airs, un sifflement proche de tes oreilles t’indique qu’une flèche a frôlé ta tête.
             <img src="fleuve" />
+            <music src="rockangry" />
         </frame>
         <frame id="8200">
             Tu atterris lourdement dans l’eau après quelques secondes de chute. Le choc te fait cracher l’air de tes poumons et un peu d’eau vient les remplir. Tu es complètement désorienté et tu te débats pour regagner la surface.
             <img src="fleuve" />
+            <music src="rockangry" />
         </frame>
         <frame id="8300">
             Tu nages comme tu peux dans l’eau mais le courant est bien trop fort pour toi. Le fleuve t’entraîne de plus en plus loin tandis que tu te débats, impuissant. Bientôt tu te retrouves au plus profond de la forêt, la cime des arbres cache la lumière du soleil.
             <img src="fleuve" />
+            <music src="rockangry" />
         </frame>
         <frame id="8400">
             Après de longues minutes, les courants se calment enfin et daignent te laisser regagner le rivage. Alors que tu te relèves, tu regardes autour de toi et te rends compte qu’il s’agit d’une partie de la forêt que tu n’as jamais encore explorée.
             <img src="fleuve" />
+            <music src="rockangry" />
         </frame>
 
         <!-- ####### Mini jeu forêt ####### -->
@@ -632,7 +697,7 @@
         <frame id="8500">
             La rivière t'a laissé ici, au milieu d'une grande forêt. Seul, exténué et trempé. Tu observes attentivement les alentours. Aucun repère logique, aucune marque. Rien, tout se ressemble. Il y a une légère brise qui te gèle et fait trembler tout ton corps. Il va falloir en sortir et vite !
             <img src="foret" />
-            <music src="tension" />
+            <music src="foret" />
             <choix consequence="cpt=0;8600" />
         </frame>
         <frame id="8600">
@@ -646,6 +711,7 @@
                 consequence="8670"
                 placeholder="A droite" />
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8610">
             Par où souhaites-tu aller ? Deux autres directions semblent être dégagées.
@@ -656,11 +722,13 @@
                 consequence="8630"
                 placeholder="A gauche" />
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8620">
             Tu as l'impression d'être revenu sur tes pas. Tu reconnais cette partie de la forêt.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8630">
             Par où souhaites-tu aller maintenant ? Deux directions semblent être dégagées.
@@ -671,6 +739,7 @@
                 consequence="8650"
                 placeholder="A droite" />
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8640">
             Non, tu as beau avancer et avancer, tu reviens toujours sur tes pas.
@@ -679,6 +748,7 @@
    </b>]]>
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8650">
             Tu sens que le vent devient de plus en plus fort. Tu frissonnes bien plus et tes jambes on la chair de poule. Vite ! Il faut sortir d'ici !!
@@ -690,11 +760,13 @@
                 consequence="8700"
                 placeholder="Tout droit" />
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8660">
             Tu te perds dans la forêt et préfères revenir sur tes pas.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8670">
             Par où souhaites-tu aller ? Deux directions semblent être dégagées.
@@ -705,6 +777,7 @@
                 consequence="cpt=cpt+1;8690"
                 placeholder="A droite" />
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8680">
             Apparemment, cette direction ne mène nulle part ...
@@ -713,15 +786,18 @@
    </b>]]>
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8690">
             Tu tombes dans les ronces et te fais mal à la cheville. Tu te soignes rapidement avant de repartir, mais tu as perdu du temps et le froid te ronge un peu plus.
             <choix consequence="cpt==5?666:8600"/>
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8700">
             Tu aperçois enfin une éclaircie au loin. Tu fonces vers cette direction, et au fur et à mesure que tu te rapproches, la lumière se fait plus forte, le bruit environnant moins sourd, et l'air plus pur. Tu es soudainement aveuglé par cette lumière éclatante à laquelle tu n'étais plus habitué. Mais tu as réussi à sortir de la forêt en vie !!
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <frame id="8800">
             Ou souhaites-tu aller maintenant ?
@@ -733,6 +809,7 @@
                 consequence="9300"
                 placeholder="Retourner a la ville" />
             <img src="foret" />
+            <music src="foret" />
         </frame>
         <!-- ####### Aller à la ville d’à côté/capitale ####### -->
         <!-- Entrée de l'arc voleur si karma == -2 && or == 110 -->
@@ -758,6 +835,7 @@
             Malheureusement il s’agissait d’une embuscade organisée par la guilde des voleurs de la région, tu te prends une flèche dans le genou et tombes par terre.
             Ils arrivent à ta hauteur, te fouillent rapidement, et, déçus de ne pas avoir trouvé d'objet de valeur, t'achèvent d'un coup de dague à la gorge.
             <img src="blackscreen"/>
+            <music src="sad"/>
         </frame>
         <frame id="9200">
             Les bandits sautent sur ton corps endolori et tranchent la gorge d’un coup sec à l’aide d’une dague.
@@ -770,11 +848,12 @@
         <frame id="9300">
             Tu pars donc en direction de Bandari en espérant pouvoir sauver Chuck. Tu peux apercevoir quelques maisonnées marquant le début du bourg au loin, il va te falloir quelques heures pour y arriver.
             <img src="foret"/>
-            <music src="yggdraop" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="9400">
             Tu arrives dans le centre de la ville qui a l’air très agité.
             <img src="village"/>
+            <music src="medievalbalad" />
         </frame>
         <frame id="9500">
             HEY TOI LA !!
@@ -787,6 +866,7 @@
             La patrouille de gardes te tombe dessus et t'emmène sans ménagement jusqu’à leurs quartiers.
             <img src="village" />
             <choix consequence="9800" />
+            <music src="tension" />
         </frame>
 
         <!-- PRISON -->
@@ -795,6 +875,7 @@
         <frame id="9700">
             Quelques heures plus tard, tu te retrouves dans une cellule avec Chuck.
             <img src="prison" />
+            <music src="sad "/>
         </frame>
         <frame id="9710">
             C’est la galère, on va se faire pendre Chuck.
@@ -802,6 +883,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
+            <music src="sad "/>
         </frame>
         <frame id="9720">
             <![CDATA[<i>
@@ -812,6 +894,7 @@
             <locuteur personnage="chuck" />
             <expression src="peur" />
             <choix consequence="9900" />
+            <music src="sad "/>
         </frame>
 
         <!-- ########## tu reviens de la forêt ######## -->
@@ -819,13 +902,15 @@
         <frame id="9800">
             Un garde te jette à terre dans la cellule, en te relevant tu aperçois Chuck qui te regarde d’un oeil en colère.
             <img src="prison" />
-            <music src="tension" />
+            <music src="sad "/>
+
         </frame>
         <frame id="9810">
             T’es vraiment qu’un salaud de m’avoir laissé. Je pensais que je valais plus que ça pour toi.
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
+            <music src="sad "/>
         </frame>
         <frame id="9820">
             Calme-toi Chuck !
@@ -833,6 +918,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
+            <music src="sad "/>
         </frame>
         <frame id="9830">
             <![CDATA[<i>
@@ -843,6 +929,7 @@
             <locuteur personnage="chuck" />
             <expression src="surprise" />
             <choix consequence="9900" />
+            <music src="sad "/>
         </frame>
 
         <!-- ########## Suite de la TAULE ######## -->
@@ -857,23 +944,28 @@
             <img src="prison" />
             <locuteur personnage="garde" />
             <expression src="fierte" />
+            <music src="tension" />
         </frame>
         <frame id="10100">
             Trois gardes entrent bruyamment dans votre cellule, vous passent les fers aux mains et vous ordonnent d’avancer. Chuck semble dépossédé de toute émotion.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10110">
             Vous avancez dans les longs couloirs sales de la prison. D’autres détenus vous regardent, d’un air parfois compatissant, parfois d’un air moqueur.
             Tu sens que ton estomac se crispe de plus en plus et tes mains tremblent légèrement.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10200">
             Vous entrez dans la cour. Deux potences vous attendent, mais également un bourreau avide de sang.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10300">
             Un préfet s’avance et récite.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10400">
             Chuck, Asiel. Selon les lois du royaume, la sentence réservée aux voleurs est la peine capitale. Ici, nous sommes compréhensifs. C’est pourquoi je vous laisse le choix de mourir la tête au bout de la corde, ou bien la tête violemment happée par le bourreau.
@@ -886,6 +978,7 @@
             <choix
                 consequence="11800"
                 placeholder="La pendaison " />
+            <music src="tension" />
         </frame>
 
         <!-- ########## décapitation  ######## -->
@@ -896,7 +989,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="emu" />
-            <music src="rockangry" />
+            <music src="tension" />
         </frame>
         <frame id="10600">
             Fort bien, bourreau faites votre office.
@@ -904,26 +997,32 @@
             <img src="prison" />
             <locuteur personnage="prefet" />
             <expression src="compatissant" />
+            <music src="tension" />
         </frame>
         <frame id="10700">
             Alors que les gardes t'emmènent de force vers le bourreau, tu commences à te débattre et à crier, tes instincts primaux prenant le dessus.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10800">
             On te force à t’agenouiller, on te force à rester immobile en maintenant ta tête collée contre le billot, ignorant tes sanglots.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="10900">
             Tu sens la lame du bourreau se poser sur ta nuque, il prépare son coup.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="11000">
             Alors que la lame fend l’air pour te trancher la nuque, tu sens une chaleur surgir du plus profond de toi, elle irradie dans tout ton corps.
             <img src="prison" />
+            <music src="tension" />
         </frame>
         <frame id="11100">
             . . .
             <img src="blackscreen" />
+            <music src="tension" />
         </frame>
         <frame id="11200">
             Tu ouvres les yeux et tout le monde se trouve à terre sauf Chuck et toi.
@@ -934,28 +1033,32 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="surprise2" />
-            <music src="yggdraop" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="11400">
             Je ne sais pas, j’ai pas compris, t’allais te faire tuer et puis une lumière violente a émané de ton corps, j’ai fermé les yeux et tout le monde était par terre inconscient..
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise2" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="11500">
             Reprenant tes esprits, tu te dis qu’il faudrait peut être filer avant que tout le monde reprenne connaissance.
             <img src="prison" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="11600">
             Vite, profitons en avant qu’ils ne se réveillent, ce sera peut être notre seule chance de nous en sortir vivant...
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="surprise" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="11700">
             Chuck et toi partez en courant dans les rues de Bandari, fuyant cet endroit où tu as échappé à la mort pour une raison que seuls les dieux connaissent.
             <img src="village" />
             <choix consequence="12500" />
+            <music src="medievalbalad" />
         </frame>
 
         <!-- ########## pendaison  ######## -->
@@ -970,6 +1073,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="emu" />
+            <music src="rockangry" />
         </frame>
         <frame id="12000">
             Fort bien, amenez le jusqu’à la potence.
@@ -977,27 +1081,33 @@
             <img src="prison" />
             <locuteur personnage="prefet" />
             <expression src="compatissant" />
+            <music src="rockangry" />
         </frame>
         <frame id="12100">
             Alors que les gardes t'emmènent de force vers la potence, tu commences à te débattre et à crier, tes instincts primaux prenant le dessus.
             <img src="prison" />
+            <music src="rockangry" />
         </frame>
         <frame id="12200">
             Dans un état second, tu ne t’aperçois pas que l’on te passe un noeud coulant autour du coup, la corde est râpeuse et te gratte. On te fait ensuite monter sur un petit tabouret.
             <img src="prison" />
+            <music src="rockangry" />
         </frame>
         <frame id="12300">
             Alors que tu sens le coup de pied faire basculer le tabouret en dessous de toi, tu sens une chaleur surgir du plus profond de toi, elle irradie tout ton corps.
             <img src="prison" />
+            <music src="rockangry" />
         </frame>
         <frame id="12310">
             . . .
             <img src="blackscreen" />
+            <music src="rockangry" />
         </frame>
         <frame id="12400">
             Tu ouvres les yeux et vois que les personnes autour de toi sauf Chuck sont toutes à terre, inconscientes.
             <img src="prison" />
             <choix consequence="11300" />
+            <music src="rockangry" />
         </frame>
 
         <!-- Petit trick ; comme les frames sont les même on repart en arrière a : 11300 -->
@@ -1013,10 +1123,12 @@
         <frame id="12600">
             Cependant alors que tu amorces la fin de ton virage, tu découvres qu’un vieil homme habillé d’une simple tunique te fait face, l’air de psalmodier dans sa barbe.
             <img src="village" />
+            <music src="tension" />
         </frame>
         <frame id="12700">
             Une violente douleur te prend à la tête, tu t’écroules.
             <img src="village" />
+            <music src="tension" />
         </frame>
 
         <!-- ########## ID : Retour en taule = Altercation avec le père ######## -->
@@ -1031,11 +1143,13 @@
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="fierte" />
+            <music src="sad" />
         </frame>
         <frame id="13000">
             Je…
             <locuteur personnage="asiel" />
             <expression src="emu" />
+            <music src="sad" />
         </frame>
         <frame id="13010">
             Asiel … Tu es un voleur, fainéant et insolent !
@@ -1044,18 +1158,21 @@
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+            <music src="sad" />
         </frame>
         <frame id="13100">
             Il… m’a fait une proposition vu que je suis ton père, j’ai pesé le pour et le contre et j’ai accepté. Vois cela comme un cadeau d’adieu, le dernier que je pourrais te faire, car dans tous les cas tu vas devoir quitter cette ville pour le restant de tes jours.
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+            <music src="sad" />
         </frame>
         <frame id="13200">
             Tu dois faire un choix, probablement le dernier de ta vie Asiel.
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="neutre" />
+            <music src="sad" />
         </frame>
         <frame id="13300">
             Soit tu pars avec le prêtre qui t’as stoppé pour aller rejoindre les rangs de leur moines dans un de leur fort reculé aux frontières Sud du Royaume, soit tu peux décliner son offre et dans ce cas tu devras finir ta vie dans l’anonymat, dans une carrière de calcaire au Nord.
@@ -1068,6 +1185,7 @@
             <choix
                 consequence="13800"
                 placeholder="Partir avec le pretre" />
+            <music src="sad" />
         </frame>
 
         <!-- ########## ID partir dans les carrière ######## -->
@@ -1083,15 +1201,18 @@
         <frame id="13500">
             Ton père se lève et s’en va, les larmes piquant au coin de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
             <img src="prison" />
+            <music src="sad" />
         </frame>
         <frame id="13600">
             À peines quelques mois après ton arrivée dans les carrières, tu tombes du haut d’un échafaudage. Les gardes, voyant que tu ne pourrais pas guérir de tes blessures t’achèvent  d’un coup d’épée longue.
             <img src="blackscreen" />
+            <music src="sad" />
         </frame>
         <frame id="13700">
             Une bouche de moins à nourrir. Au Nord, chaque ration compte.
             <img src="blackscreen" />
             <choix consequence="666" />
+            <music src="sad" />
         </frame>
 
         <!-- ########## ID partir avec le pretre ######## -->
@@ -1102,15 +1223,17 @@
             <img src="prison" />
             <locuteur personnage="thedris" />
             <expression src="tristesse" />
-            <music src="yggdraop" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="13900">
             Ton père se lève et s’en va, les larmes piquant au coin de tes yeux, tu vas devoir maintenant faire face à tes propres choix.
             <img src="prison" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="14000">
             Tu pars pour un long périple au travers des forêts, des montagnes et vallées. Qui sait ce qu’il pourrait t’y attendre ? Sans doute une grosse aventure !
             <img src="blackscreen" />
+            <music src="medievalbalad" />
         </frame>
         <frame id="14100">
             <![CDATA[<i>
@@ -1118,6 +1241,7 @@
            </b>]]>
             <img src="blackscreen" />
             <choix consequence="777" />
+            <music src="medievalbalad" />
         </frame>
 
 
