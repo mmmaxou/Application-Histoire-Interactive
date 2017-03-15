@@ -10,10 +10,10 @@ android {
         applicationId 'fr.inkarma.Inkarma'
         minSdkVersion 15
         targetSdkVersion 15
-        versionName '1.0.0'
+        versionName '1.0.1'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         versionNameSuffix 'release'
-        versionCode 8
+        versionCode 9
         multiDexEnabled = true
     }
     buildTypes {
