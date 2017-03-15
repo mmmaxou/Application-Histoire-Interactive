@@ -221,7 +221,6 @@ public class MainActivity extends AppCompatActivity {
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
-            Button buttonNext = (Button) findViewById(R.id.choixNext);
 
 
             //Reglage de la taille du texte
@@ -229,6 +228,8 @@ public class MainActivity extends AppCompatActivity {
             int textSize = reglages.getInt("text_size", 2) + 10; // On ajoute 10 qui correspond au minimum
 
             textView.setTextSize(textSize);
+            if ( textSize > 20 ) textSize = 20;
+            locuteur.setTextSize(textSize + 10);
 
             // Affichage du texte
 

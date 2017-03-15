@@ -819,12 +819,17 @@
             <img src="blackscreen"/>
             <music src="sad" />
         </frame>
+
+        <!--
         <frame id="8910">
             FRAME DE DEBUG :
             Ton karma est de $karma$ et tu possèdes $or$ or;
             <img src="blackscreen"/>
             <music src="sad" />
         </frame>
+        -->
+
+
         <frame id="9000">
             Au détour d’un virage, tu aperçois un chariot renversé. Intrigué, tu vas voir s’il n’y a pas quelque chose à récupérer dans cette épave.
             <img src="blackscreen"/>
@@ -875,7 +880,7 @@
         <frame id="9700">
             Quelques heures plus tard, tu te retrouves dans une cellule avec Chuck.
             <img src="prison" />
-            <music src="sad "/>
+            <music src="sad"/>
         </frame>
         <frame id="9710">
             C’est la galère, on va se faire pendre Chuck.
@@ -883,7 +888,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="tristesse" />
-            <music src="sad "/>
+            <music src="sad"/>
         </frame>
         <frame id="9720">
             <![CDATA[<i>
@@ -894,7 +899,7 @@
             <locuteur personnage="chuck" />
             <expression src="peur" />
             <choix consequence="9900" />
-            <music src="sad "/>
+            <music src="sad"/>
         </frame>
 
         <!-- ########## tu reviens de la forêt ######## -->
@@ -902,7 +907,7 @@
         <frame id="9800">
             Un garde te jette à terre dans la cellule, en te relevant tu aperçois Chuck qui te regarde d’un oeil en colère.
             <img src="prison" />
-            <music src="sad "/>
+            <music src="sad"/>
 
         </frame>
         <frame id="9810">
@@ -910,7 +915,7 @@
             <img src="prison" />
             <locuteur personnage="chuck" />
             <expression src="surprise" />
-            <music src="sad "/>
+            <music src="sad"/>
         </frame>
         <frame id="9820">
             Calme-toi Chuck !
@@ -918,7 +923,7 @@
             <img src="prison" />
             <locuteur personnage="asiel" />
             <expression src="attente" />
-            <music src="sad "/>
+            <music src="sad"/>
         </frame>
         <frame id="9830">
             <![CDATA[<i>
@@ -929,7 +934,7 @@
             <locuteur personnage="chuck" />
             <expression src="surprise" />
             <choix consequence="9900" />
-            <music src="sad "/>
+            <music src="sad"/>
         </frame>
 
         <!-- ########## Suite de la TAULE ######## -->
@@ -1651,7 +1656,7 @@
             <img src="gameover"/>
         </frame>
         <!--Ecran de win-->
-        <frame id="666">
+        <frame id="777">
             Felicitation ! Vous avez trouvé une bonne fin !
             <img src="goodgame"/>
         </frame>

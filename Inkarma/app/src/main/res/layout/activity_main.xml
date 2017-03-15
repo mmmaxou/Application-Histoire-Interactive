@@ -55,11 +55,11 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="0.75"
                 android:background="@drawable/cadre5"
                 android:id="@+id/layoutpersonnage"
-                android:minHeight="160dp">
+                android:minHeight="160dp"
+                android:layout_weight="0.20"
+                android:layout_height="70dp">
 
                 <TextView
                     android:text="Personnage"
@@ -68,13 +68,14 @@
                     android:textSize="30sp"
                     android:layout_width="wrap_content"
                     android:gravity="center"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:paddingLeft="40dp"
                     android:paddingRight="40dp"
                     android:textColor="?android:attr/textColorPrimaryInverse"
                     android:layout_toRightOf="@+id/expression"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignTop="@+id/expression" />
+                    android:layout_alignTop="@+id/expression"
+                    android:elevation="5dp"
+                    android:layout_marginTop="0dp" />
 
                 <ImageView
                     app:srcCompat="@mipmap/ic_launcher"
@@ -82,7 +83,7 @@
                     android:layout_weight="2"
                     android:scaleType="centerInside"
                     android:layout_alignParentBottom="true"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content" />
 
@@ -94,7 +95,7 @@
                     android:layout_alignParentBottom="true"
                     android:elevation="1dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp" />
             </RelativeLayout>
 
