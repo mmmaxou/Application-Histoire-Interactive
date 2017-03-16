@@ -36,6 +36,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             data = new Data(this);
 
             ////// obtenir et afficher page 1 --> setFrame(int)
-            setFrame(i); // le i
+            setFrame(i, false); // le i
 
 
         } catch (XmlPullParserException e) {
@@ -185,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setFrame(int i) {
+    private void setFrame(int i, Boolean before) {
 
         if (handler != null) {
             handler.removeCallbacksAndMessages(null);
@@ -216,20 +217,13 @@ public class MainActivity extends AppCompatActivity {
             ImageView personnage = (ImageView) findViewById(R.id.personnage);
             ImageView expression = (ImageView) findViewById(R.id.expression);
             RelativeLayout layoutPersonnage = (RelativeLayout) findViewById(R.id.layoutpersonnage);
-            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.first_layout);
+            LinearLayout layoutText = (LinearLayout) findViewById(R.id.LinearLayoutText);
             TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
+            TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
             Button button1 = (Button) findViewById(R.id.choix1);
             Button button2 = (Button) findViewById(R.id.choix2);
 
-
-            //Reglage de la taille du texte
-            SharedPreferences reglages = PreferenceManager.getDefaultSharedPreferences(this);
-            int textSize = reglages.getInt("text_size", 2) + 10; // On ajoute 10 qui correspond au minimum
-
-            textView.setTextSize(textSize);
-            if ( textSize > 20 ) textSize = 20;
-            locuteur.setTextSize(textSize + 10);
 
             // Affichage du texte
 
@@ -239,6 +233,12 @@ public class MainActivity extends AppCompatActivity {
 //            String text = script.evaluate("'#'+frame+ \"" + frame.text + "\"").toString(); // Affichage du numero de frame
             String text = script.evaluate("\""+frame.text+"\"").toString();
 
+            if ( frame.text == "" )  {
+                layoutText.setVisibility(View.GONE);
+            } else {
+                layoutText.setVisibility(View.VISIBLE);
+            }
+
 
             Spanned spanText;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -247,7 +247,12 @@ public class MainActivity extends AppCompatActivity {
                 spanText = Html.fromHtml(text);
             }
 
-            animateText(spanText);
+            if (before) { // Si on repart en arrière, on affiche simplement le texte sans l'animation
+                textView.setText(spanText);
+            } else {
+                animateText(spanText);
+            }
+
 
 
             // On regarde si il faux modifier le karma
@@ -299,13 +304,6 @@ public class MainActivity extends AppCompatActivity {
                 locuteur.setVisibility(View.INVISIBLE);
             }
 
-//            // Si il n'y a pas de choix, on affiche un bouton pour passer à la frame suivante.
-//            if (frame.choix[0] == -1 && frame.choix[1] == -1) {
-//                buttonNext.setVisibility(View.VISIBLE);
-//            } else {
-//                buttonNext.setVisibility(View.GONE);
-//            }
-
 
             // On lance la musique
 
@@ -314,19 +312,30 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-            Log.d("debug image :", " ---- Frame : " + frame.imgTag + " ------ memory : " + currentImage);
+//            Log.d("debug image :", " ---- Frame : " + frame.imgTag + " ------ memory : " + currentImage);
+
+            //Frame particulières
+            // Si c'est la frame 666 on change l'apparation pour un fade IN
+            if (frame.id == 666 || frame.id == 777) {
+
+                Animation animationIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
+                myImageSwitcher.setInAnimation(animationIn);
+
+            }
+
+//            SharedPreferences reglages = PreferenceManager.getDefaultSharedPreferences(this);
+//            SharedPreferences.Editor sharedEditor = reglages.edit();
+            if (frame.id == 10 ) {
+//                sharedEditor.putBoolean("pref_autoSkip", false);
+//                sharedEditor.commit();
+            }
+            if (frame.id == 100 ) {
+//                sharedEditor.putBoolean("pref_autoSkip", true);
+//                sharedEditor.commit();
+            }
 
             // Affichage des images
             if (frame.img != -1) {
-
-                // Si c'est la frame 666 on change l'apparation pour un fade IN
-                if (frame.id == 666 || frame.id == 777) {
-
-                    Animation animationIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
-                    myImageSwitcher.setInAnimation(animationIn);
-
-                }
-
                 if (frame.imgTag != currentImage) {
 
                     // Creation de la nouvelle image
@@ -349,7 +358,6 @@ public class MainActivity extends AppCompatActivity {
                     currentImage = frame.imgTag;
 
                 }
-
             }
 
 
@@ -386,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
                         historiqueText.remove(historiqueText.size() - 1);
                     }
 
-                    setFrame(script.getInt("frame"));
+                    setFrame(script.getInt("frame"), false);
 
                 }
             });
@@ -398,6 +406,20 @@ public class MainActivity extends AppCompatActivity {
             autoSkip();
 
         }
+    }
+
+    private void changeTextSize() {
+        //Reglage de la taille du texte
+        SharedPreferences reglages = PreferenceManager.getDefaultSharedPreferences(this);
+        int textSize = reglages.getInt("text_size", 2) + 10; // On ajoute 10 qui correspond au minimum
+
+        //Recuperation
+        TextView textView = (TextView) findViewById(R.id.BoiteDialogue);
+        TextView locuteur = (TextView) findViewById(R.id.textViewLocuteur);
+
+        //Changement
+        textView.setTextSize(textSize);
+        locuteur.setTextSize(textSize + 10);
     }
 
     private void addToHistorique(SharedPreferences settings) {
@@ -423,6 +445,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         final Boolean autoSpeed = settings.getBoolean("pref_autoSkip", false);
 
+
         String skipSpeedText = settings.getString("pref_autoSkipSpeed", "30");
         int skipSpeed = Integer.parseInt(skipSpeedText);
 
@@ -443,7 +466,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //Il n'y a pas de choix; on passe
-                if (id == frame.id && getGameRunning() && autoSpeed) {
+                if (id == frame.id && getGameRunning() && autoSpeed && frame.id >= 100) {
                     if (frame.getNbChoix()<2) {
                         next();
                     }
@@ -475,7 +498,7 @@ public class MainActivity extends AppCompatActivity {
 
         int id = (Integer) script.evaluate(frame.choix[0]);
         data.get(id).precedent = frame;
-        setFrame(id); //Les variables script sont sauvegardées dans le setFrame
+        setFrame(id, false); //Les variables script sont sauvegardées dans le setFrame
     }
 
     // Button choix 2
@@ -484,7 +507,7 @@ public class MainActivity extends AppCompatActivity {
 //        script.put("frameNumber", 0);
         int id = (Integer) script.evaluate(frame.choix[1]);
         data.get(id).precedent = frame;
-        setFrame(id); //Les variables script sont sauvegardées dans le setFrame
+        setFrame(id, false); //Les variables script sont sauvegardées dans le setFrame
     }
 
     // Button Next
@@ -519,7 +542,7 @@ public class MainActivity extends AppCompatActivity {
             //On avance
             historique.clear();
             historiqueText.clear();
-            setFrame(currentFrame.suivant.id);
+            setFrame(currentFrame.suivant.id, false);
         }
     }
 
@@ -563,9 +586,9 @@ public class MainActivity extends AppCompatActivity {
             if (frame.getNbChoix() == 1) {
                 int nextFrame = (int) script.evaluate(frame.getChoix(0));
                 data.get(nextFrame).precedent = frame;
-                setFrame(nextFrame);
+                setFrame(nextFrame, false);
             } else if (frame.getNbChoix() == 0) {
-                setFrame(frame.suivant.id); //Les variables script sont sauvegardées dans le setFrame
+                setFrame(frame.suivant.id, false); //Les variables script sont sauvegardées dans le setFrame
             }
         }
 
@@ -596,7 +619,7 @@ public class MainActivity extends AppCompatActivity {
                 myImageSwitcher.setInAnimation(animationIn);
 
 
-                setFrame(frame.precedent.id); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
+                setFrame(frame.precedent.id, true); // Affiche la frame du dernier choix + le nombre de frames passées avant - 1
             }
         }
     }
@@ -752,7 +775,8 @@ public class MainActivity extends AppCompatActivity {
         Boolean prefMusique = params.getBoolean("pref_musique", false);
 
         if (music == -1 || music == 0) {
-            Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Musique non trouvée", Toast.LENGTH_SHORT).show();
+            Log.d("Musique", "Musique non trouvée");
         } else if (prefMusique) { // la variable musqiue est le param
             // Initialisation
             if (mediaPlayer == null) {
@@ -798,6 +822,9 @@ public class MainActivity extends AppCompatActivity {
         if (musique && mediaPlayer == null) {
             playSound(frame.music);
         }
+
+
+        changeTextSize();
     }
 
     // Affichage caractère par caractère

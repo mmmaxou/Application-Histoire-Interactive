@@ -2,6 +2,25 @@
 <?xml-stylesheet href="../../assets/style.css"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
+
+        <frame id='10'>
+            <img src="tuto1" />
+        </frame>
+        <frame id='20'>
+            <img src="tuto2" />
+        </frame>
+        <frame id='30'>
+            <img src="tuto3" />
+        </frame>
+        <frame id='40'>
+            <img src="tuto4" />
+        </frame>
+        <frame id='50'>
+            <img src="tuto5" />
+        </frame>
+        <frame id='60'>
+            <img src="tuto6" />
+        </frame>
         <frame id='100'>
             Tu te trouves sur le rebord de la fenêtre de ton grenier, regardant passivement les nuages passer au grè des vents. Juste en dessous d’eux se situent les vallons, les petits reliefs des collines vous ont toujours fait penser à des galets gisant dans le lit d’une rivière paisible. Au sommet de ceux-ci se trouvent des petites touches de vert çà et là, prémices de la forêt abondante à la périphérie sud du petit bourg de Bandari.
             <img src="campagne" />

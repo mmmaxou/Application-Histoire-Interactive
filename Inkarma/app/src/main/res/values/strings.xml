@@ -13,7 +13,7 @@
     <string name="settings_title_size">Taille du texte</string>
 
     <string name="settings_summary_defilement">Vitesse actuelle : $1</string>
-    <string name="settings_dialog_message_defilement">Choisissez la vitesse de défilement du texte. Attention : Plus c\'est grand, plus c\'est rapide !!</string>
+    <string name="settings_dialog_message_defilement">Choisissez la vitesse de défilement du texte. Attention : Plus c\'est grand, plus c\'est lent !!</string>
     <string name="settings_title_defilement">Vitesse de défilement du texte</string>
 
     <string name="settings_skipSpeed">Vitesse de passage automatique</string>

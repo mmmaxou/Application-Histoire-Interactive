@@ -13,7 +13,7 @@
             android:key="pref_autoSkip"
             android:title="Passage automatique à l'ecran suivant"
             android:summary="Au bout d'une certaine durée, on passe automatiquement à l'écran suivant."
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:persistent="true"/>
 
         <!--ORDER EQUAL MIN-->
