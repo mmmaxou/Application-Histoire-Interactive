@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             // On regarde si il faux modifier le karma
-            if (frame.karma != 0 && frame.karmaEvaluated == false) {
+            if (frame.karma != 0 && !frame.karmaEvaluated) {
                 int currentKarma = script.getInt("karma");
                 script.put("karma", currentKarma + frame.karma);
                 frame.karmaEvaluated = true;
