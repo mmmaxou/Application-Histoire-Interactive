@@ -95,7 +95,7 @@ public class MenuActivity extends AppCompatActivity {
 
         createNewSave();
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity  .class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish(); // Call once you redirect to another activity
